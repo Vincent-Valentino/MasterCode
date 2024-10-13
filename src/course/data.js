@@ -1,0 +1,90 @@
+export const courses = {
+  Python: {
+    title: 'Python',
+    subcourses: [
+      { title: 'Introduction to Python', component: () => import('@/course/python/IntroductionPython.vue') },
+      { title: 'Get Started with Python', component: () => import('@/course/python/GetStartedPython.vue') },
+      { title: 'Python Variables and Data Types', component: () => import('@/course/python/VariablesPython.vue') },
+      { title: 'Python Operators and Comparison', component: () => import('@/course/python/OperatorPython.vue') },
+      { title: 'Python Conditions', component: () => import('@/course/python/ConditionPython.vue') },
+      { title: 'Python Loops', component: () => import('@/course/python/LoopsPython.vue') },
+      { title: 'Python Strings', component: () => import('@/course/python/StringPython.vue') },
+      { title: 'Python Lists', component: () => import('@/course/python/ListPython.vue') },
+      { title: 'Python Dictionary', component: () => import('@/course/python/DictPython.vue') },
+      { title: 'Python Sets', component: () => import('@/course/python/SetPython.vue') },
+      { title: 'File Handling in Python', component: () => import('@/course/python/FileHandlingPython.vue') },
+      { title: 'Python Functions', component: () => import('@/course/python/FunctionsPython.vue') },
+      { title: 'Python Object-Oriented Programming', component: () => import('@/course/python/OOPPython.vue') },
+      { title: 'Working with Modules in Python', component: () => import('@/course/python/ModulesPython.vue') },
+    ]
+  },
+  JavaScript: {
+    title: 'JavaScript',
+    subcourses: [
+      { title: 'Introduction to JavaScript', component: () => import('@/course/javascript/IntroductionJavascript.vue') },
+      { title: 'JavaScript Variables and Data Types', component: () => import('@/course/javascript/VariablesJavascript.vue') },
+      { title: 'JavaScript Operators', component: () => import('@/course/javascript/OperatorsJavascript.vue') },
+      { title: 'JavaScript Conditions', component: () => import('@/course/javascript/ConditionsJavascript.vue') },
+      { title: 'JavaScript Loops', component: () => import('@/course/javascript/LoopsJavascript.vue') },
+      { title: 'JavaScript Functions', component: () => import('@/course/javascript/FunctionsJavascript.vue') },
+      { title: 'JavaScript Arrays', component: () => import('@/course/javascript/ArraysJavascript.vue') },
+      { title: 'JavaScript Objects', component: () => import('@/course/javascript/ObjectsJavascript.vue') },
+      { title: 'JavaScript DOM Manipulation', component: () => import('@/course/javascript/DOMManipulation.vue') },
+      { title: 'JavaScript Events', component: () => import('@/course/javascript/EventsJavascript.vue') },
+      { title: 'JavaScript ES6 and Beyond', component: () => import('@/course/javascript/ES6Javascript.vue') },
+      { title: 'Async JavaScript and Promises', component: () => import('@/course/javascript/AsyncPromises.vue') },
+    ]
+  },
+  React: {
+    title: 'React',
+    subcourses: [
+      { title: 'Introduction to React', component: () => import('@/course/react/IntroductionReact.vue') },
+      { title: 'Get Started with React', component: () => import('@/course/react/GetStartedReact.vue') },
+      { title: 'Creating Your First React App', component: () => import('@/course/react/FirstReactApp.vue') },
+      { title: 'JSX Basics', component: () => import('@/course/react/JSXBasic.vue') },
+      { title: 'Components and Props', component: () => import('@/course/react/ComponentsProps.vue') },
+      { title: 'State Management', component: () => import('@/course/react/StateManagement.vue') },
+      { title: 'Using React Hooks', component: () => import('@/course/react/UsingHooks.vue') },
+      { title: 'useState Hook', component: () => import('@/course/react/useStateHook.vue') },
+      { title: 'useEffect Hook', component: () => import('@/course/react/useEffectHook.vue') },
+      { title: 'React Router Basics', component: () => import('@/course/react/ReactRouterBasics.vue') },
+      { title: 'Advanced Routing', component: () => import('@/course/react/AdvancedRouting.vue') },
+      { title: 'Rendering Lists in React', component: () => import('@/course/react/RenderingList.vue') },
+      { title: 'Using Keys in Lists', component: () => import('@/course/react/KeysInList.vue') },
+      { title: 'Handling Forms in React', component: () => import('@/course/react/HandlingForm.vue') },
+      { title: 'Form Validation', component: () => import('@/course/react/FormValidation.vue') },
+      { title: 'Fetching Data from APIs', component: () => import('@/course/react/FetchingData.vue') },
+      { title: 'Working with Axios', component: () => import('@/course/react/AxiosIntro.vue') },
+      { title: 'Context API', component: () => import('@/course/react/ContextAPI.vue') },
+      { title: 'Introduction to Redux', component: () => import('@/course/react/ReduxIntro.vue') },
+      { title: 'Performance Optimization', component: () => import('@/course/react/PerformanceOptimization.vue') },
+      { title: 'Deploying React Applications', component: () => import('@/course/react/DeployingReact.vue') },
+    ]
+  },
+  TypeScript: {
+    title: 'TypeScript',
+    subcourses: [
+      { title: 'Introduction to TypeScript', component: () => import('@/course/typescript/IntroductionTypescript.vue') },
+      { title: 'TypeScript Basics', component: () => import('@/course/typescript/BasicsTypescript.vue') },
+      { title: 'Working with Types', component: () => import('@/course/typescript/TypesTypescript.vue') },
+      { title: 'TypeScript Classes and Interfaces', component: () => import('@/course/typescript/ClassesInterfacesTypescript.vue') },
+      { title: 'TypeScript Generics', component: () => import('@/course/typescript/GenericsTypescript.vue') },
+      { title: 'Advanced TypeScript Features', component: () => import('@/course/typescript/AdvancedTypescript.vue') },
+      { title: 'TypeScript and JavaScript Interoperability', component: () => import('@/course/typescript/InteropTypescript.vue') },
+    ]
+  },
+  Vue: {
+    title: 'Vue',
+    subcourses: [
+      { title: 'Introduction to Vue.js', component: () => import('@/course/vue/IntroductionVue.vue') },
+      { title: 'Get Started with Vue', component: () => import('@/course/vue/GetStartedVue.vue') },
+      { title: 'Vue Components and Props', component: () => import('@/course/vue/ComponentsProps.vue') },
+      { title: 'Vue Directives', component: () => import('@/course/vue/Directives.vue') },
+      { title: 'Vue Event Handling', component: () => import('@/course/vue/EventHandling.vue') },
+      { title: 'Vue Router Basics', component: () => import('@/course/vue/VueRouter.vue') },
+      { title: 'Vuex for State Management', component: () => import('@/course/vue/VuexStateManagement.vue') },
+      { title: 'Working with APIs in Vue', component: () => import('@/course/vue/ApiIntegration.vue') },
+      { title: 'Deploying Vue Applications', component: () => import('@/course/vue/DeployingVue.vue') },
+    ]
+  },
+};
