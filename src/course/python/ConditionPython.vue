@@ -180,38 +180,32 @@ export default {
   name: 'PythonConditions',
   data() {
     return {
-      ifSyntaxCode: `
-if condition:
+      ifSyntaxCode: `if condition:
     # block of code to be executed if the condition is True
 `,
-      positiveNumberCode: `
-num = 5
+      positiveNumberCode: `num = 5
 if num > 0:
     print("The number is positive")
 `,
-      ifElseSyntaxCode: `
-if condition:
+      ifElseSyntaxCode: `if condition:
     # block of code if condition is True
 else:
     # block of code if condition is False
 `,
-      positiveNegativeCode: `
-num = -5
+      positiveNegativeCode: `num = -5
 if num > 0:
     print("Positive")
 else:
     print("Negative")
 `,
-      ifElifElseSyntaxCode: `
-if condition1:
+      ifElifElseSyntaxCode: `if condition1:
     # code block for condition1
 elif condition2:
     # code block for condition2
 else:
     # code block if none of the conditions are met
 `,
-      numberSignCode: `
-num = 0
+      numberSignCode: `num = 0
 if num > 0:
     print("Positive")
 elif num == 0:
@@ -219,27 +213,22 @@ elif num == 0:
 else:
     print("Negative")
 `,
-      nestedIfCode: `
-num = 10
+      nestedIfCode: `num = 10
 if num > 0:
     if num % 2 == 0:
         print("Positive and Even")
 `,
-      ternaryOperatorCode: `
-result = "Positive" if num > 0 else "Negative"
+      ternaryOperatorCode: `result = "Positive" if num > 0 else "Negative"
 `,
-      passStatementCode: `
-num = 5
+      passStatementCode: `num = 5
 if num > 0:
     pass  # Placeholder for future code
 `,
-      logicalOperatorsCode: `
-num = 5
+      logicalOperatorsCode: `num = 5
 if num > 1 and num < 10:
     print("Number is between 1 and 10")
 `,
-      vowelCheckCode: `
-char = 'a'
+      vowelCheckCode: `char = 'a'
 if char in 'aeiou':
     print("Vowel")
 `,

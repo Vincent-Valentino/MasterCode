@@ -1,265 +1,238 @@
 <template>
-  <div class="container mx-auto p-6">
-    <!-- Previous Sections (1-18) -->
+  <div class="w-full">
+    <!-- Header Section -->
+    <div class="w-full flex items-center gap-2 bg-blue-600 rounded-t-xl p-4">
+      <img src="/icons/typescript.svg" alt="TypeScript Logo" class="w-12 h-12">
+      <h1 class="text-2xl md:text-4xl font-bold text-white">TypeScript Generics</h1>
+    </div>
 
-    <!-- Section 19: TypeScript Generics -->
-    <section id="typescript-generics" class="mb-12">
-      <h2 class="text-4xl font-semibold mb-4">19. TypeScript Generics</h2>
+    <!-- Section: Introduction to Generics -->
+    <section id="introduction-generics" class="bg-white rounded-b-xl p-4 md:p-6">
+      <h2 class="text-3xl font-semibold mb-4">Introduction to Generics</h2>
       <p class="text-lg text-gray-700 mb-4">
-        Generics provide a way to create reusable components that work with a variety of data types while maintaining type safety. They allow you to define placeholders for types that can be specified later, enabling flexible and robust code.
+        Generics in TypeScript provide a way to create reusable components that work with a variety of types rather than a single one. They enable you to define functions, classes, and interfaces that can operate over different types while still maintaining type safety.
       </p>
 
-      <!-- Subsection 19.1: Introduction to Generics -->
-      <h3 class="text-3xl font-semibold mb-2">19.1. Introduction to Generics</h3>
+      <h3 class="text-2xl font-semibold mb-2">Why Use Generics?</h3>
       <p class="text-lg text-gray-700 mb-4">
-        Generics enable you to create components, functions, and classes that can operate with different types without sacrificing type safety. By using generics, you can write more flexible and maintainable code that works across various data types.
+        Generics allow you to create more flexible and reusable code. For example, you might have a function that works on an array of any type, or a class that can handle data of different types without sacrificing type checking.
       </p>
 
-      <!-- Subsection 19.2: Generic Functions -->
-      <h3 class="text-3xl font-semibold mb-2">19.2. Generic Functions</h3>
+      <!-- Code Example -->
+      <pre class="bg-gray-800 rounded p-4 overflow-x-auto mb-4" v-pre>
+<code class="language-typescript">// Without Generics
+function identity(arg: any): any {
+  return arg;
+}
+
+// With Generics
+function identity&lt;T&gt;(arg: T): T {
+  return arg;
+}</code></pre>
+
       <p class="text-lg text-gray-700 mb-4">
-        Generic functions are functions that can accept parameters of various types while maintaining the type relationship between inputs and outputs. This allows for greater flexibility and reusability.
+        In the example above, the generic version of the <code>identity</code> function preserves the type of the argument, providing better type safety compared to the version using <code>any</code>.
       </p>
-      <div class="bg-gray-800 text-white rounded-lg p-4 mb-4 overflow-auto">
-        <pre><code class="language-typescript">{{ genericFunctionExample }}</code></pre>
-      </div>
-      <p class="text-lg text-gray-700">
-        <strong>Explanation:</strong> The <code>identity</code> function uses a generic type <code>T</code> to accept and return a value of any type. This ensures that the input and output types are consistent.
-      </p>
-
-      <!-- Subsection 19.3: Generic Classes -->
-      <h3 class="text-3xl font-semibold mb-2">19.3. Generic Classes</h3>
-      <p class="text-lg text-gray-700 mb-4">
-        Generic classes allow you to create classes that can handle multiple data types. This is particularly useful for data structures like stacks, queues, and linked lists, where the type of data they handle can vary.
-      </p>
-      <div class="bg-gray-800 text-white rounded-lg p-4 mb-4 overflow-auto">
-        <pre><code class="language-typescript">{{ genericClassExample }}</code></pre>
-      </div>
-      <p class="text-lg text-gray-700">
-        <strong>Explanation:</strong> The <code>Stack</code> class is generic and can handle any type specified when an instance is created. This allows for creating stacks of numbers, strings, or any other type without duplicating code.
-      </p>
-
-      <!-- Subsection 19.4: Generic Interfaces -->
-      <h3 class="text-3xl font-semibold mb-2">19.4. Generic Interfaces</h3>
-      <p class="text-lg text-gray-700 mb-4">
-        Generic interfaces define contracts that can work with various data types. They are useful for defining the shape of objects that interact with generics, ensuring type safety across different implementations.
-      </p>
-      <div class="bg-gray-800 text-white rounded-lg p-4 mb-4 overflow-auto">
-        <pre><code class="language-typescript">{{ genericInterfaceExample }}</code></pre>
-      </div>
-      <p class="text-lg text-gray-700">
-        <strong>Explanation:</strong> The <code>Pair</code> interface uses generics to define a tuple of two related types. This ensures that both elements of the pair are of the specified types, maintaining consistency.
-      </p>
-
-      <!-- Subsection 19.5: Constraints -->
-      <h3 class="text-3xl font-semibold mb-2">19.5. Constraints</h3>
-      <p class="text-lg text-gray-700 mb-4">
-        Constraints limit the types that can be used with generics, ensuring that the generic types meet certain criteria. This enhances type safety by restricting the kinds of types that can be passed to generic components.
-      </p>
-      <div class="bg-gray-800 text-white rounded-lg p-4 mb-4 overflow-auto">
-        <pre><code class="language-typescript">{{ genericsConstraintsExample }}</code></pre>
-      </div>
-      <p class="text-lg text-gray-700">
-        <strong>Explanation:</strong> The <code>extend</code> keyword is used to constrain the generic type <code>T</code> to types that have a <code>length</code> property. This allows the <code>loggingIdentity</code> function to access the <code>length</code> property on <code>arg</code>, ensuring type safety.
-      </p>
-
-      <!-- Subsection 19.6: Default Type Parameters -->
-      <h3 class="text-3xl font-semibold mb-2">19.6. Default Type Parameters</h3>
-      <p class="text-lg text-gray-700 mb-4">
-        Default type parameters allow you to specify default types for generics, making them optional when the type can be inferred or when a default type is sufficient.
-      </p>
-      <div class="bg-gray-800 text-white rounded-lg p-4 mb-4 overflow-auto">
-        <pre><code class="language-typescript">{{ defaultTypeParametersExample }}</code></pre>
-      </div>
-      <p class="text-lg text-gray-700">
-        <strong>Explanation:</strong> The <code>Container</code> class has a default type parameter <code>T = string</code>. If no type is specified when creating an instance of <code>Container</code>, it defaults to <code>string</code>.
-      </p>
-
-      <!-- Subsection 19.7: Using Multiple Type Parameters -->
-      <h3 class="text-3xl font-semibold mb-2">19.7. Using Multiple Type Parameters</h3>
-      <p class="text-lg text-gray-700 mb-4">
-        Generics can accept multiple type parameters, allowing for more complex type relationships and ensuring type consistency across related types.
-      </p>
-      <div class="bg-gray-800 text-white rounded-lg p-4 mb-4 overflow-auto">
-        <pre><code class="language-typescript">{{ multipleTypeParametersExample }}</code></pre>
-      </div>
-      <p class="text-lg text-gray-700">
-        <strong>Explanation:</strong> The <code>Pair</code> interface uses two generic types <code>T</code> and <code>U</code> to define a tuple containing two related but potentially different types.
-      </p>
-
-      <!-- Subsection 19.8: Key Benefits of Generics -->
-      <h3 class="text-3xl font-semibold mb-2">19.8. Key Benefits of Generics</h3>
-      <ul class="list-disc list-inside text-lg text-gray-700 mb-4">
-        <li><strong>Reusability:</strong> Write reusable components that work with any data type.</li>
-        <li><strong>Type Safety:</strong> Maintain type safety without sacrificing flexibility.</li>
-        <li><strong>Flexibility:</strong> Handle multiple data types with a single implementation.</li>
-        <li><strong>Maintainability:</strong> Reduce code duplication and enhance code maintainability.</li>
-      </ul>
-
-      <!-- Suggested Image -->
-      <!-- 
-        Image Suggestion: A diagram illustrating how generics work in functions, classes, and interfaces, showing type placeholders and their replacements.
-        Alt Text: "Diagram illustrating the concept of generics in TypeScript, showing type placeholders and their substitutions."
-      -->
     </section>
 
-    <!-- Section 20: Best Practices -->
-    <section id="best-practices" class="mb-12">
-      <h2 class="text-4xl font-semibold mb-4">20. Best Practices</h2>
+    <!-- Section: Generic Functions -->
+    <section id="generic-functions" class="bg-white rounded-b-xl p-4 md:p-6 mt-6">
+      <h2 class="text-3xl font-semibold mb-4">Generic Functions</h2>
       <p class="text-lg text-gray-700 mb-4">
-        Adhering to best practices when working with generics ensures that your code remains clean, efficient, and maintainable. Here are some recommended guidelines:
+        A generic function allows you to specify a type parameter, which can be used within the function to maintain type information.
       </p>
-      <ul class="list-disc list-inside text-lg text-gray-700">
-        <li><strong>Use Descriptive Type Parameter Names:</strong> Use meaningful names like <code>T</code>, <code>K</code>, <code>V</code>, or more descriptive names to clarify the role of each type parameter.</li>
-        <li><strong>Constrain Type Parameters:</strong> Use constraints to limit the types that can be used with generics, enhancing type safety.</li>
-        <li><strong>Leverage Default Type Parameters:</strong> Provide default type parameters to simplify usage when a default type is sufficient.</li>
-        <li><strong>Keep Generics Simple:</strong> Avoid overly complex generic type relationships to maintain readability and simplicity.</li>
-        <li><strong>Document Generic Components:</strong> Use comments and documentation to explain the purpose and usage of generic type parameters.</li>
-        <li><strong>Reuse Existing Generics:</strong> Utilize built-in generics provided by TypeScript, such as <code>Partial</code>, <code>Readonly</code>, and <code>Record</code>, to avoid reinventing the wheel.</li>
-        <li><strong>Avoid Using <code>any</code> with Generics:</strong> Using <code>any</code> with generics can undermine type safety. Prefer using more specific types or constraints.</li>
-        <li><strong>Test Generic Components Thoroughly:</strong> Ensure that your generic components work correctly with a variety of type parameters through comprehensive testing.</li>
-      </ul>
+
+      <h3 class="text-2xl font-semibold mb-2">Defining Generic Functions</h3>
+      <p class="text-lg text-gray-700 mb-4">
+        Generic functions are defined using angle brackets (<code>&lt;&gt;</code>) to specify type parameters.
+      </p>
+
+      <!-- Code Example -->
+      <pre class="bg-gray-800 rounded p-4 overflow-x-auto mb-4" v-pre>
+<code class="language-typescript">function identity&lt;T&gt;(arg: T): T {
+  return arg;
+}
+
+let output1 = identity&lt;string&gt;('Hello TypeScript');
+console.log(output1); // Output: Hello TypeScript
+
+let output2 = identity(100);
+console.log(output2); // Output: 100 (TypeScript infers T as number)</code></pre>
+
+      <h3 class="text-2xl font-semibold mb-2">Working with Generic Types</h3>
+      <p class="text-lg text-gray-700 mb-4">
+        You can use generics with more complex types, such as arrays.
+      </p>
+
+      <!-- Code Example -->
+      <pre class="bg-gray-800 rounded p-4 overflow-x-auto mb-4" v-pre>
+<code class="language-typescript">function loggingIdentity&lt;T&gt;(arg: T[]): T[] {
+  console.log(arg.length);
+  return arg;
+}
+
+loggingIdentity([1, 2, 3]); // Output: 3</code></pre>
+
+      <p class="text-lg text-gray-700 mb-4">
+        In this example, <code>T[]</code> represents an array of type <code>T</code>. The function logs the length of the array and returns it.
+      </p>
     </section>
 
-    <!-- Section 21: Common Mistakes -->
-    <section id="common-mistakes" class="mb-12">
-      <h2 class="text-4xl font-semibold mb-4">21. Common Mistakes</h2>
+    <!-- Section: Generic Classes and Interfaces -->
+    <section id="generic-classes-interfaces" class="bg-white rounded-b-xl p-4 md:p-6 mt-6">
+      <h2 class="text-3xl font-semibold mb-4">Generic Classes and Interfaces</h2>
       <p class="text-lg text-gray-700 mb-4">
-        Being aware of common pitfalls helps you avoid errors and write more robust TypeScript code when working with generics. Here are some frequent mistakes developers make:
+        Generics can be applied to classes and interfaces, allowing them to handle various types while maintaining type safety.
       </p>
-      <ul class="list-disc list-inside text-lg text-gray-700">
-        <li><strong>Overusing Generics:</strong> Using generics when simple types or interfaces would suffice can lead to unnecessary complexity.</li>
-        <li><strong>Not Using Constraints:</strong> Failing to constrain type parameters can result in less type-safe code and unexpected behaviors.</li>
-        <li><strong>Using <code>any</code> with Generics:</strong> Incorporating <code>any</code> defeats the purpose of generics by removing type safety.</li>
-        <li><strong>Complex Generic Relationships:</strong> Creating overly intricate type relationships can make the code difficult to understand and maintain.</li>
-        <li><strong>Ignoring Type Inference:</strong> Explicitly specifying type parameters when TypeScript can infer them can lead to verbosity and reduced readability.</li>
-        <li><strong>Not Testing with Various Types:</strong> Failing to test generic components with different type parameters can leave hidden bugs and type mismatches.</li>
-        <li><strong>Neglecting Documentation:</strong> Not documenting the purpose and usage of generic type parameters can lead to confusion and misuse.</li>
-        <li><strong>Misnaming Type Parameters:</strong> Using non-descriptive or unclear names for type parameters can obscure their intended use and relationships.</li>
-      </ul>
+
+      <h3 class="text-2xl font-semibold mb-2">Generic Classes</h3>
+      <p class="text-lg text-gray-700 mb-4">
+        A generic class has a generic type parameter that applies to all of its methods and properties.
+      </p>
+
+      <!-- Code Example -->
+      <pre class="bg-gray-800 rounded p-4 overflow-x-auto mb-4" v-pre>
+<code class="language-typescript">class GenericNumber&lt;T&gt; {
+  zeroValue: T;
+  add: (x: T, y: T) => T;
+}
+
+let myGenericNumber = new GenericNumber&lt;number&gt;();
+myGenericNumber.zeroValue = 0;
+myGenericNumber.add = function (x, y) {
+  return x + y;
+};
+
+console.log(myGenericNumber.add(5, 10)); // Output: 15</code></pre>
+
+      <h3 class="text-2xl font-semibold mb-2">Generic Interfaces</h3>
+      <p class="text-lg text-gray-700 mb-4">
+        Interfaces can also be generic, allowing you to define flexible contracts for functions and classes.
+      </p>
+
+      <!-- Code Example -->
+      <pre class="bg-gray-800 rounded p-4 overflow-x-auto mb-4" v-pre>
+<code class="language-typescript">interface KeyValuePair&lt;K, V&gt; {
+  key: K;
+  value: V;
+}
+
+let kvp: KeyValuePair&lt;string, number&gt; = { key: 'age', value: 30 };
+console.log(kvp); // Output: { key: 'age', value: 30 }</code></pre>
+
+      <p class="text-lg text-gray-700 mb-4">
+        Here, <code>KeyValuePair</code> is a generic interface with two type parameters, <code>K</code> and <code>V</code>, representing the types of the key and value.
+      </p>
     </section>
 
-    <!-- Section 22: Summary -->
-    <section id="summary" class="mb-12">
-      <h2 class="text-4xl font-semibold mb-4">22. Summary</h2>
+    <!-- Section: Constraints on Generics -->
+    <section id="constraints-generics" class="bg-white rounded-b-xl p-4 md:p-6 mt-6">
+      <h2 class="text-3xl font-semibold mb-4">Constraints on Generics</h2>
       <p class="text-lg text-gray-700 mb-4">
-        Generics are a powerful feature in TypeScript that enable the creation of flexible, reusable, and type-safe components. By understanding and leveraging generics, you can write more abstract and adaptable code that works seamlessly with various data types.
+        Sometimes, you want to limit the types that can be used with your generics. Constraints allow you to enforce that a type parameter must have certain properties.
       </p>
+
+      <h3 class="text-2xl font-semibold mb-2">Using Constraints</h3>
       <p class="text-lg text-gray-700 mb-4">
-        From generic functions and classes to interfaces and constraints, generics provide a robust toolkit for handling diverse type scenarios. Adhering to best practices and being mindful of common mistakes will ensure that your usage of generics enhances your code quality and maintainability.
+        You can use the <code>extends</code> keyword to specify a constraint on a generic type parameter.
       </p>
-      <p class="text-lg text-gray-700">
-        Embrace generics to unlock greater flexibility and type safety in your TypeScript projects, paving the way for more scalable and maintainable applications.
+
+      <!-- Code Example -->
+      <pre class="bg-gray-800 rounded p-4 overflow-x-auto mb-4" v-pre>
+<code class="language-typescript">interface Lengthwise {
+  length: number;
+}
+
+function loggingIdentity&lt;T extends Lengthwise&gt;(arg: T): T {
+  console.log(arg.length);
+  return arg;
+}
+
+loggingIdentity('Hello');          // Output: 5
+loggingIdentity([1, 2, 3]);        // Output: 3
+// loggingIdentity(10);            // Error: Type 'number' does not satisfy the constraint 'Lengthwise'</code></pre>
+
+      <p class="text-lg text-gray-700 mb-4">
+        In this example, <code>T</code> is constrained to types that have a <code>length</code> property. Passing a number results in an error since it doesn't satisfy the constraint.
+      </p>
+
+      <h3 class="text-2xl font-semibold mb-2">Using Type Parameters in Generic Constraints</h3>
+      <p class="text-lg text-gray-700 mb-4">
+        You can use one type parameter to constrain another.
+      </p>
+
+      <!-- Code Example -->
+      <pre class="bg-gray-800 rounded p-4 overflow-x-auto mb-4" v-pre>
+<code class="language-typescript">function getProperty&lt;T, K extends keyof T&gt;(obj: T, key: K) {
+  return obj[key];
+}
+
+let person = { name: 'Alice', age: 25 };
+let name = getProperty(person, 'name'); // Valid
+// let unknown = getProperty(person, 'unknown'); // Error: Argument of type '"unknown"' is not assignable</code></pre>
+
+      <p class="text-lg text-gray-700 mb-4">
+        Here, <code>K</code> is constrained to the keys of <code>T</code>, ensuring that only valid property names can be used.
+      </p>
+
+      <h3 class="text-2xl font-semibold mb-2">Using Class Types in Generics</h3>
+      <p class="text-lg text-gray-700 mb-4">
+        You can create factory functions that use generics with class types.
+      </p>
+
+      <!-- Code Example -->
+      <pre class="bg-gray-800 rounded p-4 overflow-x-auto mb-4" v-pre>
+<code class="language-typescript">function create&lt;T&gt;(c: { new (): T }): T {
+  return new c();
+}
+
+class BeeKeeper {
+  hasMask: boolean = true;
+}
+
+class ZooKeeper {
+  nametag: string = 'ZooKeeper';
+}
+
+class Animal {
+  numLegs: number = 4;
+}
+
+class Bee extends Animal {
+  keeper: BeeKeeper = new BeeKeeper();
+}
+
+class Lion extends Animal {
+  keeper: ZooKeeper = new ZooKeeper();
+}
+
+function createInstance&lt;A extends Animal&gt;(c: new () => A): A {
+  return new c();
+}
+
+let lion = createInstance(Lion);
+console.log(lion.keeper.nametag); // Output: ZooKeeper
+
+let bee = createInstance(Bee);
+console.log(bee.keeper.hasMask);  // Output: true</code></pre>
+
+      <p class="text-lg text-gray-700 mb-4">
+        In this example, the <code>createInstance</code> function uses a generic type parameter constrained to <code>Animal</code> or its subclasses, allowing you to create instances of specific animal types.
       </p>
     </section>
+
   </div>
 </template>
 
 <script>
 export default {
-  name: 'TypesTypeScript',
-  data() {
-    return {
-      // Section 19: TypeScript Generics
-      genericFunctionExample: `// Generic Function Example
-function identity<T>(arg: T): T {
-  return arg;
-}
-
-const numberIdentity = identity<number>(42);
-const stringIdentity = identity<string>('Hello, Generics!');
-
-console.log(numberIdentity); // Output: 42
-console.log(stringIdentity); // Output: Hello, Generics!`,
-
-      genericClassExample: `// Generic Class Example
-class Stack<T> {
-  private items: T[] = [];
-
-  push(item: T): void {
-    this.items.push(item);
-  }
-
-  pop(): T | undefined {
-    return this.items.pop();
-  }
-
-  peek(): T | undefined {
-    return this.items[this.items.length - 1];
-  }
-
-  isEmpty(): boolean {
-    return this.items.length === 0;
-  }
-}
-
-const numberStack = new Stack<number>();
-numberStack.push(10);
-numberStack.push(20);
-console.log(numberStack.pop()); // Output: 20
-
-const stringStack = new Stack<string>();
-stringStack.push('Hello');
-stringStack.push('World');
-console.log(stringStack.peek()); // Output: World`,
-
-      genericInterfaceExample: `// Generic Interface Example
-interface Pair<T, U> {
-  first: T;
-  second: U;
-}
-
-const pair: Pair<string, number> = {
-  first: 'Age',
-  second: 30
-};
-
-console.log(pair); // Output: { first: 'Age', second: 30 }`,
-
-      genericsConstraintsExample: `// Generics with Constraints Example
-interface Lengthwise {
-  length: number;
-}
-
-function loggingIdentity<T extends Lengthwise>(arg: T): T {
-  console.log(arg.length); // Now TypeScript knows that arg has a .length property
-  return arg;
-}
-
-loggingIdentity({ length: 10, value: 'Hello' }); // Output: 10
-// loggingIdentity({ value: 'Hello' }); // Error: Argument of type '{ value: string; }' is not assignable to parameter of type 'Lengthwise'. Property 'length' is missing in type '{ value: string; }' but required in type 'Lengthwise'.`,
-
-      defaultTypeParametersExample: `// Generic Class with Default Type Parameters
-class Container<T = string> {
-  constructor(public value: T) {}
-}
-
-const defaultContainer = new Container('Default String');
-console.log(defaultContainer.value); // Output: Default String
-
-const numberContainer = new Container<number>(123);
-console.log(numberContainer.value); // Output: 123`,
-
-      multipleTypeParametersExample: `// Generic Interface with Multiple Type Parameters
-interface Pair<T, U> {
-  first: T;
-  second: U;
-}
-
-const pair: Pair<string, number> = {
-  first: 'Height',
-  second: 180
-};
-
-console.log(pair); // Output: { first: 'Height', second: 180 }`,
-    };
-  },
+  name: 'TypeScriptGenerics',
 };
 </script>
 
 <style scoped>
 .container {
-  max-width: 1200px;
+  max-width: 900px;
 }
 header h1 {
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
@@ -267,6 +240,7 @@ header h1 {
 table {
   width: 100%;
   border-collapse: collapse;
+  overflow-x: auto;
 }
 th, td {
   padding: 12px;
@@ -284,15 +258,15 @@ a {
 a:hover {
   color: #1e40af; /* Tailwind's blue-800 */
 }
+
 pre {
-  background-color: #2d2d2d;
-  color: #f8f8f2;
-  padding: 1em;
-  border-radius: 8px;
-  overflow-x: auto;
-  font-family: 'Fira Code', monospace;
+  white-space: pre-wrap; /* Ensures text wrapping for very long lines */
+  overflow-x: auto;      /* Adds horizontal scroll for overflow content */ 
 }
-code {
-  font-family: 'Fira Code', monospace;
+
+@media (max-width: 768px) {
+  pre, code {
+    font-size: 0.5rem; /* Smaller font size for mobile devices */
+  }
 }
 </style>

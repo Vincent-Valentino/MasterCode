@@ -1,7 +1,7 @@
 <template>
   <div class="w-full">
     <!-- Header Section -->
-    <div class="w-full flex items-center gap-2 bg-yellow-500 rounded-t-xl p-4">
+    <div class="w-full flex items-center gap-2 bg-yellow-600 rounded-t-xl p-4">
       <img src="/icons/javascript.svg" alt="JavaScript Logo" class="w-12 h-12">
       <h1 class="text-2xl md:text-4xl font-bold text-white">Javascript Array</h1>
     </div>
@@ -32,8 +32,7 @@
       </p>
 
       <div class="bg-gray-800 text-white rounded-lg p-4 mb-6">
-        <pre><code class="language-javascript">
-const fruits = ['Apple', 'Banana', 'Cherry'];
+        <pre><code class="language-javascript">const fruits = ['Apple', 'Banana', 'Cherry'];
 console.log(fruits[0]); // Output: Apple
 console.log(fruits[1]); // Output: Banana
 </code></pre>
@@ -48,16 +47,14 @@ console.log(fruits[1]); // Output: Banana
       <!-- Push Syntax -->
       <h3 class="text-lg md:text-xl font-semibold mb-2">Syntax</h3>
       <div class="bg-gray-800 text-white rounded-lg p-4 mb-6">
-        <pre><code class="language-javascript">
-array.push(element1, element2, ...);
+        <pre><code class="language-javascript">array.push(element1, element2, ...);
 </code></pre>
       </div>
 
       <!-- Push Example -->
       <h3 class="text-lg md:text-xl font-semibold mb-2">Example</h3>
       <div class="bg-gray-800 text-white rounded-lg p-4 mb-6">
-        <pre><code class="language-javascript">
-let fruits = ['Apple', 'Banana'];
+        <pre><code class="language-javascript">let fruits = ['Apple', 'Banana'];
 let newLength = fruits.push('Orange', 'Mango');
 console.log(fruits);      // Output: ['Apple', 'Banana', 'Orange', 'Mango']
 console.log(newLength);   // Output: 4
@@ -67,16 +64,14 @@ console.log(newLength);   // Output: 4
       <!-- Pop Syntax -->
       <h3 class="text-lg md:text-xl font-semibold mb-2">Syntax</h3>
       <div class="bg-gray-800 text-white rounded-lg p-4 mb-6">
-        <pre><code class="language-javascript">
-array.pop();
+        <pre><code class="language-javascript">array.pop();
 </code></pre>
       </div>
 
       <!-- Pop Example -->
       <h3 class="text-lg md:text-xl font-semibold mb-2">Example</h3>
       <div class="bg-gray-800 text-white rounded-lg p-4 mb-6">
-        <pre><code class="language-javascript">
-let fruits = ['Apple', 'Banana', 'Orange'];
+        <pre><code class="language-javascript">let fruits = ['Apple', 'Banana', 'Orange'];
 let lastFruit = fruits.pop();
 console.log(fruits);     // Output: ['Apple', 'Banana']
 console.log(lastFruit);  // Output: 'Orange'
@@ -92,16 +87,14 @@ console.log(lastFruit);  // Output: 'Orange'
       <!-- Shift Syntax -->
       <h3 class="text-lg md:text-xl font-semibold mb-2">Syntax</h3>
       <div class="bg-gray-800 text-white rounded-lg p-4 mb-6">
-        <pre><code class="language-javascript">
-array.shift();
+        <pre><code class="language-javascript">array.shift();
 </code></pre>
       </div>
 
       <!-- Shift Example -->
       <h3 class="text-lg md:text-xl font-semibold mb-2">Example</h3>
       <div class="bg-gray-800 text-white rounded-lg p-4 mb-6">
-        <pre><code class="language-javascript">
-let fruits = ['Apple', 'Banana', 'Orange'];
+        <pre><code class="language-javascript">let fruits = ['Apple', 'Banana', 'Orange'];
 let firstFruit = fruits.shift();
 console.log(fruits);     // Output: ['Banana', 'Orange']
 console.log(firstFruit); // Output: 'Apple'
@@ -111,16 +104,14 @@ console.log(firstFruit); // Output: 'Apple'
       <!-- Unshift Syntax -->
       <h3 class="text-lg md:text-xl font-semibold mb-2">Syntax</h3>
       <div class="bg-gray-800 text-white rounded-lg p-4 mb-6">
-        <pre><code class="language-javascript">
-array.unshift(element1, element2, ...);
+        <pre><code class="language-javascript">array.unshift(element1, element2, ...);
 </code></pre>
       </div>
 
       <!-- Unshift Example -->
       <h3 class="text-lg md:text-xl font-semibold mb-2">Example</h3>
       <div class="bg-gray-800 text-white rounded-lg p-4 mb-6">
-        <pre><code class="language-javascript">
-let fruits = ['Banana', 'Orange'];
+        <pre><code class="language-javascript">let fruits = ['Banana', 'Orange'];
 let newLength = fruits.unshift('Apple');
 console.log(fruits);     // Output: ['Apple', 'Banana', 'Orange']
 console.log(newLength);  // Output: 3
@@ -136,16 +127,14 @@ console.log(newLength);  // Output: 3
       <!-- Splice Syntax -->
       <h3 class="text-lg md:text-xl font-semibold mb-2">Splice Syntax</h3>
       <div class="bg-gray-800 text-white rounded-lg p-4 mb-6">
-        <pre><code class="language-javascript">
-array.splice(startIndex, deleteCount, item1, item2, ...);
+        <pre><code class="language-javascript">array.splice(startIndex, deleteCount, item1, item2, ...);
 </code></pre>
       </div>
 
       <!-- Splice Example -->
       <h3 class="text-lg md:text-xl font-semibold mb-2">Example</h3>
       <div class="bg-gray-800 text-white rounded-lg p-4 mb-6">
-        <pre><code class="language-javascript">
-let fruits = ['Apple', 'Banana', 'Orange', 'Mango'];
+        <pre><code class="language-javascript">let fruits = ['Apple', 'Banana', 'Orange', 'Mango'];
 let removed = fruits.splice(1, 2, 'Grapes', 'Pineapple');
 console.log(fruits);      // Output: ['Apple', 'Grapes', 'Pineapple', 'Mango']
 console.log(removed);     // Output: ['Banana', 'Orange']
@@ -155,16 +144,14 @@ console.log(removed);     // Output: ['Banana', 'Orange']
       <!-- Slice Syntax -->
       <h3 class="text-lg md:text-xl font-semibold mb-2">Slice Syntax</h3>
       <div class="bg-gray-800 text-white rounded-lg p-4 mb-6">
-        <pre><code class="language-javascript">
-array.slice(startIndex, endIndex);
+        <pre><code class="language-javascript">array.slice(startIndex, endIndex);
 </code></pre>
       </div>
 
       <!-- Slice Example -->
       <h3 class="text-lg md:text-xl font-semibold mb-2">Example</h3>
       <div class="bg-gray-800 text-white rounded-lg p-4 mb-6">
-        <pre><code class="language-javascript">
-let fruits = ['Apple', 'Banana', 'Orange', 'Mango'];
+        <pre><code class="language-javascript">let fruits = ['Apple', 'Banana', 'Orange', 'Mango'];
 let citrus = fruits.slice(1, 3);
 console.log(fruits);     // Output: ['Apple', 'Banana', 'Orange', 'Mango']
 console.log(citrus);     // Output: ['Banana', 'Orange']
@@ -180,16 +167,14 @@ console.log(citrus);     // Output: ['Banana', 'Orange']
       <!-- forEach Syntax -->
       <h3 class="text-lg md:text-xl font-semibold mb-2">forEach Syntax</h3>
       <div class="bg-gray-800 text-white rounded-lg p-4 mb-6">
-        <pre><code class="language-javascript">
-array.forEach(callback(element, index, array));
+        <pre><code class="language-javascript">array.forEach(callback(element, index, array));
 </code></pre>
       </div>
 
       <!-- forEach Example -->
       <h3 class="text-lg md:text-xl font-semibold mb-2">Example</h3>
       <div class="bg-gray-800 text-white rounded-lg p-4 mb-6">
-        <pre><code class="language-javascript">
-let fruits = ['Apple', 'Banana', 'Orange'];
+        <pre><code class="language-javascript">let fruits = ['Apple', 'Banana', 'Orange'];
 fruits.forEach(function(item, index) {
   console.log(index + ': ' + item);
 });
@@ -203,16 +188,14 @@ fruits.forEach(function(item, index) {
       <!-- map Syntax -->
       <h3 class="text-lg md:text-xl font-semibold mb-2">map Syntax</h3>
       <div class="bg-gray-800 text-white rounded-lg p-4 mb-6">
-        <pre><code class="language-javascript">
-array.map(callback(element, index, array));
+        <pre><code class="language-javascript">array.map(callback(element, index, array));
 </code></pre>
       </div>
 
       <!-- map Example -->
       <h3 class="text-lg md:text-xl font-semibold mb-2">Example</h3>
       <div class="bg-gray-800 text-white rounded-lg p-4 mb-6">
-        <pre><code class="language-javascript">
-let numbers = [1, 2, 3];
+        <pre><code class="language-javascript">let numbers = [1, 2, 3];
 let doubled = numbers.map(function(number) {
   return number * 2;
 });
@@ -223,16 +206,14 @@ console.log(doubled);  // Output: [2, 4, 6]
       <!-- filter Syntax -->
       <h3 class="text-lg md:text-xl font-semibold mb-2">filter Syntax</h3>
       <div class="bg-gray-800 text-white rounded-lg p-4 mb-6">
-        <pre><code class="language-javascript">
-array.filter(callback(element, index, array));
+        <pre><code class="language-javascript">array.filter(callback(element, index, array));
 </code></pre>
       </div>
 
       <!-- filter Example -->
       <h3 class="text-lg md:text-xl font-semibold mb-2">Example</h3>
       <div class="bg-gray-800 text-white rounded-lg p-4 mb-6">
-        <pre><code class="language-javascript">
-let numbers = [1, 2, 3, 4, 5];
+        <pre><code class="language-javascript">let numbers = [1, 2, 3, 4, 5];
 let evenNumbers = numbers.filter(function(number) {
   return number % 2 === 0;
 });
@@ -249,16 +230,14 @@ console.log(evenNumbers);  // Output: [2, 4]
       <!-- reduce Syntax -->
       <h3 class="text-lg md:text-xl font-semibold mb-2">reduce Syntax</h3>
       <div class="bg-gray-800 text-white rounded-lg p-4 mb-6">
-        <pre><code class="language-javascript">
-array.reduce(callback(accumulator, element, index, array), initialValue);
+        <pre><code class="language-javascript">array.reduce(callback(accumulator, element, index, array), initialValue);
 </code></pre>
       </div>
 
       <!-- reduce Example -->
       <h3 class="text-lg md:text-xl font-semibold mb-2">Example</h3>
       <div class="bg-gray-800 text-white rounded-lg p-4 mb-6">
-        <pre><code class="language-javascript">
-let numbers = [1, 2, 3, 4];
+        <pre><code class="language-javascript">let numbers = [1, 2, 3, 4];
 let sum = numbers.reduce(function(acc, current) {
   return acc + current;
 }, 0);
@@ -269,16 +248,14 @@ console.log(sum);  // Output: 10
       <!-- reduceRight Syntax -->
       <h3 class="text-lg md:text-xl font-semibold mb-2">reduceRight Syntax</h3>
       <div class="bg-gray-800 text-white rounded-lg p-4 mb-6">
-        <pre><code class="language-javascript">
-array.reduceRight(callback(accumulator, element, index, array), initialValue);
+        <pre><code class="language-javascript">array.reduceRight(callback(accumulator, element, index, array), initialValue);
 </code></pre>
       </div>
 
       <!-- reduceRight Example -->
       <h3 class="text-lg md:text-xl font-semibold mb-2">Example</h3>
       <div class="bg-gray-800 text-white rounded-lg p-4 mb-6">
-        <pre><code class="language-javascript">
-let numbers = [1, 2, 3, 4];
+        <pre><code class="language-javascript">let numbers = [1, 2, 3, 4];
 let sum = numbers.reduceRight(function(acc, current) {
   return acc + current;
 }, 0);
@@ -295,16 +272,14 @@ console.log(sum);  // Output: 10
       <!-- find() Syntax -->
       <h3 class="text-lg md:text-xl font-semibold mb-2">find() Syntax</h3>
       <div class="bg-gray-800 text-white rounded-lg p-4 mb-6">
-        <pre><code class="language-javascript">
-array.find(callback(element, index, array));
+        <pre><code class="language-javascript">array.find(callback(element, index, array));
 </code></pre>
       </div>
 
       <!-- find() Example -->
       <h3 class="text-lg md:text-xl font-semibold mb-2">Example</h3>
       <div class="bg-gray-800 text-white rounded-lg p-4 mb-6">
-        <pre><code class="language-javascript">
-let numbers = [1, 2, 3, 4, 5];
+        <pre><code class="language-javascript">let numbers = [1, 2, 3, 4, 5];
 let firstEven = numbers.find(function(number) {
   return number % 2 === 0;
 });
@@ -315,16 +290,14 @@ console.log(firstEven);  // Output: 2
       <!-- findIndex() Syntax -->
       <h3 class="text-lg md:text-xl font-semibold mb-2">findIndex() Syntax</h3>
       <div class="bg-gray-800 text-white rounded-lg p-4 mb-6">
-        <pre><code class="language-javascript">
-array.findIndex(callback(element, index, array));
+        <pre><code class="language-javascript">array.findIndex(callback(element, index, array));
 </code></pre>
       </div>
 
       <!-- findIndex() Example -->
       <h3 class="text-lg md:text-xl font-semibold mb-2">Example</h3>
       <div class="bg-gray-800 text-white rounded-lg p-4 mb-6">
-        <pre><code class="language-javascript">
-let numbers = [1, 2, 3, 4, 5];
+        <pre><code class="language-javascript">let numbers = [1, 2, 3, 4, 5];
 let indexOfFirstEven = numbers.findIndex(function(number) {
   return number % 2 === 0;
 });
@@ -335,16 +308,14 @@ console.log(indexOfFirstEven);  // Output: 1 (index of first even number)
       <!-- indexOf() Syntax -->
       <h3 class="text-lg md:text-xl font-semibold mb-2">indexOf() Syntax</h3>
       <div class="bg-gray-800 text-white rounded-lg p-4 mb-6">
-        <pre><code class="language-javascript">
-array.indexOf(searchElement, fromIndex);
+        <pre><code class="language-javascript">array.indexOf(searchElement, fromIndex);
 </code></pre>
       </div>
 
       <!-- indexOf() Example -->
       <h3 class="text-lg md:text-xl font-semibold mb-2">Example</h3>
       <div class="bg-gray-800 text-white rounded-lg p-4 mb-6">
-        <pre><code class="language-javascript">
-let fruits = ['Apple', 'Banana', 'Orange'];
+        <pre><code class="language-javascript">let fruits = ['Apple', 'Banana', 'Orange'];
 let index = fruits.indexOf('Banana');
 console.log(index);  // Output: 1
 </code></pre>
@@ -353,16 +324,14 @@ console.log(index);  // Output: 1
       <!-- includes() Syntax -->
       <h3 class="text-lg md:text-xl font-semibold mb-2">includes() Syntax</h3>
       <div class="bg-gray-800 text-white rounded-lg p-4 mb-6">
-        <pre><code class="language-javascript">
-array.includes(searchElement, fromIndex);
+        <pre><code class="language-javascript">array.includes(searchElement, fromIndex);
 </code></pre>
       </div>
 
       <!-- includes() Example -->
       <h3 class="text-lg md:text-xl font-semibold mb-2">Example</h3>
       <div class="bg-gray-800 text-white rounded-lg p-4 mb-6">
-        <pre><code class="language-javascript">
-let fruits = ['Apple', 'Banana', 'Orange'];
+        <pre><code class="language-javascript">let fruits = ['Apple', 'Banana', 'Orange'];
 let hasBanana = fruits.includes('Banana');
 console.log(hasBanana);  // Output: true
 </code></pre>
@@ -377,16 +346,14 @@ console.log(hasBanana);  // Output: true
       <!-- flat() Syntax -->
       <h3 class="text-lg md:text-xl font-semibold mb-2">flat() Syntax</h3>
       <div class="bg-gray-800 text-white rounded-lg p-4 mb-6">
-        <pre><code class="language-javascript">
-array.flat(depth);
+        <pre><code class="language-javascript">array.flat(depth);
 </code></pre>
       </div>
 
       <!-- flat() Example -->
       <h3 class="text-lg md:text-xl font-semibold mb-2">Example</h3>
       <div class="bg-gray-800 text-white rounded-lg p-4 mb-6">
-        <pre><code class="language-javascript">
-let nestedArray = [1, [2, [3, [4]]]];
+        <pre><code class="language-javascript">let nestedArray = [1, [2, [3, [4]]]];
 let flattened = nestedArray.flat(2);
 console.log(flattened);  // Output: [1, 2, 3, [4]]
 </code></pre>
@@ -395,16 +362,14 @@ console.log(flattened);  // Output: [1, 2, 3, [4]]
       <!-- flatMap() Syntax -->
       <h3 class="text-lg md:text-xl font-semibold mb-2">flatMap() Syntax</h3>
       <div class="bg-gray-800 text-white rounded-lg p-4 mb-6">
-        <pre><code class="language-javascript">
-array.flatMap(callback);
+        <pre><code class="language-javascript">array.flatMap(callback);
 </code></pre>
       </div>
 
       <!-- flatMap() Example -->
       <h3 class="text-lg md:text-xl font-semibold mb-2">Example</h3>
       <div class="bg-gray-800 text-white rounded-lg p-4 mb-6">
-        <pre><code class="language-javascript">
-let numbers = [1, 2, 3];
+        <pre><code class="language-javascript">let numbers = [1, 2, 3];
 let doubledAndFlattened = numbers.flatMap(n => [n, n * 2]);
 console.log(doubledAndFlattened);  // Output: [1, 2, 2, 4, 3, 6]
 </code></pre>
@@ -428,37 +393,31 @@ export default {
   name: 'ArraysJavascript',
   data() {
     return {
-      firstEvenCode: `
-let numbers = [1, 2, 3, 4, 5];
+      firstEvenCode: `let numbers = [1, 2, 3, 4, 5];
 let firstEven = numbers.find(function(number) {
   return number % 2 === 0;
 });
 console.log(firstEven);  // Output: 2
 `,
-      findIndexCode: `
-let numbers = [1, 2, 3, 4, 5];
+      findIndexCode: `let numbers = [1, 2, 3, 4, 5];
 let indexOfFirstEven = numbers.findIndex(function(number) {
   return number % 2 === 0;
 });
 console.log(indexOfFirstEven);  // Output: 1
 `,
-      indexOfCode: `
-let fruits = ['Apple', 'Banana', 'Orange'];
+      indexOfCode: `let fruits = ['Apple', 'Banana', 'Orange'];
 let index = fruits.indexOf('Banana');
 console.log(index);  // Output: 1
 `,
-      includesCode: `
-let fruits = ['Apple', 'Banana', 'Orange'];
+      includesCode: `let fruits = ['Apple', 'Banana', 'Orange'];
 let hasBanana = fruits.includes('Banana');
 console.log(hasBanana);  // Output: true
 `,
-      flatCode: `
-let nestedArray = [1, [2, [3, [4]]]];
+      flatCode: `let nestedArray = [1, [2, [3, [4]]]];
 let flattened = nestedArray.flat(2);
 console.log(flattened);  // Output: [1, 2, 3, [4]]
 `,
-      flatMapCode: `
-let numbers = [1, 2, 3];
+      flatMapCode: `let numbers = [1, 2, 3];
 let doubledAndFlattened = numbers.flatMap(n => [n, n * 2]);
 console.log(doubledAndFlattened);  // Output: [1, 2, 2, 4, 3, 6]
 `,

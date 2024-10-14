@@ -139,34 +139,29 @@ export default {
   name: 'JavaScriptConditions',
   data() {
     return {
-      ifSyntaxCode: `
-if (condition) {
+      ifSyntaxCode: `if (condition) {
     // Code to execute if the condition is true
 }
 `,
-      positiveNumberCode: `
-let num = 5;
+      positiveNumberCode: `let num = 5;
 if (num > 0) {
     console.log("The number is positive");
 }
 `,
-      elseSyntaxCode: `
-if (condition) {
+      elseSyntaxCode: `if (condition) {
     // Code to execute if the condition is true
 } else {
     // Code to execute if the condition is false
 }
 `,
-      positiveNegativeCode: `
-let num = -5;
+      positiveNegativeCode: `let num = -5;
 if (num > 0) {
     console.log("Positive");
 } else {
     console.log("Negative");
 }
 `,
-      elseIfSyntaxCode: `
-if (condition1) {
+      elseIfSyntaxCode: `if (condition1) {
     // Code for condition1
 } else if (condition2) {
     // Code for condition2
@@ -174,8 +169,7 @@ if (condition1) {
     // Code if none of the conditions are met
 }
 `,
-numberSignCode: `
-let num = 0;
+numberSignCode: `let num = 0;
 if (num > 0) {
     console.log("Positive");
 } else if (num === 0) {
@@ -184,8 +178,7 @@ if (num > 0) {
     console.log("Negative");
 }
 `,
-      switchSyntaxCode: `
-switch(expression) {
+      switchSyntaxCode: `switch(expression) {
   case value1:
     // Code to execute if expression === value1
     break;
@@ -196,8 +189,7 @@ switch(expression) {
     // Code to execute if none of the cases match
 }
 `,
-      dayOfWeekCode: `
-let day = 3;
+      dayOfWeekCode: `let day = 3;
 
 switch (day) {
   case 1:
@@ -225,8 +217,7 @@ switch (day) {
     console.log("Invalid day");
 }
 `,
-      ternaryOperatorCode: `
-let age = 18;
+      ternaryOperatorCode: `let age = 18;
 let canVote = (age >= 18) ? "Yes, you can vote." : "No, you cannot vote.";
 console.log(canVote);
 `,

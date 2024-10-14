@@ -113,8 +113,7 @@
         Let's see how variables and data types work together in a simple program:
       </p>
       <div class="bg-gray-800 text-white rounded-lg p-4 mb-6">
-        <pre><code class="language-python">
-# Personal Information
+        <pre><code class="language-python"># Personal Information
 first_name = "Emma"
 last_name = "Johnson"
 age = 28
@@ -126,7 +125,7 @@ print("Name:", first_name, last_name)
 print("Age:", age)
 print("Height (cm):", height_cm)
 print("Employed:", is_employed)
-        </code></pre>
+</code></pre>
       </div>
       <p class="text-base md:text-lg mb-6">
         In this example, we're storing personal details using appropriate data types and then printing them out. This demonstrates how variables can be used to manage and display information.
@@ -155,8 +154,7 @@ export default {
   name: 'VariablesAndDataTypes',
   data() {
     return {
-pythonCode: `
-# Declaring Variables
+pythonCode: `# Declaring Variables
 name = "James"     # String type
 age = 17           # Integer type
 weight = 60.8      # Float type

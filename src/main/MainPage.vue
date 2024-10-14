@@ -15,7 +15,7 @@
       </div>
 
       <!-- Sidebar / Drawer, hidden when no course is selected -->
-      <div :class="selectedCourse ? 'w-full md:w-1/4 h-screen md:h-full md:block' : 'hidden md:block w-0'">
+      <div :class="selectedCourse ? 'w-full md:w-1/4 h-auto' : 'hidden md:block w-0'">
         <MainSidebar 
           v-if="selectedCourse" 
           :selectedCourse="selectedCourse" 

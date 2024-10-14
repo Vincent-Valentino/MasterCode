@@ -157,72 +157,61 @@ export default {
   name: 'LoopsInPython',
   data() {
     return {
-      forLoopSyntaxCode: `
-# Basic for loop in Python
+      forLoopSyntaxCode: `# Basic for loop in Python
 for item in sequence:
     # Code block to execute
     print(item)
 `,
-      iterateListCode: `
-# Iterating over a list
+      iterateListCode: `# Iterating over a list
 fruits = ["apple", "banana", "cherry"]
 for fruit in fruits:
     print(fruit)
 `,
-      rangeFunctionCode: `
-# Using range() in a for loop
+      rangeFunctionCode: `# Using range() in a for loop
 for i in range(5):
     print(i)  # Prints 0 to 4
 `,
-      whileLoopSyntaxCode: `
-# Basic while loop in Python
+      whileLoopSyntaxCode: `# Basic while loop in Python
 while condition:
     # Code block to execute
     print("Looping")
 `,
-      countdownCode: `
-# Countdown using while loop
+      countdownCode: `# Countdown using while loop
 count = 5
 while count > 0:
     print(count)
     count -= 1
 print("Blastoff!")
 `,
-      breakStatementCode: `
-# Using break in a loop
+      breakStatementCode: `# Using break in a loop
 for i in range(10):
     if i == 5:
         break  # Exit the loop
     print(i)
 `,
-      continueStatementCode: `
-# Using continue in a loop
+      continueStatementCode: `# Using continue in a loop
 for i in range(10):
     if i % 2 == 0:
         continue  # Skip even numbers
     print(i)  # Only prints odd numbers
 `,
-      elseInLoopCode: `
-# else clause in a loop
+      elseInLoopCode: `# else clause in a loop
 for i in range(5):
     print(i)
 else:
     print("Loop completed!")
 `,
-      nestedLoopsCode: `
-# Nested loops example
+      nestedLoopsCode: `# Nested loops example
 for i in range(3):
     for j in range(3):
         print(i, j)
 `,
-      enumerateFunctionCode: `
-# Using enumerate in a loop
+      enumerateFunctionCode: `# Using enumerate in a loop
 names = ["John", "Jane", "Doe"]
 for index, name in enumerate(names):
     print(index, name)
 `,
-      zipFunctionCode: `
-# Using zip() to combine iterables
+      zipFunctionCode: `# Using zip() to combine iterables
 names = ["John", "Jane", "Doe"]
 ages = [28, 34, 40]
 for name, age in zip(names, ages):

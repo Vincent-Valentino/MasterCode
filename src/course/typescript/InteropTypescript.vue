@@ -1,724 +1,314 @@
 <template>
-  <div class="container mx-auto p-6">
+  <div class="w-full">
     <!-- Header Section -->
-    <header class="mb-8">
-      <h1 class="text-5xl font-bold text-purple-600 mb-4">Advanced TypeScript Concepts</h1>
-      <p class="text-xl text-gray-700">
-        Elevate your TypeScript skills by diving deep into advanced topics. Master complex type manipulations, enhance your code with powerful features, and write more robust and maintainable applications.
-      </p>
-    </header>
+    <div class="w-full flex items-center gap-2 bg-blue-600 rounded-t-xl p-4">
+      <img src="/icons/typescript.svg" alt="TypeScript Logo" class="w-12 h-12">
+      <h1 class="text-2xl md:text-4xl font-bold text-white">TypeScript and JavaScript Interoperability</h1>
+    </div>
 
-    <!-- Table of Contents -->
-    <nav class="mb-8">
-      <h2 class="text-3xl font-semibold mb-4">Table of Contents</h2>
-      <ul class="list-disc list-inside text-purple-500">
-        <li><a href="#intersection-types" class="underline">1. Intersection Types</a></li>
-        <li><a href="#union-types" class="underline">2. Union Types</a></li>
-        <li><a href="#conditional-types" class="underline">3. Conditional Types</a></li>
-        <li><a href="#mapped-types" class="underline">4. Mapped Types</a></li>
-        <li><a href="#utility-types" class="underline">5. Utility Types</a></li>
-        <li><a href="#type-guards" class="underline">6. Type Guards</a></li>
-        <li><a href="#advanced-generics" class="underline">7. Advanced Generics</a></li>
-        <li><a href="#decorators" class="underline">8. Decorators</a></li>
-        <li><a href="#module-augmentation" class="underline">9. Module Augmentation</a></li>
-        <li><a href="#declaration-merging" class="underline">10. Declaration Merging</a></li>
-        <li><a href="#keyof-typeof" class="underline">11. keyof and typeof Operators</a></li>
-        <li><a href="#template-literal-types" class="underline">12. Template Literal Types</a></li>
-        <li><a href="#module-interop" class="underline">13. Module Interoperability</a></li>
-        <li><a href="#best-practices" class="underline">14. Best Practices</a></li>
-        <li><a href="#common-mistakes" class="underline">15. Common Mistakes</a></li>
-        <li><a href="#summary" class="underline">16. Summary</a></li>
-      </ul>
-    </nav>
-
-    <!-- Section 1: Intersection Types -->
-    <section id="intersection-types" class="mb-12">
-      <h2 class="text-4xl font-semibold mb-4">1. Intersection Types</h2>
+    <!-- Section: Understanding JavaScript Compatibility -->
+    <section id="js-compatibility" class="bg-white rounded-b-xl p-4 md:p-6">
+      <h2 class="text-3xl font-semibold mb-4">Understanding JavaScript Compatibility</h2>
       <p class="text-lg text-gray-700 mb-4">
-        Intersection types allow you to combine multiple types into one. This is useful when you want a type that includes all properties from multiple interfaces or types.
+        One of the core philosophies of TypeScript is that it is a superset of JavaScript, meaning that all valid JavaScript code is also valid TypeScript code. This compatibility allows developers to incrementally adopt TypeScript in existing JavaScript projects.
       </p>
 
-      <h3 class="text-2xl font-semibold mb-2">1.1. Basic Intersection</h3>
+      <h3 class="text-2xl font-semibold mb-2">TypeScript Is JavaScript with Types</h3>
       <p class="text-lg text-gray-700 mb-4">
-        By using the <code>&amp;</code> operator, you can create an intersection type that includes all properties from the involved types.
+        TypeScript builds upon JavaScript by adding static type definitions. These types provide a way to describe the shape of an object, providing better documentation and allowing TypeScript to validate your code.
       </p>
-      <div class="bg-gray-800 text-white rounded-lg p-4 mb-4 overflow-auto">
-        <pre><code class="language-typescript">{{ intersectionTypeExample }}</code></pre>
-      </div>
-      <p class="text-lg text-gray-700">
-        <strong>Explanation:</strong> The <code>Admin</code> type combines both <code>User</code> and <code>Permissions</code> types, ensuring that an admin has all user properties as well as specific permissions.
+
+      <h3 class="text-2xl font-semibold mb-2">Transpilation to JavaScript</h3>
+      <p class="text-lg text-gray-700 mb-4">
+        TypeScript code is not executed directly by browsers or Node.js. Instead, TypeScript code is transpiled (or compiled) into plain JavaScript code, which can then be executed in any JavaScript environment.
+      </p>
+
+      <h3 class="text-2xl font-semibold mb-2">ESNext Features Support</h3>
+      <p class="text-lg text-gray-700 mb-4">
+        TypeScript supports the latest JavaScript features (known as ESNext) and can transpile them down to earlier versions like ES5 or ES6, ensuring compatibility with older environments.
+      </p>
+
+      <!-- Code Example -->
+      <pre class="bg-gray-800 rounded p-4 overflow-x-auto mb-4" v-pre>
+<code class="language-typescript">let greet = (name: string): string => {
+  return `Hello, ${name}!`;
+};
+
+console.log(greet('Alice')); // Output: Hello, Alice!</code></pre>
+
+      <h3 class="text-2xl font-semibold mb-2">Tip: Gradual Adoption</h3>
+      <p class="text-lg text-gray-700 mb-4">
+        You don't have to rewrite your entire JavaScript codebase in TypeScript all at once. You can gradually introduce TypeScript by renaming files from <code>.js</code> to <code>.ts</code> and adding type annotations where appropriate.
       </p>
     </section>
 
-    <!-- Sections 2 to 12: Already Included -->
-
-    <!-- Section 13: Module Interoperability -->
-    <section id="module-interop" class="mb-12">
-      <h2 class="text-4xl font-semibold mb-4">13. Module Interoperability</h2>
+    <!-- Section: Working with JavaScript Libraries in TypeScript -->
+    <section id="js-libraries" class="bg-white rounded-b-xl p-4 md:p-6 mt-6">
+      <h2 class="text-3xl font-semibold mb-4">Working with JavaScript Libraries in TypeScript</h2>
       <p class="text-lg text-gray-700 mb-4">
-        Module interoperability in TypeScript allows you to seamlessly integrate different module systems and third-party JavaScript libraries into your TypeScript projects. Understanding how to work with CommonJS, ES Modules, and type declarations is crucial for building robust and maintainable applications.
+        When using JavaScript libraries in a TypeScript project, you might encounter issues due to the lack of type definitions. TypeScript needs type information to provide type checking and IntelliSense.
       </p>
 
-      <!-- Subsection 13.1: CommonJS vs ES Modules -->
-      <h3 class="text-2xl font-semibold mb-2">13.1. CommonJS vs ES Modules</h3>
+      <h3 class="text-2xl font-semibold mb-2">Using Type Definitions</h3>
       <p class="text-lg text-gray-700 mb-4">
-        TypeScript supports both CommonJS and ES Module systems. Understanding the differences between these module systems is essential for proper module interoperability.
+        Many popular JavaScript libraries have type definitions available, either bundled with the library or available through the <code>@types</code> repository. Type definitions provide TypeScript with information about the library's API.
       </p>
 
-      <h4 class="text-xl font-semibold mb-2">13.1.1. CommonJS Modules</h4>
+      <h3 class="text-2xl font-semibold mb-2">Example: Using Lodash in TypeScript</h3>
       <p class="text-lg text-gray-700 mb-4">
-        CommonJS is the module system used by Node.js. It uses <code>require</code> and <code>module.exports</code> for importing and exporting modules.
+        Let's see how to use the Lodash library in a TypeScript project.
       </p>
-      <div class="bg-gray-800 text-white rounded-lg p-4 mb-4 overflow-auto">
-        <pre><code class="language-typescript">{{ commonJSExample }}</code></pre>
+
+      <!-- Installation Instructions -->
+      <div class="bg-gray-50 p-4 rounded mb-4">
+        <h4 class="text-xl font-semibold mb-2">Step 1: Install Lodash and Its Type Definitions</h4>
+        <pre class="bg-gray-800 rounded p-4 overflow-x-auto" v-pre>
+<code class="language-bash">
+npm install lodash
+npm install --save-dev @types/lodash</code></pre>
       </div>
-      <p class="text-lg text-gray-700">
-        <strong>Explanation:</strong> The example shows how to export a module using <code>module.exports</code> and import it using <code>require</code>.
+
+      <h4 class="text-xl font-semibold mb-2">Step 2: Import and Use Lodash Functions</h4>
+      <!-- Code Example -->
+      <pre class="bg-gray-800 rounded p-4 overflow-x-auto mb-4" v-pre>
+<code class="language-typescript">import _ from 'lodash';
+
+let numbers = [1, 2, 3, 4, 5];
+let reversedNumbers = _.reverse([...numbers]);
+
+console.log(reversedNumbers); // Output: [5, 4, 3, 2, 1]</code></pre>
+
+      <h3 class="text-2xl font-semibold mb-2">Handling Libraries Without Type Definitions</h3>
+      <p class="text-lg text-gray-700 mb-4">
+        If a library does not have type definitions, you can create custom type definitions or use the <code>declare</code> keyword to inform TypeScript about the module.
       </p>
 
-      <h4 class="text-xl font-semibold mb-2">13.1.2. ES Modules</h4>
-      <p class="text-lg text-gray-700 mb-4">
-        ES Modules are the standardized module system in JavaScript, using <code>import</code> and <code>export</code> statements. They offer better static analysis and tree-shaking capabilities.
-      </p>
-      <div class="bg-gray-800 text-white rounded-lg p-4 mb-4 overflow-auto">
-        <pre><code class="language-typescript">{{ esModuleExample }}</code></pre>
-      </div>
-      <p class="text-lg text-gray-700">
-        <strong>Explanation:</strong> The example demonstrates exporting a function using <code>export</code> and importing it using <code>import</code>.
-      </p>
+      <h4 class="text-xl font-semibold mb-2">Using the <code>declare</code> Keyword</h4>
+      <!-- Code Example -->
+      <pre class="bg-gray-800 rounded p-4 overflow-x-auto mb-4" v-pre>
+<code class="language-typescript">// Declare the module
+declare module 'some-library';
 
-      <!-- Subsection 13.2: Using esModuleInterop -->
-      <h3 class="text-2xl font-semibold mb-2">13.2. Using <code>esModuleInterop</code></h3>
-      <p class="text-lg text-gray-700 mb-4">
-        The <code>esModuleInterop</code> compiler option enables compatibility between CommonJS and ES Modules. It allows default imports from modules with no default export, making it easier to work with CommonJS modules in ES Module syntax.
-      </p>
-      <h4 class="text-xl font-semibold mb-2">13.2.1. tsconfig.json Configuration</h4>
-      <p class="text-lg text-gray-700 mb-4">
-        To enable <code>esModuleInterop</code>, update your <code>tsconfig.json</code> file as follows:
-      </p>
-      <div class="bg-gray-800 text-white rounded-lg p-4 mb-4 overflow-auto">
-        <pre><code class="language-json">{{ tsconfigExample }}</code></pre>
-      </div>
-      <p class="text-lg text-gray-700">
-        <strong>Explanation:</strong> Setting <code>"esModuleInterop": true</code> allows for seamless default imports from CommonJS modules.
-      </p>
+// Now you can import it without TypeScript errors
+import someLibrary from 'some-library';
 
-      <!-- Subsection 13.3: Importing CommonJS Modules with ES Module Syntax -->
-      <h3 class="text-2xl font-semibold mb-2">13.3. Importing CommonJS Modules with ES Module Syntax</h3>
-      <p class="text-lg text-gray-700 mb-4">
-        With <code>esModuleInterop</code> enabled, you can use ES Module syntax to import CommonJS modules.
-      </p>
-      <div class="bg-gray-800 text-white rounded-lg p-4 mb-4 overflow-auto">
-        <pre><code class="language-typescript">{{ importingCommonJSExample }}</code></pre>
-      </div>
-      <p class="text-lg text-gray-700">
-        <strong>Explanation:</strong> The <code>lodash</code> library is a CommonJS module. With <code>esModuleInterop</code> enabled, you can import it using ES Module default import syntax.
-      </p>
+someLibrary.doSomething();</code></pre>
 
-      <!-- Subsection 13.4: Using Declaration Files (.d.ts) -->
-      <h3 class="text-2xl font-semibold mb-2">13.4. Using Declaration Files (.d.ts)</h3>
+      <h4 class="text-xl font-semibold mb-2">Creating Custom Type Definitions</h4>
       <p class="text-lg text-gray-700 mb-4">
-        Declaration files provide TypeScript type definitions for JavaScript libraries, enabling type checking and IntelliSense support. They are essential for integrating third-party JavaScript libraries into TypeScript projects.
+        You can create a <code>d.ts</code> file to define types for the library.
       </p>
-      <h4 class="text-xl font-semibold mb-2">13.4.1. Installing Type Definitions</h4>
+      <!-- Code Example -->
+      <pre class="bg-gray-800 rounded p-4 overflow-x-auto mb-4" v-pre>
+<code class="language-typescript">// some-library.d.ts
+declare module 'some-library' {
+  export function doSomething(): void;
+}</code></pre>
+
+      <h3 class="text-2xl font-semibold mb-2">Tip: Contribute to DefinitelyTyped</h3>
       <p class="text-lg text-gray-700 mb-4">
-        Use the <code>@types</code> namespace to install type definitions for popular JavaScript libraries.
-      </p>
-      <div class="bg-gray-800 text-white rounded-lg p-4 mb-4 overflow-auto">
-        <pre><code class="language-shell">npm install --save-dev @types/lodash</code></pre>
-      </div>
-      <p class="text-lg text-gray-700">
-        <strong>Explanation:</strong> Installing <code>@types/lodash</code> provides TypeScript with the necessary type definitions for the <code>lodash</code> library.
-      </p>
-    
-      <h4 class="text-xl font-semibold mb-2">13.4.2. Creating Custom Declaration Files</h4>
-      <p class="text-lg text-gray-700 mb-4">
-        For JavaScript libraries without existing type definitions, you can create custom declaration files to define the necessary types.
-      </p>
-      <div class="bg-gray-800 text-white rounded-lg p-4 mb-4 overflow-auto">
-        <pre><code class="language-typescript">{{ customDeclarationFileExample }}</code></pre>
-      </div>
-      <p class="text-lg text-gray-700">
-        <strong>Explanation:</strong> The custom declaration file <code>myLibrary.d.ts</code> declares the types for a hypothetical <code>myLibrary</code> module.
+        If you create type definitions for a library, consider contributing them to the DefinitelyTyped repository so others can benefit.
       </p>
     </section>
 
-    <!-- Sections 14 to 16: Best Practices, Common Mistakes, Summary -->
-
-    <!-- Section 14: Best Practices -->
-    <section id="best-practices" class="mb-12">
-      <h2 class="text-4xl font-semibold mb-4">14. Best Practices</h2>
+    <!-- Section: Using @types to Handle Type Definitions -->
+    <section id="types-handling" class="bg-white rounded-b-xl p-4 md:p-6 mt-6">
+      <h2 class="text-3xl font-semibold mb-4">Using @types to Handle Type Definitions</h2>
       <p class="text-lg text-gray-700 mb-4">
-        Adhering to best practices when working with advanced TypeScript features ensures that your code remains clean, efficient, and maintainable. Here are some recommended guidelines:
+        The <code>@types</code> namespace on npm is a community-driven repository of TypeScript type definitions. It allows you to easily install type definitions for popular libraries.
       </p>
-      <ul class="list-disc list-inside text-lg text-gray-700">
-        <li><strong>Use Descriptive Type Names:</strong> Choose meaningful names for types, interfaces, and type parameters to enhance code readability.</li>
-        <li><strong>Leverage Utility Types:</strong> Utilize TypeScript's built-in utility types to simplify type transformations and reduce the need for custom types.</li>
-        <li><strong>Constrain Generics Appropriately:</strong> Use constraints to ensure that generics are used with compatible types, enhancing type safety.</li>
-        <li><strong>Keep Types Simple:</strong> Avoid overly complex type definitions that can make the code difficult to understand and maintain.</li>
-        <li><strong>Document Complex Types:</strong> Use comments and documentation to explain the purpose and usage of advanced type features.</li>
-        <li><strong>Reuse Types and Interfaces:</strong> Promote type reusability by defining shared interfaces and types that can be extended or combined as needed.</li>
-        <li><strong>Avoid Overusing Type Assertions:</strong> Rely on TypeScript's type inference and type guards instead of excessive type assertions to maintain type safety.</li>
-        <li><strong>Test Advanced Types:</strong> Ensure that complex type definitions work as intended by writing comprehensive tests.</li>
-      </ul>
+
+      <h3 class="text-2xl font-semibold mb-2">Installing Type Definitions</h3>
+      <p class="text-lg text-gray-700 mb-4">
+        To install type definitions for a library, use npm or yarn:
+      </p>
+
+      <!-- Installation Instructions -->
+      <div class="bg-gray-50 rounded mb-4">
+        <pre class="bg-gray-800 rounded p-4 overflow-x-auto" v-pre>
+<code class="language-bash">npm install --save-dev @types/library-name
+# or
+yarn add --dev @types/library-name</code></pre>
+      </div>
+
+      <h3 class="text-2xl font-semibold mb-2">Example: Adding Types for Express.js</h3>
+      <!-- Code Example -->
+      <pre class="bg-gray-800 rounded p-4 overflow-x-auto mb-4" v-pre>
+<code class="language-bash">npm install express
+npm install --save-dev @types/express</code></pre>
+
+      <p class="text-lg text-gray-700 mb-4">
+        Now, you can use Express with full type support:
+      </p>
+
+      <!-- Code Example -->
+      <pre class="bg-gray-800 rounded p-4 overflow-x-auto mb-4" v-pre>
+<code class="language-typescript">import express, { Request, Response } from 'express';
+
+const app = express();
+
+app.get('/', (req: Request, res: Response) => {
+  res.send('Hello, World!');
+});
+
+app.listen(3000, () => console.log('Server running on port 3000'));</code></pre>
+
+      <h3 class="text-2xl font-semibold mb-2">Global vs. Module Type Definitions</h3>
+      <p class="text-lg text-gray-700 mb-4">
+        Some libraries have global type definitions, while others use module-based definitions. Be aware of how the library exports its types to import them correctly.
+      </p>
+
+      <h4 class="text-xl font-semibold mb-2">Global Type Definitions</h4>
+      <p class="text-lg text-gray-700 mb-4">
+        For libraries that add to the global scope, you might not need to import them explicitly.
+      </p>
+
+      <!-- Code Example -->
+      <pre class="bg-gray-800 rounded p-4 overflow-x-auto mb-4" v-pre>
+<code class="language-typescript">// Assume jQuery is globally available
+$('#element').hide();</code></pre>
+
+      <h4 class="text-xl font-semibold mb-2">Module Type Definitions</h4>
+      <p class="text-lg text-gray-700 mb-4">
+        For module-based libraries, you need to import them to access their types.
+      </p>
+
+      <!-- Code Example -->
+      <pre class="bg-gray-800 rounded p-4 overflow-x-auto mb-4" v-pre>
+<code class="language-typescript">import * as $ from 'jquery';
+
+$('#element').hide();</code></pre>
+
+      <h3 class="text-2xl font-semibold mb-2">Tip: Use TypeScript's Automatic Type Acquisition</h3>
+      <p class="text-lg text-gray-700 mb-4">
+        Some editors, like Visual Studio Code, can automatically download type definitions for you. Ensure that <code>TypeScript: Disable Automatic Type Acquisition</code> is set to <code>false</code> in your editor settings.
+      </p>
     </section>
 
-    <!-- Section 15: Common Mistakes -->
-    <section id="common-mistakes" class="mb-12">
-      <h2 class="text-4xl font-semibold mb-4">15. Common Mistakes</h2>
+    <!-- Section: Migrating a JavaScript Project to TypeScript -->
+    <section id="migrating-js-to-ts" class="bg-white rounded-b-xl p-4 md:p-6 mt-6">
+      <h2 class="text-3xl font-semibold mb-4">Migrating a JavaScript Project to TypeScript</h2>
       <p class="text-lg text-gray-700 mb-4">
-        Being aware of common pitfalls helps you avoid errors and write more robust TypeScript code when working with advanced features. Here are some frequent mistakes developers make:
+        Migrating an existing JavaScript project to TypeScript can seem daunting, but with a systematic approach, it can be done efficiently. Below are steps and tips to help you through the process.
       </p>
-      <ul class="list-disc list-inside text-lg text-gray-700">
-        <li><strong>Overcomplicating Types:</strong> Creating overly complex types can make the codebase difficult to understand and maintain.</li>
-        <li><strong>Ignoring Type Inference:</strong> Relying too heavily on explicit type annotations when TypeScript can infer types can lead to unnecessary verbosity.</li>
-        <li><strong>Misusing Mapped Types:</strong> Not understanding how mapped types transform existing types can result in unexpected type behaviors.</li>
-        <li><strong>Incorrectly Using Conditional Types:</strong> Misapplying conditional types can lead to type mismatches and reduce type safety.</li>
-        <li><strong>Neglecting Constraints:</strong> Failing to constrain generics properly can allow incompatible types, undermining type safety.</li>
-        <li><strong>Overusing Module Augmentation:</strong> Excessive module augmentation can lead to code that is hard to trace and debug.</li>
-        <li><strong>Not Testing Advanced Types:</strong> Skipping tests for complex type definitions can leave hidden bugs and type mismatches.</li>
-        <li><strong>Ignoring Best Practices:</strong> Not following best practices can lead to inconsistent and error-prone code.</li>
-      </ul>
+
+      <h3 class="text-2xl font-semibold mb-2">Step 1: Add a <code>tsconfig.json</code> File</h3>
+      <p class="text-lg text-gray-700 mb-4">
+        The <code>tsconfig.json</code> file specifies the root files and compiler options required to compile the project.
+      </p>
+
+      <!-- Code Example -->
+      <pre class="bg-gray-800 rounded p-4 overflow-x-auto mb-4" v-pre>
+<code class="language-json">
+{
+  "compilerOptions": {
+    "target": "es6",
+    "module": "commonjs",
+    "allowJs": true,
+    "outDir": "./dist",
+    "rootDir": "./src",
+    "strict": true
+  },
+  "include": ["src/**/*"]
+}</code></pre>
+
+      <h3 class="text-2xl font-semibold mb-2">Step 2: Rename Files to <code>.ts</code> or <code>.tsx</code></h3>
+      <p class="text-lg text-gray-700 mb-4">
+        Start by renaming your JavaScript files from <code>.js</code> to <code>.ts</code> (or <code>.tsx</code> for React projects). TypeScript will now type-check these files.
+      </p>
+
+      <h3 class="text-2xl font-semibold mb-2">Step 3: Address Type Errors</h3>
+      <p class="text-lg text-gray-700 mb-4">
+        With <code>strict</code> mode enabled, TypeScript will report type errors. Begin fixing these errors by adding type annotations and correcting code where necessary.
+      </p>
+
+      <h4 class="text-xl font-semibold mb-2">Tip: Use <code>any</code> as a Temporary Measure</h4>
+      <p class="text-lg text-gray-700 mb-4">
+        If you encounter complex type errors, you can use the <code>any</code> type as a stopgap to silence errors. However, plan to replace <code>any</code> with proper types eventually.
+      </p>
+
+      <h3 class="text-2xl font-semibold mb-2">Step 4: Add Type Definitions for External Libraries</h3>
+      <p class="text-lg text-gray-700 mb-4">
+        Install type definitions for any external libraries you're using, as shown in previous sections.
+
+        <!-- List of Steps -->
+        <ol class="list-decimal list-inside text-lg text-gray-700 mb-4">
+          <li>Identify the libraries without type definitions.</li>
+          <li>Install type definitions using <code>@types</code>.</li>
+          <li>Create custom type definitions if necessary.</li>
+        </ol>
+      </p>
+
+      <h3 class="text-2xl font-semibold mb-2">Step 5: Enable Stricter Compiler Options</h3>
+      <p class="text-lg text-gray-700 mb-4">
+        As you progress, consider enabling stricter compiler options to catch more errors.
+
+        <!-- List of Compiler Options -->
+        <ul class="list-disc list-inside text-lg text-gray-700 mb-4">
+          <li><code>"noImplicitAny": true</code> - Warns when the compiler infers an <code>any</code> type.</li>
+          <li><code>"strictNullChecks": true</code> - Ensures that <code>null</code> and <code>undefined</code> are handled correctly.</li>
+          <li><code>"noImplicitThis": true</code> - Warns when the type of <code>this</code> is implicitly <code>any</code>.</li>
+        </ul>
+      </p>
+
+      <h3 class="text-2xl font-semibold mb-2">Step 6: Refactor to Use TypeScript Features</h3>
+      <p class="text-lg text-gray-700 mb-4">
+        Leverage TypeScript features to improve your codebase:
+
+        <!-- List of Features -->
+        <ul class="list-disc list-inside text-lg text-gray-700 mb-4">
+          <li>Use interfaces and type aliases to define object shapes.</li>
+          <li>Implement enums for clearer value sets.</li>
+          <li>Apply generics to create reusable components.</li>
+          <li>Utilize access modifiers (<code>public</code>, <code>private</code>, <code>protected</code>) in classes.</li>
+        </ul>
+      </p>
+
+      <h3 class="text-2xl font-semibold mb-2">Step 7: Continuous Integration and Testing</h3>
+      <p class="text-lg text-gray-700 mb-4">
+        Integrate TypeScript compilation into your build process and ensure that your tests pass after each change. This helps catch any issues introduced during the migration.
+      </p>
+
+      <h3 class="text-2xl font-semibold mb-2">Tip: Use Migration Tools</h3>
+      <p class="text-lg text-gray-700 mb-4">
+        Tools like <a href="https://github.com/airbnb/ts-migrate" class="text-blue-600 hover:text-blue-800">ts-migrate</a> can automate parts of the migration process by adding type annotations and fixing trivial issues.
+      </p>
+
+      <h3 class="text-2xl font-semibold mb-2">Common Pitfalls and How to Avoid Them</h3>
+
+      <h4 class="text-xl font-semibold mb-2">Implicit <code>any</code> Types</h4>
+      <p class="text-lg text-gray-700 mb-4">
+        Leaving variables untyped can lead to implicit <code>any</code> types, which defeat the purpose of using TypeScript. Use type annotations or enable <code>"noImplicitAny": true</code> to catch these.
+      </p>
+
+      <h4 class="text-xl font-semibold mb-2">Ignoring Type Errors</h4>
+      <p class="text-lg text-gray-700 mb-4">
+        Avoid using TypeScript's <code>// @ts-ignore</code> comment to silence errors unless absolutely necessary. It's better to address the underlying issue.
+      </p>
+
+      <h4 class="text-xl font-semibold mb-2">Overusing the <code>any</code> Type</h4>
+      <p class="text-lg text-gray-700 mb-4">
+        While <code>any</code> can be a useful tool during migration, overusing it can lead to a loss of type safety. Strive to replace <code>any</code> with specific types as your migration progresses.
+      </p>
+
+      <h3 class="text-2xl font-semibold mb-2">Final Thoughts</h3>
+      <p class="text-lg text-gray-700 mb-4">
+        Migrating to TypeScript is a worthwhile investment that can lead to more robust and maintainable code. Take the process step by step, and don't hesitate to involve your team in discussions about best practices.
+      </p>
     </section>
 
-    <!-- Section 16: Summary -->
-    <section id="summary" class="mb-12">
-      <h2 class="text-4xl font-semibold mb-4">16. Summary</h2>
-      <p class="text-lg text-gray-700 mb-4">
-        Advanced TypeScript features empower developers to write more flexible, reusable, and type-safe code. By mastering intersection and union types, conditional and mapped types, utility types, type guards, and advanced generics, you can tackle complex type scenarios with ease.
-      </p>
-      <p class="text-lg text-gray-700 mb-4">
-        Decorators, module augmentation, declaration merging, and template literal types further enhance TypeScript's capabilities, enabling more expressive and maintainable code structures. Adhering to best practices and being mindful of common mistakes will ensure that your advanced TypeScript code remains clean, efficient, and robust.
-      </p>
-      <p class="text-lg text-gray-700">
-        Embrace these advanced TypeScript concepts to elevate your JavaScript development, ensuring your applications are not only powerful but also maintainable and scalable for the future.
-      </p>
-    </section>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'AdvancedTypeScript',
-  data() {
-    return {
-      // Section 1: Intersection Types
-      intersectionTypeExample: `// Intersection Types Example
-interface User {
-  id: number;
-  name: string;
-}
-
-interface Permissions {
-  role: string;
-  accessLevel: number;
-}
-
-type Admin = User & Permissions;
-
-const admin: Admin = {
-  id: 1,
-  name: 'Alice',
-  role: 'Administrator',
-  accessLevel: 5
-};`,
-
-      // Section 2: Union Types
-      unionTypeExample: `// Union Types Example
-type Success = {
-  status: 'success';
-  data: any;
-};
-
-type Failure = {
-  status: 'failure';
-  error: string;
-};
-
-type Result = Success | Failure;
-
-function handleResult(result: Result) {
-  if (result.status === 'success') {
-    console.log('Data:', result.data);
-  } else {
-    console.error('Error:', result.error);
-  }
-}
-
-const successResult: Result = { status: 'success', data: { id: 1, name: 'Alice' } };
-const failureResult: Result = { status: 'failure', error: 'Something went wrong.' };
-
-handleResult(successResult); // Output: Data: { id: 1, name: 'Alice' }
-handleResult(failureResult); // Output: Error: Something went wrong.`,
-
-      // Section 3: Conditional Types
-      conditionalTypeExample: `// Conditional Types Example
-type IsString<T> = T extends string ? true : false;
-
-type Test1 = IsString<string>; // true
-type Test2 = IsString<number>; // false`,
-
-      // Section 4: Mapped Types
-      mappedTypeExample: `// Readonly Mapped Type Example
-type Readonly<T> = {
-  readonly [P in keyof T]: T[P];
-};
-
-interface User {
-  id: number;
-  name: string;
-  email: string;
-}
-
-type ReadonlyUser = Readonly<User>;
-
-const user: ReadonlyUser = {
-  id: 1,
-  name: 'Alice',
-  email: 'alice@example.com'
-};
-
-// Attempting to modify a property
-// user.name = 'Bob'; // Error: Cannot assign to 'name' because it is a read-only property.`,
-
-      // Section 5: Utility Types
-      partialExample: `// Partial Utility Type Example
-interface User {
-  id: number;
-  name: string;
-  email: string;
-}
-
-type PartialUser = Partial<User>;
-
-function updateUser(user: PartialUser) {
-  // Update logic here
-}
-
-updateUser({ name: 'Bob' }); // Valid
-updateUser({ age: 30 }); // Error: Object literal may only specify known properties, and 'age' does not exist in type 'PartialUser'.`,
-
-      pickExample: `// Pick Utility Type Example
-interface User {
-  id: number;
-  name: string;
-  email: string;
-}
-
-type UserContactInfo = Pick<User, 'name' | 'email'>;
-
-const contactInfo: UserContactInfo = {
-  name: 'Alice',
-  email: 'alice@example.com'
-};`,
-
-      omitExample: `// Omit Utility Type Example
-interface User {
-  id: number;
-  name: string;
-  email: string;
-}
-
-type UserWithoutEmail = Omit<User, 'email'>;
-
-const user: UserWithoutEmail = {
-  id: 1,
-  name: 'Bob'
-  // email: 'bob@example.com' // Error: Property 'email' does not exist on type 'UserWithoutEmail'.
-};`,
-
-      recordExample: `// Record Utility Type Example
-interface User {
-  id: number;
-  name: string;
-}
-
-type UserRoles = Record<number, string>;
-
-const roles: UserRoles = {
-  1: 'Administrator',
-  2: 'Editor',
-  3: 'Viewer'
-};
-
-console.log(roles); // Output: { '1': 'Administrator', '2': 'Editor', '3': 'Viewer' }`,
-
-      // Section 6: Type Guards
-      typeofTypeGuardExample: `// typeof Type Guard Example
-function printId(id: string | number) {
-  if (typeof id === 'string') {
-    console.log(\`ID is a string: \${id.toUpperCase()}\`);
-  } else {
-    console.log(\`ID is a number: \${id}\`);
-  }
-}
-
-printId('abc123'); // Output: ID is a string: ABC123
-printId(456);      // Output: ID is a number: 456`,
-
-      instanceofTypeGuardExample: `// instanceof Type Guard Example
-class Car {
-  move(distance: number): void {
-    console.log(\`Car moved \${distance} meters.\`);
-  }
-}
-
-class Truck {
-  move(distance: number): void {
-    console.log(\`Truck moved \${distance} meters.\`);
-  }
-  
-  loadCargo(amount: number): void {
-    console.log(\`Loaded \${amount} kg of cargo.\`);
-  }
-}
-
-type Vehicle = Car | Truck;
-
-function processVehicle(vehicle: Vehicle) {
-  vehicle.move(100);
-  if (vehicle instanceof Truck) {
-    vehicle.loadCargo(500);
-  }
-}
-
-const myCar = new Car();
-const myTruck = new Truck();
-
-processVehicle(myCar);   // Output: Car moved 100 meters.
-processVehicle(myTruck); // Output: Truck moved 100 meters.
-                          // Loaded 500 kg of cargo.`,
-
-      customTypeGuardExample: `// Custom Type Guard Example
-interface User {
-  name: string;
-  role: string;
-}
-
-interface Admin extends User {
-  adminLevel: number;
-}
-
-function isAdmin(user: User): user is Admin {
-  return user.role === 'admin';
-}
-
-function displayUserInfo(user: User) {
-  console.log(\`Name: \${user.name}\`);
-  if (isAdmin(user)) {
-    console.log(\`Admin Level: \${user.adminLevel}\`);
-  }
-}
-
-const user1: User = { name: 'Alice', role: 'admin', adminLevel: 3 };
-const user2: User = { name: 'Bob', role: 'user' };
-
-displayUserInfo(user1);
-// Output:
-// Name: Alice
-// Admin Level: 3
-
-displayUserInfo(user2);
-// Output:
-// Name: Bob`,
-
-      // Section 7: Advanced Generics
-      genericConstraintsExample: `// Generic Constraints Example
-interface Lengthwise {
-  length: number;
-}
-
-function getProperty<T extends Lengthwise, K extends keyof T>(obj: T, key: K): T[K] {
-  return obj[key];
-}
-
-const person = { name: 'Charlie', age: 25, length: 180 };
-
-const name = getProperty(person, 'name'); // Valid
-const age = getProperty(person, 'age');   // Valid
-const length = getProperty(person, 'length'); // Valid
-// const weight = getProperty(person, 'weight'); // Error: Argument of type '"weight"' is not assignable to parameter of type 'keyof Lengthwise'.`,
-
-      genericInferenceExample: `// Generic Inference Example
-function identity<T>(arg: T): T {
-  return arg;
-}
-
-const inferredNumber = identity(100); // TypeScript infers T as number
-const inferredString = identity('Generics'); // TypeScript infers T as string
-
-console.log(inferredNumber); // Output: 100
-console.log(inferredString); // Output: Generics`,
-
-      conditionalGenericsExample: `// Conditional Types with Generics Example
-type IsArray<T> = T extends any[] ? true : false;
-
-type Test1 = IsArray<string>; // false
-type Test2 = IsArray<number[]>; // true
-type Test3 = IsArray<Array<string>>; // true`,
-
-      // Section 8: Decorators
-      classDecoratorExample: `// Class Decorator Example
-function sealed(constructor: Function) {
-  Object.seal(constructor);
-  Object.seal(constructor.prototype);
-}
-
-@sealed
-class Greeter {
-  greeting: string;
-  
-  constructor(message: string) {
-    this.greeting = message;
-  }
-  
-  greet() {
-    return \`Hello, \${this.greeting}\`;
-  }
-}
-
-const greeter = new Greeter('World');
-console.log(greeter.greet()); // Output: Hello, World
-// greeter.newProperty = 'Test'; // Error: Property 'newProperty' does not exist on type 'Greeter'.`,
-
-      methodDecoratorExample: `// Method Decorator Example
-function log(target: any, propertyKey: string, descriptor: PropertyDescriptor) {
-  const originalMethod = descriptor.value;
-  
-  descriptor.value = function(...args: any[]) {
-    console.log(\`Method \${propertyKey} called with args: \${JSON.stringify(args)}\`);
-    return originalMethod.apply(this, args);
-  };
-  
-  return descriptor;
-}
-
-class Calculator {
-  @log
-  add(a: number, b: number): number {
-    return a + b;
-  }
-}
-
-const calc = new Calculator();
-console.log(calc.add(5, 3)); 
-// Output:
-// Method add called with args: [5,3]
-// 8`,
-
-      propertyDecoratorExample: `// Property Decorator Example
-function format(target: any, propertyKey: string) {
-  let value: string;
-  
-  const getter = () => value;
-  const setter = (newVal: string) => {
-    value = newVal.trim();
-  };
-  
-  Object.defineProperty(target, propertyKey, {
-    get: getter,
-    set: setter,
-    enumerable: true,
-    configurable: true
-  });
-}
-
-class User {
-  @format
-  name: string;
-  
-  constructor(name: string) {
-    this.name = name;
-  }
-}
-
-const user = new User('  Alice  ');
-console.log(user.name); // Output: "Alice"
-user.name = '  Bob  ';
-console.log(user.name); // Output: "Bob"`,
-
-      // Section 9: Module Augmentation
-      moduleAugmentationExample: `// Module Augmentation Example
-// Assuming we are augmenting the 'express' module
-
-// In a separate file, e.g., express-augmentation.d.ts
-import * as express from 'express';
-
-declare module 'express' {
-  interface Request {
-    user?: {
-      id: number;
-      name: string;
-    };
-  }
-}
-
-// Usage in application code
-import express from 'express';
-
-const app = express();
-
-app.use((req, res, next) => {
-  req.user = { id: 1, name: 'Alice' };
-  next();
-});
-
-app.get('/', (req, res) => {
-  if (req.user) {
-    res.send(\`Hello, \${req.user.name}\`);
-  } else {
-    res.send('Hello, Guest');
-  }
-});`,
-
-      // Section 10: Declaration Merging
-      mergingInterfacesExample: `// Declaration Merging Example
-interface User {
-  id: number;
-  name: string;
-}
-
-interface User {
-  email: string;
-}
-
-const user: User = {
-  id: 1,
-  name: 'Alice',
-  email: 'alice@example.com'
-};
-
-console.log(user);
-// Output: { id: 1, name: 'Alice', email: 'alice@example.com' }`,
-
-      // Section 11: keyof and typeof Operators
-      keyofExample: `// keyof Operator Example
-interface Person {
-  name: string;
-  age: number;
-}
-
-type PersonKeys = keyof Person; // 'name' | 'age'
-
-function getProperty<T, K extends keyof T>(obj: T, key: K): T[K] {
-  return obj[key];
-}
-
-const person: Person = { name: 'Bob', age: 25 };
-const name = getProperty(person, 'name'); // Type is string
-const age = getProperty(person, 'age');   // Type is number
-// const height = getProperty(person, 'height'); // Error: Argument of type '"height"' is not assignable to parameter of type 'keyof Person'.`,
-
-      typeofExample: `// typeof Operator Example
-const user = {
-  id: 1,
-  name: 'Charlie'
-};
-
-type UserType = typeof user; // { id: number; name: string; }
-
-function printUser(user: UserType) {
-  console.log(\`ID: \${user.id}, Name: \${user.name}\`);
-}
-
-printUser(user); // Output: ID: 1, Name: Charlie`,
-
-      // Section 12: Template Literal Types
-      templateLiteralTypeExample: `// Template Literal Types Example
-type Status = 'success' | 'error' | 'pending';
-type StatusMessage = \`\${Status}_message\`;
-
-const successMessage: StatusMessage = 'success_message'; // Valid
-const errorMessage: StatusMessage = 'error_message';     // Valid
-const pendingMessage: StatusMessage = 'pending_message'; // Valid
-// const invalidMessage: StatusMessage = 'unknown_message'; // Error: Type '"unknown_message"' is not assignable to type 'StatusMessage'.`,
-
-      // Section 13: Module Interoperability
-      commonJSExample: `// CommonJS Modules Example
-// Exporting a module using CommonJS
-// math.js
-function add(a, b) {
-  return a + b;
-}
-
-module.exports = { add };
-
-// Importing a CommonJS module using require
-// app.js
-const math = require('./math');
-
-console.log(math.add(2, 3)); // Output: 5`,
-
-      esModuleExample: `// ES Modules Example
-// math.ts
-export function add(a: number, b: number): number {
-  return a + b;
-}
-
-// Importing an ES Module
-// app.ts
-import { add } from './math';
-
-console.log(add(2, 3)); // Output: 5`,
-
-      tsconfigExample: `// tsconfig.json Configuration
-{
-  "compilerOptions": {
-    "target": "ES6",
-    "module": "CommonJS",
-    "esModuleInterop": true,
-    "strict": true,
-    "outDir": "./dist",
-    "rootDir": "./src"
-  }
-}`,
-
-      importingCommonJSExample: `// Importing a CommonJS Module with ES Module Syntax
-// Assuming esModuleInterop is enabled in tsconfig.json
-
-// lodash.js (CommonJS Module)
-const _ = require('lodash');
-
-module.exports = _;
-
-// app.ts
-import _ from 'lodash';
-
-const numbers = [1, 2, 3, 4, 5];
-const reversed = _.reverse([...numbers]);
-
-console.log(reversed); // Output: [5, 4, 3, 2, 1]`,
-
-      customDeclarationFileExample: `// Custom Declaration File Example
-// myLibrary.d.ts
-declare module 'myLibrary' {
-  export function greet(name: string): string;
-  export const version: string;
-}
-
-// myLibrary.js (JavaScript Module)
-function greet(name) {
-  return \`Hello, \${name}!\`;
-}
-
-const version = '1.0.0';
-
-module.exports = { greet, version };
-
-// app.ts
-import { greet, version } from 'myLibrary';
-
-console.log(greet('Alice')); // Output: Hello, Alice!
-console.log(version);        // Output: 1.0.0`,
-
-    };
-  },
+  name: 'TypeScriptJSInteroperability',
 };
 </script>
 
 <style scoped>
 .container {
-  max-width: 1200px;
+  max-width: 900px;
 }
 header h1 {
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
@@ -726,6 +316,7 @@ header h1 {
 table {
   width: 100%;
   border-collapse: collapse;
+  overflow-x: auto;
 }
 th, td {
   padding: 12px;
@@ -738,20 +329,20 @@ tr:nth-child(even) {
   background-color: #f9fafb;
 }
 a {
-  color: #7c3aed; /* Tailwind's purple-600 */
+  color: #2563eb; /* Tailwind's blue-600 */
 }
 a:hover {
-  color: #6b21a8; /* Tailwind's purple-800 */
+  color: #1e40af; /* Tailwind's blue-800 */
 }
+
 pre {
-  background-color: #2d2d2d;
-  color: #f8f8f2;
-  padding: 1em;
-  border-radius: 8px;
-  overflow-x: auto;
-  font-family: 'Fira Code', monospace;
+  white-space: pre-wrap; /* Ensures text wrapping for very long lines */
+  overflow-x: auto;      /* Adds horizontal scroll for overflow content */ 
 }
-code {
-  font-family: 'Fira Code', monospace;
+
+@media (max-width: 768px) {
+  pre, code {
+    font-size: 0.5rem; /* Smaller font size for mobile devices */
+  }
 }
 </style>

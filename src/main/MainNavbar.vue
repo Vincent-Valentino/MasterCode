@@ -31,7 +31,7 @@
       >
         <SwiperSlide v-for="course in courses" :key="course" class="!w-auto">
           <button @click="selectCourse(course)" 
-                  class="bg-stone-950 text-white m-1 px-3 py-2 rounded-full text-xs md:text-base whitespace-nowrap">
+                  class="bg-stone-950 text-white m-1 px-3 py-2 rounded-full text-sm md:text-lg md:px-5 md:py-3 whitespace-nowrap">
             {{ course }}
           </button>
         </SwiperSlide>

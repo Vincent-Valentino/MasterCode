@@ -70,7 +70,7 @@ export const courses = {
       { title: 'TypeScript Classes and Interfaces', component: () => import('@/course/typescript/ClassesInterfacesTypescript.vue') },
       { title: 'TypeScript Generics', component: () => import('@/course/typescript/GenericsTypescript.vue') },
       { title: 'Advanced TypeScript Features', component: () => import('@/course/typescript/AdvancedTypescript.vue') },
-      { title: 'TypeScript and JavaScript Interoperability', component: () => import('@/course/typescript/InteropTypescript.vue') },
+      { title: 'TypeScript Interoperability', component: () => import('@/course/typescript/InteropTypescript.vue') },
     ]
   },
   Vue: {

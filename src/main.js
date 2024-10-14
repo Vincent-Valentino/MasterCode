@@ -6,6 +6,8 @@ import Prism from 'prismjs';
 import 'prismjs/themes/prism-okaidia.css';
 import 'prismjs/components/prism-python';    // Add Python support
 import 'prismjs/components/prism-java';      // Add Java support
+import 'prismjs/components/prism-javascript';
+import 'prismjs/components/prism-typescript';
 
 console.log('Vue is initializing...');
 

@@ -136,33 +136,25 @@
         <ul class="list-disc list-inside mt-2">
           <li>
             <strong>Percent Operator:</strong>
-            <pre class="bg-gray-700 text-white p-2 rounded mt-2">
-              <code>
-name = "Alice"
+            <pre class="bg-gray-800 text-white p-2 mb-3 rounded mt-2">
+<code>name = "Alice"
 age = 25
-print("%s is %d years old" % (name, age))  # Output: Alice is 25 years old
-              </code>
-            </pre>
+print("%s is %d years old" % (name, age))  # Output: Alice is 25 years old</code></pre>
           </li>
           <li>
             <strong>.format() Method:</strong>
-            <pre class="bg-gray-700 text-white p-2 rounded mt-2">
-              <code>
-name = "Alice"
+            <pre class="bg-gray-800 text-white p-2 mb-3 rounded mt-2">
+<code>name = "Alice"
 age = 25
-print("{} is {} years old".format(name, age))  # Output: Alice is 25 years old
-              </code>
-            </pre>
+print("{} is {} years old".format(name, age))  # Output: Alice is 25 years old</code></pre>
           </li>
           <li>
             <strong>F-Strings:</strong>
-            <pre class="bg-gray-700 text-white p-2 rounded mt-2">
-              <code>
-name = "Alice"
+            <pre class="bg-gray-800 text-white p-2  mb-3 mt-2">
+<code>name = "Alice"
 age = 25
 print(f"{name} is {age} years old")  # Output: Alice is 25 years old
-              </code>
-            </pre>
+</code></pre>
           </li>
         </ul>
       </p>
@@ -207,16 +199,14 @@ print(f"{name} is {age} years old")  # Output: Alice is 25 years old
         </ul>
         <strong>Example:</strong>
         <pre class="bg-gray-700 text-white p-2 rounded mt-2">
-          <code>
-print("Hello\nWorld")  
+<code>print("Hello\nWorld")  
 # Output:
 # Hello
 # World
 
 print("She said, \"Python is awesome!\"")
 # Output: She said, "Python is awesome!"
-          </code>
-        </pre>
+</code></pre>
       </p>
 
       <!-- Conclusion -->
@@ -236,15 +226,13 @@ export default {
   name: 'PythonStrings',
   data() {
     return {
-      creatingStringsCode: `
-# Single, double, and triple quotes
+      creatingStringsCode: `# Single, double, and triple quotes
 single_quote_str = 'Hello, World!'
 double_quote_str = "Python is awesome!"
 triple_quote_str = '''This is a multi-line
 string.'''
 `,
-      stringOperationsCode: `
-# Concatenation
+      stringOperationsCode: `# Concatenation
 str1 = "Hello"
 str2 = "World"
 result = str1 + " " + str2  # Output: 'Hello World'
@@ -257,8 +245,7 @@ my_string = "Python"
 first_char = my_string[0]  # Output: 'P'
 last_char = my_string[-1]  # Output: 'n'
 `,
-      stringFormattingCode: `
-# Percent formatting
+      stringFormattingCode: `# Percent formatting
 name = "Alice"
 age = 25
 print("%s is %d years old" % (name, age))  # Output: Alice is 25 years old
@@ -269,8 +256,7 @@ print("{} is {} years old".format(name, age))  # Output: Alice is 25 years old
 # f-strings (Python 3.6+)
 print(f"{name} is {age} years old")  # Output: Alice is 25 years old
 `,
-      stringSlicingCode: `
-my_string = "Python"
+      stringSlicingCode: `my_string = "Python"
 # Slice from index 1 to 4
 print(my_string[1:5])  # Output: 'ytho'
 
@@ -283,8 +269,7 @@ print(my_string[2:])  # Output: 'thon'
 # Reverse the string
 print(my_string[::-1])  # Output: 'nohtyP'
 `,
-      escapeCharactersCode: `
-# Newline
+      escapeCharactersCode: `# Newline
 print("Hello\\nWorld")  
 # Output:
 # Hello

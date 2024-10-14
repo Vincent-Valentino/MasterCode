@@ -180,4 +180,15 @@ a {
 a:hover {
   color: #1e40af; /* Tailwind's blue-800 */
 }
+
+pre {
+  white-space: pre-wrap; /* Ensures text wrapping for very long lines */
+  overflow-x: auto;      /* Adds horizontal scroll for overflow content */ 
+}
+
+@media (max-width: 768px) {
+  pre, code {
+    font-size: 0.5rem; /* Smaller font size for mobile devices */
+  }
+}
 </style>

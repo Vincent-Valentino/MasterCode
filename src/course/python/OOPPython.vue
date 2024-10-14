@@ -3,7 +3,7 @@
     <!-- Header Section -->
     <div class="w-full flex items-center gap-2 bg-blue-600 rounded-t-xl p-4">
       <img src="/python/logo.png" alt="Python Logo" class="w-12 h-12">
-      <h1 class="text-2xl md:text-4xl font-bold text-white">Object-Oriented Programming in Python: In-Depth Guide</h1>
+      <h1 class="text-2xl md:text-4xl font-bold text-white">Object-Oriented Programming in Python</h1>
     </div>
 
     <!-- Content Section -->

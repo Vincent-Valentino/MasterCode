@@ -114,22 +114,19 @@ export default {
   name: 'PythonLists',
   data() {
     return {
-      creatingListsCode: `
-# Creating lists
+      creatingListsCode: `# Creating lists
 empty_list = []
 numbers = [1, 2, 3, 4, 5]
 mixed = [1, "two", 3.0, [4, 5]]
 using_list_function = list("Python")
 `,
-      accessingElementsCode: `
-# Accessing list elements
+      accessingElementsCode: `# Accessing list elements
 fruits = ["apple", "banana", "cherry", "date"]
 print(fruits[0])  # Output: apple
 print(fruits[-1])  # Output: date
 print(fruits[1:3])  # Output: ['banana', 'cherry']
 `,
-      listOperationsCode: `
-# List operations
+      listOperationsCode: `# List operations
 list1 = [1, 2, 3]
 list2 = [4, 5, 6]
 concatenated = list1 + list2  # [1, 2, 3, 4, 5, 6]
@@ -137,13 +134,11 @@ repeated = list1 * 3  # [1, 2, 3, 1, 2, 3, 1, 2, 3]
 length = len(list1)  # 3
 exists = 2 in list1  # True
 `,
-      listComprehensionsCode: `
-# List comprehensions
+      listComprehensionsCode: `# List comprehensions
 squares = [x**2 for x in range(10)]
 evens = [x for x in range(20) if x % 2 == 0]
 `,
-      advancedTopicsCode: `
-# Nested lists
+      advancedTopicsCode: `# Nested lists
 matrix = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
 print(matrix[1][1])  # Output: 5
 

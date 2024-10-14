@@ -311,8 +311,7 @@ export default {
   name: 'PythonDictionaries',
   data() {
     return {
-      creatingDictionariesCode: `
-# Method 1: Using curly braces
+      creatingDictionariesCode: `# Method 1: Using curly braces
 person = {'name': 'John', 'age': 30, 'city': 'New York'}
 
 # Method 2: Using dict() constructor with keyword arguments
@@ -328,8 +327,7 @@ person = {k: v for k, v in zip(keys, values)}
 
 print(person)  # Output: {'name': 'John', 'age': 30, 'city': 'New York'}
 `,
-      accessingElementsCode: `
-person = {'name': 'John', 'age': 30, 'city': 'New York'}
+      accessingElementsCode: `person = {'name': 'John', 'age': 30, 'city': 'New York'}
 
 # Using square brackets
 print(person['name'])  # Output: John
@@ -345,8 +343,7 @@ print(person.setdefault('age', 25))  # Output: 30 (existing key)
 print(person.setdefault('country', 'USA'))  # Output: USA (new key-value pair added)
 print(person)  # Output: {'name': 'John', 'age': 30, 'city': 'New York', 'country': 'USA'}
 `,
-      modifyingDictionariesCode: `
-person = {'name': 'John', 'age': 30}
+      modifyingDictionariesCode: `person = {'name': 'John', 'age': 30}
 
 # Adding a new key-value pair
 person['city'] = 'New York'
@@ -376,15 +373,13 @@ print(person)  # Output: {'name': 'John'}
 person.clear()
 print(person)  # Output: {}
 `,
-      clearMethodCode: `
-person = {'name': 'John', 'age': 30, 'city': 'New York'}
+      clearMethodCode: `person = {'name': 'John', 'age': 30, 'city': 'New York'}
 print(person)  # Output: {'name': 'John', 'age': 30, 'city': 'New York'}
 
 person.clear()
 print(person)  # Output: {}
 `,
-      copyMethodCode: `
-original = {'name': 'John', 'age': 30, 'city': 'New York'}
+      copyMethodCode: `original = {'name': 'John', 'age': 30, 'city': 'New York'}
 copied = original.copy()
 
 print(original)  # Output: {'name': 'John', 'age': 30, 'city': 'New York'}
@@ -402,8 +397,7 @@ nested_copy['info']['age'] = 31
 print(nested['info']['age'])      # Output: 31 (changed)
 print(nested_copy['info']['age']) # Output: 31 (changed)
 `,
-      fromkeysMethodCode: `
-# Creating a dictionary with default values
+      fromkeysMethodCode: `# Creating a dictionary with default values
 keys = ['name', 'age', 'city']
 default_value = 'Unknown'
 
@@ -421,8 +415,7 @@ print(mutable_default)
 # Output: {'name': ['John'], 'age': ['John'], 'city': ['John']}
 # All keys reference the same list object
 `,
-      getMethodCode: `
-person = {'name': 'John', 'age': 30}
+      getMethodCode: `person = {'name': 'John', 'age': 30}
 
 # Basic usage
 print(person.get('name'))  # Output: John
@@ -444,8 +437,7 @@ nested = {'user': {'name': 'John', 'age': 30}}
 print(nested.get('user', {}).get('name', 'Unknown'))  # Output: John
 print(nested.get('profile', {}).get('email', 'No email'))  # Output: No email
 `,
-      itemsMethodCode: `
-person = {'name': 'John', 'age': 30, 'city': 'New York'}
+      itemsMethodCode: `person = {'name': 'John', 'age': 30, 'city': 'New York'}
 
 # Getting all key-value pairs
 items = person.items()
@@ -467,8 +459,7 @@ view = person.items()
 person['country'] = 'USA'
 print(view)  # Output includes the new item: dict_items([('name', 'John'), ('age', 30), ('city', 'New York'), ('country', 'USA')])
 `,
-      keysMethodCode: `
-person = {'name': 'John', 'age': 30, 'city': 'New York'}
+      keysMethodCode: `person = {'name': 'John', 'age': 30, 'city': 'New York'}
 
 # Getting all keys
 keys = person.keys()
@@ -496,8 +487,7 @@ other_keys = {'age', 'height', 'weight'}
 common_keys = person.keys() & other_keys
 print(common_keys)  # Output: {'age'}
 `,
-      popMethodCode: `
-person = {'name': 'John', 'age': 30, 'city': 'New York'}
+      popMethodCode: `person = {'name': 'John', 'age': 30, 'city': 'New York'}
 
 # Remove and return a value for a specified key
 age = person.pop('age')
@@ -522,8 +512,7 @@ if key_to_remove in person:
 
 print(person)  # Output: {'name': 'John'}
 `,
-      popitemMethodCode: `
-person = {'name': 'John', 'age': 30, 'city': 'New York'}
+      popitemMethodCode: `person = {'name': 'John', 'age': 30, 'city': 'New York'}
 
 # Remove and return the last inserted item (Python 3.7+)
 last_item = person.popitem()
@@ -550,8 +539,7 @@ while inventory:
 
 print(inventory)  # Output: {}
 `,
-      setdefaultMethodCode: `
-person = {'name': 'John', 'age': 30}
+      setdefaultMethodCode: `person = {'name': 'John', 'age': 30}
 
 # Get an existing key's value
 name = person.setdefault('name', 'Unknown')
@@ -577,8 +565,7 @@ for char in text:
     char_count[char] += 1
 print(char_count)  # Output: {'h': 1, 'e': 1, 'l': 3, 'o': 2, ' ': 1, 'w': 1, 'r': 1, 'd': 1}
 `,
-      updateMethodCode: `
-person = {'name': 'John', 'age': 30}
+      updateMethodCode: `person = {'name': 'John', 'age': 30}
 
 # Update with another dictionary
 person.update({'city': 'New York', 'age': 31})
@@ -606,8 +593,7 @@ def create_person(name, age, **kwargs):
 new_person = create_person('Alice', 25, city='Paris', job='Artist')
 print(new_person)  # Output: {'name': 'Alice', 'age': 25, 'city': 'Paris', 'job': 'Artist'}
 `,
-      valuesMethodCode: `
-person = {'name': 'John', 'age': 30, 'city': 'New York'}
+      valuesMethodCode: `person = {'name': 'John', 'age': 30, 'city': 'New York'}
 
 # Getting all values
 values = person.values()
@@ -636,8 +622,7 @@ for grade in grades.values():
     grade_counts[grade] = grade_counts.get(grade, 0) + 1
 print(grade_counts)  # Output: {'A': 2, 'B': 1, 'C': 1}
 `,
-      dictionaryViewsCode: `
-person = {'name': 'John', 'age': 30, 'city': 'New York'}
+      dictionaryViewsCode: `person = {'name': 'John', 'age': 30, 'city': 'New York'}
 
 # Creating views
 keys_view = person.keys()
@@ -669,8 +654,7 @@ print('name' in keys_view)     # Output: True
 print('John' in values_view)   # Output: True
 print(('age', 30) in items_view)  # Output: True
 `,
-      dictionaryComprehensionsCode: `
-# Basic dictionary comprehension
+      dictionaryComprehensionsCode: `# Basic dictionary comprehension
 squares = {x: x**2 for x in range(6)}
 print(squares)  # Output: {0: 0, 1: 1, 2: 4, 3: 9, 4: 16, 5: 25}
 
@@ -698,8 +682,7 @@ print(grade_dict)  # Output: {'Alice': 'B', 'Bob': 'A', 'Charlie': 'C', 'David':
 matrix = {(i, j): i*j for i in range(3) for j in range(3)}
 print(matrix)  # Output: {(0, 0): 0, (0, 1): 0, (0, 2): 0, (1, 0): 0, (1, 1): 1, (1, 2): 2, (2, 0): 0, (2, 1): 2, (2, 2): 4}
 `,
-      nestedDictionariesCode: `
-# Creating a nested dictionary
+      nestedDictionariesCode: `# Creating a nested dictionary
 company = {
     'department1': {
         'name': 'Engineering',
@@ -758,8 +741,7 @@ company_copy['department1']['manager'] = 'Alex'
 print(f"\nOriginal manager: {company['department1']['manager']}")  # Output: Alice
 print(f"Copied manager: {company_copy['department1']['manager']}")  # Output: Alex
 `,
-      advancedTechniquesCode: `
-from collections import defaultdict, OrderedDict
+      advancedTechniquesCode: `from collections import defaultdict, OrderedDict
 import operator
 
 # Using defaultdict
@@ -808,8 +790,7 @@ action = 'A'
 result = handlers.get(action, handle_default)()
 print(result)
 `,
-      mergingDictionariesCode: `
-# Python 3.9+ dictionary union operator
+      mergingDictionariesCode: `# Python 3.9+ dictionary union operator
 dict1 = {'a': 1, 'b': 2}
 dict2 = {'b': 3, 'c': 4}
 merged = dict1 | dict2
@@ -832,8 +813,7 @@ print(dict4)  # Output: {'a': 1, 'b': 3, 'c': 4}
 
 # Note: The union operator creates a new dictionary, while update() modifies in-place
 `,
-      dictionarySetComprehensionsCode: `
-# Combining dictionary and set operations
+      dictionarySetComprehensionsCode: `# Combining dictionary and set operations
 set1 = {1, 2, 3, 4, 5}
 set2 = {3, 4, 5, 6, 7}
 
@@ -861,8 +841,7 @@ dict2 = {'b': 20, 'c': 30, 'd': 40}
 intersection_dict = {k: (dict1[k], dict2[k]) for k in dict1.keys() & dict2.keys()}
 print(intersection_dict)  # Output: {'b': (2, 20), 'c': (3, 30)}
 `,
-      jsonDictionaryCode: `
-import json
+      jsonDictionaryCode: `import json
 
 # Python dictionary
 person = {
@@ -933,8 +912,7 @@ print("\nDecoded person with custom date:")
 print(f"Name: {decoded_person_with_date['name']}")
 print(f"Birthdate: {decoded_person_with_date['birthdate'].day}-{decoded_person_with_date['birthdate'].month}-{decoded_person_with_date['birthdate'].year}")
 `,
-      memoryEfficientDictionaryCode: `
-class MemoryEfficientPerson:
+      memoryEfficientDictionaryCode: `class MemoryEfficientPerson:
     __slots__ = ['name', 'age', 'city']
 
     def __init__(self, name, age, city):
@@ -972,8 +950,7 @@ print(f"\nMemory usage of 1000 MemoryEfficientPerson instances: {sum(sys.getsize
 regular_people = [{'name': f"Person {i}", 'age': 20 + i, 'city': f"City {i}"} for i in range(1000)]
 print(f"Memory usage of 1000 regular dictionaries: {sum(sys.getsizeof(p) for p in regular_people)} bytes")
 `,
-      customDictionarySubclassCode: `
-class CaseInsensitiveDict(dict):
+      customDictionarySubclassCode: `class CaseInsensitiveDict(dict):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self._convert_keys()

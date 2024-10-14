@@ -5,10 +5,10 @@
       <div class="flex flex-col">
         <h2 class="font-bold text-sm md:text-lg mb-4 flex items-center">
           <Book class="mr-2" />
-          Learning Materials
+          Learning Topics
         </h2>
         <div class="space-y-2">
-          <a v-for="lang in languages" :key="lang" href="#" class="text-xs md:text-base block hover:text-blue-600">
+          <a v-for="lang in languages" :key="lang" href="/learn" class="text-xs md:text-base block hover:text-blue-600">
             {{ lang }}
           </a>
         </div>

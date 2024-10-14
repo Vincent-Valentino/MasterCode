@@ -3,7 +3,7 @@
     <!-- Header Section -->
     <div class="w-full flex items-center gap-2 bg-yellow-600 rounded-t-xl p-4">
       <img src="/icons/javascript.svg" alt="JavaScript Logo" class="w-12 h-12">
-      <h1 class="text-2xl md:text-4xl font-bold text-white">JavaScript Operators: A Comprehensive Guide</h1>
+      <h1 class="text-2xl md:text-4xl font-bold text-white">JavaScript Operators</h1>
     </div>
 
     <!-- Content Section -->
@@ -16,12 +16,12 @@
       <!-- Table of Contents -->
       <h2 class="text-xl md:text-2xl font-semibold mb-4">Table of Contents</h2>
       <ul class="list-disc list-inside text-base md:text-lg mb-6">
-        <li><a href="#arithmetic-operators" class="text-green-800 underline">Arithmetic Operators</a></li>
-        <li><a href="#assignment-operators" class="text-green-800 underline">Assignment Operators</a></li>
-        <li><a href="#comparison-operators" class="text-green-800 underline">Comparison Operators</a></li>
-        <li><a href="#logical-operators" class="text-green-800 underline">Logical Operators</a></li>
-        <li><a href="#bitwise-operators" class="text-green-800 underline">Bitwise Operators</a></li>
-        <li><a href="#ternary-operator" class="text-green-800 underline">Ternary Operator</a></li>
+        <li><a href="#arithmetic-operators" class="text-blue-800 underline">Arithmetic Operators</a></li>
+        <li><a href="#assignment-operators" class="text-blue-800 underline">Assignment Operators</a></li>
+        <li><a href="#comparison-operators" class="text-blue-800 underline">Comparison Operators</a></li>
+        <li><a href="#logical-operators" class="text-blue-800 underline">Logical Operators</a></li>
+        <li><a href="#bitwise-operators" class="text-blue-800 underline">Bitwise Operators</a></li>
+        <li><a href="#ternary-operator" class="text-blue-800 underline">Ternary Operator</a></li>
       </ul>
 
       <!-- Arithmetic Operators -->
@@ -41,27 +41,27 @@
           <tr>
             <td class="border border-gray-300 p-2"><code>+</code></td>
             <td class="border border-gray-300 p-2">Addition</td>
-            <td class="border border-gray-300 p-2"><code>5 + 2 // 7</code></td>
+            <td class="border border-gray-300 p-2"><code>5 + 2 // #output 7</code></td>
           </tr>
           <tr>
             <td class="border border-gray-300 p-2"><code>-</code></td>
             <td class="border border-gray-300 p-2">Subtraction</td>
-            <td class="border border-gray-300 p-2"><code>5 - 2 // 3</code></td>
+            <td class="border border-gray-300 p-2"><code>5 - 2 // #output 3</code></td>
           </tr>
           <tr>
             <td class="border border-gray-300 p-2"><code>*</code></td>
             <td class="border border-gray-300 p-2">Multiplication</td>
-            <td class="border border-gray-300 p-2"><code>5 * 2 // 10</code></td>
+            <td class="border border-gray-300 p-2"><code>5 * 2 // #output 10</code></td>
           </tr>
           <tr>
             <td class="border border-gray-300 p-2"><code>/</code></td>
             <td class="border border-gray-300 p-2">Division</td>
-            <td class="border border-gray-300 p-2"><code>10 / 2 // 5</code></td>
+            <td class="border border-gray-300 p-2"><code>10 / 2 // #output 5</code></td>
           </tr>
           <tr>
             <td class="border border-gray-300 p-2"><code>%</code></td>
             <td class="border border-gray-300 p-2">Modulus (Remainder)</td>
-            <td class="border border-gray-300 p-2"><code>5 % 2 // 1</code></td>
+            <td class="border border-gray-300 p-2"><code>5 % 2 // #output 1</code></td>
           </tr>
         </tbody>
       </table>
@@ -88,22 +88,22 @@
           <tr>
             <td class="border border-gray-300 p-2"><code>+=</code></td>
             <td class="border border-gray-300 p-2">Addition assignment</td>
-            <td class="border border-gray-300 p-2"><code>x += 3 // x = x + 3</code></td>
+            <td class="border border-gray-300 p-2"><code>x += 3 // #output x = x + 3</code></td>
           </tr>
           <tr>
             <td class="border border-gray-300 p-2"><code>-=</code></td>
             <td class="border border-gray-300 p-2">Subtraction assignment</td>
-            <td class="border border-gray-300 p-2"><code>x -= 2 // x = x - 2</code></td>
+            <td class="border border-gray-300 p-2"><code>x -= 2 // #output x = x - 2</code></td>
           </tr>
           <tr>
             <td class="border border-gray-300 p-2"><code>*=</code></td>
             <td class="border border-gray-300 p-2">Multiplication assignment</td>
-            <td class="border border-gray-300 p-2"><code>x *= 2 // x = x * 2</code></td>
+            <td class="border border-gray-300 p-2"><code>x *= 2 // #output x = x * 2</code></td>
           </tr>
           <tr>
             <td class="border border-gray-300 p-2"><code>/=</code></td>
             <td class="border border-gray-300 p-2">Division assignment</td>
-            <td class="border border-gray-300 p-2"><code>x /= 2 // x = x / 2</code></td>
+            <td class="border border-gray-300 p-2"><code>x /= 2 // #output x = x / 2</code></td>
           </tr>
         </tbody>
       </table>
@@ -125,42 +125,42 @@
           <tr>
             <td class="border border-gray-300 p-2"><code>==</code></td>
             <td class="border border-gray-300 p-2">Equal to</td>
-            <td class="border border-gray-300 p-2"><code>5 == '5' // true</code></td>
+            <td class="border border-gray-300 p-2"><code>5 == '5' // #output true</code></td>
           </tr>
           <tr>
             <td class="border border-gray-300 p-2"><code>===</code></td>
             <td class="border border-gray-300 p-2">Strict equal to</td>
-            <td class="border border-gray-300 p-2"><code>5 === '5' // false</code></td>
+            <td class="border border-gray-300 p-2"><code>5 === '5' // #output false</code></td>
           </tr>
           <tr>
             <td class="border border-gray-300 p-2"><code>!=</code></td>
             <td class="border border-gray-300 p-2">Not equal to</td>
-            <td class="border border-gray-300 p-2"><code>5 != '5' // false</code></td>
+            <td class="border border-gray-300 p-2"><code>5 != '5' // #output false</code></td>
           </tr>
           <tr>
             <td class="border border-gray-300 p-2"><code>!==</code></td>
             <td class="border border-gray-300 p-2">Strict not equal to</td>
-            <td class="border border-gray-300 p-2"><code>5 !== '5' // true</code></td>
+            <td class="border border-gray-300 p-2"><code>5 !== '5' // #output true</code></td>
           </tr>
           <tr>
             <td class="border border-gray-300 p-2"><code>></code></td>
             <td class="border border-gray-300 p-2">Greater than</td>
-            <td class="border border-gray-300 p-2"><code>5 > 2 // true</code></td>
+            <td class="border border-gray-300 p-2"><code>5 > 2 // #output true</code></td>
           </tr>
           <tr>
             <td class="border border-gray-300 p-2"><code><</code></td>
             <td class="border border-gray-300 p-2">Less than</td>
-            <td class="border border-gray-300 p-2"><code>5 < 2 // false</code></td>
+            <td class="border border-gray-300 p-2"><code>5 < 2 // #output false</code></td>
           </tr>
           <tr>
             <td class="border border-gray-300 p-2"><code>>=</code></td>
             <td class="border border-gray-300 p-2">Greater than or equal to</td>
-            <td class="border border-gray-300 p-2"><code>5 >= 5 // true</code></td>
+            <td class="border border-gray-300 p-2"><code>5 >= 5 // #output true</code></td>
           </tr>
           <tr>
             <td class="border border-gray-300 p-2"><code><=</code></td>
             <td class="border border-gray-300 p-2">Less than or equal to</td>
-            <td class="border border-gray-300 p-2"><code>5 <= 4 // false</code></td>
+            <td class="border border-gray-300 p-2"><code>5 <= 4 // #output false</code></td>
           </tr>
         </tbody>
       </table>
@@ -182,17 +182,17 @@
           <tr>
             <td class="border border-gray-300 p-2"><code>&&</code></td>
             <td class="border border-gray-300 p-2">Logical AND</td>
-            <td class="border border-gray-300 p-2"><code>(5 > 3) && (5 < 10) // true</code></td>
+            <td class="border border-gray-300 p-2"><code>(5 > 3) && (5 < 10) // #output true</code></td>
           </tr>
           <tr>
             <td class="border border-gray-300 p-2"><code>||</code></td>
             <td class="border border-gray-300 p-2">Logical OR</td>
-            <td class="border border-gray-300 p-2"><code>(5 < 3) || (5 < 10) // true</code></td>
+            <td class="border border-gray-300 p-2"><code>(5 < 3) || (5 < 10) // #output true</code></td>
           </tr>
           <tr>
             <td class="border border-gray-300 p-2"><code>!</code></td>
             <td class="border border-gray-300 p-2">Logical NOT</td>
-            <td class="border border-gray-300 p-2"><code>!(5 > 3) // false</code></td>
+            <td class="border border-gray-300 p-2"><code>!(5 > 3) // #output false</code></td>
           </tr>
         </tbody>
       </table>
@@ -214,32 +214,32 @@
           <tr>
             <td class="border border-gray-300 p-2"><code>&</code></td>
             <td class="border border-gray-300 p-2">Bitwise AND</td>
-            <td class="border border-gray-300 p-2"><code>5 & 1 // 1</code></td>
+            <td class="border border-gray-300 p-2"><code>5 & 1 // #output 1</code></td>
           </tr>
           <tr>
             <td class="border border-gray-300 p-2"><code>|</code></td>
             <td class="border border-gray-300 p-2">Bitwise OR</td>
-            <td class="border border-gray-300 p-2"><code>5 | 1 // 5</code></td>
+            <td class="border border-gray-300 p-2"><code>5 | 1 // #output 5</code></td>
           </tr>
           <tr>
             <td class="border border-gray-300 p-2"><code>^</code></td>
             <td class="border border-gray-300 p-2">Bitwise XOR</td>
-            <td class="border border-gray-300 p-2"><code>5 ^ 1 // 4</code></td>
+            <td class="border border-gray-300 p-2"><code>5 ^ 1 // #output 4</code></td>
           </tr>
           <tr>
             <td class="border border-gray-300 p-2"><code>~</code></td>
             <td class="border border-gray-300 p-2">Bitwise NOT</td>
-            <td class="border border-gray-300 p-2"><code>~5 // -6</code></td>
+            <td class="border border-gray-300 p-2"><code>~5 // #output -6</code></td>
           </tr>
           <tr>
             <td class="border border-gray-300 p-2"><code><<</code></td>
             <td class="border border-gray-300 p-2">Left Shift</td>
-            <td class="border border-gray-300 p-2"><code>5 << 1 // 10</code></td>
+            <td class="border border-gray-300 p-2"><code>5 << 1 // #output 10</code></td>
           </tr>
           <tr>
             <td class="border border-gray-300 p-2"><code>>></code></td>
             <td class="border border-gray-300 p-2">Right Shift</td>
-            <td class="border border-gray-300 p-2"><code>5 >> 1 // 2</code></td>
+            <td class="border border-gray-300 p-2"><code>5 >> 1 // #output 2</code></td>
           </tr>
         </tbody>
       </table>
@@ -250,20 +250,14 @@
         The ternary operator allows you to write a simple `if-else` statement in one line. The syntax is:
       </p>
       <pre class="bg-gray-800 text-white rounded-lg p-4 mb-6">
-        <code class="language-javascript">
-          condition ? expression_if_true : expression_if_false;
-        </code>
-      </pre>
+<code class="language-javascript">condition ? expression_if_true : expression_if_false;</code></pre>
       <p class="text-base md:text-lg mb-4">
         For example:
       </p>
       <pre class="bg-gray-800 text-white rounded-lg p-4 mb-6">
-        <code class="language-javascript">
-          let age = 18;
-          let message = (age >= 18) ? "You are an adult." : "You are a minor.";
-          console.log(message); // Output: "You are an adult."
-        </code>
-      </pre>
+<code class="language-javascript">let age = 18;
+let message = (age >= 18) ? "You are an adult." : "You are a minor.";
+console.log(message); // Output: "You are an adult."</code></pre>
     </div>
   </div>
 </template>

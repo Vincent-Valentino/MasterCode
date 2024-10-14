@@ -1,644 +1,648 @@
 <template>
-  <div class="container mx-auto p-4">
+  <div class="w-full">
     <!-- Header Section -->
     <div class="w-full flex items-center gap-2 bg-yellow-500 rounded-t-xl p-4">
       <img src="/icons/javascript.svg" alt="JavaScript Logo" class="w-12 h-12">
-      <h1 class="text-2xl md:text-4xl font-bold text-white">ES6 Javascript</h1>
+      <h1 class="text-2xl md:text-4xl font-bold text-white">ES6 JavaScript</h1>
     </div>
 
-    <!-- Table of Contents -->
-    <nav class="mb-8">
-      <h2 class="text-2xl font-semibold mb-4">Table of Contents</h2>
-      <ul class="list-disc list-inside text-blue-500">
-        <li><a href="#introduction" class="underline">1. Introduction to ES6</a></li>
-        <li><a href="#let-const" class="underline">2. Let and Const</a></li>
-        <li><a href="#arrow-functions" class="underline">3. Arrow Functions</a></li>
-        <li><a href="#template-literals" class="underline">4. Template Literals</a></li>
-        <li><a href="#destructuring" class="underline">5. Destructuring Assignment</a></li>
-        <li><a href="#spread-rest" class="underline">6. Spread and Rest Operators</a></li>
-        <li><a href="#classes" class="underline">7. Classes</a></li>
-        <li><a href="#modules" class="underline">8. Modules</a></li>
-        <li><a href="#promises" class="underline">9. Promises</a></li>
-        <li><a href="#default-parameters" class="underline">10. Default Parameters</a></li>
-        <li><a href="#enhanced-objects" class="underline">11. Enhanced Object Literals</a></li>
-        <li><a href="#iterators-generators" class="underline">12. Iterators and Generators</a></li>
-        <li><a href="#symbols" class="underline">13. Symbols</a></li>
-        <li><a href="#best-practices" class="underline">14. Best Practices</a></li>
-        <li><a href="#common-mistakes" class="underline">15. Common Mistakes</a></li>
-        <li><a href="#summary" class="underline">16. Summary</a></li>
-      </ul>
-    </nav>
-
-    <!-- Content Sections -->
-    <section id="introduction" class="mb-12">
-      <h2 class="text-3xl font-semibold mb-4">1. Introduction to ES6</h2>
-      <p class="text-lg text-gray-700 mb-4">
-        ECMAScript 2015, commonly known as ES6, is a significant update to JavaScript that introduced numerous features to enhance the language's capabilities, improve code readability, and facilitate modern development practices.
-      </p>
-      <p class="text-lg text-gray-700">
-        <strong>Why ES6?</strong> Before ES6, JavaScript lacked many features that developers needed for large-scale applications, such as classes, modules, and enhanced object literals. ES6 addressed these gaps, making JavaScript more powerful and easier to work with.
-      </p>
-    </section>
-
-    <!-- Let and Const -->
-    <section id="let-const" class="mb-12">
-      <h2 class="text-3xl font-semibold mb-4">2. Let and Const</h2>
-      <p class="text-lg text-gray-700 mb-4">
-        Prior to ES6, JavaScript only had <code>var</code> for variable declarations. ES6 introduced <code>let</code> and <code>const</code> to provide block-scoped variables, enhancing code predictability and reducing bugs.
-      </p>
-
-      <!-- Let Example -->
-      <div class="mb-6">
-        <h3 class="text-2xl font-semibold mb-2">2.1. Let</h3>
-        <p class="text-lg text-gray-700 mb-4">
-          <code>let</code> allows you to declare variables that are limited in scope to the block, statement, or expression in which they are used.
-        </p>
-        <div class="bg-gray-800 text-white rounded-lg p-4 mb-4 overflow-auto">
-          <pre><code class="language-javascript">{{ letExample }}</code></pre>
-        </div>
-        <p class="text-lg text-gray-700">
-          <strong>Explanation:</strong> The variable <code>message</code> is declared using <code>let</code> inside the <code>if</code> block, making it inaccessible outside the block.
-        </p>
-      </div>
-
-      <!-- Const Example -->
-      <div class="mb-6">
-        <h3 class="text-2xl font-semibold mb-2">2.2. Const</h3>
-        <p class="text-lg text-gray-700 mb-4">
-          <code>const</code> is used to declare variables that are read-only. Once a <code>const</code> variable is assigned, it cannot be reassigned.
-        </p>
-        <div class="bg-gray-800 text-white rounded-lg p-4 mb-4 overflow-auto">
-          <pre><code class="language-javascript">{{ constExample }}</code></pre>
-        </div>
-        <p class="text-lg text-gray-700">
-          <strong>Explanation:</strong> Attempting to reassign a <code>const</code> variable results in a TypeError. However, if the <code>const</code> holds an object, the object's properties can still be modified.
-        </p>
-      </div>
-
-      <!-- When to Use Let and Const -->
-      <div class="mb-6">
-        <h3 class="text-2xl font-semibold mb-2">2.3. When to Use Let and Const</h3>
-        <ul class="list-disc list-inside text-lg text-gray-700">
-          <li><strong>Use <code>const</code> by default:</strong> If a variable's value should not change, declare it with <code>const</code>.</li>
-          <li><strong>Use <code>let</code> when reassignment is needed:</strong> For variables that will change over time, use <code>let</code>.</li>
-          <li><strong>Avoid <code>var</code>:</strong> Prefer <code>let</code> and <code>const</code> to avoid scope-related bugs.</li>
+    <!-- Content Section -->
+    <div class="bg-white rounded-b-xl p-4 md:p-6">
+      <!-- Table of Contents -->
+      <nav class="mb-8">
+        <h2 class="text-xl md:text-2xl font-semibold mb-4">Table of Contents</h2>
+        <ul class="list-disc list-inside text-base md:text-lg mb-6">
+          <li><a href="#introduction" class="underline text-blue-800">Introduction to ES6</a></li>
+          <li><a href="#let-const" class="underline text-blue-800">Let and Const</a></li>
+          <li><a href="#arrow-functions" class="underline text-blue-800">Arrow Functions</a></li>
+          <li><a href="#template-literals" class="underline text-blue-800">Template Literals</a></li>
+          <li><a href="#destructuring" class="underline text-blue-800">Destructuring Assignment</a></li>
+          <li><a href="#spread-rest" class="underline text-blue-800">Spread and Rest Operators</a></li>
+          <li><a href="#classes" class="underline text-blue-800">Classes</a></li>
+          <li><a href="#modules" class="underline text-blue-800">Modules</a></li>
+          <li><a href="#promises" class="underline text-blue-800">Promises</a></li>
+          <li><a href="#default-parameters" class="underline text-blue-800">Default Parameters</a></li>
+          <li><a href="#enhanced-objects" class="underline text-blue-800">Enhanced Object Literals</a></li>
+          <li><a href="#iterators-generators" class="underline text-blue-800">Iterators and Generators</a></li>
+          <li><a href="#symbols" class="underline text-blue-800">Symbols</a></li>
+          <li><a href="#best-practices" class="underline text-blue-800">Best Practices</a></li>
+          <li><a href="#common-mistakes" class="underline text-blue-800">Common Mistakes</a></li>
+          <li><a href="#summary" class="underline text-blue-800">Summary</a></li>
         </ul>
-      </div>
-    </section>
+      </nav>
 
-    <!-- Arrow Functions -->
-    <section id="arrow-functions" class="mb-12">
-      <h2 class="text-3xl font-semibold mb-4">3. Arrow Functions</h2>
-      <p class="text-lg text-gray-700 mb-4">
-        Arrow functions provide a concise syntax for writing functions in JavaScript. They also inherit the <code>this</code> value from their enclosing context, which helps avoid common pitfalls related to <code>this</code>.
-      </p>
-
-      <!-- Basic Arrow Function Example -->
-      <div class="mb-6">
-        <h3 class="text-2xl font-semibold mb-2">3.1. Basic Syntax</h3>
+      <!-- Content Sections -->
+      <!-- Introduction to ES6 -->
+      <section id="introduction" class="mb-12">
+        <h2 class="text-xl md:text-2xl font-semibold mb-4">Introduction to ES6</h2>
         <p class="text-lg text-gray-700 mb-4">
-          Arrow functions offer a shorter syntax compared to traditional function expressions.
+          ECMAScript 2015, commonly known as ES6, is a significant update to JavaScript that introduced numerous features to enhance the language's capabilities, improve code readability, and facilitate modern development practices.
         </p>
-        <div class="bg-gray-800 text-white rounded-lg p-4 mb-4 overflow-auto">
-          <pre><code class="language-javascript">{{ arrowFunctionExample }}</code></pre>
-        </div>
         <p class="text-lg text-gray-700">
-          <strong>Explanation:</strong> The arrow function <code>add</code> takes two parameters and returns their sum. Notice the omission of the <code>function</code> keyword and the use of the <code>=></code> syntax.
+          <strong>Why ES6?</strong> Before ES6, JavaScript lacked many features that developers needed for large-scale applications, such as classes, modules, and enhanced object literals. ES6 addressed these gaps, making JavaScript more powerful and easier to work with.
         </p>
-      </div>
+      </section>
 
-      <!-- Arrow Function with Implicit Return -->
-      <div class="mb-6">
-        <h3 class="text-2xl font-semibold mb-2">3.2. Implicit Return</h3>
+      <!-- Let and Const -->
+      <section id="let-const" class="mb-12">
+        <h2 class="text-xl md:text-2xl font-semibold mb-4">Let and Const</h2>
         <p class="text-lg text-gray-700 mb-4">
-          If the function body contains only a single expression, you can omit the curly braces and the <code>return</code> statement.
+          Prior to ES6, JavaScript only had <code>var</code> for variable declarations. ES6 introduced <code>let</code> and <code>const</code> to provide block-scoped variables, enhancing code predictability and reducing bugs.
         </p>
-        <div class="bg-gray-800 text-white rounded-lg p-4 mb-4 overflow-auto">
-          <pre><code class="language-javascript">{{ arrowFunctionImplicitReturn }}</code></pre>
-        </div>
-        <p class="text-lg text-gray-700">
-          <strong>Explanation:</strong> The arrow function <code>multiply</code> implicitly returns the product of <code>a</code> and <code>b</code> without needing the <code>return</code> keyword.
-        </p>
-      </div>
 
-      <!-- Arrow Functions and This -->
-      <div class="mb-6">
-        <h3 class="text-2xl font-semibold mb-2">3.3. Arrow Functions and <code>this</code></h3>
-        <p class="text-lg text-gray-700 mb-4">
-          Arrow functions do not have their own <code>this</code> binding. Instead, they inherit <code>this</code> from the parent scope.
-        </p>
-        <div class="bg-gray-800 text-white rounded-lg p-4 mb-4 overflow-auto">
-          <pre><code class="language-javascript">{{ arrowFunctionThis }}</code></pre>
-        </div>
-        <p class="text-lg text-gray-700">
-          <strong>Explanation:</strong> In the object <code>counter</code>, the arrow function used in <code>setTimeout</code> inherits <code>this</code> from the surrounding context, correctly accessing <code>this.count</code>.
-        </p>
-      </div>
-    </section>
-
-    <!-- Template Literals -->
-    <section id="template-literals" class="mb-12">
-      <h2 class="text-3xl font-semibold mb-4">4. Template Literals</h2>
-      <p class="text-lg text-gray-700 mb-4">
-        Template literals provide an easy way to create multiline strings and perform string interpolation. They enhance readability and simplify dynamic string creation.
-      </p>
-
-      <!-- Basic Template Literal Example -->
-      <div class="mb-6">
-        <h3 class="text-2xl font-semibold mb-2">4.1. Basic Usage</h3>
-        <p class="text-lg text-gray-700 mb-4">
-          Template literals are enclosed by backticks (<code>`</code>) instead of single or double quotes.
-        </p>
-        <div class="bg-gray-800 text-white rounded-lg p-4 mb-4 overflow-auto">
-          <pre><code class="language-javascript">{{ templateLiteralExample }}</code></pre>
-        </div>
-        <p class="text-lg text-gray-700">
-          <strong>Explanation:</strong> The variables <code>name</code> and <code>age</code> are embedded directly within the string using the <code>${}</code> syntax.
-        </p>
-      </div>
-
-      <!-- Multiline Strings -->
-      <div class="mb-6">
-        <h3 class="text-2xl font-semibold mb-2">4.2. Multiline Strings</h3>
-        <p class="text-lg text-gray-700 mb-4">
-          Template literals allow for easy creation of multiline strings without the need for concatenation or escape characters.
-        </p>
-        <div class="bg-gray-800 text-white rounded-lg p-4 mb-4 overflow-auto">
-          <pre><code class="language-javascript">{{ multilineStringExample }}</code></pre>
-        </div>
-        <p class="text-lg text-gray-700">
-          <strong>Explanation:</strong> The string spans multiple lines, preserving the line breaks as they appear in the code.
-        </p>
-      </div>
-
-      <!-- Expression Interpolation -->
-      <div class="mb-6">
-        <h3 class="text-2xl font-semibold mb-2">4.3. Expression Interpolation</h3>
-        <p class="text-lg text-gray-700 mb-4">
-          You can embed any JavaScript expression within a template literal.
-        </p>
-        <div class="bg-gray-800 text-white rounded-lg p-4 mb-4 overflow-auto">
-          <pre><code class="language-javascript">{{ expressionInterpolationExample }}</code></pre>
-        </div>
-        <p class="text-lg text-gray-700">
-          <strong>Explanation:</strong> The expression <code>${a + b}</code> is evaluated and its result is embedded in the string.
-        </p>
-      </div>
-    </section>
-
-    <!-- Destructuring Assignment -->
-    <section id="destructuring" class="mb-12">
-      <h2 class="text-3xl font-semibold mb-4">5. Destructuring Assignment</h2>
-      <p class="text-lg text-gray-700 mb-4">
-        Destructuring allows you to extract values from arrays or properties from objects into distinct variables. It simplifies the process of working with complex data structures.
-      </p>
-
-      <!-- Object Destructuring -->
-      <div class="mb-6">
-        <h3 class="text-2xl font-semibold mb-2">5.1. Object Destructuring</h3>
-        <p class="text-lg text-gray-700 mb-4">
-          Extract specific properties from an object into variables.
-        </p>
-        <div class="bg-gray-800 text-white rounded-lg p-4 mb-4 overflow-auto">
-          <pre><code class="language-javascript">{{ objectDestructuringExample }}</code></pre>
-        </div>
-        <p class="text-lg text-gray-700">
-          <strong>Explanation:</strong> The properties <code>name</code> and <code>age</code> are extracted from the <code>person</code> object into separate variables.
-        </p>
-      </div>
-
-      <!-- Array Destructuring -->
-      <div class="mb-6">
-        <h3 class="text-2xl font-semibold mb-2">5.2. Array Destructuring</h3>
-        <p class="text-lg text-gray-700 mb-4">
-          Extract values from an array into variables.
-        </p>
-        <div class="bg-gray-800 text-white rounded-lg p-4 mb-4 overflow-auto">
-          <pre><code class="language-javascript">{{ arrayDestructuringExample }}</code></pre>
-        </div>
-        <p class="text-lg text-gray-700">
-          <strong>Explanation:</strong> The first and second elements of the <code>colors</code> array are extracted into <code>firstColor</code> and <code>secondColor</code> variables.
-        </p>
-      </div>
-
-      <!-- Nested Destructuring -->
-      <div class="mb-6">
-        <h3 class="text-2xl font-semibold mb-2">5.3. Nested Destructuring</h3>
-        <p class="text-lg text-gray-700 mb-4">
-          Destructure nested objects and arrays.
-        </p>
-        <div class="bg-gray-800 text-white rounded-lg p-4 mb-4 overflow-auto">
-          <pre><code class="language-javascript">{{ nestedDestructuringExample }}</code></pre>
-        </div>
-        <p class="text-lg text-gray-700">
-          <strong>Explanation:</strong> Nested properties <code>street</code> and <code>city</code> are extracted from the <code>address</code> object within <code>person</code>.
-        </p>
-      </div>
-    </section>
-
-    <!-- Spread and Rest Operators -->
-    <section id="spread-rest" class="mb-12">
-      <h2 class="text-3xl font-semibold mb-4">6. Spread and Rest Operators</h2>
-      <p class="text-lg text-gray-700 mb-4">
-        The spread (<code>...</code>) and rest (<code>...</code>) operators provide a concise way to expand and collect elements in arrays and objects. They enhance flexibility in function parameters, object manipulation, and array operations.
-      </p>
-
-      <!-- Spread Operator -->
-      <div class="mb-6">
-        <h3 class="text-2xl font-semibold mb-2">6.1. Spread Operator</h3>
-        <p class="text-lg text-gray-700 mb-4">
-          The spread operator expands elements of an iterable (like an array) or properties of an object.
-        </p>
-        <div class="bg-gray-800 text-white rounded-lg p-4 mb-4 overflow-auto">
-          <pre><code class="language-javascript">{{ spreadOperatorExample }}</code></pre>
-        </div>
-        <p class="text-lg text-gray-700">
-          <strong>Explanation:</strong> The spread operator is used to copy elements from <code>arr1</code> and <code>arr2</code> into a new array <code>combined</code>.
-        </p>
-      </div>
-
-      <!-- Rest Operator -->
-      <div class="mb-6">
-        <h3 class="text-2xl font-semibold mb-2">6.2. Rest Operator</h3>
-        <p class="text-lg text-gray-700 mb-4">
-          The rest operator collects multiple elements into a single array.
-        </p>
-        <div class="bg-gray-800 text-white rounded-lg p-4 mb-4 overflow-auto">
-          <pre><code class="language-javascript">{{ restOperatorExample }}</code></pre>
-        </div>
-        <p class="text-lg text-gray-700">
-          <strong>Explanation:</strong> The rest operator collects all remaining elements after the first two into the <code>others</code> array.
-        </p>
-      </div>
-
-      <!-- Spread with Objects -->
-      <div class="mb-6">
-        <h3 class="text-2xl font-semibold mb-2">6.3. Spread with Objects</h3>
-        <p class="text-lg text-gray-700 mb-4">
-          The spread operator can also be used to copy and merge objects.
-        </p>
-        <div class="bg-gray-800 text-white rounded-lg p-4 mb-4 overflow-auto">
-          <pre><code class="language-javascript">{{ spreadWithObjectsExample }}</code></pre>
-        </div>
-        <p class="text-lg text-gray-700">
-          <strong>Explanation:</strong> The <code>merged</code> object combines properties from <code>obj1</code> and <code>obj2</code>.
-        </p>
-      </div>
-    </section>
-
-    <!-- Classes -->
-    <section id="classes" class="mb-12">
-      <h2 class="text-3xl font-semibold mb-4">7. Classes</h2>
-      <p class="text-lg text-gray-700 mb-4">
-        ES6 introduced a more intuitive syntax for creating objects and handling inheritance through classes. While JavaScript remains prototype-based, classes provide a clearer and more familiar structure for developers from class-based languages.
-      </p>
-
-      <!-- Basic Class Example -->
-      <div class="mb-6">
-        <h3 class="text-2xl font-semibold mb-2">7.1. Basic Class Syntax</h3>
-        <p class="text-lg text-gray-700 mb-4">
-          Classes in ES6 provide a blueprint for creating objects with predefined properties and methods.
-        </p>
-        <div class="bg-gray-800 text-white rounded-lg p-4 mb-4 overflow-auto">
-          <pre><code class="language-javascript">{{ basicClassExample }}</code></pre>
-        </div>
-        <p class="text-lg text-gray-700">
-          <strong>Explanation:</strong> The <code>Person</code> class defines a constructor to initialize object properties and a method <code>greet</code> to display a greeting message.
-        </p>
-      </div>
-
-      <!-- Inheritance with Classes -->
-      <div class="mb-6">
-        <h3 class="text-2xl font-semibold mb-2">7.2. Inheritance with Classes</h3>
-        <p class="text-lg text-gray-700 mb-4">
-          Classes can inherit from other classes, allowing for hierarchical and reusable code structures.
-        </p>
-        <div class="bg-gray-800 text-white rounded-lg p-4 mb-4 overflow-auto">
-          <pre><code class="language-javascript">{{ inheritanceClassExample }}</code></pre>
-        </div>
-        <p class="text-lg text-gray-700">
-          <strong>Explanation:</strong> The <code>Student</code> class extends the <code>Person</code> class, inheriting its properties and methods while adding new ones specific to students.
-        </p>
-      </div>
-
-      <!-- Static Methods -->
-      <div class="mb-6">
-        <h3 class="text-2xl font-semibold mb-2">7.3. Static Methods</h3>
-        <p class="text-lg text-gray-700 mb-4">
-          Static methods belong to the class itself rather than any instance, useful for utility functions.
-        </p>
-        <div class="bg-gray-800 text-white rounded-lg p-4 mb-4 overflow-auto">
-          <pre><code class="language-javascript">{{ staticMethodExample }}</code></pre>
-        </div>
-        <p class="text-lg text-gray-700">
-          <strong>Explanation:</strong> The <code>Person</code> class has a static method <code>isAdult</code> that determines if a person is an adult based on age.
-        </p>
-      </div>
-    </section>
-
-    <!-- Modules -->
-    <section id="modules" class="mb-12">
-      <h2 class="text-3xl font-semibold mb-4">8. Modules</h2>
-      <p class="text-lg text-gray-700 mb-4">
-        ES6 modules allow you to organize your code into separate files, promoting reusability and maintainability. Modules can export variables, functions, classes, etc., which can then be imported into other modules.
-      </p>
-
-      <!-- Export and Import -->
-      <div class="mb-6">
-        <h3 class="text-2xl font-semibold mb-2">8.1. Export and Import</h3>
-        <p class="text-lg text-gray-700 mb-4">
-          Use <code>export</code> to expose code from a module and <code>import</code> to bring it into another module.
-        </p>
-        <div class="flex flex-col md:flex-row gap-4 mb-4">
-          <!-- Export Example -->
-          <div class="bg-gray-800 text-white rounded-lg p-4 overflow-auto flex-1">
-            <pre><code class="language-javascript">{{ exportExample }}</code></pre>
+        <!-- Let -->
+        <div class="mb-6">
+          <h3 class="text-2xl font-semibold mb-2">Let</h3>
+          <p class="text-lg text-gray-700 mb-4">
+            <code>let</code> allows you to declare variables that are limited in scope to the block, statement, or expression in which they are used.
+          </p>
+          <div class="bg-gray-800 text-white rounded-lg p-4 mb-4 overflow-auto">
+            <pre><code class="language-javascript">{{ letExample }}</code></pre>
           </div>
-          <!-- Import Example -->
-          <div class="bg-gray-800 text-white rounded-lg p-4 overflow-auto flex-1">
-            <pre><code class="language-javascript">{{ importExample }}</code></pre>
+          <p class="text-lg text-gray-700">
+            <strong>Explanation:</strong> The variable <code>message</code> is declared using <code>let</code> inside the <code>if</code> block, making it inaccessible outside the block.
+          </p>
+        </div>
+
+        <!-- Const -->
+        <div class="mb-6">
+          <h3 class="text-2xl font-semibold mb-2">Const</h3>
+          <p class="text-lg text-gray-700 mb-4">
+            <code>const</code> is used to declare variables that are read-only. Once a <code>const</code> variable is assigned, it cannot be reassigned.
+          </p>
+          <div class="bg-gray-800 text-white rounded-lg p-4 mb-4 overflow-auto">
+            <pre><code class="language-javascript">{{ constExample }}</code></pre>
           </div>
+          <p class="text-lg text-gray-700">
+            <strong>Explanation:</strong> Attempting to reassign a <code>const</code> variable results in a TypeError. However, if the <code>const</code> holds an object, the object's properties can still be modified.
+          </p>
         </div>
-        <p class="text-lg text-gray-700">
-          <strong>Explanation:</strong> The <code>math.js</code> module exports a function <code>add</code>, which is then imported and used in another file.
-        </p>
-      </div>
 
-      <!-- Default Exports -->
-      <div class="mb-6">
-        <h3 class="text-2xl font-semibold mb-2">8.2. Default Exports</h3>
+        <!-- When to Use Let and Const -->
+        <div class="mb-6">
+          <h3 class="text-2xl font-semibold mb-2">When to Use Let and Const</h3>
+          <ul class="list-disc list-inside text-lg text-gray-700">
+            <li><strong>Use <code>const</code> by default:</strong> If a variable's value should not change, declare it with <code>const</code>.</li>
+            <li><strong>Use <code>let</code> when reassignment is needed:</strong> For variables that will change over time, use <code>let</code>.</li>
+            <li><strong>Avoid <code>var</code>:</strong> Prefer <code>let</code> and <code>const</code> to avoid scope-related bugs.</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Arrow Functions -->
+      <section id="arrow-functions" class="mb-12">
+        <h2 class="text-xl md:text-2xl font-semibold mb-4">Arrow Functions</h2>
         <p class="text-lg text-gray-700 mb-4">
-          A module can have one default export, which can be a function, class, or object.
+          Arrow functions provide a concise syntax for writing functions in JavaScript. They also inherit the <code>this</code> value from their enclosing context, which helps avoid common pitfalls related to <code>this</code>.
         </p>
-        <div class="flex flex-col md:flex-row gap-4 mb-4">
-          <!-- Default Export Example -->
-          <div class="bg-gray-800 text-white rounded-lg p-4 overflow-auto flex-1">
-            <pre><code class="language-javascript">{{ defaultExportExample }}</code></pre>
+
+        <!-- Basic Arrow Function Example -->
+        <div class="mb-6">
+          <h3 class="text-2xl font-semibold mb-2">Basic Arrow Function Syntax</h3>
+          <p class="text-lg text-gray-700 mb-4">
+            Arrow functions offer a shorter syntax compared to traditional function expressions.
+          </p>
+          <div class="bg-gray-800 text-white rounded-lg p-4 mb-4 overflow-auto">
+            <pre><code class="language-javascript">{{ arrowFunctionExample }}</code></pre>
           </div>
-          <!-- Import Default Export Example -->
-          <div class="bg-gray-800 text-white rounded-lg p-4 overflow-auto flex-1">
-            <pre><code class="language-javascript">{{ importDefaultExportExample }}</code></pre>
+          <p class="text-lg text-gray-700">
+            <strong>Explanation:</strong> The arrow function <code>add</code> takes two parameters and returns their sum. Notice the omission of the <code>function</code> keyword and the use of the <code>=></code> syntax.
+          </p>
+        </div>
+
+        <!-- Arrow Function with Implicit Return -->
+        <div class="mb-6">
+          <h3 class="text-2xl font-semibold mb-2">Arrow Function with Implicit Return</h3>
+          <p class="text-lg text-gray-700 mb-4">
+            If the function body contains only a single expression, you can omit the curly braces and the <code>return</code> statement.
+          </p>
+          <div class="bg-gray-800 text-white rounded-lg p-4 mb-4 overflow-auto">
+            <pre><code class="language-javascript">{{ arrowFunctionImplicitReturn }}</code></pre>
           </div>
+          <p class="text-lg text-gray-700">
+            <strong>Explanation:</strong> The arrow function <code>multiply</code> implicitly returns the product of <code>a</code> and <code>b</code> without needing the <code>return</code> keyword.
+          </p>
         </div>
-        <p class="text-lg text-gray-700">
-          <strong>Explanation:</strong> The <code>logger.js</code> module exports a default function, which can be imported without curly braces.
-        </p>
-      </div>
-    </section>
 
-    <!-- Promises -->
-    <section id="promises" class="mb-12">
-      <h2 class="text-3xl font-semibold mb-4">9. Promises</h2>
-      <p class="text-lg text-gray-700 mb-4">
-        Promises provide a cleaner and more manageable way to handle asynchronous operations compared to traditional callback functions. They represent a value that may be available now, later, or never.
-      </p>
+        <!-- Arrow Functions and This -->
+        <div class="mb-6">
+          <h3 class="text-2xl font-semibold mb-2">Arrow Functions and <code>this</code></h3>
+          <p class="text-lg text-gray-700 mb-4">
+            Arrow functions do not have their own <code>this</code> binding. Instead, they inherit <code>this</code> from the parent scope.
+          </p>
+          <div class="bg-gray-800 text-white rounded-lg p-4 mb-4 overflow-auto">
+            <pre><code class="language-javascript">{{ arrowFunctionThis }}</code></pre>
+          </div>
+          <p class="text-lg text-gray-700">
+            <strong>Explanation:</strong> In the object <code>counter</code>, the arrow function used in <code>setTimeout</code> inherits <code>this</code> from the surrounding context, correctly accessing <code>this.count</code>.
+          </p>
+        </div>
+      </section>
 
-      <!-- Basic Promise Example -->
-      <div class="mb-6">
-        <h3 class="text-2xl font-semibold mb-2">9.1. Basic Promise Syntax</h3>
+      <!-- Template Literals -->
+      <section id="template-literals" class="mb-12">
+        <h2 class="text-xl md:text-2xl font-semibold mb-4">Template Literals</h2>
         <p class="text-lg text-gray-700 mb-4">
-          Create a promise that resolves after a certain period.
+          Template literals provide an easy way to create multiline strings and perform string interpolation. They enhance readability and simplify dynamic string creation.
         </p>
-        <div class="bg-gray-800 text-white rounded-lg p-4 mb-4 overflow-auto">
-          <pre><code class="language-javascript">{{ promiseExample }}</code></pre>
-        </div>
-        <p class="text-lg text-gray-700">
-          <strong>Explanation:</strong> The promise resolves with the message "Operation Successful!" after 2 seconds. The <code>.then()</code> method handles the resolved value.
-        </p>
-      </div>
 
-      <!-- Chaining Promises -->
-      <div class="mb-6">
-        <h3 class="text-2xl font-semibold mb-2">9.2. Chaining Promises</h3>
+        <!-- Basic Template Literal Example -->
+        <div class="mb-6">
+          <h3 class="text-2xl font-semibold mb-2">Basic Template Literal Usage</h3>
+          <p class="text-lg text-gray-700 mb-4">
+            Template literals are enclosed by backticks (<code>`</code>) instead of single or double quotes.
+          </p>
+          <div class="bg-gray-800 text-white rounded-lg p-4 mb-4 overflow-auto">
+            <pre><code class="language-javascript">{{ templateLiteralExample }}</code></pre>
+          </div>
+          <p class="text-lg text-gray-700">
+            <strong>Explanation:</strong> The variables <code>name</code> and <code>age</code> are embedded directly within the string using the <code>${}</code> syntax.
+          </p>
+        </div>
+
+        <!-- Multiline Strings -->
+        <div class="mb-6">
+          <h3 class="text-2xl font-semibold mb-2">Multiline Strings</h3>
+          <p class="text-lg text-gray-700 mb-4">
+            Template literals allow for easy creation of multiline strings without the need for concatenation or escape characters.
+          </p>
+          <div class="bg-gray-800 text-white rounded-lg p-4 mb-4 overflow-auto">
+            <pre><code class="language-javascript">{{ multilineStringExample }}</code></pre>
+          </div>
+          <p class="text-lg text-gray-700">
+            <strong>Explanation:</strong> The string spans multiple lines, preserving the line breaks as they appear in the code.
+          </p>
+        </div>
+
+        <!-- Expression Interpolation -->
+        <div class="mb-6">
+          <h3 class="text-2xl font-semibold mb-2">Expression Interpolation</h3>
+          <p class="text-lg text-gray-700 mb-4">
+            You can embed any JavaScript expression within a template literal.
+          </p>
+          <div class="bg-gray-800 text-white rounded-lg p-4 mb-4 overflow-auto">
+            <pre><code class="language-javascript">{{ expressionInterpolationExample }}</code></pre>
+          </div>
+          <p class="text-lg text-gray-700">
+            <strong>Explanation:</strong> The expression <code>${a + b}</code> is evaluated and its result is embedded in the string.
+          </p>
+        </div>
+      </section>
+
+      <!-- Destructuring Assignment -->
+      <section id="destructuring" class="mb-12">
+        <h2 class="text-xl md:text-2xl font-semibold mb-4">Destructuring Assignment</h2>
         <p class="text-lg text-gray-700 mb-4">
-          Chain multiple asynchronous operations in a readable manner.
+          Destructuring allows you to extract values from arrays or properties from objects into distinct variables. It simplifies the process of working with complex data structures.
         </p>
-        <div class="bg-gray-800 text-white rounded-lg p-4 mb-4 overflow-auto">
-          <pre><code class="language-javascript">{{ promiseChainingExample }}</code></pre>
-        </div>
-        <p class="text-lg text-gray-700">
-          <strong>Explanation:</strong> Each <code>.then()</code> returns a new promise, allowing for sequential asynchronous operations.
-        </p>
-      </div>
 
-      <!-- Handling Errors with Promises -->
-      <div class="mb-6">
-        <h3 class="text-2xl font-semibold mb-2">9.3. Handling Errors</h3>
+        <!-- Object Destructuring -->
+        <div class="mb-6">
+          <h3 class="text-2xl font-semibold mb-2">Object Destructuring</h3>
+          <p class="text-lg text-gray-700 mb-4">
+            Extract specific properties from an object into variables.
+          </p>
+          <div class="bg-gray-800 text-white rounded-lg p-4 mb-4 overflow-auto">
+            <pre><code class="language-javascript">{{ objectDestructuringExample }}</code></pre>
+          </div>
+          <p class="text-lg text-gray-700">
+            <strong>Explanation:</strong> The properties <code>name</code> and <code>age</code> are extracted from the <code>person</code> object into separate variables.
+          </p>
+        </div>
+
+        <!-- Array Destructuring -->
+        <div class="mb-6">
+          <h3 class="text-2xl font-semibold mb-2">Array Destructuring</h3>
+          <p class="text-lg text-gray-700 mb-4">
+            Extract values from an array into variables.
+          </p>
+          <div class="bg-gray-800 text-white rounded-lg p-4 mb-4 overflow-auto">
+            <pre><code class="language-javascript">{{ arrayDestructuringExample }}</code></pre>
+          </div>
+          <p class="text-lg text-gray-700">
+            <strong>Explanation:</strong> The first and second elements of the <code>colors</code> array are extracted into <code>firstColor</code> and <code>secondColor</code> variables.
+          </p>
+        </div>
+
+        <!-- Nested Destructuring -->
+        <div class="mb-6">
+          <h3 class="text-2xl font-semibold mb-2">Nested Destructuring</h3>
+          <p class="text-lg text-gray-700 mb-4">
+            Destructure nested objects and arrays.
+          </p>
+          <div class="bg-gray-800 text-white rounded-lg p-4 mb-4 overflow-auto">
+            <pre><code class="language-javascript">{{ nestedDestructuringExample }}</code></pre>
+          </div>
+          <p class="text-lg text-gray-700">
+            <strong>Explanation:</strong> Nested properties <code>street</code> and <code>city</code> are extracted from the <code>address</code> object within <code>person</code>.
+          </p>
+        </div>
+      </section>
+
+      <!-- Spread and Rest Operators -->
+      <section id="spread-rest" class="mb-12">
+        <h2 class="text-xl md:text-2xl font-semibold mb-4">Spread and Rest Operators</h2>
         <p class="text-lg text-gray-700 mb-4">
-          Use <code>.catch()</code> to handle errors in promise chains.
+          The spread (<code>...</code>) and rest (<code>...</code>) operators provide a concise way to expand and collect elements in arrays and objects. They enhance flexibility in function parameters, object manipulation, and array operations.
         </p>
-        <div class="bg-gray-800 text-white rounded-lg p-4 mb-4 overflow-auto">
-          <pre><code class="language-javascript">{{ promiseErrorHandlingExample }}</code></pre>
+
+        <!-- Spread Operator -->
+        <div class="mb-6">
+          <h3 class="text-2xl font-semibold mb-2">Spread Operator</h3>
+          <p class="text-lg text-gray-700 mb-4">
+            The spread operator expands elements of an iterable (like an array) or properties of an object.
+          </p>
+          <div class="bg-gray-800 text-white rounded-lg p-4 mb-4 overflow-auto">
+            <pre><code class="language-javascript">{{ spreadOperatorExample }}</code></pre>
+          </div>
+          <p class="text-lg text-gray-700">
+            <strong>Explanation:</strong> The spread operator is used to copy elements from <code>arr1</code> and <code>arr2</code> into a new array <code>combined</code>.
+          </p>
         </div>
-        <p class="text-lg text-gray-700">
-          <strong>Explanation:</strong> If any promise in the chain is rejected, the <code>.catch()</code> method handles the error.
-        </p>
-      </div>
-    </section>
 
-    <!-- Default Parameters -->
-    <section id="default-parameters" class="mb-12">
-      <h2 class="text-3xl font-semibold mb-4">10. Default Parameters</h2>
-      <p class="text-lg text-gray-700 mb-4">
-        Default parameters allow you to initialize function parameters with default values if no value or <code>undefined</code> is passed.
-      </p>
+        <!-- Rest Operator -->
+        <div class="mb-6">
+          <h3 class="text-2xl font-semibold mb-2">Rest Operator</h3>
+          <p class="text-lg text-gray-700 mb-4">
+            The rest operator collects multiple elements into a single array.
+          </p>
+          <div class="bg-gray-800 text-white rounded-lg p-4 mb-4 overflow-auto">
+            <pre><code class="language-javascript">{{ restOperatorExample }}</code></pre>
+          </div>
+          <p class="text-lg text-gray-700">
+            <strong>Explanation:</strong> The rest operator collects all remaining elements after the first two into the <code>others</code> array.
+          </p>
+        </div>
 
-      <!-- Basic Default Parameters Example -->
-      <div class="mb-6">
-        <h3 class="text-2xl font-semibold mb-2">10.1. Basic Usage</h3>
+        <!-- Spread with Objects -->
+        <div class="mb-6">
+          <h3 class="text-2xl font-semibold mb-2">Spread with Objects</h3>
+          <p class="text-lg text-gray-700 mb-4">
+            The spread operator can also be used to copy and merge objects.
+          </p>
+          <div class="bg-gray-800 text-white rounded-lg p-4 mb-4 overflow-auto">
+            <pre><code class="language-javascript">{{ spreadWithObjectsExample }}</code></pre>
+          </div>
+          <p class="text-lg text-gray-700">
+            <strong>Explanation:</strong> The <code>merged</code> object combines properties from <code>obj1</code> and <code>obj2</code>.
+          </p>
+        </div>
+      </section>
+
+      <!-- Classes -->
+      <section id="classes" class="mb-12">
+        <h2 class="text-xl md:text-2xl font-semibold mb-4">Classes</h2>
         <p class="text-lg text-gray-700 mb-4">
-          Assign default values to function parameters.
+          ES6 introduced a more intuitive syntax for creating objects and handling inheritance through classes. While JavaScript remains prototype-based, classes provide a clearer and more familiar structure for developers from class-based languages.
         </p>
-        <div class="bg-gray-800 text-white rounded-lg p-4 mb-4 overflow-auto">
-          <pre><code class="language-javascript">{{ defaultParametersExample }}</code></pre>
-        </div>
-        <p class="text-lg text-gray-700">
-          <strong>Explanation:</strong> If <code>greeting</code> is not provided, it defaults to "Hello".
-        </p>
-      </div>
 
-      <!-- Default Parameters with Expressions -->
-      <div class="mb-6">
-        <h3 class="text-2xl font-semibold mb-2">10.2. Expressions as Defaults</h3>
+        <!-- Basic Class Example -->
+        <div class="mb-6">
+          <h3 class="text-2xl font-semibold mb-2">Basic Class Syntax</h3>
+          <p class="text-lg text-gray-700 mb-4">
+            Classes in ES6 provide a blueprint for creating objects with predefined properties and methods.
+          </p>
+          <div class="bg-gray-800 text-white rounded-lg p-4 mb-4 overflow-auto">
+            <pre><code class="language-javascript">{{ basicClassExample }}</code></pre>
+          </div>
+          <p class="text-lg text-gray-700">
+            <strong>Explanation:</strong> The <code>Person</code> class defines a constructor to initialize object properties and a method <code>greet</code> to display a greeting message.
+          </p>
+        </div>
+
+        <!-- Inheritance with Classes -->
+        <div class="mb-6">
+          <h3 class="text-2xl font-semibold mb-2">Inheritance with Classes</h3>
+          <p class="text-lg text-gray-700 mb-4">
+            Classes can inherit from other classes, allowing for hierarchical and reusable code structures.
+          </p>
+          <div class="bg-gray-800 text-white rounded-lg p-4 mb-4 overflow-auto">
+            <pre><code class="language-javascript">{{ inheritanceClassExample }}</code></pre>
+          </div>
+          <p class="text-lg text-gray-700">
+            <strong>Explanation:</strong> The <code>Student</code> class extends the <code>Person</code> class, inheriting its properties and methods while adding new ones specific to students.
+          </p>
+        </div>
+
+        <!-- Static Methods -->
+        <div class="mb-6">
+          <h3 class="text-2xl font-semibold mb-2">Static Methods</h3>
+          <p class="text-lg text-gray-700 mb-4">
+            Static methods belong to the class itself rather than any instance, useful for utility functions.
+          </p>
+          <div class="bg-gray-800 text-white rounded-lg p-4 mb-4 overflow-auto">
+            <pre><code class="language-javascript">{{ staticMethodExample }}</code></pre>
+          </div>
+          <p class="text-lg text-gray-700">
+            <strong>Explanation:</strong> The <code>Person</code> class has a static method <code>isAdult</code> that determines if a person is an adult based on age.
+          </p>
+        </div>
+      </section>
+
+      <!-- Modules -->
+      <section id="modules" class="mb-12">
+        <h2 class="text-xl md:text-2xl font-semibold mb-4">Modules</h2>
         <p class="text-lg text-gray-700 mb-4">
-          Use expressions to define default parameter values.
+          ES6 modules allow you to organize your code into separate files, promoting reusability and maintainability. Modules can export variables, functions, classes, etc., which can then be imported into other modules.
         </p>
-        <div class="bg-gray-800 text-white rounded-lg p-4 mb-4 overflow-auto">
-          <pre><code class="language-javascript">{{ defaultParametersExpressionExample }}</code></pre>
+
+        <!-- Export and Import -->
+        <div class="mb-6">
+          <h3 class="text-2xl font-semibold mb-2">Export and Import</h3>
+          <p class="text-lg text-gray-700 mb-4">
+            Use <code>export</code> to expose code from a module and <code>import</code> to bring it into another module.
+          </p>
+          <div class="flex flex-col md:flex-row gap-4 mb-4">
+            <!-- Export Example -->
+            <div class="bg-gray-800 text-white rounded-lg p-4 overflow-auto flex-1">
+              <pre><code class="language-javascript">{{ exportExample }}</code></pre>
+            </div>
+            <!-- Import Example -->
+            <div class="bg-gray-800 text-white rounded-lg p-4 overflow-auto flex-1">
+              <pre><code class="language-javascript">{{ importExample }}</code></pre>
+            </div>
+          </div>
+          <p class="text-lg text-gray-700">
+            <strong>Explanation:</strong> The <code>math.js</code> module exports a function <code>add</code>, which is then imported and used in another file.
+          </p>
         </div>
-        <p class="text-lg text-gray-700">
-          <strong>Explanation:</strong> The default value for <code>initialCount</code> is dynamically calculated based on the length of the <code>items</code> array.
-        </p>
-      </div>
-    </section>
 
-    <!-- Enhanced Object Literals -->
-    <section id="enhanced-objects" class="mb-12">
-      <h2 class="text-3xl font-semibold mb-4">11. Enhanced Object Literals</h2>
-      <p class="text-lg text-gray-700 mb-4">
-        ES6 introduces several enhancements to object literals, making it easier to create objects with dynamic properties, concise methods, and more.
-      </p>
+        <!-- Default Exports -->
+        <div class="mb-6">
+          <h3 class="text-2xl font-semibold mb-2">Default Exports</h3>
+          <p class="text-lg text-gray-700 mb-4">
+            A module can have one default export, which can be a function, class, or object.
+          </p>
+          <div class="flex flex-col md:flex-row gap-4 mb-4">
+            <!-- Default Export Example -->
+            <div class="bg-gray-800 text-white rounded-lg p-4 overflow-auto flex-1">
+              <pre><code class="language-javascript">{{ defaultExportExample }}</code></pre>
+            </div>
+            <!-- Import Default Export Example -->
+            <div class="bg-gray-800 text-white rounded-lg p-4 overflow-auto flex-1">
+              <pre><code class="language-javascript">{{ importDefaultExportExample }}</code></pre>
+            </div>
+          </div>
+          <p class="text-lg text-gray-700">
+            <strong>Explanation:</strong> The <code>logger.js</code> module exports a default function, which can be imported without curly braces.
+          </p>
+        </div>
+      </section>
 
-      <!-- Property Shorthand -->
-      <div class="mb-6">
-        <h3 class="text-2xl font-semibold mb-2">11.1. Property Shorthand</h3>
+      <!-- Promises -->
+      <section id="promises" class="mb-12">
+        <h2 class="text-xl md:text-2xl font-semibold mb-4">Promises</h2>
         <p class="text-lg text-gray-700 mb-4">
-          When property names are the same as variable names, you can use shorthand syntax.
+          Promises provide a cleaner and more manageable way to handle asynchronous operations compared to traditional callback functions. They represent a value that may be available now, later, or never.
         </p>
-        <div class="bg-gray-800 text-white rounded-lg p-4 mb-4 overflow-auto">
-          <pre><code class="language-javascript">{{ propertyShorthandExample }}</code></pre>
-        </div>
-        <p class="text-lg text-gray-700">
-          <strong>Explanation:</strong> Instead of writing <code>name: name</code>, you can simply write <code>name</code>.
-        </p>
-      </div>
 
-      <!-- Method Definitions -->
-      <div class="mb-6">
-        <h3 class="text-2xl font-semibold mb-2">11.2. Method Definitions</h3>
+        <!-- Basic Promise Example -->
+        <div class="mb-6">
+          <h3 class="text-2xl font-semibold mb-2">Basic Promise Syntax</h3>
+          <p class="text-lg text-gray-700 mb-4">
+            Create a promise that resolves after a certain period.
+          </p>
+          <div class="bg-gray-800 text-white rounded-lg p-4 mb-4 overflow-auto">
+            <pre><code class="language-javascript">{{ promiseExample }}</code></pre>
+          </div>
+          <p class="text-lg text-gray-700">
+            <strong>Explanation:</strong> The promise resolves with the message "Operation Successful!" after 2 seconds. The <code>.then()</code> method handles the resolved value.
+          </p>
+        </div>
+
+        <!-- Chaining Promises -->
+        <div class="mb-6">
+          <h3 class="text-2xl font-semibold mb-2">Chaining Promises</h3>
+          <p class="text-lg text-gray-700 mb-4">
+            Chain multiple asynchronous operations in a readable manner.
+          </p>
+          <div class="bg-gray-800 text-white rounded-lg p-4 mb-4 overflow-auto">
+            <pre><code class="language-javascript">{{ promiseChainingExample }}</code></pre>
+          </div>
+          <p class="text-lg text-gray-700">
+            <strong>Explanation:</strong> Each <code>.then()</code> returns a new promise, allowing for sequential asynchronous operations.
+          </p>
+        </div>
+
+        <!-- Handling Errors with Promises -->
+        <div class="mb-6">
+          <h3 class="text-2xl font-semibold mb-2">Handling Errors with Promises</h3>
+          <p class="text-lg text-gray-700 mb-4">
+            Use <code>.catch()</code> to handle errors in promise chains.
+          </p>
+          <div class="bg-gray-800 text-white rounded-lg p-4 mb-4 overflow-auto">
+            <pre><code class="language-javascript">{{ promiseErrorHandlingExample }}</code></pre>
+          </div>
+          <p class="text-lg text-gray-700">
+            <strong>Explanation:</strong> If any promise in the chain is rejected, the <code>.catch()</code> method handles the error.
+          </p>
+        </div>
+      </section>
+
+      <!-- Default Parameters -->
+      <section id="default-parameters" class="mb-12">
+        <h2 class="text-xl md:text-2xl font-semibold mb-4">Default Parameters</h2>
         <p class="text-lg text-gray-700 mb-4">
-          Define methods in objects without the <code>function</code> keyword.
+          Default parameters allow you to initialize function parameters with default values if no value or <code>undefined</code> is passed.
         </p>
-        <div class="bg-gray-800 text-white rounded-lg p-4 mb-4 overflow-auto">
-          <pre><code class="language-javascript">{{ methodDefinitionExample }}</code></pre>
-        </div>
-        <p class="text-lg text-gray-700">
-          <strong>Explanation:</strong> The <code>greet</code> method is defined using the concise method syntax.
-        </p>
-      </div>
 
-      <!-- Computed Property Names -->
-      <div class="mb-6">
-        <h3 class="text-2xl font-semibold mb-2">11.3. Computed Property Names</h3>
+        <!-- Basic Default Parameters Example -->
+        <div class="mb-6">
+          <h3 class="text-2xl font-semibold mb-2">Basic Default Parameters Usage</h3>
+          <p class="text-lg text-gray-700 mb-4">
+            Assign default values to function parameters.
+          </p>
+          <div class="bg-gray-800 text-white rounded-lg p-4 mb-4 overflow-auto">
+            <pre><code class="language-javascript">{{ defaultParametersExample }}</code></pre>
+          </div>
+          <p class="text-lg text-gray-700">
+            <strong>Explanation:</strong> If <code>greeting</code> is not provided, it defaults to "Hello".
+          </p>
+        </div>
+
+        <!-- Default Parameters with Expressions -->
+        <div class="mb-6">
+          <h3 class="text-2xl font-semibold mb-2">Default Parameters with Expressions</h3>
+          <p class="text-lg text-gray-700 mb-4">
+            Use expressions to define default parameter values.
+          </p>
+          <div class="bg-gray-800 text-white rounded-lg p-4 mb-4 overflow-auto">
+            <pre><code class="language-javascript">{{ defaultParametersExpressionExample }}</code></pre>
+          </div>
+          <p class="text-lg text-gray-700">
+            <strong>Explanation:</strong> The default value for <code>initialCount</code> is dynamically calculated based on the length of the <code>items</code> array.
+          </p>
+        </div>
+      </section>
+
+      <!-- Enhanced Object Literals -->
+      <section id="enhanced-objects" class="mb-12">
+        <h2 class="text-xl md:text-2xl font-semibold mb-4">Enhanced Object Literals</h2>
         <p class="text-lg text-gray-700 mb-4">
-          Use expressions to define dynamic property names within objects.
+          ES6 introduces several enhancements to object literals, making it easier to create objects with dynamic properties, concise methods, and more.
         </p>
-        <div class="bg-gray-800 text-white rounded-lg p-4 mb-4 overflow-auto">
-          <pre><code class="language-javascript">{{ computedPropertyExample }}</code></pre>
+
+        <!-- Property Shorthand -->
+        <div class="mb-6">
+          <h3 class="text-2xl font-semibold mb-2">Property Shorthand</h3>
+          <p class="text-lg text-gray-700 mb-4">
+            When property names are the same as variable names, you can use shorthand syntax.
+          </p>
+          <div class="bg-gray-800 text-white rounded-lg p-4 mb-4 overflow-auto">
+            <pre><code class="language-javascript">{{ propertyShorthandExample }}</code></pre>
+          </div>
+          <p class="text-lg text-gray-700">
+            <strong>Explanation:</strong> Instead of writing <code>name: name</code>, you can simply write <code>name</code>.
+          </p>
         </div>
-        <p class="text-lg text-gray-700">
-          <strong>Explanation:</strong> The property name is determined by the value of <code>propName</code>.
-        </p>
-      </div>
-    </section>
 
-    <!-- Iterators and Generators -->
-    <section id="iterators-generators" class="mb-12">
-      <h2 class="text-3xl font-semibold mb-4">12. Iterators and Generators</h2>
-      <p class="text-lg text-gray-700 mb-4">
-        Iterators and generators provide powerful ways to traverse and generate sequences of values in JavaScript.
-      </p>
+        <!-- Method Definitions -->
+        <div class="mb-6">
+          <h3 class="text-2xl font-semibold mb-2">Method Definitions</h3>
+          <p class="text-lg text-gray-700 mb-4">
+            Define methods in objects without the <code>function</code> keyword.
+          </p>
+          <div class="bg-gray-800 text-white rounded-lg p-4 mb-4 overflow-auto">
+            <pre><code class="language-javascript">{{ methodDefinitionExample }}</code></pre>
+          </div>
+          <p class="text-lg text-gray-700">
+            <strong>Explanation:</strong> The <code>greet</code> method is defined using the concise method syntax.
+          </p>
+        </div>
 
-      <!-- Iterators -->
-      <div class="mb-6">
-        <h3 class="text-2xl font-semibold mb-2">12.1. Iterators</h3>
+        <!-- Computed Property Names -->
+        <div class="mb-6">
+          <h3 class="text-2xl font-semibold mb-2">Computed Property Names</h3>
+          <p class="text-lg text-gray-700 mb-4">
+            Use expressions to define dynamic property names within objects.
+          </p>
+          <div class="bg-gray-800 text-white rounded-lg p-4 mb-4 overflow-auto">
+            <pre><code class="language-javascript">{{ computedPropertyExample }}</code></pre>
+          </div>
+          <p class="text-lg text-gray-700">
+            <strong>Explanation:</strong> The property name is determined by the value of <code>propName</code>.
+          </p>
+        </div>
+      </section>
+
+      <!-- Iterators and Generators -->
+      <section id="iterators-generators" class="mb-12">
+        <h2 class="text-xl md:text-2xl font-semibold mb-4">Iterators and Generators</h2>
         <p class="text-lg text-gray-700 mb-4">
-          Iterators allow you to define custom iteration behavior for objects.
+          Iterators and generators provide powerful ways to traverse and generate sequences of values in JavaScript.
         </p>
-        <div class="bg-gray-800 text-white rounded-lg p-4 mb-4 overflow-auto">
-          <pre><code class="language-javascript">{{ iteratorExample }}</code></pre>
-        </div>
-        <p class="text-lg text-gray-700">
-          <strong>Explanation:</strong> The <code>myIterable</code> object implements the <code>[Symbol.iterator]</code> method, allowing it to be iterated over with a <code>for...of</code> loop.
-        </p>
-      </div>
 
-      <!-- Generators -->
-      <div class="mb-6">
-        <h3 class="text-2xl font-semibold mb-2">12.2. Generators</h3>
+        <!-- Iterators -->
+        <div class="mb-6">
+          <h3 class="text-2xl font-semibold mb-2">Iterators</h3>
+          <p class="text-lg text-gray-700 mb-4">
+            Iterators allow you to define custom iteration behavior for objects.
+          </p>
+          <div class="bg-gray-800 text-white rounded-lg p-4 mb-4 overflow-auto">
+            <pre><code class="language-javascript">{{ iteratorExample }}</code></pre>
+          </div>
+          <p class="text-lg text-gray-700">
+            <strong>Explanation:</strong> The <code>myIterable</code> object implements the <code>[Symbol.iterator]</code> method, allowing it to be iterated over with a <code>for...of</code> loop.
+          </p>
+        </div>
+
+        <!-- Generators -->
+        <div class="mb-6">
+          <h3 class="text-2xl font-semibold mb-2">Generators</h3>
+          <p class="text-lg text-gray-700 mb-4">
+            Generators are functions that can be paused and resumed, enabling the generation of sequences of values on the fly.
+          </p>
+          <div class="bg-gray-800 text-white rounded-lg p-4 mb-4 overflow-auto">
+            <pre><code class="language-javascript">{{ generatorExample }}</code></pre>
+          </div>
+          <p class="text-lg text-gray-700">
+            <strong>Explanation:</strong> The <code>numberGenerator</code> function yields numbers from 1 to 5, allowing iteration over generated values.
+          </p>
+        </div>
+      </section>
+
+      <!-- Symbols -->
+      <section id="symbols" class="mb-12">
+        <h2 class="text-xl md:text-2xl font-semibold mb-4">Symbols</h2>
         <p class="text-lg text-gray-700 mb-4">
-          Generators are functions that can be paused and resumed, enabling the generation of sequences of values on the fly.
+          Symbols are unique and immutable primitive values that can be used as identifiers for object properties, ensuring property keys are unique and avoiding name collisions.
         </p>
-        <div class="bg-gray-800 text-white rounded-lg p-4 mb-4 overflow-auto">
-          <pre><code class="language-javascript">{{ generatorExample }}</code></pre>
+
+        <!-- Basic Symbol Example -->
+        <div class="mb-6">
+          <h3 class="text-2xl font-semibold mb-2">Basic Symbol Usage</h3>
+          <p class="text-lg text-gray-700 mb-4">
+            Create symbols and use them as object property keys.
+          </p>
+          <div class="bg-gray-800 text-white rounded-lg p-4 mb-4 overflow-auto">
+            <pre><code class="language-javascript">{{ symbolExample }}</code></pre>
+          </div>
+          <p class="text-lg text-gray-700">
+            <strong>Explanation:</strong> Each symbol is unique, even if they have the same description.
+          </p>
         </div>
-        <p class="text-lg text-gray-700">
-          <strong>Explanation:</strong> The <code>numberGenerator</code> function yields numbers from 1 to 5, allowing iteration over generated values.
-        </p>
-      </div>
-    </section>
 
-    <!-- Symbols -->
-    <section id="symbols" class="mb-12">
-      <h2 class="text-3xl font-semibold mb-4">13. Symbols</h2>
-      <p class="text-lg text-gray-700 mb-4">
-        Symbols are unique and immutable primitive values that can be used as identifiers for object properties, ensuring property keys are unique and avoiding name collisions.
-      </p>
+        <!-- Symbols and Object Properties -->
+        <div class="mb-6">
+          <h3 class="text-2xl font-semibold mb-2">Symbols as Property Keys</h3>
+          <p class="text-lg text-gray-700 mb-4">
+            Use symbols to define properties that won't clash with other property names.
+          </p>
+          <div class="bg-gray-800 text-white rounded-lg p-4 mb-4 overflow-auto">
+            <pre><code class="language-javascript">{{ symbolPropertyExample }}</code></pre>
+          </div>
+          <p class="text-lg text-gray-700">
+            <strong>Explanation:</strong> The <code>uniqueKey</code> symbol ensures that the property is unique and doesn't interfere with other properties.
+          </p>
+        </div>
+      </section>
 
-      <!-- Basic Symbol Example -->
-      <div class="mb-6">
-        <h3 class="text-2xl font-semibold mb-2">13.1. Basic Usage</h3>
+      <!-- Best Practices -->
+      <section id="best-practices" class="mb-12">
+        <h2 class="text-xl md:text-2xl font-semibold mb-4">Best Practices</h2>
         <p class="text-lg text-gray-700 mb-4">
-          Create symbols and use them as object property keys.
+          Adhering to best practices ensures your code is clean, efficient, and maintainable.
         </p>
-        <div class="bg-gray-800 text-white rounded-lg p-4 mb-4 overflow-auto">
-          <pre><code class="language-javascript">{{ symbolExample }}</code></pre>
-        </div>
-        <p class="text-lg text-gray-700">
-          <strong>Explanation:</strong> Each symbol is unique, even if they have the same description.
-        </p>
-      </div>
 
-      <!-- Symbols and Object Properties -->
-      <div class="mb-6">
-        <h3 class="text-2xl font-semibold mb-2">13.2. Symbols as Property Keys</h3>
+        <ul class="list-disc list-inside text-lg text-gray-700">
+          <li><strong>Use <code>const</code> by default:</strong> Only use <code>let</code> when you need to reassign variables.</li>
+          <li><strong>Leverage Arrow Functions:</strong> Use arrow functions for concise syntax and to avoid issues with <code>this</code>.</li>
+          <li><strong>Prefer Template Literals:</strong> Use template literals for easier string manipulation and readability.</li>
+          <li><strong>Embrace Destructuring:</strong> Use destructuring to extract data from objects and arrays cleanly.</li>
+          <li><strong>Utilize Spread and Rest:</strong> Use spread for copying and merging and rest for function parameters.</li>
+          <li><strong>Implement Classes Wisely:</strong> Use classes to organize related functionalities and promote reusability.</li>
+          <li><strong>Organize Code with Modules:</strong> Split your code into modules for better maintainability and scope management.</li>
+          <li><strong>Handle Asynchronous Operations with Promises:</strong> Use promises for cleaner asynchronous code.</li>
+        </ul>
+      </section>
+
+      <!-- Common Mistakes -->
+      <section id="common-mistakes" class="mb-12">
+        <h2 class="text-xl md:text-2xl font-semibold mb-4">Common Mistakes</h2>
         <p class="text-lg text-gray-700 mb-4">
-          Use symbols to define properties that won't clash with other property names.
+          Being aware of common mistakes can help you avoid pitfalls and write more robust code.
         </p>
-        <div class="bg-gray-800 text-white rounded-lg p-4 mb-4 overflow-auto">
-          <pre><code class="language-javascript">{{ symbolPropertyExample }}</code></pre>
-        </div>
+
+        <ul class="list-disc list-inside text-lg text-gray-700">
+          <li><strong>Misusing <code>this</code> in Arrow Functions:</strong> Remember that arrow functions do not have their own <code>this</code>.</li>
+          <li><strong>Overusing <code>var</code>:</strong> Prefer <code>let</code> and <code>const</code> to avoid scope-related bugs.</li>
+          <li><strong>Not Handling Promise Rejections:</strong> Always include <code>.catch()</code> to handle errors in promise chains.</li>
+          <li><strong>Ignoring Module Load Order:</strong> Ensure that modules are imported in the correct order to avoid undefined dependencies.</li>
+          <li><strong>Shadowing Variables:</strong> Avoid declaring variables with the same name in overlapping scopes, which can lead to unexpected behaviors.</li>
+        </ul>
+      </section>
+
+      <!-- Summary -->
+      <section id="summary" class="mb-12">
+        <h2 class="text-xl md:text-2xl font-semibold mb-4">Summary</h2>
+        <p class="text-lg text-gray-700 mb-4">
+          ES6 introduced a wealth of features that have significantly enhanced JavaScript's capabilities, making it more powerful and easier to write maintainable code. Understanding and effectively utilizing these features is essential for modern JavaScript development.
+        </p>
         <p class="text-lg text-gray-700">
-          <strong>Explanation:</strong> The <code>uniqueKey</code> symbol ensures that the property is unique and doesn't interfere with other properties.
+          By mastering ES6 features such as <code>let</code>/<code>const</code>, arrow functions, template literals, destructuring, spread/rest operators, classes, modules, promises, and more, you can write cleaner, more efficient, and more robust JavaScript code.
         </p>
-      </div>
-    </section>
-
-    <!-- Best Practices -->
-    <section id="best-practices" class="mb-12">
-      <h2 class="text-3xl font-semibold mb-4">14. Best Practices</h2>
-      <p class="text-lg text-gray-700 mb-4">
-        Adhering to best practices ensures your code is clean, efficient, and maintainable.
-      </p>
-
-      <ul class="list-disc list-inside text-lg text-gray-700">
-        <li><strong>Use <code>const</code> by default:</strong> Only use <code>let</code> when you need to reassign variables.</li>
-        <li><strong>Leverage Arrow Functions:</strong> Use arrow functions for concise syntax and to avoid issues with <code>this</code>.</li>
-        <li><strong>Prefer Template Literals:</strong> Use template literals for easier string manipulation and readability.</li>
-        <li><strong>Embrace Destructuring:</strong> Use destructuring to extract data from objects and arrays cleanly.</li>
-        <li><strong>Utilize Spread and Rest:</strong> Use spread for copying and merging and rest for function parameters.</li>
-        <li><strong>Implement Classes Wisely:</strong> Use classes to organize related functionalities and promote reusability.</li>
-        <li><strong>Organize Code with Modules:</strong> Split your code into modules for better maintainability and scope management.</li>
-        <li><strong>Handle Asynchronous Operations with Promises:</strong> Use promises for cleaner asynchronous code.</li>
-      </ul>
-    </section>
-
-    <!-- Common Mistakes -->
-    <section id="common-mistakes" class="mb-12">
-      <h2 class="text-3xl font-semibold mb-4">15. Common Mistakes</h2>
-      <p class="text-lg text-gray-700 mb-4">
-        Being aware of common mistakes can help you avoid pitfalls and write more robust code.
-      </p>
-
-      <ul class="list-disc list-inside text-lg text-gray-700">
-        <li><strong>Misusing <code>this</code> in Arrow Functions:</strong> Remember that arrow functions do not have their own <code>this</code>.</li>
-        <li><strong>Overusing <code>var</code>:</strong> Prefer <code>let</code> and <code>const</code> to avoid scope-related bugs.</li>
-        <li><strong>Not Handling Promise Rejections:</strong> Always include <code>.catch()</code> to handle errors in promise chains.</li>
-        <li><strong>Ignoring Module Load Order:</strong> Ensure that modules are imported in the correct order to avoid undefined dependencies.</li>
-        <li><strong>Shadowing Variables:</strong> Avoid declaring variables with the same name in overlapping scopes, which can lead to unexpected behaviors.</li>
-      </ul>
-    </section>
-
-    <!-- Summary -->
-    <section id="summary" class="mb-12">
-      <h2 class="text-3xl font-semibold mb-4">16. Summary</h2>
-      <p class="text-lg text-gray-700 mb-4">
-        ES6 introduced a wealth of features that have significantly enhanced JavaScript's capabilities, making it more powerful and easier to write maintainable code. Understanding and effectively utilizing these features is essential for modern JavaScript development.
-      </p>
-      <p class="text-lg text-gray-700">
-        By mastering ES6 features such as <code>let</code>/<code>const</code>, arrow functions, template literals, destructuring, spread/rest operators, classes, modules, promises, and more, you can write cleaner, more efficient, and more robust JavaScript code.
-      </p>
-    </section>
+      </section>
+    </div>
   </div>
 </template>
 
@@ -987,12 +991,12 @@ console.log(Object.getOwnPropertySymbols(user)); // Output: [Symbol(id)]`,
 </script>
 
 <style>
-  pre {
+pre {
   white-space: pre-wrap; /* Ensures text wrapping for very long lines */
   overflow-x: auto;      /* Adds horizontal scroll for overflow content */ 
-  }
+}
 
-  @media (max-width: 768px) {
+@media (max-width: 768px) {
   pre, code {
     font-size: 0.5rem; /* Smaller font size for mobile devices */
   }

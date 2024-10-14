@@ -89,30 +89,23 @@ export default {
     return {
 
 pythonCode:
-      `
-print("Hello World")
-      `,
+`print("Hello World")`,
 
 cppCode:
-      `
-#include <iostream>
+`#include <iostream>
 using namespace std;
 
 int main() {
     cout << "Hello, World!";
     return 0;
-}
-      `,
+}`,
 
 javaCode:
-      
-      `
-class HelloWorld {
+`class HelloWorld {
     public static void main(String[] args) {
         System.out.println("Hello, World!");
     }
-}
-      `,
+}`,
     };
   },
 };

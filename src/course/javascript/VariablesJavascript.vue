@@ -3,7 +3,7 @@
     <!-- Header Section -->
     <div class="w-full flex items-center gap-2 bg-yellow-600 rounded-t-xl p-4">
       <img src="/icons/javascript.svg" alt="JavaScript Logo" class="w-12 h-12">
-      <h1 class="text-2xl md:text-4xl font-bold text-white">JavaScript Variables: Comprehensive Guide</h1>
+      <h1 class="text-2xl md:text-4xl font-bold text-white">JavaScript Variables</h1>
     </div>
 
     <!-- Content Section -->
@@ -166,8 +166,7 @@ export default {
   name: 'VariablesJavascript',
   data() {
     return {
-      declareVariablesCode: `
-var x = 10;
+      declareVariablesCode: `var x = 10;
 let y = 20;
 const z = 30;
 
@@ -175,8 +174,7 @@ x = 15; // valid
 y = 25; // valid
 // z = 35; // Error: Assignment to constant variable
 `,
-      hoistingExampleCode: `
-console.log(a); // undefined
+      hoistingExampleCode: `console.log(a); // undefined
 var a = 10;
 
 console.log(b); // ReferenceError: Cannot access 'b' before initialization
@@ -185,8 +183,7 @@ let b = 20;
 console.log(c); // ReferenceError: Cannot access 'c' before initialization
 const c = 30;
 `,
-      scopeExampleCode: `
-let globalVar = "I'm global";
+      scopeExampleCode: `let globalVar = "I'm global";
 
 function testScope() {
     let localVar = "I'm local";

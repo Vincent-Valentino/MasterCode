@@ -3,7 +3,7 @@
     <!-- Header Section -->
     <div class="w-full flex items-center gap-2 bg-yellow-600 rounded-t-xl p-4">
       <img src="/icons/javascript.svg" alt="JavaScript Logo" class="w-12 h-12">
-      <h1 class="text-2xl md:text-4xl font-bold text-white">JavaScript Functions: A Complete Guide</h1>
+      <h1 class="text-2xl md:text-4xl font-bold text-white">JavaScript Functions</h1>
     </div>
 
     <!-- Content Section -->
@@ -130,44 +130,38 @@ export default {
   name: 'JavaScriptFunctions',
   data() {
     return {
-      functionBasicsCode: `
-function greet(name) {
+      functionBasicsCode: `function greet(name) {
   console.log('Hello, ' + name + '!');
 }
 // Calling the function
 greet('Alice');  // Output: Hello, Alice!
 `,
-      functionExpressionCode: `
-const greet = function(name) {
+      functionExpressionCode: `const greet = function(name) {
   console.log('Hello, ' + name + '!');
 };
 greet('Bob');  // Output: Hello, Bob!
 `,
-      arrowFunctionCode: `
-const greet = (name) => {
+      arrowFunctionCode: `const greet = (name) => {
   console.log('Hello, ' + name + '!');
 };
 greet('Charlie');  // Output: Hello, Charlie!
 `,
 
-      functionParametersCode: `
-function add(a, b) {
+      functionParametersCode: `function add(a, b) {
   return a + b;
 }
 const sum = add(3, 4);
 console.log(sum);  // Output: 7
 `,
 
-      returnStatementCode: `
-function multiply(a, b) {
+      returnStatementCode: `function multiply(a, b) {
   return a * b;
 }
 const result = multiply(5, 10);
 console.log(result);  // Output: 50
 `,
 
-      higherOrderFunctionCode: `
-function greaterThan(n) {
+      higherOrderFunctionCode: `function greaterThan(n) {
   return function(m) {
     return m > n;
   };
@@ -176,8 +170,7 @@ const greaterThan10 = greaterThan(10);
 console.log(greaterThan10(11));  // Output: true
 `,
 
-      callbackFunctionCode: `
-function fetchData(callback) {
+      callbackFunctionCode: `function fetchData(callback) {
   setTimeout(() => {
     callback('Data fetched!');
   }, 1000);
@@ -187,8 +180,7 @@ fetchData((data) => {
 });
 `,
 
-      closureExampleCode: `
-function outer() {
+      closureExampleCode: `function outer() {
   let counter = 0;
   return function() {
     counter++;
@@ -199,14 +191,12 @@ const increment = outer();
 console.log(increment());  // Output: 1
 console.log(increment());  // Output: 2
 `,
-      iifeCode: `
-(function() {
+      iifeCode: `(function() {
   console.log('IIFE invoked immediately!');
 })();
 `,
 
-      functionBestPracticesCode: `
-1. Use descriptive function names:
+      functionBestPracticesCode: `1. Use descriptive function names:
 function calculateArea(radius) {
   return Math.PI * radius * radius;
 }

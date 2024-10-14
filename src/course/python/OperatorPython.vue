@@ -117,15 +117,84 @@
             <tr class="odd:bg-white even:bg-gray-50">
               <td class="border px-4 py-2"><code>=</code></td>
               <td class="border px-4 py-2">Simple Assignment</td>
-              <td class="border px-4 py-2"><code>a = 5</code></td>
+              <td class="border px-4 py-2"><code>a = b</code></td>
             </tr>
             <tr class="odd:bg-white even:bg-gray-50">
               <td class="border px-4 py-2"><code>+=</code></td>
-              <td class="border px-4 py-2"><code>a = a + b</code></td>
-              <td class="border px-4 py-2"><code>a += b</code></td>
+              <td class="border px-4 py-2">Addition Assignment</td>
+              <td class="border px-4 py-2"><code>a += b</code> (<code>a = a + b</code>)</td>
             </tr>
-            <!-- Continue with other assignment operators -->
-            <!-- ... -->
+            <tr class="odd:bg-white even:bg-gray-50">
+              <td class="border px-4 py-2"><code>-=</code></td>
+              <td class="border px-4 py-2">Subtraction Assignment</td>
+              <td class="border px-4 py-2"><code>a -= b</code> (<code>a = a - b</code>)</td>
+            </tr>
+            <tr class="odd:bg-white even:bg-gray-50">
+              <td class="border px-4 py-2"><code>*=</code></td>
+              <td class="border px-4 py-2">Multiplication Assignment</td>
+              <td class="border px-4 py-2"><code>a *= b</code> (<code>a = a * b</code>)</td>
+            </tr>
+            <tr class="odd:bg-white even:bg-gray-50">
+              <td class="border px-4 py-2"><code>/=</code></td>
+              <td class="border px-4 py-2">Division Assignment</td>
+              <td class="border px-4 py-2"><code>a /= b</code> (<code>a = a / b</code>)</td>
+            </tr>
+            <tr class="odd:bg-white even:bg-gray-50">
+              <td class="border px-4 py-2"><code>%=</code></td>
+              <td class="border px-4 py-2">Remainder Assignment</td>
+              <td class="border px-4 py-2"><code>a %= b</code> (<code>a = a % b</code>)</td>
+            </tr>
+            <tr class="odd:bg-white even:bg-gray-50">
+              <td class="border px-4 py-2"><code>**=</code></td>
+              <td class="border px-4 py-2">Exponentiation Assignment</td>
+              <td class="border px-4 py-2"><code>a **= b</code> (<code>a = a ** b</code>)</td>
+            </tr>
+            <tr class="odd:bg-white even:bg-gray-50">
+              <td class="border px-4 py-2"><code>&lt;&lt;=</code></td>
+              <td class="border px-4 py-2">Left Shift Assignment</td>
+              <td class="border px-4 py-2"><code>a &lt;&lt;= b</code> (<code>a = a &lt;&lt; b</code>)</td>
+            </tr>
+            <tr class="odd:bg-white even:bg-gray-50">
+              <td class="border px-4 py-2"><code>&gt;&gt;=</code></td>
+              <td class="border px-4 py-2">Right Shift Assignment</td>
+              <td class="border px-4 py-2"><code>a &gt;&gt;= b</code> (<code>a = a &gt;&gt; b</code>)</td>
+            </tr>
+            <tr class="odd:bg-white even:bg-gray-50">
+              <td class="border px-4 py-2"><code>&gt;&gt;&gt;=</code></td>
+              <td class="border px-4 py-2">Unsigned Right Shift Assignment</td>
+              <td class="border px-4 py-2"><code>a &gt;&gt;&gt;= b</code> (<code>a = a &gt;&gt;&gt; b</code>)</td>
+            </tr>
+            <tr class="odd:bg-white even:bg-gray-50">
+              <td class="border px-4 py-2"><code>&amp;=</code></td>
+              <td class="border px-4 py-2">Bitwise AND Assignment</td>
+              <td class="border px-4 py-2"><code>a &amp;= b</code> (<code>a = a &amp; b</code>)</td>
+            </tr>
+            <tr class="odd:bg-white even:bg-gray-50">
+              <td class="border px-4 py-2"><code>^=</code></td>
+              <td class="border px-4 py-2">Bitwise XOR Assignment</td>
+              <td class="border px-4 py-2"><code>a ^= b</code> (<code>a = a ^ b</code>)</td>
+            </tr>
+            <tr class="odd:bg-white even:bg-gray-50">
+              <td class="border px-4 py-2"><code>|=</code></td>
+              <td class="border px-4 py-2">Bitwise OR Assignment</td>
+              <td class="border px-4 py-2"><code>a |= b</code> (<code>a = a | b</code>)</td>
+            </tr>
+            <!-- Logical Assignment Operators (ES2021) -->
+            <tr class="odd:bg-white even:bg-gray-50">
+              <td class="border px-4 py-2"><code>&amp;&amp;=</code></td>
+              <td class="border px-4 py-2">Logical AND Assignment</td>
+              <td class="border px-4 py-2"><code>a &amp;&amp;= b</code> (<code>a &amp;&amp; (a = b)</code>)</td>
+            </tr>
+            <tr class="odd:bg-white even:bg-gray-50">
+              <td class="border px-4 py-2"><code>||=</code></td>
+              <td class="border px-4 py-2">Logical OR Assignment</td>
+              <td class="border px-4 py-2"><code>a ||= b</code> (<code>a || (a = b)</code>)</td>
+            </tr>
+            <tr class="odd:bg-white even:bg-gray-50">
+              <td class="border px-4 py-2"><code>??=</code></td>
+              <td class="border px-4 py-2">Logical Nullish Assignment</td>
+              <td class="border px-4 py-2"><code>a ??= b</code> (<code>a ?? (a = b)</code>)</td>
+            </tr>
           </tbody>
         </table>
       </div>
@@ -158,8 +227,41 @@
               <td class="border px-4 py-2">Equal to</td>
               <td class="border px-4 py-2"><code>a == b</code></td>
             </tr>
-            <!-- Continue with other comparison operators -->
-            <!-- ... -->
+            <tr class="odd:bg-white even:bg-gray-50">
+              <td class="border px-4 py-2"><code>!=</code></td>
+              <td class="border px-4 py-2">Not Equal to</td>
+              <td class="border px-4 py-2"><code>a != b</code></td>
+            </tr>
+            <tr class="odd:bg-white even:bg-gray-50">
+              <td class="border px-4 py-2"><code>===</code></td>
+              <td class="border px-4 py-2">Strict Equal to</td>
+              <td class="border px-4 py-2"><code>a === b</code></td>
+            </tr>
+            <tr class="odd:bg-white even:bg-gray-50">
+              <td class="border px-4 py-2"><code>!==</code></td>
+              <td class="border px-4 py-2">Strict Not Equal to</td>
+              <td class="border px-4 py-2"><code>a !== b</code></td>
+            </tr>
+            <tr class="odd:bg-white even:bg-gray-50">
+              <td class="border px-4 py-2"><code>&gt;</code></td>
+              <td class="border px-4 py-2">Greater Than</td>
+              <td class="border px-4 py-2"><code>a &gt; b</code></td>
+            </tr>
+            <tr class="odd:bg-white even:bg-gray-50">
+              <td class="border px-4 py-2"><code>&gt;=</code></td>
+              <td class="border px-4 py-2">Greater Than or Equal to</td>
+              <td class="border px-4 py-2"><code>a &gt;= b</code></td>
+            </tr>
+            <tr class="odd:bg-white even:bg-gray-50">
+              <td class="border px-4 py-2"><code>&lt;</code></td>
+              <td class="border px-4 py-2">Less Than</td>
+              <td class="border px-4 py-2"><code>a &lt; b</code></td>
+            </tr>
+            <tr class="odd:bg-white even:bg-gray-50">
+              <td class="border px-4 py-2"><code>&lt;=</code></td>
+              <td class="border px-4 py-2">Less Than or Equal to</td>
+              <td class="border px-4 py-2"><code>a &lt;= b</code></td>
+            </tr>
           </tbody>
         </table>
       </div>
@@ -190,11 +292,19 @@
           <tbody>
             <tr class="odd:bg-white even:bg-gray-50">
               <td class="border px-4 py-2"><code>and</code></td>
-              <td class="border px-4 py-2">Returns True if both statements are true</td>
+              <td class="border px-4 py-2">Returns <code>True</code> if both statements are true</td>
               <td class="border px-4 py-2"><code>a > b and b > 0</code></td>
             </tr>
-            <!-- Continue with other logical operators -->
-            <!-- ... -->
+            <tr class="odd:bg-white even:bg-gray-50">
+              <td class="border px-4 py-2"><code>or</code></td>
+              <td class="border px-4 py-2">Returns <code>True</code> if at least one statement is true</td>
+              <td class="border px-4 py-2"><code>a > b or b > 0</code></td>
+            </tr>
+            <tr class="odd:bg-white even:bg-gray-50">
+              <td class="border px-4 py-2"><code>not</code></td>
+              <td class="border px-4 py-2">Reverses the result, returns <code>True</code> if the result is false</td>
+              <td class="border px-4 py-2"><code>not(a > b)</code></td>
+            </tr>
           </tbody>
         </table>
       </div>
@@ -485,8 +595,7 @@ export default {
   name: 'OperatorsAndExpressions',
   data() {
     return {
-      ArithmeticOperator: `
-# Arithmetic Operators Example
+      ArithmeticOperator: `# Arithmetic Operators Example
 a = 10
 b = 3
 
@@ -505,8 +614,7 @@ print(a / b)  # Output: 3.33 (float)
 # Modulus
 print(a % b)  # Output: 1
 `,
-      AssignmentOperator: `
-# Assignment Operators Example
+      AssignmentOperator: `# Assignment Operators Example
 a = 5
 b = 10
 
@@ -518,8 +626,7 @@ print(a)  # Output: 15
 a *= 2  # Equivalent to: a = a * 2
 print(a)  # Output: 30
 `,
-      BitwiseOperator: `
-# Bitwise Operators Example
+      BitwiseOperator: `# Bitwise Operators Example
 a = 6  # 110 in binary
 b = 3  # 011 in binary
 
@@ -529,8 +636,7 @@ print(a & b)  # Output: 2 (binary: 010)
 # Bitwise OR
 print(a | b)  # Output: 7 (binary: 111)
 `,
-      IdentityOperator: `
-# Identity Operators Example
+      IdentityOperator: `# Identity Operators Example
 x = [1, 2, 3]
 y = [1, 2, 3]
 z = x
@@ -539,8 +645,7 @@ z = x
 print(x is z)  # Output: True
 print(x is y)  # Output: False
 `,
-      LogicalOperator: `
-# Logical Operators Example
+      LogicalOperator: `# Logical Operators Example
 a = True
 b = False
 
@@ -550,8 +655,7 @@ print(a and b)  # Output: False
 # or Operator
 print(a or b)  # Output: True
 `,
-      MembershipOperator: `
-# Membership Operators Example
+      MembershipOperator: `# Membership Operators Example
 x = 'Python'
 y = {1, 2, 3, 4}
 
@@ -561,8 +665,7 @@ print('y' in x)  # Output: False
 # not in Operator
 print(5 not in y)  # Output: True
 `,
-      PrecedenceOperator: `
-# Operator Precedence Example
+      PrecedenceOperator: `# Operator Precedence Example
 result = 10 + 2 * 3  # Multiplication first, then addition
 print(result)  # Output: 16
 
@@ -570,13 +673,11 @@ print(result)  # Output: 16
 result = (10 + 2) * 3
 print(result)  # Output: 36
 `,
-      ChainedComparison: `
-# Chained Comparison Example
+      ChainedComparison: `# Chained Comparison Example
 x = 5
 print(3 < x < 10)  # Output: True
 `,
-      ComparisonOperator: `
-# Comparison Operators Example
+      ComparisonOperator: `# Comparison Operators Example
 a = 10
 b = 20
 
@@ -586,8 +687,7 @@ print(a == b)  # Output: False
 # Not equal to
 print(a != b)  # Output: True
 `,
-      VariablesSwap: `
-# Variables Swap Example
+      VariablesSwap: `# Variables Swap Example
 a = 5
 b = 10
 

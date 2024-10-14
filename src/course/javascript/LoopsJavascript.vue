@@ -145,47 +145,39 @@ export default {
   name: 'JavaScriptLoops',
   data() {
     return {
-      forLoopSyntax: `
-for (initialization; condition; increment/decrement) {
+      forLoopSyntax: `for (initialization; condition; increment/decrement) {
   // Code to execute
 }
 `,
-forLoopExample: `
-for (let i = 1; i <= 5; i++) {
+forLoopExample: `for (let i = 1; i <= 5; i++) {
   console.log(i); // Output: 1, 2, 3, 4, 5
 }
 `,
-      whileLoopSyntax: `
-while (condition) {
+      whileLoopSyntax: `while (condition) {
   // Code to execute
 }
 `,
-      whileLoopExample: `
-let i = 1;
+      whileLoopExample: `let i = 1;
 while (i <= 5) {
   console.log(i); // Output: 1, 2, 3, 4, 5
   i++;
 }
 `,
-      doWhileLoopSyntax: `
-do {
+      doWhileLoopSyntax: `do {
   // Code to execute
 } while (condition);
 `,
-      doWhileLoopExample: `
-let i = 1;
+      doWhileLoopExample: `let i = 1;
 do {
   console.log(i); // Output: 1, 2, 3, 4, 5
   i++;
 } while (i <= 5);
 `,
-      forInLoopSyntax: `
-for (property in object) {
+      forInLoopSyntax: `for (property in object) {
   // Code to execute
 }
 `,
-      forInLoopExample: `
-const person = { name: 'Alice', age: 25, city: 'New York' };
+      forInLoopExample: `const person = { name: 'Alice', age: 25, city: 'New York' };
 for (let key in person) {
   console.log(\`\${key}: \${person[key]}\`);
   // Output:
@@ -194,13 +186,11 @@ for (let key in person) {
   // city: New York
 }
 `,
-      forOfLoopSyntax: `
-for (variable of iterable) {
+      forOfLoopSyntax: `for (variable of iterable) {
   // Code to execute
 }
 `,
-      forOfLoopExample: `
-const numbers = [1, 2, 3, 4, 5];
+      forOfLoopExample: `const numbers = [1, 2, 3, 4, 5];
 for (let num of numbers) {
   console.log(num); // Output: 1, 2, 3, 4, 5
 }

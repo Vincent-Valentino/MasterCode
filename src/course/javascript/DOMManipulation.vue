@@ -102,7 +102,7 @@
         Mastering DOM manipulation is essential for any web developer looking to create dynamic and responsive web applications. With the knowledge from this course, you're now equipped to manipulate the DOM effectively.
       </p>
       <p class="text-base md:text-lg">
-        In the next section, we'll delve into <strong>Asynchronous JavaScript</strong>, covering concepts like callbacks, promises, and async/await.
+        In the next section, we'll delve into <strong>JavaScript Events</strong>, covering event handlers.
       </p>
     </div>
   </div>
@@ -113,8 +113,7 @@ export default {
   name: 'DomManipulation',
   data() {
     return {
-      domIntroductionCode: `
-<!-- Sample HTML Structure -->
+      domIntroductionCode: `<!-- Sample HTML Structure -->
 <!DOCTYPE html>
 <html>
 <head>
@@ -128,8 +127,7 @@ export default {
 </body>
 </html>
       `,
-      selectingElementsCode: `
-// Selecting elements by ID
+      selectingElementsCode: `// Selecting elements by ID
 const contentDiv = document.getElementById('content');
 
 // Selecting elements by class name
@@ -147,8 +145,7 @@ const allParagraphs = document.querySelectorAll('p');
 // Logging selected elements
 console.log(contentDiv, paragraphs, divs, header, allParagraphs);
       `,
-      manipulatingElementsCode: `
-// Changing the content of an element
+      manipulatingElementsCode: `// Changing the content of an element
 const header = document.querySelector('h1');
 // Original content
 console.log('Original header:', header.textContent);
@@ -213,8 +210,7 @@ const newDiv = document.createElement('div');
 newDiv.textContent = 'This div replaces the old content div.';
 contentDiv.parentElement.replaceChild(newDiv, contentDiv);
       `,
-      eventHandlingCode: `
-// Adding an event listener
+      eventHandlingCode: `// Adding an event listener
 const button = document.querySelector('button');
 button.addEventListener('click', function() {
   alert('Button clicked!');
@@ -268,8 +264,7 @@ button.addEventListener('click', function() {
   console.log('This will only run once');
 }, { once: true });
       `,
-      advancedTopicsCode: `
-// Traversing the DOM
+      advancedTopicsCode: `// Traversing the DOM
 const listItem = document.querySelector('li.active');
 const parent = listItem.parentElement;
 const children = parent.children;

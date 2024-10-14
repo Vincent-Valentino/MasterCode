@@ -117,9 +117,6 @@
       <p class="text-base md:text-lg mb-4">
         JavaScript events are powerful tools for creating interactive web experiences. By understanding how to effectively handle events, you can build responsive and user-friendly applications.
       </p>
-      <p class="text-base md:text-lg">
-        In the next course, we'll dive into <strong>Asynchronous JavaScript</strong>, exploring callbacks, promises, and async/await.
-      </p>
     </div>
   </div>
 </template>
@@ -129,8 +126,7 @@ export default {
   name: 'JavaScriptEvents',
   data() {
     return {
-      eventIntroductionCode: `
-<!-- Sample HTML Structure for Events -->
+      eventIntroductionCode: `<!-- Sample HTML Structure for Events -->
 <!DOCTYPE html>
 <html>
 <head>
@@ -143,8 +139,7 @@ export default {
 </body>
 </html>
       `,
-      eventTypesCode: `
-// Mouse Events
+      eventTypesCode: `// Mouse Events
 document.getElementById('clickButton').addEventListener('click', function() {
   console.log('Button clicked');
 });
@@ -168,8 +163,7 @@ window.addEventListener('resize', function() {
   console.log('Window resized');
 });
       `,
-      eventListenersCode: `
-/* Adding Event Listeners */
+      eventListenersCode: `/* Adding Event Listeners */
 
 // Using addEventListener
 const button = document.getElementById('clickButton');
@@ -194,8 +188,7 @@ button.removeEventListener('click', handleClick);
 // Using inline event handlers (not recommended)
 // <button onclick="alert('Button clicked inline!')">Click Me</button>
       `,
-      eventObjectCode: `
-/* Understanding the Event Object */
+      eventObjectCode: `/* Understanding the Event Object */
 
 document.getElementById('clickButton').addEventListener('click', function(event) {
   console.log('Event type:', event.type); // 'click'
@@ -210,8 +203,7 @@ document.getElementById('textInput').addEventListener('keydown', function(event)
   console.log('Event object:', event);
 });
       `,
-      eventPropagationCode: `
-/* Event Propagation */
+      eventPropagationCode: `/* Event Propagation */
 
 <!-- HTML Structure -->
 <div id="grandparent">
@@ -265,8 +257,7 @@ document.getElementById('child').addEventListener('click', function(event) {
   console.log('Propagation stopped at child');
 });
       `,
-      eventDelegationCode: `
-/* Event Delegation Example */
+      eventDelegationCode: `/* Event Delegation Example */
 
 <!-- HTML Structure -->
 <ul id="itemList">
@@ -290,8 +281,7 @@ document.getElementById('itemList').appendChild(newItem);
 
 // The event listener on the parent element will handle clicks on new items
       `,
-      customEventsCode: `
-/* Custom Events */
+      customEventsCode: `/* Custom Events */
 
 // Creating and dispatching a custom event
 const customEvent = new Event('myCustomEvent');
@@ -315,8 +305,7 @@ document.addEventListener('myCustomEventWithData', function(event) {
 // Dispatching the event with data
 document.dispatchEvent(customEventWithData);
       `,
-      advancedTopicsCode: `
-/* Advanced Event Handling */
+      advancedTopicsCode: `/* Advanced Event Handling */
 
 // Throttling Events
 function throttle(func, limit) {
