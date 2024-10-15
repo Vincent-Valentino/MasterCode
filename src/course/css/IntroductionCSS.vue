@@ -1,16 +1,16 @@
 <template>
   <div class="w-full">
     <!-- Header Section -->
-    <div class="w-full flex items-center gap-2 bg-purple-600 rounded-t-xl p-4">
+    <div class="w-full flex items-center gap-5 bg-black rounded-t-xl p-4">
       <img src="/icons/css3.svg" alt="CSS Logo" class="w-12 h-12">
-      <h1 class="text-2xl md:text-4xl font-bold text-white">Introduction to CSS</h1>
+      <h1 class="text-2xl md:text-4xl font-bold text-blue-800">Introduction to CSS</h1>
     </div>
 
     <!-- Content Section -->
     <div class="bg-white rounded-b-xl p-4 md:p-6">
       <!-- Introduction Paragraph -->
       <p class="text-base md:text-lg mb-6">
-        **CSS** (Cascading Style Sheets) is the language used to describe the presentation of a document written in HTML or XML. While HTML structures the content of a web page, CSS defines its visual appearance, including layout, colors, fonts, and responsiveness. Mastering CSS is essential for creating visually appealing and user-friendly websites.
+        CSS (Cascading Style Sheets) is the language used to describe the presentation of a document written in HTML or XML. While HTML structures the content of a web page, CSS defines its visual appearance, including layout, colors, fonts, and responsiveness. Mastering CSS is essential for creating visually appealing and user-friendly websites.
       </p>
 
       <!-- What is CSS and How It Works -->
@@ -19,7 +19,7 @@
         CSS is a style sheet language that enables developers to separate the content of a web page from its presentation. By doing so, it allows for greater flexibility and control over the layout and design of multiple web pages, all from a single CSS file. CSS works by selecting HTML elements and applying styles to them based on selectors, properties, and values.
       </p>
       <p class="text-base md:text-lg mb-6">
-        **Key Concepts of CSS:**
+        Key Concepts of CSS:
       </p>
       <ul class="list-disc list-inside text-base md:text-lg mb-6">
         <li><strong>Selectors:</strong> Patterns used to select the elements you want to style.</li>

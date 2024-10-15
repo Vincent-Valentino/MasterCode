@@ -1,7 +1,7 @@
 <template>
   <div class="w-full">
     <!-- Header Section -->
-    <div class="w-full flex items-center gap-2 bg-blue-700 rounded-t-xl p-4">
+    <div class="w-full flex items-center gap-5 bg-indigo-900 rounded-t-xl p-4">
       <img src="/cpp/logo.svg" alt="C++ Logo" class="w-12 h-12">
       <h1 class="text-2xl md:text-4xl font-bold text-white">Introduction to C++</h1>
     </div>
@@ -10,16 +10,16 @@
     <div class="bg-white rounded-b-xl p-4 md:p-6">
       <!-- Introduction Paragraph -->
       <p class="text-base md:text-lg mb-6">
-        **C++** is a powerful, high-performance programming language that has been a cornerstone in the software development industry for decades. Renowned for its efficiency and control over system resources, C++ is widely used in various domains, including system/software development, game development, real-time simulations, and more. This introduction delves into the history of C++, its evolution from the C programming language, setting up a development environment, and writing your first C++ program. Additionally, we will explore C++'s pivotal role in modern software development, highlighting why it remains a preferred choice for developers worldwide.
+        C++ is a powerful, high-performance programming language that has been a cornerstone in the software development industry for decades. Renowned for its efficiency and control over system resources, C++ is widely used in various domains, including system/software development, game development, real-time simulations, and more. This introduction delves into the history of C++, its evolution from the C programming language, setting up a development environment, and writing your first C++ program. Additionally, we will explore C++'s pivotal role in modern software development, highlighting why it remains a preferred choice for developers worldwide.
       </p>
 
       <!-- What is C++? -->
       <h2 class="text-xl md:text-2xl font-semibold mb-4">What is C++?</h2>
       <p class="text-base md:text-lg mb-4">
-        **C++** is a general-purpose programming language created by **Bjarne Stroustrup** as an extension of the C programming language. It incorporates both procedural and object-oriented programming paradigms, allowing developers to write efficient and flexible code. C++ is known for its ability to provide low-level memory manipulation while still offering high-level abstractions, making it suitable for a wide range of applications.
+        C++ is a general-purpose programming language created by Bjarne Stroustrup as an extension of the C programming language. It incorporates both procedural and object-oriented programming paradigms, allowing developers to write efficient and flexible code. C++ is known for its ability to provide low-level memory manipulation while still offering high-level abstractions, making it suitable for a wide range of applications.
       </p>
       <p class="text-base md:text-lg mb-6">
-        **Key Features of C++:**
+        Key Features of C++:
       </p>
       <ul class="list-disc list-inside text-base md:text-lg mb-6">
         <li><strong>Object-Oriented:</strong> Supports classes, inheritance, polymorphism, and encapsulation.</li>
@@ -32,7 +32,7 @@
       <!-- History of C++ -->
       <h2 class="text-xl md:text-2xl font-semibold mb-4">History of C++ and Its Evolution from C</h2>
       <p class="text-base md:text-lg mb-4">
-        C++ was developed by **Bjarne Stroustrup** at Bell Labs starting in the early 1980s. Initially named "C with Classes," C++ was designed to enhance the C programming language by adding object-oriented features, thereby enabling developers to create more complex and manageable codebases. Over the years, C++ has undergone several standardization updates, with major versions like C++98, C++03, C++11, C++14, C++17, C++20, and the upcoming C++23 introducing new features and improvements.
+        C++ was developed by Bjarne Stroustrup at Bell Labs starting in the early 1980s. Initially named "C with Classes," C++ was designed to enhance the C programming language by adding object-oriented features, thereby enabling developers to create more complex and manageable codebases. Over the years, C++ has undergone several standardization updates, with major versions like C++98, C++03, C++11, C++14, C++17, C++20, and the upcoming C++23 introducing new features and improvements.
       </p>
       <p class="text-base md:text-lg mb-6">
         The evolution from C to C++ was driven by the need for better abstraction mechanisms, such as classes and objects, which facilitate encapsulation, inheritance, and polymorphism. These features enable developers to model real-world entities more effectively, leading to more scalable and maintainable software systems.
@@ -64,7 +64,7 @@
         <li><strong>Versus Python:</strong> Python is an interpreted language known for its simplicity and readability, making it ideal for rapid development. C++ offers superior performance and is better suited for resource-intensive applications.</li>
       </ul>
       <p class="text-base md:text-lg mb-6">
-        **Key Takeaways:**
+        Key Takeaways:
       </p>
       <ul class="list-disc list-inside text-base md:text-lg mb-6">
         <li>C++ excels in performance-critical applications due to its compiled nature and low-level memory management capabilities.</li>
@@ -124,7 +124,7 @@
         C++, C#, and C are three prominent programming languages that share a common lineage but serve different purposes and paradigms in the software development landscape.
       </p>
       <p class="text-base md:text-lg mb-6">
-        **C Language:**
+        C Language:
       </p>
       <ul class="list-disc list-inside text-base md:text-lg mb-6">
         <li>
@@ -138,7 +138,7 @@
         </li>
       </ul>
       <p class="text-base md:text-lg mb-6">
-        **C++ Language:**
+        C++ Language:
       </p>
       <ul class="list-disc list-inside text-base md:text-lg mb-6">
         <li>
@@ -152,7 +152,7 @@
         </li>
       </ul>
       <p class="text-base md:text-lg mb-6">
-        **C# Language:**
+        C# Language:
       </p>
       <ul class="list-disc list-inside text-base md:text-lg mb-6">
         <li>
@@ -166,7 +166,7 @@
         </li>
       </ul>
       <p class="text-base md:text-lg mb-6">
-        **Key Differences:**
+        Key Differences:
       </p>
       <ul class="list-disc list-inside text-base md:text-lg mb-6">
         <li>
@@ -183,7 +183,7 @@
         </li>
       </ul>
       <p class="text-base md:text-lg mb-6">
-        **Is C++ Related to C# and C?**
+        Is C++ Related to C# and C?
       </p>
       <p class="text-base md:text-lg mb-6">
         Yes, C++, C#, and C share a common ancestry rooted in the C programming language. C++ was developed as an extension of C, adding object-oriented features while maintaining compatibility with C code. C# was later created by Microsoft as a part of the .NET framework, drawing inspiration from both C and C++ but designed with a focus on simplicity, safety, and modern programming practices.
@@ -192,7 +192,7 @@
       <!-- Conclusion -->
       <h2 class="text-xl md:text-2xl font-semibold mb-4">Conclusion</h2>
       <p class="text-base md:text-lg mb-6">
-        **C++** stands as a testament to the enduring power and flexibility of programming languages. Its evolution from C has endowed it with object-oriented capabilities, making it a versatile tool for a wide range of applications. Whether you're developing system-level software, high-performance games, or real-time simulations, C++ provides the performance and control necessary to build robust and efficient solutions.
+        C++ stands as a testament to the enduring power and flexibility of programming languages. Its evolution from C has endowed it with object-oriented capabilities, making it a versatile tool for a wide range of applications. Whether you're developing system-level software, high-performance games, or real-time simulations, C++ provides the performance and control necessary to build robust and efficient solutions.
       </p>
       <p class="text-base md:text-lg mb-6">
         By setting up a suitable development environment and mastering the fundamentals, including writing and executing basic programs, you lay the groundwork for harnessing the full potential of C++. As the software industry continues to advance, C++ remains a critical language for developers aiming to create high-performance, scalable, and reliable applications.
@@ -217,13 +217,13 @@ export default {
 
 <style>
 pre {
-  white-space: pre-wrap; /* Ensures text wrapping for very long lines */
-  overflow-x: auto;      /* Adds horizontal scroll for overflow content */ 
+  white-space: pre-wrap; 
+  overflow-x: auto;       
 }
 
 @media (max-width: 768px) {
   pre, code {
-    font-size: 0.5rem; /* Smaller font size for mobile devices */
+    font-size: 0.5rem; 
   }
 }
 </style>

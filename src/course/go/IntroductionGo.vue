@@ -1,7 +1,7 @@
 <template>
   <div class="w-full">
     <!-- Header Section -->
-    <div class="w-full flex items-center gap-2 bg-teal-500 rounded-t-xl p-4">
+    <div class="w-full flex items-center gap-5 bg-teal-500 rounded-t-xl p-4">
       <img src="/icons/go.svg" alt="Go Logo" class="w-12 h-12">
       <h1 class="text-2xl md:text-4xl font-bold text-white">Introduction to Go</h1>
     </div>
@@ -10,16 +10,16 @@
     <div class="bg-white rounded-b-xl p-4 md:p-6">
       <!-- Introduction Paragraph -->
       <p class="text-base md:text-lg mb-6">
-        **Go**, also known as **Golang**, is a statically typed, compiled programming language designed by **Google**. Created to address shortcomings in other programming languages, Go emphasizes simplicity, efficiency, and reliability. Its robust standard library, built-in support for concurrency, and garbage collection make it a favorite among developers for building scalable and high-performance applications. This introduction explores the history and goals of Go, its key features, how to write your first Go program, and why Go is rapidly gaining popularity in the modern software development landscape.
+        Go, also known as Golang, is a statically typed, compiled programming language designed by Google. Created to address shortcomings in other programming languages, Go emphasizes simplicity, efficiency, and reliability. Its robust standard library, built-in support for concurrency, and garbage collection make it a favorite among developers for building scalable and high-performance applications. This introduction explores the history and goals of Go, its key features, how to write your first Go program, and why Go is rapidly gaining popularity in the modern software development landscape.
       </p>
 
       <!-- History and Goals of Go -->
       <h2 class="text-xl md:text-2xl font-semibold mb-4">History and Goals of Go</h2>
       <p class="text-base md:text-lg mb-4">
-        Go was developed at Google by **Robert Griesemer**, **Rob Pike**, and **Ken Thompson** and was officially announced in November 2009. The primary motivation behind Go's creation was to enhance programming productivity in the era of multicore, networked machines, and large codebases. The designers aimed to create a language that combined the efficiency and control of low-level languages like C++ with the ease of use and safety features of higher-level languages.
+        Go was developed at Google by Robert Griesemer, Rob Pike, and Ken Thompson and was officially announced in November 2009. The primary motivation behind Go's creation was to enhance programming productivity in the era of multicore, networked machines, and large codebases. The designers aimed to create a language that combined the efficiency and control of low-level languages like C++ with the ease of use and safety features of higher-level languages.
       </p>
       <p class="text-base md:text-lg mb-6">
-        **Key Goals of Go:**
+        Key Goals of Go:
       </p>
       <ul class="list-disc list-inside text-base md:text-lg mb-6">
         <li><strong>Simplicity:</strong> Go's syntax is clean and minimalistic, making it easy to learn and use.</li>
@@ -47,7 +47,7 @@ func main() {
 </code>
       </pre>
       <p class="text-base md:text-lg mb-6">
-        **Explanation:**
+        Explanation:
       </p>
       <ul class="list-disc list-inside text-base md:text-lg mb-6">
         <li>
@@ -64,7 +64,7 @@ func main() {
         </li>
       </ul>
       <p class="text-base md:text-lg mb-6">
-        **Running the Program:**
+        Running the Program:
       </p>
       <ol class="list-decimal list-inside text-base md:text-lg mb-6">
         <li>Create a new file named <code>hello.go</code>.</li>
@@ -92,7 +92,7 @@ Hello, World!
         Go incorporates an efficient garbage collector, which automatically manages memory by reclaiming memory occupied by objects that are no longer in use. This feature eliminates the need for manual memory management, reducing the risk of memory leaks and pointer-related errors common in languages like C and C++.
       </p>
       <p class="text-base md:text-lg mb-6">
-        **Benefits of Garbage Collection in Go:**
+        Benefits of Garbage Collection in Go:
       </p>
       <ul class="list-disc list-inside text-base md:text-lg mb-6">
         <li><strong>Safety:</strong> Prevents memory leaks and dangling pointers by automatically freeing unused memory.</li>
@@ -102,10 +102,10 @@ Hello, World!
 
       <h3 class="text-lg md:text-xl font-semibold mb-2">Concurrency Model</h3>
       <p class="text-base md:text-lg mb-4">
-        Concurrency is a core aspect of Go, enabling developers to build applications that can perform multiple operations simultaneously. Go introduces the concept of **goroutines** and **channels** to facilitate concurrent programming.
+        Concurrency is a core aspect of Go, enabling developers to build applications that can perform multiple operations simultaneously. Go introduces the concept of goroutines and channels to facilitate concurrent programming.
       </p>
       <p class="text-base md:text-lg mb-6">
-        **Goroutines:**
+        Goroutines:
       </p>
       <ul class="list-disc list-inside text-base md:text-lg mb-6">
         <li>
@@ -119,7 +119,7 @@ Hello, World!
         </li>
       </ul>
       <p class="text-base md:text-lg mb-6">
-        **Channels:**
+        Channels:
       </p>
       <ul class="list-disc list-inside text-base md:text-lg mb-6">
         <li>
@@ -133,7 +133,7 @@ Hello, World!
         </li>
       </ul>
       <p class="text-base md:text-lg mb-6">
-        **Example of Concurrency in Go:**
+        Example of Concurrency in Go:
       </p>
       <pre class="bg-gray-800 text-white p-4 rounded-md overflow-x-auto mb-6">
 <code>
@@ -167,7 +167,7 @@ func main() {
 </code>
       </pre>
       <p class="text-base md:text-lg mb-6">
-        **Explanation:**
+        Explanation:
       </p>
       <ul class="list-disc list-inside text-base md:text-lg mb-6">
         <li>
@@ -184,7 +184,7 @@ func main() {
         </li>
       </ul>
       <p class="text-base md:text-lg mb-6">
-        **Sample Output:**
+        Sample Output:
       </p>
       <pre class="bg-gray-800 text-white p-4 rounded-md overflow-x-auto mb-6">
 <code>
@@ -214,7 +214,7 @@ Hello, Bob!
         </li>
       </ul>
       <p class="text-base md:text-lg mb-6">
-        **Key Takeaways:**
+        Key Takeaways:
       </p>
       <ul class="list-disc list-inside text-base md:text-lg mb-6">
         <li>Go offers a balance between performance and simplicity, making it suitable for a wide range of applications.</li>
@@ -248,7 +248,7 @@ Hello, Bob!
         </li>
       </ul>
       <p class="text-base md:text-lg mb-6">
-        **Reasons for Adoption:**
+        Reasons for Adoption:
       </p>
       <ul class="list-disc list-inside text-base md:text-lg mb-6">
         <li><strong>Performance:</strong> Go's compiled nature ensures high execution speed, making it suitable for performance-critical applications.</li>
@@ -279,7 +279,7 @@ Hello, Bob!
         </li>
       </ul>
       <p class="text-base md:text-lg mb-6">
-        **Benchmark Insights:**
+        Benchmark Insights:
       </p>
       <p class="text-base md:text-lg mb-6">
         Numerous benchmarks have demonstrated Go's impressive performance, especially in I/O-bound and concurrent tasks. Its lightweight goroutines and efficient scheduler allow Go programs to handle thousands of concurrent operations with minimal overhead, making it ideal for modern cloud-native applications and services.
@@ -314,7 +314,7 @@ Hello, Bob!
         </li>
       </ul>
       <p class="text-base md:text-lg mb-6">
-        **Future Prospects:**
+        Future Prospects:
       </p>
       <p class="text-base md:text-lg mb-6">
         With ongoing advancements and the introduction of new features in recent versions, Go is poised to maintain its momentum in the software development landscape. Its alignment with modern development practices and its ability to meet the demands of high-performance, scalable applications ensure that Go will remain a vital tool for developers in the years to come.
@@ -323,7 +323,7 @@ Hello, Bob!
       <!-- Conclusion -->
       <h2 class="text-xl md:text-2xl font-semibold mb-4">Conclusion</h2>
       <p class="text-base md:text-lg mb-6">
-        **Go** has emerged as a formidable programming language that addresses the complexities and performance challenges of modern software development. Its combination of simplicity, efficiency, and robust concurrency support makes it a preferred choice for building scalable and high-performance applications. Whether you're developing microservices, cloud-native solutions, or high-throughput systems, Go provides the tools and features necessary to deliver reliable and efficient software.
+        Go has emerged as a formidable programming language that addresses the complexities and performance challenges of modern software development. Its combination of simplicity, efficiency, and robust concurrency support makes it a preferred choice for building scalable and high-performance applications. Whether you're developing microservices, cloud-native solutions, or high-throughput systems, Go provides the tools and features necessary to deliver reliable and efficient software.
       </p>
       <p class="text-base md:text-lg mb-6">
         By understanding Go's history, key features, and its advantages over other languages, developers can make informed decisions about incorporating Go into their projects. As Go continues to evolve and expand its ecosystem, its role in shaping the future of software development is undeniable. Embrace Go to harness its full potential and stay ahead in the competitive landscape of technology.
@@ -345,13 +345,13 @@ export default {
 
 <style>
 pre {
-  white-space: pre-wrap; /* Ensures text wrapping for very long lines */
-  overflow-x: auto;      /* Adds horizontal scroll for overflow content */ 
+  white-space: pre-wrap; 
+  overflow-x: auto;       
 }
 
 @media (max-width: 768px) {
   pre, code {
-    font-size: 0.5rem; /* Smaller font size for mobile devices */
+    font-size: 0.5rem; 
   }
 }
 </style>

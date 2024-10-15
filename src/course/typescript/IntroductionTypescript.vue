@@ -75,47 +75,49 @@
       </p>
 
       <!-- Comparison Table -->
-      <table class="min-w-full bg-white border border-gray-200 mb-6 overflow-x-auto">
-        <thead>
-          <tr>
-            <th class="py-2 px-4 border-b">Feature</th>
-            <th class="py-2 px-4 border-b">JavaScript</th>
-            <th class="py-2 px-4 border-b">TypeScript</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td class="py-2 px-4 border-b">Typing</td>
-            <td class="py-2 px-4 border-b">Dynamic Typing</td>
-            <td class="py-2 px-4 border-b">Static Typing</td>
-          </tr>
-          <tr>
-            <td class="py-2 px-4 border-b">Type Annotations</td>
-            <td class="py-2 px-4 border-b">Not Available</td>
-            <td class="py-2 px-4 border-b">Supported</td>
-          </tr>
-          <tr>
-            <td class="py-2 px-4 border-b">Interfaces</td>
-            <td class="py-2 px-4 border-b">Not Available</td>
-            <td class="py-2 px-4 border-b">Supported</td>
-          </tr>
-          <tr>
-            <td class="py-2 px-4 border-b">Generics</td>
-            <td class="py-2 px-4 border-b">Not Available</td>
-            <td class="py-2 px-4 border-b">Supported</td>
-          </tr>
-          <tr>
-            <td class="py-2 px-4 border-b">Compilation</td>
-            <td class="py-2 px-4 border-b">Interpreted at Runtime</td>
-            <td class="py-2 px-4 border-b">Compiled to JavaScript</td>
-          </tr>
-          <tr>
-            <td class="py-2 px-4 border-b">Tooling Support</td>
-            <td class="py-2 px-4 border-b">Basic</td>
-            <td class="py-2 px-4 border-b">Enhanced with IntelliSense, Autocompletion</td>
-          </tr>
-        </tbody>
-      </table>
+      <div class="overflow-x-auto">
+        <table class="min-w-full bg-white border border-gray-200 mb-6 overflow-x-auto">
+          <thead>
+            <tr>
+              <th class="py-2 px-4 border-b">Feature</th>
+              <th class="py-2 px-4 border-b">JavaScript</th>
+              <th class="py-2 px-4 border-b">TypeScript</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="py-2 px-4 border-b">Typing</td>
+              <td class="py-2 px-4 border-b">Dynamic Typing</td>
+              <td class="py-2 px-4 border-b">Static Typing</td>
+            </tr>
+            <tr>
+              <td class="py-2 px-4 border-b">Type Annotations</td>
+              <td class="py-2 px-4 border-b">Not Available</td>
+              <td class="py-2 px-4 border-b">Supported</td>
+            </tr>
+            <tr>
+              <td class="py-2 px-4 border-b">Interfaces</td>
+              <td class="py-2 px-4 border-b">Not Available</td>
+              <td class="py-2 px-4 border-b">Supported</td>
+            </tr>
+            <tr>
+              <td class="py-2 px-4 border-b">Generics</td>
+              <td class="py-2 px-4 border-b">Not Available</td>
+              <td class="py-2 px-4 border-b">Supported</td>
+            </tr>
+            <tr>
+              <td class="py-2 px-4 border-b">Compilation</td>
+              <td class="py-2 px-4 border-b">Interpreted at Runtime</td>
+              <td class="py-2 px-4 border-b">Compiled to JavaScript</td>
+            </tr>
+            <tr>
+              <td class="py-2 px-4 border-b">Tooling Support</td>
+              <td class="py-2 px-4 border-b">Basic</td>
+              <td class="py-2 px-4 border-b">Enhanced with IntelliSense, Autocompletion</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
 
       <!-- Explanation of Table -->
       <p class="text-lg text-gray-700">
