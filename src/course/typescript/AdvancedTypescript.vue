@@ -1,9 +1,9 @@
 <template>
   <div class="w-full">
     <!-- Header Section -->
-    <div class="w-full flex items-center gap-2 bg-blue-600 rounded-t-xl p-4">
-      <img src="/icons/typescript.svg" alt="TypeScript Logo" class="w-12 h-12">
-      <h1 class="text-2xl md:text-4xl font-bold text-white">Advanced TypeScript Features</h1>
+    <div class="w-full flex items-center gap-5 bg-blue-950 rounded-t-xl p-4">
+      <img src="/ts/logo.svg" alt="Typescript Logo" class="w-12 h-12">
+      <h1 class="text-2xl md:text-4xl font-bold text-blue-200">Advanced TypeScript Features</h1>
     </div>
 
     <!-- Section: Decorators in TypeScript -->

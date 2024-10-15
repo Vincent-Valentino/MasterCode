@@ -39,7 +39,7 @@
           <p class="mb-2">
             The <code>v-bind</code> directive is used to dynamically bind one or more attributes, or a component prop to an expression. It's often shortened to just a colon (:).
           </p>
-          <div class="bg-gray-100 p-4 rounded">
+          <div class="bg-gray-800 text-white p-4 rounded">
             <pre><code>{{ vBindExample }}</code></pre>
           </div>
         </div>
@@ -50,7 +50,7 @@
           <p class="mb-2">
             <code>v-model</code> creates a two-way binding on a form input element or a component. It automatically picks the correct way to update the element based on the input type.
           </p>
-          <div class="bg-gray-100 p-4 rounded">
+          <div class="bg-gray-800 text-white p-4 rounded">
             <pre><code>{{ vModelExample }}</code></pre>
           </div>
         </div>
@@ -61,7 +61,7 @@
           <p class="mb-2">
             These directives are used for conditional rendering of elements. <code>v-if</code> will only render the element if the expression evaluates to true.
           </p>
-          <div class="bg-gray-100 p-4 rounded">
+          <div class="bg-gray-800 text-white p-4 rounded">
             <pre><code>{{ vIfExample }}</code></pre>
           </div>
         </div>
@@ -72,7 +72,7 @@
           <p class="mb-2">
             <code>v-show</code> is used for toggling the visibility of an element. Unlike <code>v-if</code>, a <code>v-show</code> element is always rendered and remains in the DOM.
           </p>
-          <div class="bg-gray-100 p-4 rounded">
+          <div class="bg-gray-800 text-white p-4 rounded">
             <pre><code>{{ vShowExample }}</code></pre>
           </div>
         </div>
@@ -83,7 +83,7 @@
           <p class="mb-2">
             <code>v-for</code> is used to render a list of items based on an array or an object. It requires a special syntax in the form of <code>item in items</code>.
           </p>
-          <div class="bg-gray-100 p-4 rounded">
+          <div class="bg-gray-800 text-white p-4 rounded">
             <pre><code>{{ vForExample }}</code></pre>
           </div>
         </div>
@@ -94,7 +94,7 @@
           <p class="mb-2">
             <code>v-on</code> attaches an event listener to the element. It's typically abbreviated to the @ symbol.
           </p>
-          <div class="bg-gray-100 p-4 rounded">
+          <div class="bg-gray-800 text-white p-4 rounded">
             <pre><code>{{ vOnExample }}</code></pre>
           </div>
         </div>
@@ -110,7 +110,7 @@
               <li><code>v-once</code> renders the element and component once only, and skips future updates</li>
             </ul>
           </p>
-          <div class="bg-gray-100 p-4 rounded">
+          <div class="bg-gray-800 text-white p-4 rounded">
             <pre><code>{{ vUtilityExample }}</code></pre>
           </div>
         </div>
@@ -136,7 +136,7 @@
             <li><code>.self</code> - only trigger handler if event.target is the element itself</li>
             <li><code>.once</code> - trigger the handler at most once</li>
           </ul>
-          <div class="bg-gray-100 p-4 rounded">
+          <div class="bg-gray-800 text-white p-4 rounded">
             <pre><code>{{ eventModifiersExample }}</code></pre>
           </div>
         </div>
@@ -147,7 +147,7 @@
           <p class="mb-2">
             When listening for keyboard events, you often need to check for specific keys. Vue allows adding key modifiers for <code>v-on</code> when listening for key events:
           </p>
-          <div class="bg-gray-100 p-4 rounded">
+          <div class="bg-gray-800 text-white p-4 rounded">
             <pre><code>{{ keyModifiersExample }}</code></pre>
           </div>
         </div>
@@ -158,7 +158,7 @@
           <p class="mb-2">
             These modifiers restrict the handler to events triggered by a specific mouse button:
           </p>
-          <div class="bg-gray-100 p-4 rounded">
+          <div class="bg-gray-800 text-white p-4 rounded">
             <pre><code>{{ mouseModifiersExample }}</code></pre>
           </div>
         </div>
@@ -177,7 +177,7 @@
           <p class="mb-2">
             <code>v-if</code> is used to conditionally render a block. The block will only be rendered if the directive's expression returns a truthy value. You can use <code>v-else</code> to indicate an "else block" for <code>v-if</code>.
           </p>
-          <div class="bg-gray-100 p-4 rounded">
+          <div class="bg-gray-800 text-white p-4 rounded">
             <pre><code>{{ vIfElseExample }}</code></pre>
           </div>
         </div>
@@ -191,7 +191,7 @@
           <p class="mb-2">
             Generally speaking, <code>v-if</code> has higher toggle costs while <code>v-show</code> has higher initial render costs. So prefer <code>v-show</code> if you need to toggle something very often, and prefer <code>v-if</code> if the condition is unlikely to change at runtime.
           </p>
-          <div class="bg-gray-100 p-4 rounded">
+          <div class="bg-gray-800 text-white p-4 rounded">
             <pre><code>{{ vShowVsVIfExample }}</code></pre>
           </div>
         </div>
@@ -210,7 +210,7 @@
           <p class="mb-2">
             You can use <code>v-for</code> to iterate through both arrays and objects:
           </p>
-          <div class="bg-gray-100 p-4 rounded">
+          <div class="bg-gray-800 text-white p-4 rounded">
             <pre><code>{{ vForArrayObjectExample }}</code></pre>
           </div>
         </div>
@@ -221,7 +221,7 @@
           <p class="mb-2">
             When using <code>v-for</code>, it's recommended to provide a <code>key</code> attribute for each item. This helps Vue identify which items in a list have changed, been added, or been removed, leading to more predictable behavior.
           </p>
-          <div class="bg-gray-100 p-4 rounded">
+          <div class="bg-gray-800 text-white p-4 rounded">
             <pre><code>{{ vForKeyExample }}</code></pre>
           </div>
         </div>
@@ -232,7 +232,7 @@
           <p class="mb-2">
             You can nest <code>v-for</code> directives and even use them with a range of numbers:
           </p>
-          <div class="bg-gray-100 p-4 rounded">
+          <div class="bg-gray-800 text-white p-4 rounded">
             <pre><code>{{ vForNestedRangeExample }}</code></pre>
           </div>
         </div>
@@ -248,7 +248,7 @@
         <!-- Basic Event Handling -->
         <div class="mb-6">
           <h3 class="text-xl font-semibold mb-2">Basic Event Handling</h3>
-          <div class="bg-gray-100 p-4 rounded">
+          <div class="bg-gray-800 text-white p-4 rounded">
             <pre><code>{{ vOnBasicExample }}</code></pre>
           </div>
         </div>
@@ -259,7 +259,7 @@
           <p class="mb-2">
             The logic for many event handlers will be more complex, so keeping your methods in the <code>methods</code> option is a good idea:
           </p>
-          <div class="bg-gray-100 p-4 rounded">
+          <div class="bg-gray-800 text-white p-4 rounded">
             <pre><code>{{ vOnMethodExample }}</code></pre>
           </div>
         </div>
@@ -270,7 +270,7 @@
           <p class="mb-2">
             Vue provides event modifiers for <code>v-on</code> to address common needs:
           </p>
-          <div class="bg-gray-100 p-4 rounded">
+          <div class="bg-gray-800 text-white p-4 rounded">
             <pre><code>{{ vOnModifiersExample }}</code></pre>
           </div>
         </div>
@@ -289,7 +289,7 @@
           <p class="mb-2">
             Here's a simple example of <code>v-model</code> with a text input:
           </p>
-          <div class="bg-gray-100 p-4 rounded">
+          <div class="bg-gray-800 text-white p-4 rounded">
             <pre><code>{{ vModelBasicExample }}</code></pre>
           </div>
         </div>
@@ -300,7 +300,7 @@
           <p class="mb-2">
             <code>v-model</code> also works with checkboxes and radio buttons:
           </p>
-          <div class="bg-gray-100 p-4 rounded">
+          <div class="bg-gray-800 text-white p-4 rounded">
             <pre><code>{{ vModelCheckboxRadioExample }}</code></pre>
           </div>
         </div>
@@ -311,7 +311,7 @@
           <p class="mb-2">
             <code>v-model</code> can be used with select dropdowns as well:
           </p>
-          <div class="bg-gray-100 p-4 rounded">
+          <div class="bg-gray-800 text-white p-4 rounded">
             <pre><code>{{ vModelSelectExample }}</code></pre>
           </div>
         </div>
@@ -327,7 +327,7 @@
             <li><code>.number</code> - cast input string to numbers</li>
             <li><code>.trim</code> - trim input</li>
           </ul>
-          <div class="bg-gray-100 p-4 rounded">
+          <div class="bg-gray-800 text-white p-4 rounded">
             <pre><code>{{ vModelModifiersExample }}</code></pre>
           </div>
         </div>
@@ -346,7 +346,7 @@
           <p class="mb-2">
             Here's an example of a custom directive that focuses an input element:
           </p>
-          <div class="bg-gray-100 p-4 rounded">
+          <div class="bg-gray-800 text-white p-4 rounded">
             <pre><code>{{ customDirectiveExample }}</code></pre>
           </div>
         </div>
@@ -364,7 +364,7 @@
             <li><code>componentUpdated</code>: called after the containing component and its children have updated</li>
             <li><code>unbind</code>: called only once, when the directive is unbound from the element</li>
           </ul>
-          <div class="bg-gray-100 p-4 rounded">
+          <div class="bg-gray-800 text-white p-4 rounded">
             <pre><code>{{ directiveHooksExample }}</code></pre>
           </div>
         </div>
@@ -383,7 +383,7 @@
           <p class="mb-2">
             You can use a dynamic attribute name with <code>v-bind</code>:
           </p>
-          <div class="bg-gray-100 p-4 rounded">
+          <div class="bg-gray-800 text-white p-4 rounded">
             <pre><code>{{ dynamicBindExample }}</code></pre>
           </div>
         </div>
@@ -394,7 +394,7 @@
           <p class="mb-2">
             Similarly, you can use dynamic event names with <code>v-on</code>:
           </p>
-          <div class="bg-gray-100 p-4 rounded">
+          <div class="bg-gray-800 text-white p-4 rounded">
             <pre><code>{{ dynamicOnExample }}</code></pre>
           </div>
         </div>
@@ -437,8 +437,7 @@ export default {
   name: 'VueDirectivesCourse',
   data() {
     return {
-      vBindExample: `
-<template>
+      vBindExample: `<template>
   <div>
     <img v-bind:src="imageSrc" v-bind:alt="imageAlt">
     <!-- Shorthand -->
@@ -455,10 +454,8 @@ export default {
     }
   }
 }
-<\/script>
-      `,
-      vModelExample: `
-<template>
+<\/script>`,
+      vModelExample: `<template>
   <div>
     <input v-model="message" placeholder="edit me">
     <p>Message is: {{ message }}</p>
@@ -473,10 +470,8 @@ export default {
     }
   }
 }
-<\/script>
-      `,
-      vIfExample: `
-<template>
+<\/script>`,
+      vIfExample: `<template>
   <div>
     <p v-if="seen">Now you see me</p>
     <p v-else>Now you don't</p>
@@ -491,10 +486,8 @@ export default {
     }
   }
 }
-<\/script>
-      `,
-      vShowExample: `
-<template>
+<\/script>`,
+      vShowExample: `<template>
   <div>
     <p v-show="isVisible">This paragraph is visible</p>
   </div>
@@ -508,10 +501,8 @@ export default {
     }
   }
 }
-<\/script>
-      `,
-      vForExample: `
-<template>
+<\/script>`,
+      vForExample: `<template>
   <ul>
     <li v-for="item in items" :key="item.id">
       {{ item.name }}
@@ -531,10 +522,8 @@ export default {
     }
   }
 }
-<\/script>
-      `,
-      vOnExample: `
-<template>
+<\/script>`,
+      vOnExample: `<template>
   <div>
     <button v-on:click="counter += 1">Add 1</button>
     <!-- Shorthand -->
@@ -551,10 +540,8 @@ export default {
     }
   }
 }
-<\/script>
-      `,
-      vUtilityExample: `
-<template>
+<\/script>`,
+      vUtilityExample: `<template>
   <div>
     <span v-pre>{{ this will not be compiled }}</span>
     <div v-cloak>{{ message }}</div>
@@ -577,10 +564,8 @@ export default {
 [v-cloak] {
   display: none;
 }
-</style>
-      `,
-      eventModifiersExample: `
-<template>
+</style>`,
+      eventModifiersExample: `<template>
   <div>
     <!-- the click event's propagation will be stopped -->
     <a @click.stop="doThis"></a>
@@ -597,10 +582,8 @@ export default {
     <!-- only trigger handler if event.target is the element itself -->
     <div @click.self="doThat">...</div>
   </div>
-</template>
-      `,
-      keyModifiersExample: `
-<template>
+</template>`,
+      keyModifiersExample: `<template>
   <div>
     <!-- only call \`submit\` when the \`key\` is \`Enter\` -->
     <input @keyup.enter="submit">
@@ -608,10 +591,8 @@ export default {
     <!-- \`.exact\` modifier allows control of the exact combination of system modifiers needed to trigger an event -->
     <button @click.ctrl.exact="onCtrlClick">A</button>
   </div>
-</template>
-      `,
-      mouseModifiersExample: `
-<template>
+</template>`,
+      mouseModifiersExample: `<template>
   <div>
     <!-- only call \`mousedownHandler\` for left button mouse clicks -->
     <div @mousedown.left="mousedownHandler">Left Click</div>
@@ -619,10 +600,8 @@ export default {
     <!-- only call \`mousedownHandler\` for right button mouse clicks -->
     <div @mousedown.right="mousedownHandler">Right Click</div>
   </div>
-</template>
-      `,
-      vIfElseExample: `
-<template>
+</template>`,
+      vIfElseExample: `<template>
   <div>
     <div v-if="type === 'A'">
       A
@@ -647,10 +626,8 @@ export default {
     }
   }
 }
-<\/script>
-      `,
-      vShowVsVIfExample: `
-<template>
+<\/script>`,
+      vShowVsVIfExample: `<template>
   <div>
     <h1 v-if="ok">Title (v-if)</h1>
     <h1 v-show="ok">Title (v-show)</h1>
@@ -665,10 +642,8 @@ export default {
     }
   }
 }
-<\/script>
-      `,
-      vForArrayObjectExample: `
-<template>
+<\/script>`,
+      vForArrayObjectExample: `<template>
   <div>
     <!-- Array example -->
     <ul>
@@ -703,10 +678,8 @@ export default {
     }
   }
 }
-<\/script>
-      `,
-      vForKeyExample: `
-<template>
+<\/script>`,
+      vForKeyExample: `<template>
   <div>
     <ul>
       <li v-for="item in items" :key="item.id">
@@ -728,10 +701,8 @@ export default {
     }
   }
 }
-<\/script>
-      `,
-      vForNestedRangeExample: `
-<template>
+<\/script>`,
+      vForNestedRangeExample: `<template>
   <div>
     <!-- Nested v-for -->
     <ul>
@@ -775,10 +746,8 @@ export default {
     }
   }
 }
-<\/script>
-      `,
-      vOnBasicExample: `
-<template>
+<\/script>`,
+      vOnBasicExample: `<template>
   <div>
     <button v-on:click="counter += 1">Add 1</button>
     <p>The button above has been clicked {{ counter }} times.</p>
@@ -793,10 +762,8 @@ export default {
     }
   }
 }
-<\/script>
-      `,
-      vOnMethodExample: `
-<template>
+<\/script>`,
+      vOnMethodExample: `<template>
   <div>
     <!-- \`greet\` is the name of a method defined below -->
     <button v-on:click="greet">Greet</button>
@@ -821,10 +788,8 @@ export default {
     }
   }
 }
-<\/script>
-      `,
-      vOnModifiersExample: `
-<template>
+<\/script>`,
+      vOnModifiersExample: `<template>
   <div>
     <!-- the click event's propagation will be stopped -->
     <a v-on:click.stop="doThis"></a>
@@ -845,10 +810,8 @@ export default {
     <!-- i.e. not from a child element -->
     <div v-on:click.self="doThat">...</div>
   </div>
-</template>
-      `,
-      vModelBasicExample: `
-<template>
+</template>`,
+      vModelBasicExample: `<template>
   <div>
     <input v-model="message" placeholder="edit me">
     <p>Message is: {{ message }}</p>
@@ -863,10 +826,8 @@ export default {
     }
   }
 }
-<\/script>
-      `,
-      vModelCheckboxRadioExample: `
-<template>
+<\/script>`,
+      vModelCheckboxRadioExample: `<template>
   <div>
     <!-- Checkbox -->
     <input type="checkbox" id="checkbox" v-model="checked">
@@ -894,10 +855,8 @@ export default {
     }
   }
 }
-<\/script>
-      `,
-      vModelSelectExample: `
-<template>
+<\/script>`,
+      vModelSelectExample: `<template>
   <div>
     <select v-model="selected">
       <option disabled value="">Please select one</option>
@@ -917,10 +876,8 @@ export default {
     }
   }
 }
-<\/script>
-      `,
-      vModelModifiersExample: `
-<template>
+<\/script>`,
+      vModelModifiersExample: `<template>
   <div>
     <!-- synced after "change" instead of "input" -->
     <input v-model.lazy="msg">
@@ -942,10 +899,8 @@ export default {
     }
   }
 }
-<\/script>
-      `,
-      customDirectiveExample: `
-<template>
+<\/script>`,
+      customDirectiveExample: `<template>
   <div>
     <!-- When the page loads, the input element will be focused -->
     <input v-focus>
@@ -964,10 +919,8 @@ export default {
     }
   }
 }
-<\/script>
-      `,
-      directiveHooksExample: `
-Vue.directive('color-swatch', {
+<\/script>`,
+      directiveHooksExample: `Vue.directive('color-swatch', {
   bind: function (el, binding) {
     el.style.backgroundColor = binding.value
   },
@@ -977,10 +930,8 @@ Vue.directive('color-swatch', {
 })
 
 // Usage:
-// <div v-color-swatch="color"></div>
-      `,
-      dynamicBindExample: `
-<template>
+// <div v-color-swatch="color"></div>`,
+      dynamicBindExample: `<template>
   <div>
     <a v-bind:[attributeName]="url"> ... </a>
   </div>
@@ -995,10 +946,8 @@ export default {
     }
   }
 }
-<\/script>
-      `,
-      dynamicOnExample: `
-<template>
+<\/script>`,
+      dynamicOnExample: `<template>
   <div>
     <a v-on:[eventName]="doSomething"> ... </a>
   </div>

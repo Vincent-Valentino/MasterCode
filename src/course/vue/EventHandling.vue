@@ -27,7 +27,7 @@
       </p>
       <!-- Code Example: Using v-on -->
       <div class="bg-gray-800 text-white rounded-lg p-4 mb-6">
-        <pre v-pre><code class="language-html">{{ usingVOnExample }}</code></pre>
+        <pre><code class="language-html">{{ usingVOnExample }}</code></pre>
       </div>
 
       <!-- Event Listener Shorthand (@ Syntax) -->
@@ -37,7 +37,7 @@
       </p>
       <!-- Code Example: Shorthand Syntax -->
       <div class="bg-gray-800 text-white rounded-lg p-4 mb-6">
-        <pre v-pre><code class="language-html">{{ shorthandSyntaxExample }}</code></pre>
+        <pre><code class="language-html">{{ shorthandSyntaxExample }}</code></pre>
       </div>
 
       <!-- Listening for Native DOM Events -->
@@ -53,7 +53,7 @@
       </p>
       <!-- Code Example: Handling Click Event -->
       <div class="bg-gray-800 text-white rounded-lg p-4 mb-6">
-        <pre v-pre><code class="language-html">{{ handlingClickEventExample }}</code></pre>
+        <pre><code class="language-html">{{ handlingClickEventExample }}</code></pre>
       </div>
 
       <!-- Binding Multiple Events to a Single Element -->
@@ -63,7 +63,7 @@
       </p>
       <!-- Code Example: Multiple Event Bindings -->
       <div class="bg-gray-800 text-white rounded-lg p-4 mb-6">
-        <pre v-pre><code class="language-html">{{ multipleEventBindingsExample }}</code></pre>
+        <pre><code class="language-html">{{ multipleEventBindingsExample }}</code></pre>
       </div>
 
       <!-- Method Binding in Event Handlers -->
@@ -79,7 +79,7 @@
       </p>
       <!-- Code Example: Calling Methods -->
       <div class="bg-gray-800 text-white rounded-lg p-4 mb-6">
-        <pre v-pre><code class="language-html">{{ callingMethodsExample }}</code></pre>
+        <pre><code class="language-html">{{ callingMethodsExample }}</code></pre>
       </div>
 
       <!-- Passing Arguments to Event Methods -->
@@ -89,7 +89,7 @@
       </p>
       <!-- Code Example: Passing Arguments -->
       <div class="bg-gray-800 text-white rounded-lg p-4 mb-6">
-        <pre v-pre><code class="language-html">{{ passingArgumentsExample }}</code></pre>
+        <pre><code class="language-html">{{ passingArgumentsExample }}</code></pre>
       </div>
 
       <!-- Accessing the Event Object in Methods -->
@@ -99,7 +99,7 @@
       </p>
       <!-- Code Example: Accessing Event Object -->
       <div class="bg-gray-800 text-white rounded-lg p-4 mb-6">
-        <pre v-pre><code class="language-html">{{ accessingEventObjectExample }}</code></pre>
+        <pre><code class="language-html">{{ accessingEventObjectExample }}</code></pre>
       </div>
 
       <!-- Event Modifiers -->
@@ -115,7 +115,7 @@
       </p>
       <!-- Code Example: .prevent Modifier -->
       <div class="bg-gray-800 text-white rounded-lg p-4 mb-6">
-        <pre v-pre><code class="language-html">{{ preventModifierExample }}</code></pre>
+        <pre><code class="language-html">{{ preventModifierExample }}</code></pre>
       </div>
 
       <!-- Stopping Event Propagation with .stop -->
@@ -125,7 +125,7 @@
       </p>
       <!-- Code Example: .stop Modifier -->
       <div class="bg-gray-800 text-white rounded-lg p-4 mb-6">
-        <pre v-pre><code class="language-html">{{ stopModifierExample }}</code></pre>
+        <pre><code class="language-html">{{ stopModifierExample }}</code></pre>
       </div>
 
       <!-- Limiting Events to Once with .once -->
@@ -135,7 +135,7 @@
       </p>
       <!-- Code Example: .once Modifier -->
       <div class="bg-gray-800 text-white rounded-lg p-4 mb-6">
-        <pre v-pre><code class="language-html">{{ onceModifierExample }}</code></pre>
+        <pre><code class="language-html">{{ onceModifierExample }}</code></pre>
       </div>
 
       <!-- Using .self to Restrict Event Triggers to the Element Itself -->
@@ -145,7 +145,7 @@
       </p>
       <!-- Code Example: .self Modifier -->
       <div class="bg-gray-800 text-white rounded-lg p-4 mb-6">
-        <pre v-pre><code class="language-html">{{ selfModifierExample }}</code></pre>
+        <pre><code class="language-html">{{ selfModifierExample }}</code></pre>
       </div>
 
       <!-- Key Modifiers -->
@@ -161,7 +161,7 @@
       </p>
       <!-- Code Example: Key Modifiers -->
       <div class="bg-gray-800 text-white rounded-lg p-4 mb-6">
-        <pre v-pre><code class="language-html">{{ keyModifiersExample }}</code></pre>
+        <pre><code class="language-html">{{ keyModifiersExample }}</code></pre>
       </div>
 
       <!-- Using Custom Key Aliases -->
@@ -171,7 +171,7 @@
       </p>
       <!-- Code Example: Custom Key Aliases -->
       <div class="bg-gray-800 text-white rounded-lg p-4 mb-6">
-        <pre v-pre><code class="language-javascript">{{ customKeyAliasesExample }}</code></pre>
+        <pre><code class="language-javascript">{{ customKeyAliasesExample }}</code></pre>
       </div>
 
       <!-- Handling Specific Keys Using Key Codes or Names -->
@@ -181,7 +181,7 @@
       </p>
       <!-- Code Example: Specific Keys -->
       <div class="bg-gray-800 text-white rounded-lg p-4 mb-6">
-        <pre v-pre><code class="language-html">{{ specificKeysExample }}</code></pre>
+        <pre><code class="language-html">{{ specificKeysExample }}</code></pre>
       </div>
 
       <!-- Mouse Button Modifiers -->
@@ -197,7 +197,7 @@
       </p>
       <!-- Code Example: Mouse Button Modifiers -->
       <div class="bg-gray-800 text-white rounded-lg p-4 mb-6">
-        <pre v-pre><code class="language-html">{{ mouseButtonModifiersExample }}</code></pre>
+        <pre><code class="language-html">{{ mouseButtonModifiersExample }}</code></pre>
       </div>
 
       <!-- Combining Mouse Modifiers with Other Event Handling -->
@@ -207,7 +207,7 @@
       </p>
       <!-- Code Example: Combining Mouse Modifiers -->
       <div class="bg-gray-800 text-white rounded-lg p-4 mb-6">
-        <pre v-pre><code class="language-html">{{ combiningMouseModifiersExample }}</code></pre>
+        <pre><code class="language-html">{{ combiningMouseModifiersExample }}</code></pre>
       </div>
 
       <!-- Event Binding for Form Inputs -->
@@ -223,7 +223,7 @@
       </p>
       <!-- Code Example: Input Events -->
       <div class="bg-gray-800 text-white rounded-lg p-4 mb-6">
-        <pre v-pre><code class="language-html">{{ inputEventsExample }}</code></pre>
+        <pre><code class="language-html">{{ inputEventsExample }}</code></pre>
       </div>
 
       <!-- Handling Form Submissions with Event Handlers -->
@@ -233,7 +233,7 @@
       </p>
       <!-- Code Example: Form Submission Handling -->
       <div class="bg-gray-800 text-white rounded-lg p-4 mb-6">
-        <pre v-pre><code class="language-html">{{ formSubmissionHandlingExample }}</code></pre>
+        <pre><code class="language-html">{{ formSubmissionHandlingExample }}</code></pre>
       </div>
 
       <!-- Using v-model for Two-Way Data Binding Alongside Event Handling -->
@@ -243,7 +243,7 @@
       </p>
       <!-- Code Example: v-model with Event Handling -->
       <div class="bg-gray-800 text-white rounded-lg p-4 mb-6">
-        <pre v-pre><code class="language-html">{{ vModelWithEventHandlingExample }}</code></pre>
+        <pre><code class="language-html">{{ vModelWithEventHandlingExample }}</code></pre>
       </div>
 
       <!-- Custom Event Handling -->
@@ -259,7 +259,7 @@
       </p>
       <!-- Code Example: Emitting Custom Events -->
       <div class="bg-gray-800 text-white rounded-lg p-4 mb-6">
-        <pre v-pre><code class="language-javascript">{{ emittingCustomEventsExample }}</code></pre>
+        <pre><code class="language-javascript">{{ emittingCustomEventsExample }}</code></pre>
       </div>
 
       <!-- Listening for Custom Events -->
@@ -269,7 +269,7 @@
       </p>
       <!-- Code Example: Listening for Custom Events -->
       <div class="bg-gray-800 text-white rounded-lg p-4 mb-6">
-        <pre v-pre><code class="language-html">{{ listeningCustomEventsExample }}</code></pre>
+        <pre><code class="language-html">{{ listeningCustomEventsExample }}</code></pre>
       </div>
 
       <!-- Passing Data with Custom Events -->
@@ -279,7 +279,7 @@
       </p>
       <!-- Code Example: Passing Data with Custom Events -->
       <div class="bg-gray-800 text-white rounded-lg p-4 mb-6">
-        <pre v-pre><code class="language-javascript">{{ passingDataCustomEventsExample }}</code></pre>
+        <pre><code class="language-javascript">{{ passingDataCustomEventsExample }}</code></pre>
       </div>
 
       <!-- Handling Events in Parent-Child Component Relationships -->
@@ -289,7 +289,7 @@
       </p>
       <!-- Code Example: Parent-Child Event Handling -->
       <div class="bg-gray-800 text-white rounded-lg p-4 mb-6">
-        <pre v-pre><code class="language-html">{{ parentChildEventHandlingExample }}</code></pre>
+        <pre><code class="language-html">{{ parentChildEventHandlingExample }}</code></pre>
       </div>
 
       <!-- Event Handling with Dynamic Components -->
@@ -305,7 +305,7 @@
       </p>
       <!-- Code Example: Binding Events to Dynamic Components -->
       <div class="bg-gray-800 text-white rounded-lg p-4">
-        <pre v-pre><code class="language-html">{{ bindingEventsDynamicComponentsExample }}</code></pre>
+        <pre><code class="language-html">{{ bindingEventsDynamicComponentsExample }}</code></pre>
       </div>
     </div>
   </div>
@@ -317,24 +317,15 @@ export default {
   data() {
     return {
       // Code Examples
-      usingVOnExample: `
-<button v-on:click="handleClick">Click Me</button>
-      `,
-      shorthandSyntaxExample: `
-<button @click="handleClick">Click Me</button>
-      `,
-      handlingClickEventExample: `
-<button @click="submitForm">Submit</button>
-      `,
-      multipleEventBindingsExample: `
-<input
+      usingVOnExample: `<button v-on:click="handleClick">Click Me</button>`,
+      shorthandSyntaxExample: `<button @click="handleClick">Click Me</button>`,
+      handlingClickEventExample: `<button @click="submitForm">Submit</button>`,
+      multipleEventBindingsExample: `<input
   @focus="handleFocus"
   @blur="handleBlur"
   @input="handleInput"
-/>
-      `,
-      callingMethodsExample: `
-<!-- Template -->
+/>`,
+      callingMethodsExample: `<!-- Template -->
 <button @click="greetUser">Greet</button>
 
 <!-- Script -->
@@ -344,10 +335,8 @@ export default {
       alert('Hello, User!');
     }
   }
-};
-      `,
-      passingArgumentsExample: `
-<!-- Template -->
+};`,
+      passingArgumentsExample: `<!-- Template -->
 <button @click="addToCart(product.id)">Add to Cart</button>
 
 <!-- Script -->
@@ -357,10 +346,8 @@ export default {
       // Logic to add product to cart
     }
   }
-};
-      `,
-      accessingEventObjectExample: `
-<!-- Template -->
+};`,
+      accessingEventObjectExample: `<!-- Template -->
 <input @keyup="logKey($event)">
 
 <!-- Script -->
@@ -370,77 +357,47 @@ export default {
       console.log('Key pressed:', event.key);
     }
   }
-};
-      `,
-      preventModifierExample: `
-<form @submit.prevent="processForm">
+};`,
+      preventModifierExample: `<form @submit.prevent="processForm">
   <!-- Form fields -->
-</form>
-      `,
-      stopModifierExample: `
-<button @click.stop="handleButtonClick">Click Me</button>
-      `,
-      onceModifierExample: `
-<button @click.once="initialize">Initialize</button>
-      `,
-      selfModifierExample: `
-<div @click.self="handleDivClick">
+</form>`,
+      stopModifierExample: `<button @click.stop="handleButtonClick">Click Me</button>`,
+      onceModifierExample: `<button @click.once="initialize">Initialize</button>`,
+      selfModifierExample: `<div @click.self="handleDivClick">
   <p>Clicking here won't trigger the handler.</p>
-</div>
-      `,
-      keyModifiersExample: `
-<input @keyup.enter="submitForm" placeholder="Press Enter to submit">
-      `,
-      customKeyAliasesExample: `
-// In main.js
+</div>`,
+      keyModifiersExample: `<input @keyup.enter="submitForm" placeholder="Press Enter to submit">`,
+      customKeyAliasesExample: `// In main.js
 Vue.config.keyCodes = {
   f2: 113
 };
 
 // In component
-<input @keyup.f2="openSearch">
-      `,
-      specificKeysExample: `
-<input @keyup.page-down="nextPage">
-      `,
-      mouseButtonModifiersExample: `
-<button @click.right="showContextMenu">Right Click Me</button>
-      `,
-      combiningMouseModifiersExample: `
-<button @click.middle.prevent="handleMiddleClick">Middle Click Me</button>
-      `,
-      inputEventsExample: `
-<input
+<input @keyup.f2="openSearch">`,
+      specificKeysExample: `<input @keyup.page-down="nextPage">`,
+      mouseButtonModifiersExample: `<button @click.right="showContextMenu">Right Click Me</button>`,
+      combiningMouseModifiersExample: `<button @click.middle.prevent="handleMiddleClick">Middle Click Me</button>`,
+      inputEventsExample: `<input
   @input="validateInput"
   @change="handleChange"
   @focus="handleFocus"
   @blur="handleBlur"
-/>
-      `,
-      formSubmissionHandlingExample: `
-<form @submit.prevent="submitData">
+/>`,
+      formSubmissionHandlingExample: `<form @submit.prevent="submitData">
   <!-- Form fields -->
-</form>
-      `,
-      vModelWithEventHandlingExample: `
-<input v-model="username" @input="checkUsername">
-      `,
-      emittingCustomEventsExample: `
-// ChildComponent.vue
+</form>`,
+      vModelWithEventHandlingExample: `<input v-model="username" @input="checkUserna`,
+      emittingCustomEventsExample: `// ChildComponent.vue
 export default {
   methods: {
     sendUpdate() {
       this.$emit('update', { data: 'New Data' });
     }
   }
-};
-      `,
-      listeningCustomEventsExample: `
-<!-- ParentComponent.vue -->
-<ChildComponent @update="handleUpdate"/>
-      `,
-      passingDataCustomEventsExample: `
-// Emitting event with data
+};`,
+      listeningCustomEventsExample: `<!-- ParentComponent.vue -->
+<ChildComponent @update="handleUpdate"/>`,
+      passingDataCustomEventsExample: `// Emitting event with data
 this.$emit('itemSelected', itemId);
 
 // Listening and handling the event
@@ -450,18 +407,13 @@ methods: {
   selectItem(id) {
     // Handle the selected item
   }
-}
-      `,
-      parentChildEventHandlingExample: `
-<!-- ChildComponent.vue -->
+}`,
+      parentChildEventHandlingExample: `<!-- ChildComponent.vue -->
 <button @click="$emit('incrementCount')">Increment</button>
 
 <!-- ParentComponent.vue -->
-<ChildComponent @incrementCount="count++"/>
-      `,
-      bindingEventsDynamicComponentsExample: `
-<component :is="currentComponent" @action="handleAction"></component>
-      `
+<ChildComponent @incrementCount="count++"/>`,
+      bindingEventsDynamicComponentsExample: `<component :is="currentComponent" @action="handleAction"></component>`
     };
   }
 };

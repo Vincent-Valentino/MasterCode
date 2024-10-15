@@ -87,4 +87,115 @@ export const courses = {
       { title: 'Deploying Vue Applications', component: () => import('@/course/vue/DeployingVue.vue') },
     ]
   },
+  "C#": {
+    title: 'C#',
+    subcourses: [
+      { title: 'Introduction to C#', component: () => import('@/course/csharp/IntroductionCSharp.vue') },
+      { title: 'C# Basics: Variables and Data Types', component: () => import('@/course/csharp/BasicsCSharp.vue') },
+      { title: 'C# Control Structures', component: () => import('@/course/csharp/ControlStructuresCSharp.vue') },
+      { title: 'C# Methods', component: () => import('@/course/csharp/MethodsCSharp.vue') },
+      { title: 'C# Object-Oriented Programming', component: () => import('@/course/csharp/OOPCSharp.vue') },
+      { title: 'C# Collections', component: () => import('@/course/csharp/CollectionsCSharp.vue') },
+      { title: 'LINQ in C#', component: () => import('@/course/csharp/LINQCSharp.vue') },
+      { title: 'Exception Handling in C#', component: () => import('@/course/csharp/ExceptionHandlingCSharp.vue') },
+      { title: 'Asynchronous Programming in C#', component: () => import('@/course/csharp/AsyncProgrammingCSharp.vue') },
+      { title: 'Delegates and Events', component: () => import('@/course/csharp/DelegatesEventsCSharp.vue') },
+      { title: 'C# Generics', component: () => import('@/course/csharp/GenericsCSharp.vue') },
+    ]
+  },
+  "C++": {
+    title: 'C++',
+    subcourses: [
+      { title: 'Introduction to C++', component: () => import('@/course/cplusplus/IntroductionCPlusPlus.vue') },
+      { title: 'C++ Basics: Variables and Data Types', component: () => import('@/course/cplusplus/BasicsCPlusPlus.vue') },
+      { title: 'C++ Control Structures', component: () => import('@/course/cplusplus/ControlStructuresCPlusPlus.vue') },
+      { title: 'C++ Functions', component: () => import('@/course/cplusplus/FunctionsCPlusPlus.vue') },
+      { title: 'Object-Oriented Programming in C++', component: () => import('@/course/cplusplus/OOPCPlusPlus.vue') },
+      { title: 'C++ Standard Library', component: () => import('@/course/cplusplus/StandardLibraryCPlusPlus.vue') },
+      { title: 'Pointers and References', component: () => import('@/course/cplusplus/PointersReferencesCPlusPlus.vue') },
+      { title: 'C++ Templates', component: () => import('@/course/cplusplus/TemplatesCPlusPlus.vue') },
+      { title: 'Memory Management in C++', component: () => import('@/course/cplusplus/MemoryManagementCPlusPlus.vue') },
+      { title: 'Advanced C++ Features', component: () => import('@/course/cplusplus/AdvancedCPlusPlus.vue') },
+      { title: 'C++ Concurrency', component: () => import('@/course/cplusplus/ConcurrencyCPlusPlus.vue') },
+    ]
+  },
+  Go: {
+    title: 'Go',
+    subcourses: [
+      { title: 'Introduction to Go', component: () => import('@/course/go/IntroductionGo.vue') },
+      { title: 'Go Basics: Variables and Data Types', component: () => import('@/course/go/BasicsGo.vue') },
+      { title: 'Go Control Structures', component: () => import('@/course/go/ControlStructuresGo.vue') },
+      { title: 'Go Functions', component: () => import('@/course/go/FunctionsGo.vue') },
+      { title: 'Go Structs and Interfaces', component: () => import('@/course/go/StructsInterfacesGo.vue') },
+      { title: 'Go Concurrency', component: () => import('@/course/go/ConcurrencyGo.vue') },
+      { title: 'Error Handling in Go', component: () => import('@/course/go/ErrorHandlingGo.vue') },
+      { title: 'Working with Packages in Go', component: () => import('@/course/go/PackagesGo.vue') },
+      { title: 'Building Web Applications with Go', component: () => import('@/course/go/WebAppsGo.vue') },
+      { title: 'Testing in Go', component: () => import('@/course/go/TestingGo.vue') },
+      { title: 'Deploying Go Applications', component: () => import('@/course/go/DeployingGo.vue') },
+    ]
+  },
+  Angular: {
+    title: 'Angular',
+    subcourses: [
+      { title: 'Introduction to Angular', component: () => import('@/course/angular/IntroductionAngular.vue') },
+      { title: 'Angular Components and Modules', component: () => import('@/course/angular/ComponentsModulesAngular.vue') },
+      { title: 'Angular Templates and Data Binding', component: () => import('@/course/angular/TemplatesDataBindingAngular.vue') },
+      { title: 'Angular Services', component: () => import('@/course/angular/ServicesAngular.vue') },
+      { title: 'Angular Routing', component: () => import('@/course/angular/RoutingAngular.vue') },
+      { title: 'Angular Forms', component: () => import('@/course/angular/FormsAngular.vue') },
+      { title: 'Dependency Injection in Angular', component: () => import('@/course/angular/DependencyInjectionAngular.vue') },
+      { title: 'Angular HTTPClient', component: () => import('@/course/angular/HTTPClientAngular.vue') },
+      { title: 'Angular State Management with NgRx', component: () => import('@/course/angular/StateManagementNgRx.vue') },
+      { title: 'Angular Performance Optimization', component: () => import('@/course/angular/PerformanceOptimizationAngular.vue') },
+      { title: 'Building and Deploying Angular Applications', component: () => import('@/course/angular/DeployingAngular.vue') },
+    ]
+  },
+  HTML: {
+    title: 'HTML',
+    subcourses: [
+      { title: 'Introduction to HTML', component: () => import('@/course/html/IntroductionHTML.vue') },
+      { title: 'HTML Elements and Structure', component: () => import('@/course/html/ElementsStructureHTML.vue') },
+      { title: 'HTML Forms and Inputs', component: () => import('@/course/html/FormsInputsHTML.vue') },
+      { title: 'HTML Media Elements', component: () => import('@/course/html/MediaElementsHTML.vue') },
+      { title: 'Semantic HTML', component: () => import('@/course/html/SemanticHTML.vue') },
+      { title: 'Accessibility in HTML', component: () => import('@/course/html/AccessibilityHTML.vue') },
+      { title: 'HTML5 Features', component: () => import('@/course/html/HTML5Features.vue') },
+      { title: 'SEO Best Practices with HTML', component: () => import('@/course/html/SEOBestPracticesHTML.vue') },
+      { title: 'Advanced HTML Techniques', component: () => import('@/course/html/AdvancedHTML.vue') },
+    ]
+  },
+  CSS: {
+    title: 'CSS',
+    subcourses: [
+      { title: 'Introduction to CSS', component: () => import('@/course/css/IntroductionCSS.vue') },
+      { title: 'CSS Selectors and Specificity', component: () => import('@/course/css/SelectorsSpecificityCSS.vue') },
+      { title: 'CSS Box Model', component: () => import('@/course/css/BoxModelCSS.vue') },
+      { title: 'CSS Layouts with Flexbox', component: () => import('@/course/css/FlexboxCSS.vue') },
+      { title: 'CSS Grid Layout', component: () => import('@/course/css/GridLayoutCSS.vue') },
+      { title: 'Responsive Design with CSS', component: () => import('@/course/css/ResponsiveDesignCSS.vue') },
+      { title: 'CSS Animations and Transitions', component: () => import('@/course/css/AnimationsTransitionsCSS.vue') },
+      { title: 'CSS Preprocessors: Sass and LESS', component: () => import('@/course/css/PreprocessorsCSS.vue') },
+      { title: 'Advanced CSS Techniques', component: () => import('@/course/css/AdvancedCSS.vue') },
+      { title: 'CSS Architecture: BEM and OOCSS', component: () => import('@/course/css/ArchitectureCSS.vue') },
+      { title: 'CSS Performance Optimization', component: () => import('@/course/css/PerformanceOptimizationCSS.vue') },
+    ]
+  },
+  NextJS: {
+    title: 'Next.js',
+    subcourses: [
+      { title: 'Introduction to Next.js', component: () => import('@/course/nextjs/IntroductionNextJS.vue') },
+      { title: 'Setting Up a Next.js Project', component: () => import('@/course/nextjs/SettingUpNextJS.vue') },
+      { title: 'Pages and Routing in Next.js', component: () => import('@/course/nextjs/PagesRoutingNextJS.vue') },
+      { title: 'Next.js Components and Props', component: () => import('@/course/nextjs/ComponentsPropsNextJS.vue') },
+      { title: 'Next.js Data Fetching', component: () => import('@/course/nextjs/DataFetchingNextJS.vue') },
+      { title: 'API Routes in Next.js', component: () => import('@/course/nextjs/APIRoutesNextJS.vue') },
+      { title: 'Styling in Next.js', component: () => import('@/course/nextjs/StylingNextJS.vue') },
+      { title: 'Deploying Next.js Applications', component: () => import('@/course/nextjs/DeployingNextJS.vue') },
+      { title: 'Next.js Dynamic Routing', component: () => import('@/course/nextjs/DynamicRoutingNextJS.vue') },
+      { title: 'Authentication in Next.js', component: () => import('@/course/nextjs/AuthenticationNextJS.vue') },
+      { title: 'Next.js Performance Optimization', component: () => import('@/course/nextjs/PerformanceOptimizationNextJS.vue') },
+      { title: 'Building Serverless Functions with Next.js', component: () => import('@/course/nextjs/ServerlessFunctionsNextJS.vue') },
+    ]
+  },
 };

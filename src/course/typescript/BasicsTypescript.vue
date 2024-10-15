@@ -1,9 +1,9 @@
 <template>
   <div class="w-full">
     <!-- Header Section -->
-    <div class="w-full flex items-center gap-2 bg-blue-600 rounded-t-xl p-4">
-      <img src="/icons/typescript.svg" alt="TypeScript Logo" class="w-12 h-12">
-      <h1 class="text-2xl md:text-4xl font-bold text-white">TypeScript Basics</h1>
+    <div class="w-full flex items-center gap-5 bg-blue-950 rounded-t-xl p-4">
+      <img src="/ts/logo.svg" alt="Typescript Logo" class="w-12 h-12">
+      <h1 class="text-2xl md:text-4xl font-bold text-blue-200">TypeScript Basics</h1>
     </div>
 
     <!-- Section: Type Annotations and Variables -->
@@ -19,7 +19,7 @@
       </p>
       <!-- Code Example -->
       <pre class="bg-gray-800 rounded p-4 overflow-x-auto mb-4" v-pre>
-<code class="language-typescript">et count: number = 42;
+<code class="language-typescript">let count: number = 42;
 const name: string = 'Alice';
 var isActive: boolean = true;
 </code></pre>

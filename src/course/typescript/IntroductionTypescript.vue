@@ -1,9 +1,9 @@
 <template>
   <div class="w-full">
     <!-- Header Section -->
-    <div class="w-full flex items-center gap-2 bg-blue-600 rounded-t-xl p-4">
-      <img src="/icons/typescript.svg" alt="Typescript Logo" class="w-12 h-12">
-      <h1 class="text-2xl md:text-4xl font-bold text-white">Introduction to Typescript</h1>
+    <div class="w-full flex items-center gap-5 bg-blue-950 rounded-t-xl p-4">
+      <img src="/ts/logo.svg" alt="Typescript Logo" class="w-12 h-12">
+      <h1 class="text-2xl md:text-4xl font-bold text-blue-200">Introduction to TypeScript</h1>
     </div>
 
     <!-- Section 1: Why TypeScript Instead of Just JavaScript? -->
@@ -75,7 +75,7 @@
       </p>
 
       <!-- Comparison Table -->
-      <table class="min-w-full bg-white border border-gray-200 mb-6">
+      <table class="min-w-full bg-white border border-gray-200 mb-6 overflow-x-auto">
         <thead>
           <tr>
             <th class="py-2 px-4 border-b">Feature</th>

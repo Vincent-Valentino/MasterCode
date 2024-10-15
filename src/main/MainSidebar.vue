@@ -3,10 +3,10 @@
   <div 
     v-if="isDrawerVisible || !isMobile"
     :class="{
-      'fixed inset-0 z-50 bg-white p-4 w-full h-full': isDrawerVisible,  // Mobile drawer
-      'md:sticky md:h-auto md:m-5 md:ml-0 md:w-11/12 md:p-0 md:pt-8 md:mb-28 md:rounded-lg': !isMobile // Desktop sidebar
+      'fixed inset-0 z-50 bg-white p-4 w-full h-full': isDrawerVisible && isMobile,  // Mobile drawer
+      'md:sticky md:h-auto md:m-5 md:ml-0 md:w-11/12 md:p-0 md:pt-8 md:mb-28 md:rounded-lg top-0 z-50': !isMobile // Desktop sidebar
     }"
-    style="top: 0; z-index: 50;">
+    >
     
     <!-- Close button for mobile -->
     <button v-if="isDrawerVisible" @click="toggleSidebar" class="absolute top-2 md:hidden right-2 focus:outline-none">

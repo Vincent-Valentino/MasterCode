@@ -304,13 +304,10 @@ export default {
   data() {
     return {
       // Code Examples
-      globalComponentCode: `
-Vue.component('my-component', {
+      globalComponentCode: `Vue.component('my-component', {
   template: '<div>This is a global component!</div>'
-});
-      `,
-      singleFileComponentCode: `
-<template>
+});`,
+      singleFileComponentCode: `<template>
   <div>
     <h2>{{ title }}</h2>
     <p>This is a single-file component.</p>
@@ -333,10 +330,8 @@ export default {
 h2 {
   color: #42b983;
 }
-</style>
-      `,
-      globalRegistrationCode: `
-// In main.js
+</style>`,
+      globalRegistrationCode: `// In main.js
 import Vue from 'vue';
 import ChildComponent from './components/ChildComponent.vue';
 
@@ -344,10 +339,8 @@ Vue.component('ChildComponent', ChildComponent);
 
 new Vue({
   render: h => h(App)
-}).$mount('#app');
-      `,
-      localRegistrationCode: `
-<template>
+}).$mount('#app');`,
+      localRegistrationCode: `<template>
   <div>
     <ChildComponent :title="componentTitle" />
   </div>
@@ -367,44 +360,34 @@ export default {
     };
   }
 };
-<\/script>
-      `,
-      definingPropsCode: `
-export default {
+<\/script>`,
+      definingPropsCode: `export default {
   name: 'ChildComponent',
   props: ['message']
-};
-      `,
-      passingPropsCode: `
-<!-- In ParentComponent.vue -->
+};`,
+      passingPropsCode: `<!-- In ParentComponent.vue -->
 <template>
   <div>
     <ChildComponent message="Hello from Parent!" />
   </div>
-</template>
-      `,
-      propTypesCode: `
-export default {
+</template>`,
+      propTypesCode: `export default {
   props: {
     count: Number,
     user: Object,
     isActive: Boolean,
     tags: Array
   }
-};
-      `,
-      defaultPropsCode: `
-export default {
+};`,
+      defaultPropsCode: `export default {
   props: {
     title: {
       type: String,
       default: 'Default Title'
     }
   }
-};
-      `,
-      propValidationCode: `
-export default {
+};`,
+      propValidationCode: `export default {
   props: {
     age: {
       type: Number,
@@ -413,36 +396,26 @@ export default {
       }
     }
   }
-};
-      `,
-      staticPropsCode: `
-<ChildComponent message="Static Message" />
-      `,
-      dynamicPropsCode: `
-<!-- Assuming 'dynamicMessage' is a data property -->
-<ChildComponent :message="dynamicMessage" />
-      `,
-      watchingPropsCode: `
-export default {
+};`,
+      staticPropsCode: `<ChildComponent message="Static Message" />`,
+      dynamicPropsCode: `<!-- Assuming 'dynamicMessage' is a data property -->
+<ChildComponent :message="dynamicMessage" />`,
+      watchingPropsCode: `export default {
   props: ['value'],
   watch: {
     value(newVal, oldVal) {
       console.log('Value changed from', oldVal, 'to', newVal);
     }
   }
-};
-      `,
-      emittingEventsCode: `
-export default {
+};`,
+      emittingEventsCode: `export default {
   methods: {
     sendMessage() {
       this.$emit('message-sent', 'Hello Parent!');
     }
   }
-};
-      `,
-      emittingCustomEventsCode: `
-<!-- In ChildComponent.vue -->
+};`,
+      emittingCustomEventsCode: `<!-- In ChildComponent.vue -->
 <template>
   <button @click="notifyParent">Click Me</button>
 </template>
@@ -455,10 +428,8 @@ export default {
     }
   }
 };
-<\/script>
-      `,
-      handlingCustomEventsCode: `
-<!-- In ParentComponent.vue -->
+<\/script>`,
+      handlingCustomEventsCode: `<!-- In ParentComponent.vue -->
 <template>
   <div>
     <ChildComponent @custom-event="handleCustomEvent" />
@@ -473,18 +444,14 @@ export default {
     }
   }
 };
-<\/script>
-      `,
-      basicSlotCode: `
-<!-- In ChildComponent.vue -->
+<\/script>`,
+      basicSlotCode: `<!-- In ChildComponent.vue -->
 <template>
   <div>
     <slot></slot>
   </div>
-</template>
-      `,
-      namedSlotsCode: `
-<!-- In ChildComponent.vue -->
+</template>`,
+      namedSlotsCode: `<!-- In ChildComponent.vue -->
 <template>
   <div>
     <header>
@@ -497,10 +464,8 @@ export default {
       <slot name="footer"></slot>
     </footer>
   </div>
-</template>
-      `,
-      scopedSlotsCode: `
-<!-- In ChildComponent.vue -->
+</template>`,
+      scopedSlotsCode: `<!-- In ChildComponent.vue -->
 <template>
   <div>
     <slot :user="userData"></slot>
@@ -518,10 +483,8 @@ export default {
     };
   }
 };
-<\/script>
-      `,
-      dynamicComponentsCode: `
-<template>
+<\/script>`,
+      dynamicComponentsCode: `<template>
   <div>
     <component :is="currentComponent"></component>
 

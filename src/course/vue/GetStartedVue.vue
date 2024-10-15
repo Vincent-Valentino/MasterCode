@@ -193,23 +193,16 @@ export default {
   name: 'VueSetupGuide',
   data() {
     return {
-      verifyNodeNpm: `
-# Verify Node.js version
+      verifyNodeNpm: `# Verify Node.js version
 node -v
 
 # Verify npm version
-npm -v
-      `,
-      installVueCli: `
-# Install Vue CLI globally
-npm install -g @vue/cli
-      `,
-      createVueCliProject: `
-# Create a new project
-vue create my-vue-app
-      `,
-      vueCliProjectStructure: `
-my-vue-app/
+npm -v`,
+      installVueCli: `# Install Vue CLI globally
+npm install -g @vue/cli`,
+      createVueCliProject: `# Create a new project
+vue create my-vue-app`,
+      vueCliProjectStructure: `my-vue-app/
 ├── node_modules/
 ├── public/
 │   ├── favicon.ico
@@ -222,24 +215,19 @@ my-vue-app/
 ├── .gitignore
 ├── babel.config.js
 ├── package.json
-└── README.md
-      `,
-      runVueCliServer: `
-# Navigate to the project directory
+└── README.md`,
+      runVueCliServer: `# Navigate to the project directory
 cd my-vue-app
 
 # Run the development server
 npm run serve
       `,
-      createViteProject: `
-# Use npm
+      createViteProject: `# Use npm
 npm init vite@latest my-vue-app -- --template vue
 
 # Or use yarn
-yarn create vite my-vue-app --template vue
-      `,
-      viteProjectStructure: `
-my-vue-app/
+yarn create vite my-vue-app --template vue`,
+      viteProjectStructure: `my-vue-app/
 ├── node_modules/
 ├── public/
 │   └── favicon.ico
@@ -252,18 +240,15 @@ my-vue-app/
 ├── index.html
 ├── package.json
 ├── vite.config.js
-└── README.md
-      `,
-      runViteServer: `
-# Navigate to the project directory
+└── README.md`,
+      runViteServer: `# Navigate to the project directory
 cd my-vue-app
 
 # Install dependencies
 npm install
 
 # Run the development server
-npm run dev
-      `
+npm run dev`
     };
   }
 };

@@ -1,10 +1,10 @@
 <template>
   <div class="w-full">
     <!-- Header Section -->
-    <div class="w-full flex items-center gap-2 bg-yellow-600 rounded-t-xl p-4">
-      <img src="/icons/javascript.svg" alt="JavaScript Logo" class="w-12 h-12">
-      <h1 class="text-2xl md:text-4xl font-bold text-white">JavaScript Loops</h1>
-    </div>
+    <div class="w-full flex items-center gap-5 bg-yellow-500 rounded-t-xl p-4">
+        <img src="/js/logo.png" alt="JavaScript Logo" class="w-12 h-12">
+        <h1 class="text-2xl md:text-4xl font-bold text-black">JavaScript Loops</h1>
+      </div>
 
     <!-- Content Section -->
     <div class="bg-white rounded-b-xl p-4 md:p-6">

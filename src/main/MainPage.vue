@@ -1,7 +1,6 @@
 <template>
   <div class="min-h-screen bg-white text-gray-800">
     <MainNavbar @selectedCourse="selectCourse" @toggleSidebar="toggleSidebar" />
-    <LanguageIcons />
 
     <!-- Flex container for content and sidebar -->
     <div class="flex flex-col md:flex-row md:space-x-4 bg-slate-50">
@@ -32,7 +31,6 @@
 
 <script>
 import MainNavbar from './MainNavbar.vue';
-import LanguageIcons from './MainIcon.vue';
 import MainContent from './MainContent.vue';
 import MainFooter from './MainFooter.vue';
 import MainSidebar from './MainSidebar.vue';
@@ -41,7 +39,6 @@ export default {
   name: 'App',
   components: {
     MainNavbar,
-    LanguageIcons,
     MainContent,
     MainFooter,
     MainSidebar
