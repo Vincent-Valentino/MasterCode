@@ -8,13 +8,13 @@
 
     <!-- Section: Decorators in TypeScript -->
     <section id="decorators" class="bg-white rounded-b-xl p-4 md:p-6">
-      <h2 class="text-3xl font-semibold mb-4">Decorators in TypeScript</h2>
-      <p class="text-lg text-gray-700 mb-4">
+      <h2 class="text-xl md:text-2xl font-semibold mb-4">Decorators in TypeScript</h2>
+      <p class="text-base md:text-lg mb-6">
         Decorators are a powerful feature in TypeScript that allow you to modify classes, methods, properties, and parameters at design time. They provide a way to add annotations and a meta-programming syntax for class declarations and members.
       </p>
 
       <h3 class="text-2xl font-semibold mb-2">Enabling Decorators</h3>
-      <p class="text-lg text-gray-700 mb-4">
+      <p class="text-base md:text-lg mb-6">
         To use decorators, you need to enable the <code>experimentalDecorators</code> compiler option in your <code>tsconfig.json</code> file:
       </p>
       <!-- Code Example -->
@@ -26,7 +26,7 @@
 }</code></pre>
 
       <h3 class="text-2xl font-semibold mb-2">Decorator Factories</h3>
-      <p class="text-lg text-gray-700 mb-4">
+      <p class="text-base md:text-lg mb-6">
         A decorator is a special kind of declaration that can be attached to classes, methods, properties, or parameters. Decorators are functions that return a function (known as a decorator factory).
       </p>
       <!-- Code Example -->
@@ -50,7 +50,7 @@ class Greeter {
 </code></pre>
 
       <h3 class="text-2xl font-semibold mb-2">Class Decorators</h3>
-      <p class="text-lg text-gray-700 mb-4">
+      <p class="text-base md:text-lg mb-6">
         A class decorator is applied to the constructor of the class. It can be used to observe, modify, or replace a class definition.
       </p>
 
@@ -69,7 +69,7 @@ let p = new Person('Alice');
 // Output: Class: Person</code></pre>
 
       <h3 class="text-2xl font-semibold mb-2">Method Decorators</h3>
-      <p class="text-lg text-gray-700 mb-4">
+      <p class="text-base md:text-lg mb-6">
         A method decorator is declared just before a method declaration. It can be used to observe, modify, or replace a method definition.
       </p>
 
@@ -95,7 +95,7 @@ calc.add(2, 3);
 // Output: Method add called with args: [2, 3]</code></pre>
 
       <h3 class="text-2xl font-semibold mb-2">Property Decorators</h3>
-      <p class="text-lg text-gray-700 mb-4">
+      <p class="text-base md:text-lg mb-6">
         A property decorator is declared before a property declaration. It cannot modify the property initializer but can observe that a property has been declared.
       </p>
 
@@ -139,7 +139,7 @@ p.name = 'Charlie';
 </code></pre>
 
       <h3 class="text-2xl font-semibold mb-2">Parameter Decorators</h3>
-      <p class="text-lg text-gray-700 mb-4">
+      <p class="text-base md:text-lg mb-6">
         A parameter decorator is declared just before a parameter declaration. It can be used to observe that a parameter has been declared on a method.
       </p>
 
@@ -160,7 +160,7 @@ greeter.greet('World');
 // Output: Parameter in method greet at position 0 has been decorated</code></pre>
 
       <h3 class="text-2xl font-semibold mb-2">Tip: Using Decorators Wisely</h3>
-      <p class="text-lg text-gray-700 mb-4">
+      <p class="text-base md:text-lg mb-6">
         Decorators can significantly enhance the functionality of your code, but they can also make it more complex. Use them judiciously and document their behavior to maintain code readability.
       </p>
     </section>
@@ -168,18 +168,18 @@ greeter.greet('World');
     <!-- Section: Conditional Types -->
     <section id="conditional-types" class="bg-white rounded-b-xl p-4 md:p-6 mt-6">
       <h2 class="text-3xl font-semibold mb-4">Conditional Types</h2>
-      <p class="text-lg text-gray-700 mb-4">
+      <p class="text-base md:text-lg mb-6">
         Conditional types enable creating types that depend on a condition expressed using the <code>extends</code> keyword in a type expression. They are particularly useful for type transformations.
       </p>
 
       <h3 class="text-2xl font-semibold mb-2">Basic Syntax</h3>
-      <p class="text-lg text-gray-700 mb-4">
+      <p class="text-base md:text-lg mb-6">
         The syntax for a conditional type is:
       </p>
-      <p class="text-lg text-gray-700 mb-4">
+      <p class="text-base md:text-lg mb-6">
         <code>T extends U ? X : Y</code>
       </p>
-      <p class="text-lg text-gray-700 mb-4">
+      <p class="text-base md:text-lg mb-6">
         If type <code>T</code> extends type <code>U</code>, then the type resolves to <code>X</code>; otherwise, it resolves to <code>Y</code>.
       </p>
 
@@ -191,7 +191,7 @@ type A = IsString&lt;string&gt;;  // true
 type B = IsString&lt;number&gt;;  // false</code></pre>
 
       <h3 class="text-2xl font-semibold mb-2">Distributive Conditional Types</h3>
-      <p class="text-lg text-gray-700 mb-4">
+      <p class="text-base md:text-lg mb-6">
         When the checked type is a union, conditional types become distributive, meaning the conditional type is applied to each member of the union.
       </p>
 
@@ -211,7 +211,7 @@ type T2 = TypeName&lt;string[]&gt;;  // 'object'
 type T3 = TypeName&lt;string | (() => void)&gt;; // 'string' | 'function'</code></pre>
 
       <h3 class="text-2xl font-semibold mb-2">Conditional Type Constraints</h3>
-      <p class="text-lg text-gray-700 mb-4">
+      <p class="text-base md:text-lg mb-6">
         Conditional types can be used to constrain type parameters.
       </p>
 
@@ -231,7 +231,7 @@ let dogName: AnimalName&lt;Dog&gt; = 'Buddy';
 // let numberName: AnimalName&lt;number&gt; = 'Nope'; // Error</code></pre>
 
       <h3 class="text-2xl font-semibold mb-2">Tip: Avoid Overcomplicating Types</h3>
-      <p class="text-lg text-gray-700 mb-4">
+      <p class="text-base md:text-lg mb-6">
         While conditional types are powerful, overusing them can make your code harder to understand. Keep your type definitions as simple as possible.
       </p>
     </section>
@@ -239,15 +239,15 @@ let dogName: AnimalName&lt;Dog&gt; = 'Buddy';
     <!-- Section: Mapped Types -->
     <section id="mapped-types" class="bg-white rounded-b-xl p-4 md:p-6 mt-6">
       <h2 class="text-3xl font-semibold mb-4">Mapped Types</h2>
-      <p class="text-lg text-gray-700 mb-4">
+      <p class="text-base md:text-lg mb-6">
         Mapped types allow you to create new types by transforming each property in an existing type. They are especially useful for creating variations of existing types.
       </p>
 
       <h3 class="text-2xl font-semibold mb-2">Creating Mapped Types</h3>
-      <p class="text-lg text-gray-700 mb-4">
+      <p class="text-base md:text-lg mb-6">
         The basic syntax for a mapped type is:
       </p>
-      <p class="text-lg text-gray-700 mb-4">
+      <p class="text-base md:text-lg mb-6">
         <code>{ [P in K]: T[P] }</code>
       </p>
 
@@ -270,7 +270,7 @@ let readonlyUser: Readonly&lt;User&gt; = {
 // readonlyUser.name = 'Bob'; // Error: Cannot assign to 'name' because it is a read-only property.</code></pre>
 
       <h3 class="text-2xl font-semibold mb-2">Using Modifiers</h3>
-      <p class="text-lg text-gray-700 mb-4">
+      <p class="text-base md:text-lg mb-6">
         You can add or remove modifiers like <code>readonly</code> and <code>optional</code> (<code>?</code>) in mapped types.
       </p>
 
@@ -285,7 +285,7 @@ type Required&lt;T&gt; = {
 };</code></pre>
 
       <h3 class="text-2xl font-semibold mb-2">Mapping Over Unions</h3>
-      <p class="text-lg text-gray-700 mb-4">
+      <p class="text-base md:text-lg mb-6">
         Mapped types can be used with unions, creating types that are the union of the mappings.
       </p>
 
@@ -301,7 +301,7 @@ let flags: Flags = {
 };</code></pre>
 
       <h3 class="text-2xl font-semibold mb-2">Tip: Combining Mapped and Conditional Types</h3>
-      <p class="text-lg text-gray-700 mb-4">
+      <p class="text-base md:text-lg mb-6">
         You can create powerful type transformations by combining mapped types with conditional types.
       </p>
 
@@ -324,12 +324,12 @@ type NullableProduct = NullableProperties&lt;Product&gt;;
     <!-- Section: Utility Types (Partial, Readonly, Pick, Record) -->
     <section id="utility-types" class="bg-white rounded-b-xl p-4 md:p-6 mt-6">
       <h2 class="text-3xl font-semibold mb-4">Utility Types</h2>
-      <p class="text-lg text-gray-700 mb-4">
+      <p class="text-base md:text-lg mb-6">
         TypeScript provides several utility types to facilitate common type transformations. They are built using mapped types and conditional types.
       </p>
 
       <h3 class="text-2xl font-semibold mb-2">Partial&lt;T&gt;</h3>
-      <p class="text-lg text-gray-700 mb-4">
+      <p class="text-base md:text-lg mb-6">
         Constructs a type with all properties of <code>T</code> set to optional.
       </p>
 
@@ -346,7 +346,7 @@ function updateUser(id: number, newUserData: Partial&lt;User&gt;) {
 }</code></pre>
 
       <h3 class="text-2xl font-semibold mb-2">Readonly&lt;T&gt;</h3>
-      <p class="text-lg text-gray-700 mb-4">
+      <p class="text-base md:text-lg mb-6">
         Constructs a type with all properties of <code>T</code> set to readonly.
       </p>
 
@@ -361,7 +361,7 @@ function updateUser(id: number, newUserData: Partial&lt;User&gt;) {
 // user.email = 'new@example.com'; // Error: Cannot assign to 'email' because it is a read-only property.</code></pre>
 
       <h3 class="text-2xl font-semibold mb-2">Pick&lt;T, K&gt;</h3>
-      <p class="text-lg text-gray-700 mb-4">
+      <p class="text-base md:text-lg mb-6">
         Constructs a type by picking a set of properties <code>K</code> from <code>T</code>.
       </p>
 
@@ -375,7 +375,7 @@ let userPreview: UserPreview = {
 };</code></pre>
 
       <h3 class="text-2xl font-semibold mb-2">Record&lt;K, T&gt;</h3>
-      <p class="text-lg text-gray-700 mb-4">
+      <p class="text-base md:text-lg mb-6">
         Constructs a type with a set of properties <code>K</code> of type <code>T</code>.
       </p>
 
@@ -394,7 +394,7 @@ const nav: Record&lt;Page, PageInfo&gt; = {
 };</code></pre>
 
       <h3 class="text-2xl font-semibold mb-2">Tip: Leveraging Utility Types</h3>
-      <p class="text-lg text-gray-700 mb-4">
+      <p class="text-base md:text-lg mb-6">
         Utility types can simplify your type definitions and reduce repetition. Familiarize yourself with them to write more concise TypeScript code.
       </p>
     </section>
@@ -402,12 +402,12 @@ const nav: Record&lt;Page, PageInfo&gt; = {
     <!-- Section: Advanced Type Inference -->
     <section id="advanced-type-inference" class="bg-white rounded-b-xl p-4 md:p-6 mt-6">
       <h2 class="text-3xl font-semibold mb-4">Advanced Type Inference</h2>
-      <p class="text-lg text-gray-700 mb-4">
+      <p class="text-base md:text-lg mb-6">
         TypeScript's type inference capabilities can handle complex scenarios, reducing the need for explicit type annotations.
       </p>
 
       <h3 class="text-2xl font-semibold mb-2">Inference in Generics</h3>
-      <p class="text-lg text-gray-700 mb-4">
+      <p class="text-base md:text-lg mb-6">
         TypeScript can infer type parameters in generic functions based on the arguments passed.
       </p>
 
@@ -423,7 +423,7 @@ let strings = map(numbers, (num) => num.toString());
 console.log(strings); // Output: ['1', '2', '3']</code></pre>
 
       <h3 class="text-2xl font-semibold mb-2">Inference with Contextual Typing</h3>
-      <p class="text-lg text-gray-700 mb-4">
+      <p class="text-base md:text-lg mb-6">
         TypeScript can infer types based on the context in which a function is used.
       </p>
 
@@ -435,7 +435,7 @@ let add: Adder = (x, y) => x + y;
 // x and y are inferred to be numbers</code></pre>
 
       <h3 class="text-2xl font-semibold mb-2">Inference in Conditional Types</h3>
-      <p class="text-lg text-gray-700 mb-4">
+      <p class="text-base md:text-lg mb-6">
         TypeScript can infer types in conditional types using the <code>infer</code> keyword.
       </p>
 
@@ -451,7 +451,7 @@ type UserReturnType = ReturnType&lt;typeof getUser&gt;;
 // UserReturnType is inferred as { id: number; name: string; }</code></pre>
 
       <h3 class="text-2xl font-semibold mb-2">Tip: Trust the Compiler</h3>
-      <p class="text-lg text-gray-700 mb-4">
+      <p class="text-base md:text-lg mb-6">
         In many cases, you can rely on TypeScript's inference to determine types without explicit annotations. This can lead to cleaner and more maintainable code.
       </p>
     </section>

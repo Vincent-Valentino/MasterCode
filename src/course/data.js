@@ -198,4 +198,89 @@ export const courses = {
       { title: 'Building Serverless Functions with Next.js', component: () => import('@/course/nextjs/ServerlessFunctionsNextJS.vue') },
     ]
   },
+  Java: {
+    title: 'Java',
+    subcourses: [
+      { title: 'Introduction to Java', component: () => import('@/course/java/IntroductionJava.vue') },
+      { title: 'Setting Up a Next.js Project', component: () => import('@/course/nextjs/SettingUpNextJS.vue') },
+      { title: 'Pages and Routing in Next.js', component: () => import('@/course/nextjs/PagesRoutingNextJS.vue') },
+      { title: 'Next.js Components and Props', component: () => import('@/course/nextjs/ComponentsPropsNextJS.vue') },
+      { title: 'Next.js Data Fetching', component: () => import('@/course/nextjs/DataFetchingNextJS.vue') },
+      { title: 'API Routes in Next.js', component: () => import('@/course/nextjs/APIRoutesNextJS.vue') },
+      { title: 'Styling in Next.js', component: () => import('@/course/nextjs/StylingNextJS.vue') },
+      { title: 'Deploying Next.js Applications', component: () => import('@/course/nextjs/DeployingNextJS.vue') },
+      { title: 'Next.js Dynamic Routing', component: () => import('@/course/nextjs/DynamicRoutingNextJS.vue') },
+      { title: 'Authentication in Next.js', component: () => import('@/course/nextjs/AuthenticationNextJS.vue') },
+      { title: 'Next.js Performance Optimization', component: () => import('@/course/nextjs/PerformanceOptimizationNextJS.vue') },
+      { title: 'Building Serverless Functions with Next.js', component: () => import('@/course/nextjs/ServerlessFunctionsNextJS.vue') },
+    ]
+  },
+  PHP: {
+    title: 'PHP',
+    subcourses: [
+      { title: 'Introduction to PHP', component: () => import('@/course/php/IntroductionPHP.vue') },
+      { title: 'Setting Up a Next.js Project', component: () => import('@/course/nextjs/SettingUpNextJS.vue') },
+      { title: 'Pages and Routing in Next.js', component: () => import('@/course/nextjs/PagesRoutingNextJS.vue') },
+      { title: 'Next.js Components and Props', component: () => import('@/course/nextjs/ComponentsPropsNextJS.vue') },
+      { title: 'Next.js Data Fetching', component: () => import('@/course/nextjs/DataFetchingNextJS.vue') },
+      { title: 'API Routes in Next.js', component: () => import('@/course/nextjs/APIRoutesNextJS.vue') },
+      { title: 'Styling in Next.js', component: () => import('@/course/nextjs/StylingNextJS.vue') },
+      { title: 'Deploying Next.js Applications', component: () => import('@/course/nextjs/DeployingNextJS.vue') },
+      { title: 'Next.js Dynamic Routing', component: () => import('@/course/nextjs/DynamicRoutingNextJS.vue') },
+      { title: 'Authentication in Next.js', component: () => import('@/course/nextjs/AuthenticationNextJS.vue') },
+      { title: 'Next.js Performance Optimization', component: () => import('@/course/nextjs/PerformanceOptimizationNextJS.vue') },
+      { title: 'Building Serverless Functions with Next.js', component: () => import('@/course/nextjs/ServerlessFunctionsNextJS.vue') },
+    ]
+  },
+  Ruby: {
+    title: 'Next.js',
+    subcourses: [
+      { title: 'Introduction to Ruby', component: () => import('@/course/ruby/IntroductionRuby.vue') },
+      { title: 'Setting Up a Next.js Project', component: () => import('@/course/nextjs/SettingUpNextJS.vue') },
+      { title: 'Pages and Routing in Next.js', component: () => import('@/course/nextjs/PagesRoutingNextJS.vue') },
+      { title: 'Next.js Components and Props', component: () => import('@/course/nextjs/ComponentsPropsNextJS.vue') },
+      { title: 'Next.js Data Fetching', component: () => import('@/course/nextjs/DataFetchingNextJS.vue') },
+      { title: 'API Routes in Next.js', component: () => import('@/course/nextjs/APIRoutesNextJS.vue') },
+      { title: 'Styling in Next.js', component: () => import('@/course/nextjs/StylingNextJS.vue') },
+      { title: 'Deploying Next.js Applications', component: () => import('@/course/nextjs/DeployingNextJS.vue') },
+      { title: 'Next.js Dynamic Routing', component: () => import('@/course/nextjs/DynamicRoutingNextJS.vue') },
+      { title: 'Authentication in Next.js', component: () => import('@/course/nextjs/AuthenticationNextJS.vue') },
+      { title: 'Next.js Performance Optimization', component: () => import('@/course/nextjs/PerformanceOptimizationNextJS.vue') },
+      { title: 'Building Serverless Functions with Next.js', component: () => import('@/course/nextjs/ServerlessFunctionsNextJS.vue') },
+    ]
+  },
+  NextJS: {
+    title: 'Next.js',
+    subcourses: [
+      { title: 'Introduction to Next.js', component: () => import('@/course/nextjs/IntroductionNextJS.vue') },
+      { title: 'Setting Up a Next.js Project', component: () => import('@/course/nextjs/SettingUpNextJS.vue') },
+      { title: 'Pages and Routing in Next.js', component: () => import('@/course/nextjs/PagesRoutingNextJS.vue') },
+      { title: 'Next.js Components and Props', component: () => import('@/course/nextjs/ComponentsPropsNextJS.vue') },
+      { title: 'Next.js Data Fetching', component: () => import('@/course/nextjs/DataFetchingNextJS.vue') },
+      { title: 'API Routes in Next.js', component: () => import('@/course/nextjs/APIRoutesNextJS.vue') },
+      { title: 'Styling in Next.js', component: () => import('@/course/nextjs/StylingNextJS.vue') },
+      { title: 'Deploying Next.js Applications', component: () => import('@/course/nextjs/DeployingNextJS.vue') },
+      { title: 'Next.js Dynamic Routing', component: () => import('@/course/nextjs/DynamicRoutingNextJS.vue') },
+      { title: 'Authentication in Next.js', component: () => import('@/course/nextjs/AuthenticationNextJS.vue') },
+      { title: 'Next.js Performance Optimization', component: () => import('@/course/nextjs/PerformanceOptimizationNextJS.vue') },
+      { title: 'Building Serverless Functions with Next.js', component: () => import('@/course/nextjs/ServerlessFunctionsNextJS.vue') },
+    ]
+  },
+  NextJS: {
+    title: 'Next.js',
+    subcourses: [
+      { title: 'Introduction to Next.js', component: () => import('@/course/nextjs/IntroductionNextJS.vue') },
+      { title: 'Setting Up a Next.js Project', component: () => import('@/course/nextjs/SettingUpNextJS.vue') },
+      { title: 'Pages and Routing in Next.js', component: () => import('@/course/nextjs/PagesRoutingNextJS.vue') },
+      { title: 'Next.js Components and Props', component: () => import('@/course/nextjs/ComponentsPropsNextJS.vue') },
+      { title: 'Next.js Data Fetching', component: () => import('@/course/nextjs/DataFetchingNextJS.vue') },
+      { title: 'API Routes in Next.js', component: () => import('@/course/nextjs/APIRoutesNextJS.vue') },
+      { title: 'Styling in Next.js', component: () => import('@/course/nextjs/StylingNextJS.vue') },
+      { title: 'Deploying Next.js Applications', component: () => import('@/course/nextjs/DeployingNextJS.vue') },
+      { title: 'Next.js Dynamic Routing', component: () => import('@/course/nextjs/DynamicRoutingNextJS.vue') },
+      { title: 'Authentication in Next.js', component: () => import('@/course/nextjs/AuthenticationNextJS.vue') },
+      { title: 'Next.js Performance Optimization', component: () => import('@/course/nextjs/PerformanceOptimizationNextJS.vue') },
+      { title: 'Building Serverless Functions with Next.js', component: () => import('@/course/nextjs/ServerlessFunctionsNextJS.vue') },
+    ]
+  },
 };

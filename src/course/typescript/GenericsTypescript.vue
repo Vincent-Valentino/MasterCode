@@ -8,13 +8,13 @@
 
     <!-- Section: Introduction to Generics -->
     <section id="introduction-generics" class="bg-white rounded-b-xl p-4 md:p-6">
-      <h2 class="text-3xl font-semibold mb-4">Introduction to Generics</h2>
-      <p class="text-lg text-gray-700 mb-4">
+      <h2 class="text-xl md:text-2xl font-semibold mb-4">Introduction to Generics</h2>
+      <p class="text-base md:text-lg mb-6">
         Generics in TypeScript provide a way to create reusable components that work with a variety of types rather than a single one. They enable you to define functions, classes, and interfaces that can operate over different types while still maintaining type safety.
       </p>
 
       <h3 class="text-2xl font-semibold mb-2">Why Use Generics?</h3>
-      <p class="text-lg text-gray-700 mb-4">
+      <p class="text-base md:text-lg mb-6">
         Generics allow you to create more flexible and reusable code. For example, you might have a function that works on an array of any type, or a class that can handle data of different types without sacrificing type checking.
       </p>
 
@@ -30,20 +30,20 @@ function identity&lt;T&gt;(arg: T): T {
   return arg;
 }</code></pre>
 
-      <p class="text-lg text-gray-700 mb-4">
+      <p class="text-base md:text-lg mb-6">
         In the example above, the generic version of the <code>identity</code> function preserves the type of the argument, providing better type safety compared to the version using <code>any</code>.
       </p>
     </section>
 
     <!-- Section: Generic Functions -->
     <section id="generic-functions" class="bg-white rounded-b-xl p-4 md:p-6 mt-6">
-      <h2 class="text-3xl font-semibold mb-4">Generic Functions</h2>
-      <p class="text-lg text-gray-700 mb-4">
+      <h2 class="text-xl md:text-2xl font-semibold mb-4">Generic Functions</h2>
+      <p class="text-base md:text-lg mb-6">
         A generic function allows you to specify a type parameter, which can be used within the function to maintain type information.
       </p>
 
       <h3 class="text-2xl font-semibold mb-2">Defining Generic Functions</h3>
-      <p class="text-lg text-gray-700 mb-4">
+      <p class="text-base md:text-lg mb-6">
         Generic functions are defined using angle brackets (<code>&lt;&gt;</code>) to specify type parameters.
       </p>
 
@@ -60,7 +60,7 @@ let output2 = identity(100);
 console.log(output2); // Output: 100 (TypeScript infers T as number)</code></pre>
 
       <h3 class="text-2xl font-semibold mb-2">Working with Generic Types</h3>
-      <p class="text-lg text-gray-700 mb-4">
+      <p class="text-base md:text-lg mb-6">
         You can use generics with more complex types, such as arrays.
       </p>
 
@@ -73,20 +73,20 @@ console.log(output2); // Output: 100 (TypeScript infers T as number)</code></pre
 
 loggingIdentity([1, 2, 3]); // Output: 3</code></pre>
 
-      <p class="text-lg text-gray-700 mb-4">
+      <p class="text-base md:text-lg mb-6">
         In this example, <code>T[]</code> represents an array of type <code>T</code>. The function logs the length of the array and returns it.
       </p>
     </section>
 
     <!-- Section: Generic Classes and Interfaces -->
     <section id="generic-classes-interfaces" class="bg-white rounded-b-xl p-4 md:p-6 mt-6">
-      <h2 class="text-3xl font-semibold mb-4">Generic Classes and Interfaces</h2>
-      <p class="text-lg text-gray-700 mb-4">
+      <h2 class="text-xl md:text-2xl font-semibold mb-4">Generic Classes and Interfaces</h2>
+      <p class="text-base md:text-lg mb-6">
         Generics can be applied to classes and interfaces, allowing them to handle various types while maintaining type safety.
       </p>
 
       <h3 class="text-2xl font-semibold mb-2">Generic Classes</h3>
-      <p class="text-lg text-gray-700 mb-4">
+      <p class="text-base md:text-lg mb-6">
         A generic class has a generic type parameter that applies to all of its methods and properties.
       </p>
 
@@ -106,7 +106,7 @@ myGenericNumber.add = function (x, y) {
 console.log(myGenericNumber.add(5, 10)); // Output: 15</code></pre>
 
       <h3 class="text-2xl font-semibold mb-2">Generic Interfaces</h3>
-      <p class="text-lg text-gray-700 mb-4">
+      <p class="text-base md:text-lg mb-6">
         Interfaces can also be generic, allowing you to define flexible contracts for functions and classes.
       </p>
 
@@ -120,20 +120,20 @@ console.log(myGenericNumber.add(5, 10)); // Output: 15</code></pre>
 let kvp: KeyValuePair&lt;string, number&gt; = { key: 'age', value: 30 };
 console.log(kvp); // Output: { key: 'age', value: 30 }</code></pre>
 
-      <p class="text-lg text-gray-700 mb-4">
+      <p class="text-base md:text-lg mb-6">
         Here, <code>KeyValuePair</code> is a generic interface with two type parameters, <code>K</code> and <code>V</code>, representing the types of the key and value.
       </p>
     </section>
 
     <!-- Section: Constraints on Generics -->
     <section id="constraints-generics" class="bg-white rounded-b-xl p-4 md:p-6 mt-6">
-      <h2 class="text-3xl font-semibold mb-4">Constraints on Generics</h2>
-      <p class="text-lg text-gray-700 mb-4">
+      <h2 class="text-xl md:text-2xl font-semibold mb-4">Constraints on Generics</h2>
+      <p class="text-base md:text-lg mb-6">
         Sometimes, you want to limit the types that can be used with your generics. Constraints allow you to enforce that a type parameter must have certain properties.
       </p>
 
       <h3 class="text-2xl font-semibold mb-2">Using Constraints</h3>
-      <p class="text-lg text-gray-700 mb-4">
+      <p class="text-base md:text-lg mb-6">
         You can use the <code>extends</code> keyword to specify a constraint on a generic type parameter.
       </p>
 
@@ -152,12 +152,12 @@ loggingIdentity('Hello');          // Output: 5
 loggingIdentity([1, 2, 3]);        // Output: 3
 // loggingIdentity(10);            // Error: Type 'number' does not satisfy the constraint 'Lengthwise'</code></pre>
 
-      <p class="text-lg text-gray-700 mb-4">
+      <p class="text-base md:text-lg mb-6">
         In this example, <code>T</code> is constrained to types that have a <code>length</code> property. Passing a number results in an error since it doesn't satisfy the constraint.
       </p>
 
       <h3 class="text-2xl font-semibold mb-2">Using Type Parameters in Generic Constraints</h3>
-      <p class="text-lg text-gray-700 mb-4">
+      <p class="text-base md:text-lg mb-6">
         You can use one type parameter to constrain another.
       </p>
 
@@ -171,12 +171,12 @@ let person = { name: 'Alice', age: 25 };
 let name = getProperty(person, 'name'); // Valid
 // let unknown = getProperty(person, 'unknown'); // Error: Argument of type '"unknown"' is not assignable</code></pre>
 
-      <p class="text-lg text-gray-700 mb-4">
+      <p class="text-base md:text-lg mb-6">
         Here, <code>K</code> is constrained to the keys of <code>T</code>, ensuring that only valid property names can be used.
       </p>
 
       <h3 class="text-2xl font-semibold mb-2">Using Class Types in Generics</h3>
-      <p class="text-lg text-gray-700 mb-4">
+      <p class="text-base md:text-lg mb-6">
         You can create factory functions that use generics with class types.
       </p>
 
@@ -216,7 +216,7 @@ console.log(lion.keeper.nametag); // Output: ZooKeeper
 let bee = createInstance(Bee);
 console.log(bee.keeper.hasMask);  // Output: true</code></pre>
 
-      <p class="text-lg text-gray-700 mb-4">
+      <p class="text-base md:text-lg mb-6">
         In this example, the <code>createInstance</code> function uses a generic type parameter constrained to <code>Animal</code> or its subclasses, allowing you to create instances of specific animal types.
       </p>
     </section>

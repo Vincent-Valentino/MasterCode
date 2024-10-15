@@ -8,11 +8,11 @@
 
     <!-- Section 1: Why TypeScript Instead of Just JavaScript? -->
     <section id="why-typescript" class="bg-white rounded-b-xl p-4 md:p-6">
-      <h2 class="text-3xl font-semibold mb-4">Why TypeScript Instead of Just JavaScript?</h2>
-      <p class="text-lg text-gray-700 mb-4">
+      <h2 class="text-xl md:text-2xl font-semibold mb-4">Why TypeScript Instead of Just JavaScript?</h2>
+      <p class="text-base md:text-lg mb-4">
         JavaScript is a versatile and widely-used language, but as applications grow in complexity, maintaining large codebases can become challenging. TypeScript addresses these challenges by introducing static typing and other advanced features that enhance code reliability, maintainability, and developer productivity.
       </p>
-      <ul class="list-disc list-inside text-lg text-gray-700">
+      <ul class="list-disc list-inside text-base md:text-lg">
         <li><strong>Static Typing:</strong> Detect errors at compile-time rather than runtime, reducing bugs and improving code quality.</li>
         <li><strong>Enhanced Tooling:</strong> Improved IntelliSense, autocompletion, and navigation in IDEs.</li>
         <li><strong>Better Maintainability:</strong> Clearer contracts and interfaces make code easier to understand and maintain.</li>
@@ -22,11 +22,11 @@
 
     <!-- Section 2: Features Added by TypeScript -->
     <section id="features" class="bg-white rounded-b-xl p-4 md:p-6">
-      <h2 class="text-3xl font-semibold mb-4">Features Added by TypeScript</h2>
-      <p class="text-lg text-gray-700 mb-4">
+      <h2 class="text-xl md:text-2xl font-semibold mb-4">Features Added by TypeScript</h2>
+      <p class="text-base md:text-lg mb-4">
         TypeScript enriches JavaScript by introducing several features that facilitate better coding practices and advanced functionalities.
       </p>
-      <ul class="list-disc list-inside text-lg text-gray-700">
+      <ul class="list-disc list-inside text-base md:text-lg">
         <li><strong>Type Annotations:</strong> Define variable types to enforce type safety.</li>
         <li><strong>Interfaces:</strong> Define contracts for objects, ensuring consistent structure.</li>
         <li><strong>Classes and Inheritance:</strong> Advanced object-oriented programming features with support for inheritance.</li>
@@ -45,18 +45,18 @@
 
     <!-- Section 3: Who Uses TypeScript and Why? -->
     <section id="usage" class="bg-white rounded-b-xl p-4 md:p-6">
-      <h2 class="text-3xl font-semibold mb-4">Who Uses TypeScript and Why?</h2>
-      <p class="text-lg text-gray-700 mb-4">
+      <h2 class="text-xl md:text-2xl font-semibold mb-4">Who Uses TypeScript and Why?</h2>
+      <p class="text-base md:text-lg mb-4">
         TypeScript has been adopted by numerous companies and projects due to its ability to improve code quality and developer productivity. Prominent organizations leveraging TypeScript include:
       </p>
-      <ul class="list-disc list-inside text-lg text-gray-700 mb-4">
+      <ul class="list-disc list-inside text-base md:text-lg mb-4">
         <li><strong>Microsoft:</strong> As the creator of TypeScript, Microsoft extensively uses it in its products like Visual Studio Code.</li>
         <li><strong>Google:</strong> Angular, one of the most popular front-end frameworks, is built with TypeScript.</li>
         <li><strong>Airbnb:</strong> Utilizes TypeScript for its frontend codebase to enhance maintainability.</li>
         <li><strong>Slack:</strong> Employs TypeScript to manage its complex codebase efficiently.</li>
         <li><strong>Asana:</strong> Uses TypeScript to ensure type safety and reduce bugs in their applications.</li>
       </ul>
-      <p class="text-lg text-gray-700">
+      <p class="text-base md:text-lg">
         These organizations choose TypeScript to handle large-scale applications, enforce strict type checking, and improve collaboration among development teams.
       </p>
 
@@ -69,8 +69,8 @@
 
     <!-- Section 4: Differences and Learning Curve Compared to JavaScript -->
     <section id="differences" class="bg-white rounded-b-xl p-4 md:p-6">
-      <h2 class="text-3xl font-semibold mb-4">Differences and Learning Curve Compared to JavaScript</h2>
-      <p class="text-lg text-gray-700 mb-4">
+      <h2 class="text-xl md:text-2xl font-semibold mb-4">Differences and Learning Curve Compared to JavaScript</h2>
+      <p class="text-base md:text-lg mb-4">
         Transitioning from JavaScript to TypeScript involves understanding the key differences and adapting to the additional syntax and concepts. While TypeScript offers numerous advantages, it also introduces a learning curve, especially for developers unfamiliar with static typing and object-oriented programming principles.
       </p>
 
@@ -120,23 +120,23 @@
       </div>
 
       <!-- Explanation of Table -->
-      <p class="text-lg text-gray-700">
+      <p class="text-base md:text-lg">
         <strong>Explanation:</strong> The table above highlights the fundamental differences between JavaScript and TypeScript. TypeScript introduces static typing, interfaces, generics, and requires a compilation step, which collectively contribute to more robust and maintainable code.
       </p>
 
       <!-- Learning Curve -->
       <h3 class="text-2xl font-semibold mt-6 mb-4">Learning Curve</h3>
-      <p class="text-lg text-gray-700 mb-4">
+      <p class="text-base md:text-lg mb-4">
         For developers familiar with JavaScript, learning TypeScript involves understanding additional syntax and concepts related to static typing and object-oriented programming. Key areas to focus on include:
       </p>
-      <ul class="list-disc list-inside text-lg text-gray-700 mb-4">
+      <ul class="list-disc list-inside text-base md:text-lg mb-4">
         <li>Type Annotations and Type Inference</li>
         <li>Interfaces and Type Aliases</li>
         <li>Generics</li>
         <li>Classes and Inheritance</li>
         <li>Modules and Namespaces</li>
       </ul>
-      <p class="text-lg text-gray-700">
+      <p class="text-base md:text-lg">
         However, the transition is often smooth, especially for those with experience in strongly-typed languages like Java or C#. The benefits in terms of code quality and tooling support make the investment in learning TypeScript worthwhile.
       </p>
 

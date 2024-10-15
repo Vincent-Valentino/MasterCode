@@ -19,7 +19,7 @@
     <div class="md:w-full md:bg-blue-900 rounded-t-lg">
       <h2 class="text-lg font-semibold pb-4 text-black md:text-white md:p-2">{{ selectedCourse }} Subcourses</h2>
     </div>
-    <ul class="flex flex-col md:block md:space-x-0 pt-1 pb-5 bg-white">
+    <ul class="flex flex-col md:block md:space-x-0  pt-3 pb-4 bg-white">
       <li v-for="(subcourse, index) in subcourses" :key="subcourse.title" class="mb-2">
         <!-- Link to select subcourse and trigger content change -->
         <a 

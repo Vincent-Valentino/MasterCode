@@ -52,23 +52,23 @@
       </p>
       <pre class="bg-gray-800 text-white p-4 rounded-md overflow-x-auto mb-6">
 <code>
-<!-- Example of Internal Stylesheet -->
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Internal Stylesheet Example</title>
-    <style>
-        p {
-            color: green;
-            font-size: 18px;
-        }
-    </style>
-</head>
-<body>
-    <p>This paragraph is styled using an internal stylesheet.</p>
-</body>
-</html>
+&lt;!-- Example of Internal Stylesheet --&gt;
+    &lt;!DOCTYPE html&gt;
+    &lt;html lang=&quot;en&quot;&gt;
+    &lt;head&gt;
+        &lt;meta charset=&quot;UTF-8&quot;&gt;
+        &lt;title&gt;Internal Stylesheet Example&lt;/title&gt;
+        &lt;style&gt;
+            p {
+                color: green;
+                font-size: 18px;
+            }
+        &lt;/style&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;p&gt;This paragraph is styled using an internal stylesheet.&lt;/p&gt;
+    &lt;/body&gt;
+    &lt;/html&gt;
 </code>
       </pre>
 

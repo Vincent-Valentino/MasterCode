@@ -8,13 +8,13 @@
 
     <!-- Section: Classes and Constructors -->
     <section id="classes-constructors" class="bg-white rounded-b-xl p-4 md:p-6">
-      <h2 class="text-3xl font-semibold mb-4">Classes and Constructors</h2>
-      <p class="text-lg text-gray-700 mb-4">
+      <h2 class="text-xl md:text-2xl font-semibold mb-4">Classes and Constructors</h2>
+      <p class="text-base md:text-lg mb-6">
         TypeScript enhances JavaScript classes by adding type annotations and other features, making object-oriented programming more robust and easier to maintain.
       </p>
 
       <h3 class="text-2xl font-semibold mb-2">Defining a Class</h3>
-      <p class="text-lg text-gray-700 mb-4">
+      <p class="text-base md:text-lg mb-6">
         A class in TypeScript is defined using the <code>class</code> keyword, followed by the class name.
       </p>
       <!-- Code Example -->
@@ -26,7 +26,7 @@
 </code></pre>
 
       <h3 class="text-2xl font-semibold mb-2">Constructors</h3>
-      <p class="text-lg text-gray-700 mb-4">
+      <p class="text-base md:text-lg mb-6">
         Constructors are special methods used to initialize objects. In TypeScript, you can define a constructor using the <code>constructor</code> keyword.
       </p>
       <!-- Code Example -->
@@ -45,12 +45,12 @@ let person1 = new Person('Alice', 30);
 console.log(person1.name); // Output: Alice
 console.log(person1.age);  // Output: 30
 </code></pre>
-      <p class="text-lg text-gray-700 mb-4">
+      <p class="text-base md:text-lg mb-6">
         In this example, the <code>Person</code> class has a constructor that initializes the <code>name</code> and <code>age</code> properties.
       </p>
 
       <h3 class="text-2xl font-semibold mb-2">Parameter Properties</h3>
-      <p class="text-lg text-gray-700 mb-4">
+      <p class="text-base md:text-lg mb-6">
         TypeScript provides a shorthand for defining and initializing class members directly in the constructor parameters using access modifiers.
       </p>
       <!-- Code Example -->
@@ -63,20 +63,20 @@ let person2 = new Person('Bob', 25);
 console.log(person2.name); // Output: Bob
 // console.log(person2.age); // Error: Property 'age' is private
 </code></pre>
-      <p class="text-lg text-gray-700 mb-4">
+      <p class="text-base md:text-lg mb-6">
         Here, <code>name</code> and <code>age</code> are automatically declared and initialized. The <code>public</code> and <code>private</code> keywords specify the access modifiers.
       </p>
     </section>
 
     <!-- Section: Access Modifiers (public, private, protected) -->
     <section id="access-modifiers" class="bg-white rounded-b-xl p-4 md:p-6 mt-6">
-      <h2 class="text-3xl font-semibold mb-4">Access Modifiers</h2>
-      <p class="text-lg text-gray-700 mb-4">
+      <h2 class="text-xl md:text-2xlfont-semibold mb-4">Access Modifiers</h2>
+      <p class="text-base md:text-lg mb-6">
         Access modifiers control the visibility of class members. TypeScript supports <code>public</code>, <code>private</code>, and <code>protected</code> modifiers.
       </p>
 
       <h3 class="text-2xl font-semibold mb-2">Public Members</h3>
-      <p class="text-lg text-gray-700 mb-4">
+      <p class="text-base md:text-lg mb-6">
         Members marked as <code>public</code> (or with no modifier) are accessible from anywhere.
       </p>
       <!-- Code Example -->
@@ -94,7 +94,7 @@ console.log(car.make); // Output: Toyota
 </code></pre>
 
       <h3 class="text-2xl font-semibold mb-2">Private Members</h3>
-      <p class="text-lg text-gray-700 mb-4">
+      <p class="text-base md:text-lg mb-6">
         Members marked as <code>private</code> are accessible only within the class they are declared.
       </p>
       <!-- Code Example -->
@@ -122,7 +122,7 @@ console.log(account.getBalance()); // Output: 1500
 </code></pre>
 
       <h3 class="text-2xl font-semibold mb-2">Protected Members</h3>
-      <p class="text-lg text-gray-700 mb-4">
+      <p class="text-base md:text-lg mb-6">
         Members marked as <code>protected</code> are accessible within the class and its subclasses.
       </p>
       <!-- Code Example -->
@@ -156,13 +156,13 @@ console.log(manager.getDetails()); // Output: ID: 101, Department: Sales
 
     <!-- Section: Inheritance and Polymorphism in TypeScript -->
     <section id="inheritance-polymorphism" class="bg-white rounded-b-xl p-4 md:p-6 mt-6">
-      <h2 class="text-3xl font-semibold mb-4">Inheritance and Polymorphism</h2>
-      <p class="text-lg text-gray-700 mb-4">
+      <h2 class="text-xl md:text-2xlfont-semibold mb-4">Inheritance and Polymorphism</h2>
+      <p class="text-base md:text-lg mb-6">
         TypeScript supports class inheritance and polymorphism, allowing you to create a hierarchy of classes that share functionality.
       </p>
 
       <h3 class="text-2xl font-semibold mb-2">Class Inheritance</h3>
-      <p class="text-lg text-gray-700 mb-4">
+      <p class="text-base md:text-lg mb-6">
         A class can extend another class using the <code>extends</code> keyword, inheriting its properties and methods.
       </p>
       <!-- Code Example -->
@@ -185,7 +185,7 @@ dog.move(10);      // Output: Animal moved 10 meters.
 </code></pre>
 
       <h3 class="text-2xl font-semibold mb-2">Method Overriding</h3>
-      <p class="text-lg text-gray-700 mb-4">
+      <p class="text-base md:text-lg mb-6">
         A subclass can override methods from its superclass to provide specific implementations.
       </p>
       <!-- Code Example -->
@@ -207,7 +207,7 @@ cat.makeSound();   // Output: Meow!
 </code></pre>
 
       <h3 class="text-2xl font-semibold mb-2">Polymorphism</h3>
-      <p class="text-lg text-gray-700 mb-4">
+      <p class="text-base md:text-lg mb-6">
         Polymorphism allows objects of different classes related by inheritance to be treated as objects of a common superclass.
       </p>
       <!-- Code Example -->
@@ -241,20 +241,20 @@ animals.forEach(playSound);
 // Meow!
 // Generic animal sound.
 </code></pre>
-      <p class="text-lg text-gray-700 mb-4">
+      <p class="text-base md:text-lg mb-6">
         The <code>playSound</code> function accepts an <code>Animal</code> type, but when passed different subclasses, it calls their specific implementations.
       </p>
     </section>
 
     <!-- Section: Interfaces and Their Implementation -->
     <section id="interfaces" class="bg-white rounded-b-xl p-4 md:p-6 mt-6">
-      <h2 class="text-3xl font-semibold mb-4">Interfaces and Their Implementation</h2>
-      <p class="text-lg text-gray-700 mb-4">
+      <h2 class="text-xl md:text-2xlfont-semibold mb-4">Interfaces and Their Implementation</h2>
+      <p class="text-base md:text-lg mb-6">
         Interfaces in TypeScript define the structure of an object, specifying property names and types without implementing functionality.
       </p>
 
       <h3 class="text-2xl font-semibold mb-2">Defining an Interface</h3>
-      <p class="text-lg text-gray-700 mb-4">
+      <p class="text-base md:text-lg mb-6">
         An interface is defined using the <code>interface</code> keyword.
       </p>
       <!-- Code Example -->
@@ -273,7 +273,7 @@ logPoint(point); // Output: x: 10, y: 20
 </code></pre>
 
       <h3 class="text-2xl font-semibold mb-2">Implementing Interfaces in Classes</h3>
-      <p class="text-lg text-gray-700 mb-4">
+      <p class="text-base md:text-lg mb-6">
         A class can implement an interface using the <code>implements</code> keyword, ensuring it adheres to the interface's structure.
       </p>
       <!-- Code Example -->
@@ -301,13 +301,13 @@ circle.draw(); // Output: Drawing a circle with radius 5
 
     <!-- Section: Extending Interfaces -->
     <section id="extending-interfaces" class="bg-white rounded-b-xl p-4 md:p-6 mt-6">
-      <h2 class="text-3xl font-semibold mb-4">Extending Interfaces</h2>
-      <p class="text-lg text-gray-700 mb-4">
+      <h2 class="text-xl md:text-2xlfont-semibold mb-4">Extending Interfaces</h2>
+      <p class="text-base md:text-lg mb-6">
         Interfaces can extend other interfaces, allowing you to build upon existing structures.
       </p>
 
       <h3 class="text-2xl font-semibold mb-2">Single Interface Inheritance</h3>
-      <p class="text-lg text-gray-700 mb-4">
+      <p class="text-base md:text-lg mb-6">
         An interface can extend a single interface, inheriting its properties.
       </p>
       <!-- Code Example -->
@@ -329,7 +329,7 @@ console.log(square); // Output: { color: 'blue', sideLength: 10 }
 </code></pre>
 
       <h3 class="text-2xl font-semibold mb-2">Multiple Interface Inheritance</h3>
-      <p class="text-lg text-gray-700 mb-4">
+      <p class="text-base md:text-lg mb-6">
         An interface can extend multiple interfaces, combining their properties.
       </p>
       <!-- Code Example -->
@@ -356,7 +356,7 @@ console.log(square); // Output: { color: 'red', sideLength: 5, penWidth: 2 }
 </code></pre>
 
       <h3 class="text-2xl font-semibold mb-2">Extending Classes with Interfaces</h3>
-      <p class="text-lg text-gray-700 mb-4">
+      <p class="text-base md:text-lg mb-6">
         Interfaces can also extend classes. When an interface extends a class, it inherits the class's members but not its implementation.
       </p>
       <!-- Code Example -->
@@ -378,7 +378,7 @@ class Button extends Control implements SelectableControl {
 let btn = new Button();
 btn.select(); // Output: Button selected
 </code></pre>
-      <p class="text-lg text-gray-700 mb-4">
+      <p class="text-base md:text-lg mb-6">
         In this example, <code>SelectableControl</code> extends <code>Control</code>, and any class implementing <code>SelectableControl</code> must also extend <code>Control</code>.
       </p>
     </section>

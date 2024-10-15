@@ -1,8 +1,8 @@
 <template>
   <div class="w-full">
     <!-- Header Section -->
-    <div class="w-full flex items-center gap-2 bg-blue-600 rounded-t-xl p-4">
-      <img src="/csharp/logo.png" alt="C# Logo" class="w-12 h-12">
+    <div class="w-full flex items-center gap-5 bg-purple-950 rounded-t-xl p-4">
+      <img src="/csharp/logo.svg" alt="C# Logo" class="w-12 h-12">
       <h1 class="text-2xl md:text-4xl font-bold text-white">C# Methods</h1>
     </div>
 

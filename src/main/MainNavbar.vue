@@ -29,10 +29,11 @@
         :modules="[FreeMode]"
         class="mySwiper p-5"
       >
-        <SwiperSlide v-for="course in courses" :key="course" class="!w-auto">
-          <button @click="selectCourse(course)" 
-                  class="bg-stone-950 text-white m-1 px-3 py-2 rounded-full text-sm md:text-lg md:px-5 md:py-3 whitespace-nowrap">
-            {{ course }}
+        <SwiperSlide v-for="course in courses" :key="course.name" class="!w-auto">
+          <button @click="selectCourse(course.name)" 
+                  class="text-white m-1 px-1 py-2 rounded-full text-sm md:text-lg md:px-3 md:mx-5  whitespace-nowrap flex flex-col justify-center items-center">
+            <!-- Display SVG Icon -->
+            <img :src="course.icon" :alt="course.name" class="size-12 md:size-16 mr-2"/>
           </button>
         </SwiperSlide>
       </Swiper>
@@ -48,9 +49,24 @@ import { FreeMode } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/free-mode';
 
+// Courses object array with course name and SVG path
 const courses = ref([
-  'Python', 'JavaScript', 'TypeScript', 'Java', 'C++', 'C#', 'Go', 'Ruby', 'PHP', 'SQL',
-  'MongoDB', 'HTML', 'CSS', 'TailwindCSS', 'React', 'Vue', 'Angular', 'Firebase', 'Next.js'
+  { name: 'Python', icon: '/icons/python.svg' },
+  { name: 'JavaScript', icon: '/icons/javascript.svg' },
+  { name: 'TypeScript', icon: '/icons/typescript.svg' },
+  { name: 'Java', icon: '/icons/java.svg' },
+  { name: 'C++', icon: '/icons/cplusplus.svg' },
+  { name: 'C#', icon: '/icons/csharp.svg' },
+  { name: 'Go', icon: '/icons/go.svg' },
+  { name: 'Ruby', icon: '/icons/ruby.svg' },
+  { name: 'PHP', icon: '/icons/php.svg' },
+  { name: 'SQL', icon: '/icons/mysql.svg' },
+  { name: 'MongoDB', icon: '/icons/mongodb.svg' },
+  { name: 'HTML', icon: '/icons/html5.svg' },
+  { name: 'CSS', icon: '/icons/css3.svg' },
+  { name: 'React', icon: '/icons/react.svg' },
+  { name: 'Vue', icon: '/icons/vuedotjs.svg' },
+  { name: 'Angular', icon: '/icons/angular.svg' }
 ]);
 
 const emit = defineEmits(['selectedCourse', 'toggleSidebar']);
@@ -83,5 +99,10 @@ onMounted(() => {
 /* Ensure slides only take up the necessary width */
 .swiper-slide {
   width: auto !important;
+}
+
+img {
+  display: inline-block;
+  vertical-align: middle;
 }
 </style>
