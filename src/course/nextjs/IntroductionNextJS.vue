@@ -2,7 +2,7 @@
   <div class="w-full">
     <!-- Header Section -->
     <div class="w-full flex items-center gap-2 bg-indigo-600 rounded-t-xl p-4">
-      <img src="/icons/nextjs.svg" alt="Next.js Logo" class="w-12 h-12">
+      <img src="/icons/css3.svg" alt="Next.js Logo" class="w-12 h-12">
       <h1 class="text-2xl md:text-4xl font-bold text-white">Introduction to Next.js</h1>
     </div>
 
