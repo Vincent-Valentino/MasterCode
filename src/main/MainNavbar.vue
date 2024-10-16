@@ -211,7 +211,7 @@ const courses = ref([
   { name: 'Vue', iconGray: '/icons/vuedotjs.svg', iconColored: '/vue/logo.svg', isHovered: false },
   { name: 'Angular', iconGray: '/icons/angular.svg', iconColored: '/angular/logo.svg', isHovered: false },
   { name: 'TailwindCSS', iconGray: '/icons/tailwind.svg', iconColored: '/tailwindcss/logo.svg', isHovered: false },
-  { name: 'Angular', iconGray: '/bootstrap/logo.svg', iconColored: '/icons/bootstrap.svg', isHovered: false }
+  { name: 'Bootstrap', iconGray: '/bootstrap/logo.svg', iconColored: '/icons/bootstrap.svg', isHovered: false }
 ]);
 
 // Function to toggle hover state

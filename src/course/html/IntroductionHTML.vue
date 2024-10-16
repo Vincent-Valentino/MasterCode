@@ -1,7 +1,7 @@
 <template>
   <div class="w-full">
     <!-- Header Section -->
-    <div class="w-full flex items-center gap-2 bg-yellow-500 rounded-t-xl p-4">
+    <div class="w-full flex items-center gap-5 bg-yellow-500 rounded-t-xl p-4">
       <img src="/icons/html5.svg" alt="HTML Logo" class="w-12 h-12">
       <h1 class="text-2xl md:text-4xl font-bold text-white">Introduction to HTML</h1>
     </div>
@@ -10,7 +10,7 @@
     <div class="bg-white rounded-b-xl p-4 md:p-6">
       <!-- Introduction Paragraph -->
       <p class="text-base md:text-lg mb-6">
-        **HTML** (HyperText Markup Language) is the foundational language for creating and structuring content on the web. It defines the structure and layout of web pages by using a variety of elements and tags. Understanding HTML is essential for anyone looking to delve into web development, as it serves as the backbone upon which other technologies like CSS and JavaScript build upon.
+        HTML (HyperText Markup Language) is the foundational language for creating and structuring content on the web. It defines the structure and layout of web pages by using a variety of elements and tags. Understanding HTML is essential for anyone looking to delve into web development, as it serves as the backbone upon which other technologies like CSS and JavaScript build upon.
       </p>
 
       <!-- What is HTML? -->
@@ -19,7 +19,7 @@
         HTML is a markup language used to create the structure of web pages. Unlike programming languages that perform actions, HTML focuses on organizing and presenting content. It uses a series of elements and tags to define different parts of a web page, such as headings, paragraphs, links, images, and more.
       </p>
       <p class="text-base md:text-lg mb-6">
-        **Key Characteristics of HTML:**
+        Key Characteristics of HTML:
       </p>
       <ul class="list-disc list-inside text-base md:text-lg mb-6">
         <li><strong>Markup Language:</strong> Uses tags to annotate and structure content.</li>
@@ -35,23 +35,23 @@
       </p>
       <pre class="bg-gray-800 text-white p-4 rounded-md overflow-x-auto mb-6">
 <code>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My First HTML Page</title>
-</head>
-<body>
-    <h1>Welcome to My Website</h1>
-    <p>This is a paragraph of text on my first HTML page.</p>
-</body>
-</html>
+&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;IE=edge&quot;&gt;
+    &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+    &lt;title&gt;My First HTML Page&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Welcome to My Website&lt;/h1&gt;
+    &lt;p&gt;This is a paragraph of text on my first HTML page.&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;
 </code>
       </pre>
       <p class="text-base md:text-lg mb-6">
-        **Explanation of the Basic Structure:**
+        Explanation of the Basic Structure:
       </p>
       <ul class="list-disc list-inside text-base md:text-lg mb-6">
         <li><strong>DOCTYPE Declaration:</strong> Specifies the version of HTML being used. In modern web development, <code>&lt;!DOCTYPE html&gt;</code> declares that the document is HTML5.</li>
@@ -68,7 +68,7 @@
         The <code>&lt;!DOCTYPE html&gt;</code> declaration is an instruction to the web browser about the version of HTML the page is written in. It ensures that the browser renders the page in standards-compliant mode, which helps maintain consistency across different browsers and devices.
       </p>
       <p class="text-base md:text-lg mb-6">
-        **Why is DOCTYPE Important?**
+        Why is DOCTYPE Important?
       </p>
       <ul class="list-disc list-inside text-base md:text-lg mb-6">
         <li><strong>Standards Mode vs. Quirks Mode:</strong> The DOCTYPE declaration triggers the browser to render the page in standards mode, adhering to the latest HTML and CSS specifications. Without it, browsers may enter quirks mode, leading to inconsistent rendering.</li>
@@ -79,10 +79,10 @@
       <!-- Role of HTML in Web Development -->
       <h2 class="text-xl md:text-2xl font-semibold mb-4">The Role of HTML in Web Development</h2>
       <p class="text-base md:text-lg mb-4">
-        HTML serves as the skeleton of every web page, defining the structure and layout of content. It works in tandem with **CSS** (Cascading Style Sheets) and **JavaScript** to create rich, interactive, and visually appealing websites.
+        HTML serves as the skeleton of every web page, defining the structure and layout of content. It works in tandem with CSS (Cascading Style Sheets) and JavaScript to create rich, interactive, and visually appealing websites.
       </p>
       <p class="text-base md:text-lg mb-6">
-        **How HTML Interacts with CSS and JavaScript:**
+        How HTML Interacts with CSS and JavaScript:
       </p>
       <ul class="list-disc list-inside text-base md:text-lg mb-6">
         <li><strong>CSS:</strong> Styles the HTML elements, controlling their appearance, layout, colors, fonts, and responsiveness.</li>
@@ -90,7 +90,7 @@
         <li><strong>DOM (Document Object Model):</strong> JavaScript interacts with the DOM, a tree-like representation of the HTML structure, to manipulate and update content dynamically.</li>
       </ul>
       <p class="text-base md:text-lg mb-6">
-        **Importance of Semantic HTML:**
+        Importance of Semantic HTML:
       </p>
       <ul class="list-disc list-inside text-base md:text-lg mb-6">
         <li><strong>Accessibility:</strong> Semantic HTML enhances accessibility by providing meaningful structure, making it easier for assistive technologies like screen readers to interpret and navigate content.</li>
@@ -102,38 +102,38 @@
       <h2 class="text-xl md:text-2xl font-semibold mb-4">Code Example: Basic HTML Document Structure</h2>
       <pre class="bg-gray-800 text-white p-4 rounded-md overflow-x-auto mb-6">
 <code>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Basic HTML Structure</title>
-</head>
-<body>
-    <header>
-        <h1>My Website</h1>
-    </header>
-    <nav>
-        <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Contact</a></li>
-        </ul>
-    </nav>
-    <main>
-        <section>
-            <h2>Welcome</h2>
-            <p>This is a simple HTML page.</p>
-        </section>
-    </main>
-    <footer>
-        <p>&copy; 2024 My Website</p>
-    </footer>
-</body>
-</html>
+&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;UTF-8&quot;&gt;
+    &lt;title&gt;Basic HTML Structure&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;header&gt;
+        &lt;h1&gt;My Website&lt;/h1&gt;
+    &lt;/header&gt;
+    &lt;nav&gt;
+        &lt;ul&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Home&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;About&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;#&quot;&gt;Contact&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/nav&gt;
+    &lt;main&gt;
+        &lt;section&gt;
+            &lt;h2&gt;Welcome&lt;/h2&gt;
+            &lt;p&gt;This is a simple HTML page.&lt;/p&gt;
+        &lt;/section&gt;
+    &lt;/main&gt;
+    &lt;footer&gt;
+        &lt;p&gt;&amp;copy; 2024 My Website&lt;/p&gt;
+    &lt;/footer&gt;
+&lt;/body&gt;
+&lt;/html&gt;
 </code>
       </pre>
       <p class="text-base md:text-lg mb-6">
-        **Explanation of the Example:**
+        Explanation of the Example:
       </p>
       <ul class="list-disc list-inside text-base md:text-lg mb-6">
         <li><strong>&lt;header&gt;:</strong> Contains introductory content or navigational links.</li>
@@ -149,7 +149,7 @@
       <!-- Conclusion -->
       <h2 class="text-xl md:text-2xl font-semibold mb-4">Conclusion</h2>
       <p class="text-base md:text-lg mb-6">
-        **HTML** is the cornerstone of web development, providing the essential structure upon which all web content is built. Its simplicity and flexibility make it accessible to beginners while its extensibility ensures that it remains relevant in the ever-evolving landscape of web technologies. By mastering HTML, developers lay a solid foundation for building sophisticated, interactive, and visually appealing websites.
+        HTML is the cornerstone of web development, providing the essential structure upon which all web content is built. Its simplicity and flexibility make it accessible to beginners while its extensibility ensures that it remains relevant in the ever-evolving landscape of web technologies. By mastering HTML, developers lay a solid foundation for building sophisticated, interactive, and visually appealing websites.
       </p>
       <p class="text-base md:text-lg mb-6">
         As you continue your journey into web development, understanding HTML's role and mastering its syntax will empower you to create well-structured and accessible web pages. Combined with CSS and JavaScript, HTML enables the creation of dynamic and engaging user experiences that are fundamental to modern web applications.

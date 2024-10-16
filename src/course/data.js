@@ -40,12 +40,10 @@ export const courses = {
     subcourses: [
       { title: 'Introduction to React', component: () => import('@/course/react/IntroductionReact.vue') },
       { title: 'Get Started with React', component: () => import('@/course/react/GetStartedReact.vue') },
-      { title: 'Creating Your First React App', component: () => import('@/course/react/FirstReactApp.vue') },
       { title: 'JSX Basics', component: () => import('@/course/react/JSXBasic.vue') },
       { title: 'Components and Props', component: () => import('@/course/react/ComponentsProps.vue') },
-      { title: 'State Management', component: () => import('@/course/react/StateManagement.vue') },
       { title: 'Using React Hooks', component: () => import('@/course/react/UsingHooks.vue') },
-      { title: 'useState Hook', component: () => import('@/course/react/useStateHook.vue') },
+      { title: 'useState and State Management', component: () => import('@/course/react/useStateHook.vue') },
       { title: 'useEffect Hook', component: () => import('@/course/react/useEffectHook.vue') },
       { title: 'React Router Basics', component: () => import('@/course/react/ReactRouterBasics.vue') },
       { title: 'Advanced Routing', component: () => import('@/course/react/AdvancedRouting.vue') },
@@ -249,10 +247,10 @@ export const courses = {
       { title: 'Building Serverless Functions with Next.js', component: () => import('@/course/nextjs/ServerlessFunctionsNextJS.vue') },
     ]
   },
-  NextJS: {
-    title: 'Next.js',
+  TailwindCSS: {
+    title: 'TailwindCSS',
     subcourses: [
-      { title: 'Introduction to Next.js', component: () => import('@/course/nextjs/IntroductionNextJS.vue') },
+      { title: 'Introduction to TailwindCSS', component: () => import('@/course/tailwind/IntroductionTailwind.vue') },
       { title: 'Setting Up a Next.js Project', component: () => import('@/course/nextjs/SettingUpNextJS.vue') },
       { title: 'Pages and Routing in Next.js', component: () => import('@/course/nextjs/PagesRoutingNextJS.vue') },
       { title: 'Next.js Components and Props', component: () => import('@/course/nextjs/ComponentsPropsNextJS.vue') },
@@ -266,10 +264,10 @@ export const courses = {
       { title: 'Building Serverless Functions with Next.js', component: () => import('@/course/nextjs/ServerlessFunctionsNextJS.vue') },
     ]
   },
-  NextJS: {
-    title: 'Next.js',
+  Bootstrap: {
+    title: 'Bootstrap',
     subcourses: [
-      { title: 'Introduction to Next.js', component: () => import('@/course/nextjs/IntroductionNextJS.vue') },
+      { title: 'Introduction to Bootstrap', component: () => import('@/course/bootstrap/IntroductionBootstrap.vue') },
       { title: 'Setting Up a Next.js Project', component: () => import('@/course/nextjs/SettingUpNextJS.vue') },
       { title: 'Pages and Routing in Next.js', component: () => import('@/course/nextjs/PagesRoutingNextJS.vue') },
       { title: 'Next.js Components and Props', component: () => import('@/course/nextjs/ComponentsPropsNextJS.vue') },
