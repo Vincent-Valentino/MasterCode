@@ -2,7 +2,7 @@
   <div class="w-full min-h-screen py-6 px-1 md:p-6 relative">
     <!-- Default text when no course is selected -->
     <div
-      v-if="!selectedCourse"
+      v-if="selectedCourse === 'Home'"
       class="flex flex-col md:flex-row items-center justify-center min-h-screen p-6 bg-blue-50"
     >
       <!-- Text Content -->
@@ -60,7 +60,7 @@
 </template>
 
 <script setup>
-import { computed, defineProps, defineEmits, defineAsyncComponent } from 'vue';
+import { computed, defineProps, defineEmits, defineAsyncComponent, ref } from 'vue';
 import { courses } from '@/course/data.js'; // Import course data
 
 // Props from the parent
@@ -71,6 +71,10 @@ const props = defineProps({
 
 // Emit events to notify the parent about subcourse changes
 const emit = defineEmits(['updateSubcourseIndex']);
+
+// State for the drawer toggle (without drawer functionality for now)
+const drawerOpen = ref(false);  // Control drawer visibility
+
 
 // Get subcourses from the selected course
 const subcourses = computed(() => (courses[props.selectedCourse]?.subcourses) || []);
@@ -107,4 +111,3 @@ function previousSubcourse() {
   animation: fadeIn 1s ease-in-out forwards;
 }
 </style>
-

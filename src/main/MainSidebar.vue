@@ -4,7 +4,7 @@
     v-if="isDrawerVisible || !isMobile"
     :class="{
       'fixed inset-0 z-50 bg-white p-4 w-full h-full': isDrawerVisible && isMobile,  // Mobile drawer
-      'md:sticky md:h-auto md:m-5 md:ml-0 md:w-11/12 md:p-0 md:pt-8 md:mb-28 md:rounded-lg top-0 z-50': !isMobile // Desktop sidebar
+      'md:sticky md:h-auto md:m-5 md:ml-0 md:w-11/12 md:p-0 md:pt-8 md:mb-28 md:rounded-lg top-0 z-40': !isMobile // Desktop sidebar
     }"
     >
     
@@ -24,7 +24,7 @@
         <!-- Link to select subcourse and trigger content change -->
         <a 
           href="#" 
-          class="text-blue-600 hover:text-blue-800 pl-4 p-2 mb-1"
+          class="text-blue-600 hover:text-blue-800 pl-2 p-1 mb-1"
           @click="toggleSidebar"
           @click.prevent="selectSubcourse(index)"
         >
