@@ -63,7 +63,7 @@ const languages2 = [
   { name: 'Flutter', image: '/icons/flutter.svg' },
   { name: 'Postman', image: '/icons/postman.svg' },
   { name: 'PHP', image: '/icons/php.svg' },
-  { name: 'Bootstrap', image: '/icons/bootstrap.svg' },
+  { name: 'Bootstrap', image: '/bootstrap/logo  .svg' },
   { name: 'Angular', image: '/icons/angular.svg' },
 ];
 

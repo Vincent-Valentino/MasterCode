@@ -233,7 +233,9 @@ function selectCourse(course) {
 }
 
 function mainPage() {
+  toggleMenu();
   selectedCourse.value = "Home";
+  emit("selectedCourse", "Home");
 }
 
 function toggleMenu() {

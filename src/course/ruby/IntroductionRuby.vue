@@ -1,4 +1,5 @@
 <template>
+
   <div class="w-full">
     <!-- Header Section -->
     <div class="w-full flex items-center gap-5 bg-red-600 rounded-t-xl p-4">
@@ -8,38 +9,42 @@
 
     <!-- Content Section -->
     <div class="bg-white rounded-b-xl p-4 md:p-6">
-      <!-- Detailed Introduction Paragraph -->
+      <!-- Introduction Paragraph -->
       <p class="text-base md:text-lg mb-6">
-        Ruby is a dynamic, open-source programming language with a focus on simplicity and productivity. Designed and developed by Yukihiro “Matz” Matsumoto in the mid-1990s, Ruby blends parts of his favorite languages—Perl, Smalltalk, Eiffel, Ada, and Lisp—to create a language that is both powerful and easy to use. Ruby is fully object-oriented, meaning that everything in Ruby is an object, including primitive data types like numbers and booleans. This pure object-oriented approach allows developers to write highly modular and reusable code.
-
-        One of Ruby's standout features is its elegant syntax, which is both natural to read and easy to write. This readability makes Ruby an excellent choice for beginners who are just starting their programming journey, as well as for experienced developers who appreciate clean and maintainable code. Ruby emphasizes the "principle of least astonishment" (POLA), ensuring that the language behaves in a way that minimizes confusion and surprises for developers. This philosophy leads to a more intuitive coding experience, where the language's behavior aligns closely with the developer's expectations.
-
-        Beyond its syntax, Ruby is renowned for its robust ecosystem, particularly the Ruby on Rails framework. Rails revolutionized web development by introducing conventions that streamline the development process, allowing developers to build complex web applications rapidly without sacrificing quality or performance. Rails follows the "Convention over Configuration" (CoC) and "Don't Repeat Yourself" (DRY) principles, which reduce the need for boilerplate code and enhance productivity.
-
-        Ruby's versatility extends beyond web development. It is used in various domains, including automation, data processing, DevOps, and even game development. The language's flexibility allows developers to tackle a wide range of projects, from scripting simple tasks to building large-scale enterprise applications. Additionally, Ruby boasts a vibrant and supportive community that contributes to a vast array of libraries (gems), tools, and frameworks, making it easier for developers to find solutions and collaborate on projects.
-
-        In summary, Ruby's combination of elegant syntax, object-oriented purity, powerful frameworks, and a supportive community makes it a compelling choice for developers seeking a language that balances simplicity with capability. Whether you're building web applications, automating tasks, or exploring new programming paradigms, Ruby provides the tools and flexibility to bring your ideas to life effectively.
+        Ruby is a dynamic, open-source programming language focused on simplicity and productivity. Created by Yukihiro “Matz” Matsumoto in the mid-1990s, Ruby blends elements from languages like Perl, Smalltalk, and Lisp to offer a highly readable and elegant syntax. Fully object-oriented, Ruby enables developers to write clean and modular code, making it a favorite for both beginners and experienced programmers.
       </p>
 
       <!-- Why Learn Ruby -->
       <h2 class="text-xl md:text-2xl font-semibold mb-4">Why Learn Ruby?</h2>
       <ul class="list-disc list-inside text-base md:text-lg mb-6">
-        <li><span class="font-semibold">Easy to Learn:</span> Ruby has a clean and intuitive syntax, making it a great first language for beginners.</li>
-        <li><span class="font-semibold">Ruby on Rails:</span> The language is best known for its popular web framework, Ruby on Rails, which simplifies web application development with conventions over configuration.</li>
-        <li><span class="font-semibold">Highly Flexible:</span> Ruby allows developers to write programs that are easy to understand and extend.</li>
-        <li><span class="font-semibold">Productivity:</span> Ruby's concise code allows developers to accomplish more with fewer lines, speeding up the development process.</li>
-        <li><span class="font-semibold">Active Community:</span> A vibrant community contributes to a rich ecosystem of gems and libraries, facilitating rapid development and problem-solving.</li>
+        <li><span class="font-semibold">Easy to Learn:</span> Ruby's intuitive syntax makes it accessible for newcomers.</li>
+        <li><span class="font-semibold">Ruby on Rails:</span> Leverage the powerful Rails framework for rapid web development.</li>
+        <li><span class="font-semibold">Highly Flexible:</span> Ruby allows developers to write expressive and maintainable code.</li>
+        <li><span class="font-semibold">Productivity:</span> Concise code enables faster development cycles.</li>
+        <li><span class="font-semibold">Active Community:</span> Benefit from a rich ecosystem of gems and libraries supported by a vibrant community.</li>
+      </ul>
+
+      <!-- Main Features of Ruby -->
+      <h2 class="text-xl md:text-2xl font-semibold mb-4">Main Features of Ruby</h2>
+      <ul class="list-disc list-inside text-base md:text-lg mb-6">
+        <li><span class="font-semibold">Pure Object-Oriented:</span> Every value in Ruby is an object, promoting consistency and flexibility.</li>
+        <li><span class="font-semibold">Elegant Syntax:</span> Ruby's readable and expressive syntax makes code easy to write and understand.</li>
+        <li><span class="font-semibold">Metaprogramming:</span> Ruby allows programs to modify themselves, enabling dynamic and adaptable code structures.</li>
+        <li><span class="font-semibold">Extensive Standard Library:</span> Provides a wide range of built-in functions and classes for various tasks.</li>
+        <li><span class="font-semibold">Garbage Collection:</span> Automatic memory management helps prevent memory leaks and optimizes performance.</li>
+        <li><span class="font-semibold">Exception Handling:</span> Robust error handling mechanisms ensure reliable and maintainable applications.</li>
+        <li><span class="font-semibold">Cross-Platform Compatibility:</span> Runs on various operating systems including Windows, Linux, and macOS.</li>
       </ul>
 
       <!-- Applications of Ruby -->
       <h2 class="text-xl md:text-2xl font-semibold mb-4">Applications of Ruby</h2>
       <p class="text-base md:text-lg mb-4">
-        Ruby can be used in various fields, including:
+        Ruby's versatility allows it to be used in a variety of domains, such as:
       </p>
       <ul class="list-disc list-inside text-base md:text-lg mb-6">
         <li><span class="font-semibold">Web Applications with Ruby on Rails:</span> Building robust and scalable web applications efficiently.</li>
-        <li><span class="font-semibold">Prototyping and MVP Development:</span> Quickly developing minimum viable products to test ideas and gather feedback.</li>
-        <li><span class="font-semibold">Automation Scripts:</span> Writing scripts to automate repetitive tasks and improve workflow efficiency.</li>
+        <li><span class="font-semibold">Prototyping and MVP Development:</span> Quickly developing minimum viable products to test ideas.</li>
+        <li><span class="font-semibold">Automation Scripts:</span> Automating repetitive tasks to improve workflow efficiency.</li>
         <li><span class="font-semibold">DevOps and System Administration:</span> Managing and automating server configurations and deployments.</li>
         <li><span class="font-semibold">Data Processing:</span> Handling and manipulating data for various applications.</li>
         <li><span class="font-semibold">Game Development:</span> Creating simple games and interactive applications.</li>
