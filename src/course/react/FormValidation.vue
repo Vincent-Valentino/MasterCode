@@ -29,48 +29,51 @@
       </p>
       <pre class="bg-gray-800 text-white p-4 rounded-md overflow-x-auto mb-6">
         <code class="language-jsx">
-import React, { useState } from 'react';
+import React, &#123; useState &#125; from 'react';
 
 function ControlledForm() &#123;
   const [email, setEmail] = useState('');
   const [error, setError] = useState('');
 
-  const handleChange = (e) => {
+  const handleChange = (e) =&gt; &#123;
     setEmail(e.target.value);
     // Simple email validation regex
     const emailRegex = /\S+@\S+\.\S+/;
-    if (!emailRegex.test(e.target.value)) {
+    if (!emailRegex.test(e.target.value)) &#123;
       setError('Please enter a valid email address.');
-    } else {
+    &#125; else &#123;
       setError('');
-    }
-  };
+    &#125;
+  &#125;;
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e) =&gt; &#123;
     e.preventDefault();
-    if (error === '' && email !== '') {
+    if (error === '' && email !== '') &#123;
       alert(`Submitted Email: ${email}`);
-    }
-  };
+    &#125;
+  &#125;;
 
   return (
-  &lt;form onSubmit=&#123;handleSubmit&#125;&gt;
-    &lt;label&gt;
-      Email:
-      &lt;input
-        type="email"
-        value=&#123;email&#125;
-        onChange=&#123;handleChange&#125;
-        className="border p-2 rounded-md"
-      /&gt;
-    &lt;/label&gt;
-    &#123;error && &lt;p className="text-red-500"&gt;&#123;error&#125;&lt;/p&gt;&#125;
-    &lt;button type="submit" disabled=&#123;error !== '' || email === ''&#125; className="mt-4 bg-blue-500 text-white px-4 py-2 rounded-md"&gt;
-      Submit
-    &lt;/button&gt;
-  &lt;/form&gt;
-);
-
+    &lt;form onSubmit=&#123;handleSubmit&#125;&gt;
+      &lt;label&gt;
+        Email:
+        &lt;input
+          type="email"
+          value=&#123;email&#125;
+          onChange=&#123;handleChange&#125;
+          className="border p-2 rounded-md"
+        /&gt;
+      &lt;/label&gt;
+      &#123;error && &lt;p className="text-red-500"&gt;&#123;error&#125;&lt;/p&gt;&#125;
+      &lt;button type="submit" 
+      disabled=&#123;error !== '' || email === ''&#125; 
+      className="mt-4 bg-blue-500 text-white px-4 py-2 rounded-md"
+      &gt;
+        Submit
+      &lt;/button&gt;
+    &lt;/form&gt;
+  );
+&#125;;
 
 export default ControlledForm;
         </code>
@@ -90,41 +93,41 @@ export default ControlledForm;
       </p>
       <pre class="bg-gray-800 text-white p-4 rounded-md overflow-x-auto mb-6">
         <code class="language-jsx">
-import React, { useRef, useState } from 'react';
+import React, &#123; useRef, useState &#125; from 'react';
 
-function UncontrolledForm() {
+function UncontrolledForm() &#123;
   const emailRef = useRef();
   const [error, setError] = useState('');
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e) =&gt; &#123;
     e.preventDefault();
     const email = emailRef.current.value;
     const emailRegex = /\S+@\S+\.\S+/;
-    if (!emailRegex.test(email)) {
+    if (!emailRegex.test(email)) &#123;
       setError('Please enter a valid email address.');
-    } else {
+    &#125; else &#123;
       setError('');
       alert(`Submitted Email: ${email}`);
-    }
-  };
+    &#125;
+  &#125;;
 
   return (
-    <form onSubmit={handleSubmit}>
-      <label>
+    &lt;form onSubmit=&#123;handleSubmit&#125;&gt;
+      &lt;label&gt;
         Email:
-        <input
+        &lt;input
           type="email"
-          ref={emailRef}
+          ref=&#123;emailRef&#125;
           className="border p-2 rounded-md"
-        />
-      </label>
-      {error && <p className="text-red-500">{error}</p>}
-      <button type="submit" className="mt-4 bg-green-500 text-white px-4 py-2 rounded-md">
+        /&gt;
+      &lt;/label&gt;
+      &#123;error && &lt;p className="text-red-500"&gt;&#123;error&#125;&lt;/p&gt;&#125;
+      &lt;button type="submit" className="mt-4 bg-green-500 text-white px-4 py-2 rounded-md"&gt;
         Submit
-      </button>
-    </form>
+      &lt;/button&gt;
+    &lt;/form&gt;
   );
-}
+&#125;;
 
 export default UncontrolledForm;
         </code>
@@ -171,11 +174,11 @@ export default UncontrolledForm;
       <pre class="bg-gray-800 text-white p-4 rounded-md overflow-x-auto mb-6">
         <code class="language-jsx">
 import React from 'react';
-import { Formik, Form, Field, ErrorMessage } from 'formik';
+import &#123; Formik, Form, Field, ErrorMessage &#125; from 'formik';
 import * as Yup from 'yup';
 
 function SignupForm() &#123;
-  const validationSchema = Yup.object({
+  const validationSchema = Yup.object(&#123;
     username: Yup.string()
       .required('Username is required'),
     email: Yup.string()
@@ -184,46 +187,46 @@ function SignupForm() &#123;
     password: Yup.string()
       .min(6, 'Password must be at least 6 characters')
       .required('Password is required'),
-  });
+  &#125;);
 
-  const handleSubmit = (values) => {
+  const handleSubmit = (values) =&gt; &#123;
     alert(JSON.stringify(values, null, 2));
-  };
+  &#125;;
 
   return (
-  &lt;Formik
-    initialValues=&#123; username: '', email: '', password: '' &#125;
-    validationSchema={validationSchema}
-    onSubmit={handleSubmit}
-  &gt;
-    &lt;Form&gt;
-      &lt;label&gt;
-        Username:
-        &lt;Field name="username" type="text" className="border p-2 rounded-md" /&gt;
-      &lt;/label&gt;
-      &lt;ErrorMessage name="username" component="div" className="text-red-500" /&gt;
+    &lt;Formik
+      initialValues=&#123; &#123; username: '', email: '', password: '' &#125; &#125;
+      validationSchema=&#123;validationSchema&#125;
+      onSubmit=&#123;handleSubmit&#125;
+    &#62;
+      &lt;Form&gt;
+        &lt;label&gt;
+          Username:
+          &lt;Field name="username" type="text" className="border p-2 rounded-md" /&gt;
+        &lt;/label&gt;
+        &lt;ErrorMessage name="username" component="div" className="text-red-500" /&gt;
 
-      &lt;label&gt;
-        Email:
-        &lt;Field name="email" type="email" className="border p-2 rounded-md" /&gt;
-      &lt;/label&gt;
-      &lt;ErrorMessage name="email" component="div" className="text-red-500" /&gt;
+        &lt;label&gt;
+          Email:
+          &lt;Field name="email" type="email" className="border p-2 rounded-md" /&gt;
+        &lt;/label&gt;
+        &lt;ErrorMessage name="email" component="div" className="text-red-500" /&gt;
 
-      &lt;label&gt;
-        Password:
-        &lt;Field name="password" type="password" className="border p-2 rounded-md" /&gt;
-      &lt;/label&gt;
-      &lt;ErrorMessage name="password" component="div" className="text-red-500" /&gt;
+        &lt;label&gt;
+          Password:
+          &lt;Field name="password" type="password" className="border p-2 rounded-md" /&gt;
+        &lt;/label&gt;
+        &lt;ErrorMessage name="password" component="div" className="text-red-500" /&gt;
 
-      &lt;button type="submit" className="mt-4 bg-purple-500 text-white px-4 py-2 rounded-md"&gt;
-        Submit
-      &lt;/button&gt;
-    &lt;/Form&gt;
-  &lt;/Formik&gt;
-);
+        &lt;button type="submit" className="mt-4 bg-purple-500 text-white px-4 py-2 rounded-md"&gt;
+          Submit
+        &lt;/button&gt;
+      &lt;/Form&gt;
+    &lt;/Formik&gt;
+  );
+&#125;;
 
 export default SignupForm;
-
         </code>
       </pre>
 
@@ -255,67 +258,65 @@ export default SignupForm;
       </p>
       <pre class="bg-gray-800 text-white p-4 rounded-md overflow-x-auto mb-6">
         <code class="language-jsx">
-import React, { useState } from 'react';
+import React, &#123; useState &#125; from 'react';
 
-function MultiInputForm() {
-  const [form, setForm] = useState({ firstName: '', lastName: '', email: '' });
+function MultiInputForm() &#123;
+  const [form, setForm] = useState(&#123; firstName: '', lastName: '', email: '' &#125;);
 
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setForm({
+  const handleChange = (e) =&gt; &#123;
+    const &#123; name, value &#125; = e.target;
+    setForm(&#123;
       ...form,
       [name]: value
-    });
-  };
+    &#125;);
+  &#125;;
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e) =&gt; &#123;
     e.preventDefault();
     console.log(form);
-  };
+  &#125;;
 
   return (
-  &lt;form onSubmit=&#123;handleSubmit&#125;&gt;
-    &lt;label&gt;
-      First Name:
-      &lt;input
-        type="text"
-        name="firstName"
-        value=&#123;form.firstName&#125;
-        onChange=&#123;handleChange&#125;
-        className="border p-2 rounded-md"
-      /&gt;
-    &lt;/label&gt;
+    &lt;form onSubmit=&#123;handleSubmit&#125;&gt;
+      &lt;label&gt;
+        First Name:
+        &lt;input
+          type="text"
+          name="firstName"
+          value=&#123;form.firstName&#125;
+          onChange=&#123;handleChange&#125;
+          className="border p-2 rounded-md"
+        /&gt;
+      &lt;/label&gt;
 
-    &lt;label&gt;
-      Last Name:
-      &lt;input
-        type="text"
-        name="lastName"
-        value=&#123;form.lastName&#125;
-        onChange=&#123;handleChange&#125;
-        className="border p-2 rounded-md"
-      /&gt;
-    &lt;/label&gt;
+      &lt;label&gt;
+        Last Name:
+        &lt;input
+          type="text"
+          name="lastName"
+          value=&#123;form.lastName&#125;
+          onChange=&#123;handleChange&#125;
+          className="border p-2 rounded-md"
+        /&gt;
+      &lt;/label&gt;
 
-    &lt;label&gt;
-      Email:
-      &lt;input
-        type="email"
-        name="email"
-        value=&#123;form.email&#125;
-        onChange=&#123;handleChange&#125;
-        className="border p-2 rounded-md"
-      /&gt;
-    &lt;/label&gt;
+      &lt;label&gt;
+        Email:
+        &lt;input
+          type="email"
+          name="email"
+          value=&#123;form.email&#125;
+          onChange=&#123;handleChange&#125;
+          className="border p-2 rounded-md"
+        /&gt;
+      &lt;/label&gt;
 
-    &lt;button type="submit" className="mt-4 bg-blue-500 text-white px-4 py-2 rounded-md"&gt;
-      Register
-    &lt;/button&gt;
-  &lt;/form&gt;
-);
-
+      &lt;button type="submit" className="mt-4 bg-blue-500 text-white px-4 py-2 rounded-md"&gt;
+        Register
+      &lt;/button&gt;
+    &lt;/form&gt;
   );
-}
+&#125;;
 
 export default MultiInputForm;
         </code>
@@ -330,21 +331,21 @@ export default MultiInputForm;
       <pre class="bg-gray-800 text-white p-4 rounded-md overflow-x-auto mb-6">
         <code class="language-jsx">
 // useForm.js
-import { useState } from 'react';
+import &#123; useState &#125; from 'react';
 
-function useForm(initialValues) {
+function useForm(initialValues) &#123;
   const [values, setValues] = useState(initialValues);
 
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setValues({
+  const handleChange = (e) =&gt; &#123;
+    const &#123; name, value &#125; = e.target;
+    setValues(&#123;
       ...values,
       [name]: value
-    });
-  };
+    &#125;);
+  &#125;;
 
   return [values, handleChange];
-}
+&#125;;
 
 export default useForm;
 
@@ -352,44 +353,44 @@ export default useForm;
 import React from 'react';
 import useForm from './useForm';
 
-function FormComponent() {
-  const [form, handleChange] = useForm({ username: '', email: '' });
+function FormComponent() &#123;
+  const [form, handleChange] = useForm(&#123; username: '', email: '' &#125;);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e) =&gt; &#123;
     e.preventDefault();
     console.log(form);
-  };
+  &#125;;
 
   return (
-    <form onSubmit={handleSubmit}>
-      <label>
+    &lt;form onSubmit=&#123;handleSubmit&#125;&gt;
+      &lt;label&gt;
         Username:
-        <input
+        &lt;input
           type="text"
           name="username"
-          value={form.username}
-          onChange={handleChange}
+          value=&#123;form.username&#125;
+          onChange=&#123;handleChange&#125;
           className="border p-2 rounded-md"
-        />
-      </label>
+        /&gt;
+      &lt;/label&gt;
 
-      <label>
+      &lt;label&gt;
         Email:
-        <input
+        &lt;input
           type="email"
           name="email"
-          value={form.email}
-          onChange={handleChange}
+          value=&#123;form.email&#125;
+          onChange=&#123;handleChange&#125;
           className="border p-2 rounded-md"
-        />
-      </label>
+        /&gt;
+      &lt;/label&gt;
 
-      <button type="submit" className="mt-4 bg-green-500 text-white px-4 py-2 rounded-md">
+      &lt;button type="submit" className="mt-4 bg-green-500 text-white px-4 py-2 rounded-md"&gt;
         Submit
-      </button>
-    </form>
+      &lt;/button&gt;
+    &lt;/form&gt;
   );
-}
+&#125;;
 
 export default FormComponent;
         </code>
@@ -458,8 +459,4 @@ pre {
   }
 }
 
-.active {
-  font-weight: bold;
-  color: #1D4ED8; /* Example active link color */
-}
 </style>

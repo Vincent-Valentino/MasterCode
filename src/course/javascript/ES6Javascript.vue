@@ -992,6 +992,7 @@ console.log(Object.getOwnPropertySymbols(user)); // Output: [Symbol(id)]`,
 
 <style>
 pre {
+  font-size: 0.7rem;
   white-space: pre-wrap; /* Ensures text wrapping for very long lines */
   overflow-x: auto;      /* Adds horizontal scroll for overflow content */ 
 }

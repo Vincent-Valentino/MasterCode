@@ -137,6 +137,7 @@ export const courses = {
     title: 'Angular',
     subcourses: [
       { title: 'Introduction to Angular', component: () => import('@/course/angular/IntroductionAngular.vue') },
+      { title: 'Get Started with Angular', component: () => import('@/course/angular/GetStartedAngular.vue') },
       { title: 'Angular Components and Modules', component: () => import('@/course/angular/ComponentsModulesAngular.vue') },
       { title: 'Angular Templates and Data Binding', component: () => import('@/course/angular/TemplatesDataBindingAngular.vue') },
       { title: 'Angular Services', component: () => import('@/course/angular/ServicesAngular.vue') },
@@ -146,7 +147,7 @@ export const courses = {
       { title: 'Angular HTTPClient', component: () => import('@/course/angular/HTTPClientAngular.vue') },
       { title: 'Angular State Management with NgRx', component: () => import('@/course/angular/StateManagementNgRx.vue') },
       { title: 'Angular Performance Optimization', component: () => import('@/course/angular/PerformanceOptimizationAngular.vue') },
-      { title: 'Building and Deploying Angular Applications', component: () => import('@/course/angular/DeployingAngular.vue') },
+      { title: 'Building Angular Applications', component: () => import('@/course/angular/DeployingAngular.vue') },
     ]
   },
   HTML: {

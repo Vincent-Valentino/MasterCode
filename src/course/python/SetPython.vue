@@ -315,8 +315,7 @@ export default {
   name: 'PythonSets',
   data() {
     return {
-      creatingSetsCode: `
-# Creating a set from a list
+      creatingSetsCode: `# Creating a set from a list
 fruits = set(['apple', 'banana', 'cherry', 'apple'])
 print(fruits)  # Output: {'cherry', 'banana', 'apple'}
 
@@ -346,8 +345,7 @@ try:
 except TypeError as e:
     print(f"Error: {e}")  # Output: Error: unhashable type: 'list'
 `,
-      setOperationsCode: `
-# Define two sets
+      setOperationsCode: `# Define two sets
 A = {1, 2, 3, 4, 5}
 B = {4, 5, 6, 7, 8}
 
@@ -389,8 +387,7 @@ D = {10, 11, 12}
 print(A.isdisjoint(D))  # Output: True
 print(A.isdisjoint(B))  # Output: False
 `,
-      modifyingSetsCode: `
-# Start with a set
+      modifyingSetsCode: `# Start with a set
 fruits = {'apple', 'banana', 'cherry'}
 
 # Adding elements
@@ -437,8 +434,7 @@ try:
 except KeyError as e:
     print(f"Error: {e}")  # Output: Error: 'pop from an empty set'
 `,
-      addMethodCode: `
-fruits = {'apple', 'banana'}
+      addMethodCode: `fruits = {'apple', 'banana'}
 print(fruits)  # Output: {'apple', 'banana'}
 
 fruits.add('cherry')
@@ -462,8 +458,7 @@ try:
 except TypeError as e:
     print(f"Error: {e}")  # Output: Error: unhashable type: 'list'
 `,
-      clearMethodCode: `
-numbers = {1, 2, 3, 4, 5}
+      clearMethodCode: `numbers = {1, 2, 3, 4, 5}
 print(numbers)  # Output: {1, 2, 3, 4, 5}
 
 numbers.clear()
@@ -479,8 +474,7 @@ print(mixed_set)  # Output: {1, 'two', (3, 4)}
 mixed_set.clear()
 print(mixed_set)  # Output: set()
 `,
-      copyMethodCode: `
-original = {1, 2, 3}
+      copyMethodCode: `original = {1, 2, 3}
 copied = original.copy()
 
 print(original)  # Output: {1, 2, 3}
@@ -509,8 +503,7 @@ print(nested)       # Output: {1, 2, (3, 4), [5, 6, 7]}
 print(nested_copy)  # Output: {1, 2, (3, 4), [5, 6, 7]}
 # Both sets now reference the same list object
 `,
-      differenceMethodCode: `
-set1 = {1, 2, 3, 4, 5}
+      differenceMethodCode: `set1 = {1, 2, 3, 4, 5}
 set2 = {4, 5, 6, 7, 8}
 set3 = {1, 2}
 
@@ -537,8 +530,7 @@ print(set1.difference(set1))  # Output: set()
 print(set1.difference(set()))  # Output: {1, 2, 3, 4, 5}
 print(set().difference(set1))  # Output: set()
 `,
-      differenceUpdateMethodCode: `
-set1 = {1, 2, 3, 4, 5}
+      differenceUpdateMethodCode: `set1 = {1, 2, 3, 4, 5}
 set2 = {4, 5, 6, 7, 8}
 set3 = {1, 2}
 
@@ -569,8 +561,7 @@ print("After difference_update with empty set:", set1)  # Output: {1, 2, 3, 4, 5
 set1.difference_update(set1)
 print("After difference_update with itself:", set1)  # Output: set()
 `,
-      discardMethodCode: `
-fruits = {'apple', 'banana', 'cherry', 'date'}
+      discardMethodCode: `fruits = {'apple', 'banana', 'cherry', 'date'}
 print("Original set:", fruits)
 
 # Discard an existing element
@@ -595,8 +586,7 @@ except KeyError as e:
 fruits.discard('grape')  # This doesn't raise an error
 print("Final set:", fruits)  # Output: {'apple', 'date'}
 `,
-      intersectionMethodCode: `
-set1 = {1, 2, 3, 4, 5}
+      intersectionMethodCode: `set1 = {1, 2, 3, 4, 5}
 set2 = {4, 5, 6, 7, 8}
 set3 = {1, 2, 5}
 
@@ -627,8 +617,7 @@ print(set1.intersection(set4))  # Output: set()
 # Intersection with a set and a list
 print(set1.intersection([2, 3, 4, 9]))  # Output: {2, 3, 4}
 `,
-      intersectionUpdateMethodCode: `
-set1 = {1, 2, 3, 4, 5}
+      intersectionUpdateMethodCode: `set1 = {1, 2, 3, 4, 5}
 set2 = {4, 5, 6, 7, 8}
 set3 = {1, 2, 5}
 
@@ -665,8 +654,7 @@ set1 = {1, 2, 3, 4, 5}
 set1.intersection_update([3, 4, 5, 6])
 print("After intersection_update with a list:", set1)  # Output: {3, 4, 5}
 `,
-      isdisjointMethodCode: `
-set1 = {1, 2, 3, 4, 5}
+      isdisjointMethodCode: `set1 = {1, 2, 3, 4, 5}
 set2 = {6, 7, 8, 9, 10}
 set3 = {5, 6, 7}
 empty_set = set()
@@ -699,8 +687,7 @@ meats = {'chicken', 'beef', 'pork'}
 print(fruits.isdisjoint(vegetables) and fruits.isdisjoint(meats) and vegetables.isdisjoint(meats))
 # Output: True (no common elements across all sets)
 `,
-      issubsetMethodCode: `
-set1 = {1, 2, 3, 4, 5}
+      issubsetMethodCode: `set1 = {1, 2, 3, 4, 5}
 set2 = {2, 3, 4}
 set3 = {1, 2, 3, 4, 5, 6}
 empty_set = set()
@@ -741,8 +728,7 @@ else:
     print("User is missing some required permissions")
 # Output: User has all required permissions
 `,
-      issupersetMethodCode: `
-set1 = {1, 2, 3, 4, 5}
+      issupersetMethodCode: `set1 = {1, 2, 3, 4, 5}
 set2 = {2, 3, 4}
 set3 = {1, 2, 3, 4, 5, 6}
 empty_set = set()
@@ -783,8 +769,7 @@ else:
     print("Candidate is missing some required skills")
 # Output: Candidate meets all job requirements
 `,
-      popMethodCode: `
-fruits = {'apple', 'banana', 'cherry', 'date'}
+      popMethodCode: `fruits = {'apple', 'banana', 'cherry', 'date'}
 print("Original set:", fruits)
 
 # Pop an arbitrary element
@@ -818,8 +803,7 @@ while tasks:
     # Process the task here
 print("All tasks processed")
 `,
-      removeMethodCode: `
-fruits = {'apple', 'banana', 'cherry', 'date'}
+      removeMethodCode: `fruits = {'apple', 'banana', 'cherry', 'date'}
 print("Original set:", fruits)
 
 # Remove an existing element
@@ -857,8 +841,7 @@ while to_process:
 print("Processed items:", processed)
 print("Remaining items to process:", to_process)
 `,
-symmetricDifferenceUpdateMethodCode: `
-set1 = {1, 2, 3, 4, 5}
+symmetricDifferenceUpdateMethodCode: `set1 = {1, 2, 3, 4, 5}
 set2 = {4, 5, 6, 7, 8}
 
 print("Original set1:", set1)
@@ -898,8 +881,7 @@ changed_items.symmetric_difference_update(current_items)
 print("Items that were added or removed:", changed_items)
 # Output: {'item1', 'item4', 'item5', 'item6'}
 `,
-      unionMethodCode: `
-set1 = {1, 2, 3, 4, 5}
+      unionMethodCode: `set1 = {1, 2, 3, 4, 5}
 set2 = {4, 5, 6, 7, 8}
 set3 = {7, 8, 9, 10}
 
@@ -938,8 +920,7 @@ all_skills = python_skills.union(web_skills, database_skills)
 print("Combined skill set:", all_skills)
 # Output: {'variables', 'functions', 'classes', 'HTML', 'CSS', 'JavaScript', 'SQL', 'MongoDB'}
 `,
-      updateMethodCode: `
-set1 = {1, 2, 3, 4, 5}
+      updateMethodCode: `set1 = {1, 2, 3, 4, 5}
 set2 = {4, 5, 6, 7, 8}
 list1 = [7, 8, 9]
 
@@ -982,8 +963,7 @@ valid_users -= disabled_users
 print("Updated valid users:", valid_users)
 # Output: {'alice', 'bob', 'david', 'eve'}
 `,
-      setComparisonsCode: `
-set1 = {1, 2, 3, 4, 5}
+      setComparisonsCode: `set1 = {1, 2, 3, 4, 5}
 set2 = {4, 5, 6, 7, 8}
 set3 = {1, 2, 3, 4, 5}
 subset = {2, 3, 4}
@@ -1025,8 +1005,7 @@ print("Is user a subset of admin?", user_permissions <= admin_permissions)  # Ou
 print("Is guest a proper subset of user?", guest_permissions < user_permissions)  # Output: True
 print("Are guest and admin permissions different?", guest_permissions != admin_permissions)  # Output: True
 `,
-      frozensetsCode: `
-# Creating a frozenset
+      frozensetsCode: `# Creating a frozenset
 frozen = frozenset([1, 2, 3, 4, 5])
 print(frozen)  # Output: frozenset({1, 2, 3, 4, 5})
 
@@ -1065,8 +1044,7 @@ print(result1, result2)  # Output: 6 6
 
 # Note: The lru_cache decorator uses frozenset internally to hash the arguments
 `,
-      setComprehensionsCode: `
-# Basic set comprehension
+      setComprehensionsCode: `# Basic set comprehension
 squares = {x**2 for x in range(10)}
 print(squares)  # Output: {0, 1, 4, 9, 16, 25, 36, 49, 64, 81}
 
@@ -1107,8 +1085,7 @@ all_tags = {tag for article in articles for tag in article["tags"]}
 print(all_tags)
 # Output: {'python', 'programming', 'basics', 'data science', 'machine learning', 'html', 'css', 'javascript'}
 `,
-advancedTechniquesCode: `
-# Using sets for efficient lookup
+advancedTechniquesCode: `# Using sets for efficient lookup
 def find_common_elements(list1, list2):
     set1 = set(list1)
     return [element for element in list2 if element in set1]
@@ -1205,8 +1182,7 @@ print(longest_substring_without_repeats("abcabcbb"))  # Output: 3
 print(longest_substring_without_repeats("bbbbb"))     # Output: 1
 print(longest_substring_without_repeats("pwwkew"))    # Output: 3
 `,
-      performanceConsiderationsCode: `
-import time
+      performanceConsiderationsCode: `import time
 import random
 
 # Generate large datasets
@@ -1287,6 +1263,7 @@ print(f"Memory saving with set: {(list_memory - set_memory) / 1024 / 1024:.2f} M
 
 <style>
   pre {
+  font-size: 0.9rem;
   white-space: pre-wrap; /* Ensures text wrapping for very long lines */
   overflow-x: auto;      /* Adds horizontal scroll for overflow content */ 
   }

@@ -263,8 +263,4 @@ pre {
   }
 }
 
-.active {
-  font-weight: bold;
-  color: #1D4ED8; /* Example active link color */
-}
 </style>

@@ -11,7 +11,6 @@
 
       <!-- Menu Content -->
       <div class="p-4 flex flex-col space-y-6">
-        
         <!-- Section 1: Main Links -->
         <div class="flex flex-row border-yellow-700 pb-3 border-b-2">
           <div class="w-1/2 flex-col flex gap-4 text-justify">
@@ -134,7 +133,6 @@
             </ul>
           </div>
         </div>
-
       </div>
     </div>
   </transition>
@@ -192,7 +190,8 @@ import { FreeMode } from 'swiper/modules';
 
 import 'swiper/css';
 import 'swiper/css/free-mode';
-// Courses object array with grayscale and colored icons (colored in /{languageName}/logo.svg)
+
+// Courses object array with grayscale and colored icons
 const courses = ref([
   { name: 'Python', iconGray: '/icons/python.svg', iconColored: '/python/logo.svg', isHovered: false },
   { name: 'JavaScript', iconGray: '/icons/javascript.svg', iconColored: '/js/logo.png', isHovered: false },
@@ -228,8 +227,8 @@ const dropdown = ref(null);
 
 // Emit the selected course when clicked
 function selectCourse(course) {
-  selectedCourse.value = course;  // Update selectedCourse
-  emit('selectedCourse', course);  // Emit the selected course to the parent
+  selectedCourse.value = course;
+  emit('selectedCourse', course);
 }
 
 function mainPage() {
@@ -238,7 +237,7 @@ function mainPage() {
   emit("selectedCourse", "Home");
 }
 
-function NavLinks(course){
+function NavLinks(course) {
   toggleMenu();
   selectCourse(course);
 }
@@ -255,10 +254,15 @@ function toggleDropdown(menu) {
 <style scoped>
 /* Slide-down transition */
 .slide-down-enter-active, .slide-down-leave-active {
-  transition: transform 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
 }
 .slide-down-enter, .slide-down-leave-to {
   transform: translateY(-100%);
+  opacity: 0;
+}
+.slide-down-enter-to, .slide-down-leave {
+  transform: translateY(0);
+  opacity: 1;
 }
 
 /* Custom styles for hover effect */
@@ -278,6 +282,7 @@ function toggleDropdown(menu) {
   border-radius: 5px;
   text-align: center;
 }
+
 .swiper-slide {
   width: auto !important;
 }
@@ -289,8 +294,7 @@ img {
 }
 
 img:hover {
-  transform: scale(1.1);
+  transform: scale(1.2);
   opacity: 0.9;
 }
-
 </style>

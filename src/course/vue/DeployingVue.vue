@@ -1,9 +1,9 @@
 <template>
   <div class="w-full">
     <!-- Header Section -->
-    <div class="w-full flex items-center gap-2 bg-blue-600 rounded-t-xl p-4">
+    <div class="w-full flex items-center gap-2 bg-green-600 rounded-t-xl p-4">
       <img src="/vue/logo.svg" alt="Vue.js Logo" class="w-12 h-12">
-      <h1 class="text-2xl md:text-4xl font-bold text-white">Deploying Vue Applications</h1>
+      <h1 class="text-2xl md:text-4xl font-bold text-white">Deploying Vue Application</h1>
     </div>
 
     <!-- Content Section -->
@@ -383,8 +383,8 @@ jobs:
         with:
           publish-dir: ./dist
           production-deploy: true
-          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
-          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+          NETLIFY_AUTH_TOKEN: $&#123;&#123; secrets.NETLIFY_AUTH_TOKEN &#125;&#125;
+          NETLIFY_SITE_ID: $&#123;&#123; secrets.NETLIFY_SITE_ID &#125;&#125;
             </code></pre>
           </div>
         </div>
@@ -450,7 +450,7 @@ jobs:
       - name: Deploy
         run: npm run deploy
         env:
-          DEPLOY_KEY: ${{ secrets.DEPLOY_KEY }}
+          DEPLOY_KEY: $&#123;&#123; secrets.DEPLOY_KEY &#125;&#125;
             </code></pre>
           </div>
         </div>
@@ -637,7 +637,7 @@ export default {
   <div>
     <h3>User List</h3>
     <ul>
-      <li v-for="user in users" :key="user.id">{{ user.name }}</li>
+      <li v-for="user in users" :key="user.id">&#123;&#123; user.name &#125;&#125;</li>
     </ul>
   </div>
 </template>`,
@@ -763,8 +763,8 @@ export default {
 <template>
   <div>
     <h3>User Details</h3>
-    <p v-if="user">Name: {{ user.name }}</p>
-    <p v-if="user">Email: {{ user.email }}</p>
+    <p v-if="user">Name: &#123;&#123; user.name &#125;&#125;</p>
+    <p v-if="user">Email: &#123;&#123; user.email &#125;&#125;</p>
     <button @click="deleteUser">Delete User</button>
     <p v-else>User has been deleted.</p>
   </div>
@@ -798,8 +798,8 @@ export default {
 <template>
   <div>
     <button @click="fetchData">Fetch Data</button>
-    <p v-if="data">{{ data }}</p>
-    <p v-if="successMessage" class="text-green-500">{{ successMessage }}</p>
+    <p v-if="data">&#123;&#123; data &#125;&#125;</p>
+    <p v-if="successMessage" class="text-green-500">&#123;&#123; successMessage &#125;&#125;</p>
   </div>
 </template>`,
       
@@ -830,7 +830,7 @@ export default {
 <template>
   <div>
     <button @click="fetchData">Fetch Data</button>
-    <p v-if="errorMessage" class="text-red-500">{{ errorMessage }}</p>
+    <p v-if="errorMessage" class="text-red-500">&#123;&#123; errorMessage &#125;&#125;</p>
     <p v-if="data">{{ data }}</p>
   </div>
 </template>`,
@@ -869,7 +869,7 @@ export default {
     <h3>Formatted Data</h3>
     <ul>
       <li v-for="item in formattedData" :key="item.id">
-        Name: {{ item.name }}, Email: {{ item.email }}
+        Name: &#123;&#123; item.name &#125;&#125;, Email: &#123;&#123; item.email &#125;&#125;
       </li>
     </ul>
   </div>
@@ -911,11 +911,11 @@ export default {
   <div>
     <h3>Posts</h3>
     <button @click="fetchPosts" :disabled="loading">
-      {{ loading ? 'Loading...' : 'Load Posts' }}
+      &#123;&#123; loading ? 'Loading...' : 'Load Posts' &#125;&#125;
     </button>
-    <p v-if="error" class="text-red-500">{{ error }}</p>
+    <p v-if="error" class="text-red-500">&#123;&#123; error &#125;&#125;</p>
     <ul v-if="posts.length">
-      <li v-for="post in posts" :key="post.id">{{ post.title }}</li>
+      <li v-for="post in posts" :key="post.id">&#123;&#123; post.title &#125;&#125;</li>
     </ul>
   </div>
 </template>`,
@@ -952,9 +952,9 @@ export default {
 <template>
   <div>
     <button @click="fetchData" :disabled="loading">
-      {{ loading ? 'Loading...' : 'Fetch Data' }}
+      &#123;&#123; loading ? 'Loading...' : 'Fetch Data' &#125;&#125;
     </button>
-    <p v-if="errorMessage" class="text-red-500">{{ errorMessage }}</p>
+    <p v-if="errorMessage" class="text-red-500">&#123;&#123; errorMessage &#125;&#125;</p>
     <p v-if="data">{{ data }}</p>
   </div>
 </template>`,
@@ -1046,7 +1046,7 @@ export default {
     <button @click="addNewItem">Add Item</button>
     <ul>
       <li v-for="item in allItems" :key="item.id">
-        {{ item.name }} - {{ item.description }}
+        &#123;&#123; item.name &#125;&#125; - &#123;&#123; item.description &#125;&#125;
         <button @click="removeItem(item.id)">Delete</button>
       </li>
     </ul>

@@ -1016,8 +1016,13 @@ print(ci_dict.keys())  # Output: dict_keys(['name', 'age', 'city'])
 
 <style>
   pre {
+  font-size: 0.65rem;
   white-space: pre-wrap; /* Ensures text wrapping for very long lines */
   overflow-x: auto;      /* Adds horizontal scroll for overflow content */ 
+  }
+
+  code {
+  overflow-x: scroll;
   }
 
   @media (max-width: 768px) {

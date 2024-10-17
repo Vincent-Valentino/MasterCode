@@ -206,8 +206,7 @@ export default {
   name: 'PythonFileHandling',
   data() {
     return {
-      fileBasicsCode: `
-# Opening a file
+      fileBasicsCode: `# Opening a file
 file = open('example.txt', 'r')  # 'r' mode for reading
 
 # Reading content
@@ -231,8 +230,7 @@ with open('example.txt', 'r') as file:
 # 'b' - Binary mode
 # '+' - Updating (reading and writing)
 `,
-      readingFilesCode: `
-# Reading entire file
+      readingFilesCode: `# Reading entire file
 with open('example.txt', 'r') as file:
     content = file.read()
     print(content)
@@ -259,8 +257,7 @@ with open('example.txt', 'r') as file:
         third_line = lines[2]
         print(f"Third line: {third_line}")
 `,
-writingFilesCode: `
-# Writing to a file (overwrites existing content)
+writingFilesCode: `# Writing to a file (overwrites existing content)
 with open('output.txt', 'w') as file:
     file.write("Hello, World!")
     file.write("This is a new line.\n")
@@ -288,8 +285,7 @@ data = bytes([0x41, 0x42, 0x43])  # ASCII for 'ABC'
 with open('binary_output.bin', 'wb') as file:
     file.write(data)
 `,
-      appendingFilesCode: `
-# Appending to a file
+      appendingFilesCode: `# Appending to a file
 with open('log.txt', 'a') as file:
     file.write("This line will be appended.\n")
 
@@ -323,8 +319,7 @@ with open('numbers.txt', 'a+') as file:
     content = file.read()
     print(f"Updated content: {content}")
 `,
-      withStatementCode: `
-# Basic usage of 'with' statement
+      withStatementCode: `# Basic usage of 'with' statement
 with open('example.txt', 'r') as file:
     content = file.read()
     print(content)
@@ -360,8 +355,7 @@ class CustomFileHandler:
 with CustomFileHandler('custom.txt', 'w') as file:
     file.write("Using custom context manager")
 `,
-      fileMethodsCode: `
-# Opening a file
+      fileMethodsCode: `# Opening a file
 file = open('example.txt', 'r+')  # 'r+' mode for reading and writing
 
 # read() - Read entire file content
@@ -409,8 +403,7 @@ with open('example.txt', 'r') as file:
     print(file.read())
 # File is automatically closed after the 'with' block
 `,
-      binaryFilesCode: `
-# Writing binary data
+      binaryFilesCode: `# Writing binary data
 data = bytes([0x48, 0x65, 0x6C, 0x6C, 0x6F])  # "Hello" in ASCII
 with open('binary_file.bin', 'wb') as file:
     file.write(data)
@@ -447,8 +440,7 @@ def copy_binary_file(source, destination):
 # Example usage of binary file copy
 copy_binary_file('source_image.jpg', 'copied_image.jpg')
 `,
-      csvFilesCode: `
-import csv
+      csvFilesCode: `import csv
 
 # Writing CSV data
 data = [
@@ -508,8 +500,7 @@ with open('custom_data.csv', 'r') as file:
     for row in reader:
         print(row)
 `,
-      jsonFilesCode: `
-import json
+      jsonFilesCode: `import json
 
 # Writing JSON data
 data = {
@@ -561,8 +552,7 @@ json_string = '{"name": "Bob", "age": 30}'
 decoded_person = json.loads(json_string, object_hook=person_decoder)
 print(f"Name: {decoded_person.name}, Age: {decoded_person.age}")
 `,
-      errorHandlingCode: `
-# Handling FileNotFoundError
+      errorHandlingCode: `# Handling FileNotFoundError
 try:
     with open('non_existent_file.txt', 'r') as file:
         content = file.read()
@@ -627,8 +617,7 @@ try:
 except FileOperationError as e:
     print(f"Error: {e}")
 `,
-      osModuleCode: `
-import os
+      osModuleCode: `import os
 
 # Get current working directory
 current_dir = os.getcwd()
@@ -699,8 +688,7 @@ for root, dirs, files in os.walk('folder'):
     print(f"Files: {files}")
     print()
 `,
-advancedTechniquesCode: `
-import os
+advancedTechniquesCode: `import os
 import shutil
 import tempfile
 import mmap
@@ -833,6 +821,7 @@ print("Advanced file operations completed and temporary files cleaned up.")
 
 <style>
   pre {
+  font-size: 0.6rem;
   white-space: pre-wrap; /* Ensures text wrapping for very long lines */
   overflow-x: auto;      /* Adds horizontal scroll for overflow content */ 
   }
