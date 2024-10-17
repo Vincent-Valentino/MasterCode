@@ -1,7 +1,7 @@
 <template>
   <!-- Main Navbar and Menu Section -->
   <transition name="slide-down">
-    <div v-if="IsMenuVisible" class="absolute bg-stone-800 text-white left-0 top-0 w-full z-50">
+    <div v-if="IsMenuVisible" class="absolute bg-stone-800 min-h-screen md:min-h-1/3 text-white left-0 top-0 w-full z-50">
       <!-- Close Button -->
       <div class="p-4 flex justify-center">
         <button @click="toggleMenu" class="text-white border-2 border-white rounded-full p-2">
@@ -66,7 +66,7 @@
               <a href="#" class="dropdown-item">Ember</a>
               <a href="#" class="dropdown-item">Backbone</a>
               <a href="#" class="dropdown-item">Preact</a>
-              <a href="#" class="dropdown-item">Next.js</a>
+              <a href="#" @click="NavLinks('NextJS')" class="dropdown-item">Next.js</a>
               <a href="#" class="dropdown-item">Nuxt.js</a>
               <a href="#" class="dropdown-item">Gatsby</a>
             </ul>
@@ -255,7 +255,7 @@ function toggleDropdown(menu) {
 <style scoped>
 /* Slide-down transition */
 .slide-down-enter-active, .slide-down-leave-active {
-  transition: transform 0.8s ease-in-out;
+  transition: transform 0.5s ease-in-out;
 }
 .slide-down-enter, .slide-down-leave-to {
   transform: translateY(-100%);
