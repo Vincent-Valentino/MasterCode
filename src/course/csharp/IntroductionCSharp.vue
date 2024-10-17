@@ -27,7 +27,7 @@
 
       <!-- Comparing C# with Other Languages -->
       <h2 class="text-xl md:text-2xl font-semibold mb-4">Comparing C# with Java and C++</h2>
-      <table class="min-w-full table-auto mb-6">
+      <table class="min-w-full table-auto mb-6 overflow-x-auto">
         <thead>
           <tr class="bg-gray-200">
             <th class="px-4 py-2">Feature</th>

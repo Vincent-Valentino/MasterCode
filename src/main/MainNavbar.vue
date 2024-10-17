@@ -40,7 +40,7 @@
             <ul v-if="dropdown === 'code'" class="dropdown-list flex flex-col pl-4 mt-2 space-y-2">
               <a href="#" @click="NavLinks('Python')" class="dropdown-item">Python</a>
               <a href="#" @click="NavLinks('JavaScript')" class="dropdown-item">JavaScript</a>
-              <a href="#" @click="NavLinks('Typescript')" class="dropdown-item">TypeScript</a>
+              <a href="#" @click="NavLinks('TypeScript')" class="dropdown-item">TypeScript</a>
               <a href="#" @click="NavLinks('C++')" class="dropdown-item">C++</a>
               <a href="#" @click="NavLinks('Java')" class="dropdown-item">Java</a>
               <a href="#" @click="NavLinks('C#')" class="dropdown-item">C#</a>
