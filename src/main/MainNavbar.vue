@@ -38,16 +38,16 @@
               <span v-else>▼</span>
             </button>
             <ul v-if="dropdown === 'code'" class="dropdown-list flex flex-col pl-4 mt-2 space-y-2">
-              <a href="#" class="dropdown-item">Python</a>
-              <a href="#" class="dropdown-item">JavaScript</a>
-              <a href="#" class="dropdown-item">TypeScript</a>
-              <a href="#" class="dropdown-item">C++</a>
-              <a href="#" class="dropdown-item">Java</a>
-              <a href="#" class="dropdown-item">C#</a>
-              <a href="#" class="dropdown-item">Ruby</a>
-              <a href="#" class="dropdown-item">PHP</a>
-              <a href="#" class="dropdown-item">HTML/CSS</a>
-              <a href="#" class="dropdown-item">C</a>
+              <a href="#" @click="NavLinks('Python')" class="dropdown-item">Python</a>
+              <a href="#" @click="NavLinks('JavaScript')" class="dropdown-item">JavaScript</a>
+              <a href="#" @click="NavLinks('Typescript')" class="dropdown-item">TypeScript</a>
+              <a href="#" @click="NavLinks('C++')" class="dropdown-item">C++</a>
+              <a href="#" @click="NavLinks('Java')" class="dropdown-item">Java</a>
+              <a href="#" @click="NavLinks('C#')" class="dropdown-item">C#</a>
+              <a href="#" @click="NavLinks('Ruby')" class="dropdown-item">Ruby</a>
+              <a href="#" @click="NavLinks('PHP')" class="dropdown-item">PHP</a>
+              <a href="#" @click="NavLinks('HTML')" class="dropdown-item">HTML</a>
+              <a href="#" @click="NavLinks('CSS')" class="dropdown-item">CSS</a>
             </ul>
           </div>
 
@@ -59,9 +59,9 @@
               <span v-else>▼</span>
             </button>
             <ul v-if="dropdown === 'frontendFrameworks'" class="dropdown-list flex flex-col pl-4 mt-2 space-y-2">
-              <a href="#" class="dropdown-item">React</a>
-              <a href="#" class="dropdown-item">Vue</a>
-              <a href="#" class="dropdown-item">Angular</a>
+              <a href="#" @click="NavLinks('React')" class="dropdown-item">React</a>
+              <a href="#" @click="NavLinks('Vue')" class="dropdown-item">Vue</a>
+              <a href="#" @click="NavLinks('Angular')" class="dropdown-item">Angular</a>
               <a href="#" class="dropdown-item">Svelte</a>
               <a href="#" class="dropdown-item">Ember</a>
               <a href="#" class="dropdown-item">Backbone</a>
@@ -236,6 +236,11 @@ function mainPage() {
   toggleMenu();
   selectedCourse.value = "Home";
   emit("selectedCourse", "Home");
+}
+
+function NavLinks(course){
+  toggleMenu();
+  selectCourse(course);
 }
 
 function toggleMenu() {

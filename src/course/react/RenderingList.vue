@@ -1,8 +1,4 @@
 <template>
-  <div>
-    
-  </div>
-</template><template>
   <div class="w-full">
     <!-- Header Section -->
     <div class="w-full flex items-center gap-5 bg-cyan-400 rounded-t-xl p-4">
