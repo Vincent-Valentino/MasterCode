@@ -1,11 +1,7 @@
 <template>
   <div class="w-full">
     <!-- Header Section -->
-    <div class="w-full flex items-center gap-5 bg-blue-600 rounded-t-xl p-4">
-      <img src="/python/logo.png" alt="Python Logo" class="w-12 h-12">
-      <h1 class="text-2xl md:text-4xl font-bold text-yellow-400">Python Strings</h1>
-    </div>
-
+    <Header title="Python Strings" value="python" />
     <!-- Content Section -->
     <div class="bg-white rounded-b-xl p-4 md:p-6">
       <!-- Introduction -->
@@ -222,8 +218,12 @@ print("She said, \"Python is awesome!\"")
 </template>
 
 <script>
+import Header from "@/course/components/HeaderContent.vue"
 export default {
-  name: 'PythonStrings',
+  name: "PythonStrings",
+  components: {
+    Header
+  },
   data() {
     return {
       creatingStringsCode: `# Single, double, and triple quotes

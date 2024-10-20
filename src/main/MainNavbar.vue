@@ -13,124 +13,180 @@
       <div class="p-4 flex flex-col space-y-6">
         <!-- Section 1: Main Links -->
         <div class="flex flex-row border-yellow-700 pb-3 border-b-2">
-          <div class="w-1/2 flex-col flex gap-4 text-justify">
-            <a href="#" @click="mainPage" class="menu-link">Home</a>
-            <a href="#" class="menu-link">About</a>
-            <a href="#" class="menu-link">FAQ</a>
+          <div class="w-1/2 md:w-full flex-col md:flex-row md:justify-start md:gap-10 md:px-10 md:py-2 md:font-bold md:text-yellow-300 flex gap-4 text-justify">
+            <a href="#" @click="mainPage" class="menu-link ml-2">Home</a>
+            <a href="/about" class="menu-link ml-2">About</a>
+            <a href="#" class="menu-link ml-2">FAQ</a>
             <a href="#" class="menu-link hidden md:block">Account</a>
             <a href="#" class="menu-link hidden md:block">Achievements</a>
           </div>
           <div class="w-1/2 flex flex-col gap-4 text-justify md:hidden items-justify">
-            <a href="#" class="menu-link">Account</a>
-            <a href="#" class="menu-link">Achievements</a>
+            <a href="#" class="menu-link ml-2">Account</a>
+            <a href="#" class="menu-link ml-2">Achievements</a>
             <a href="#" class="menu-link special-link w-1/2 md:hidden">Login</a>
           </div>
         </div>
 
         <!-- Section 2: Code & Frameworks -->
-        <div class="flex flex-col space-y-4">
-          <!-- Code Dropdown -->
-          <div class="dropdown">
-            <button @click="toggleDropdown('code')" class="menu-link flex justify-between items-center w-full">
-              Code
-              <span v-if="dropdown === 'code'">▲</span>
-              <span v-else>▼</span>
-            </button>
-            <ul v-if="dropdown === 'code'" class="dropdown-list flex flex-col pl-4 mt-2 space-y-2">
-              <a href="#" @click="NavLinks('Python')" class="dropdown-item">Python</a>
-              <a href="#" @click="NavLinks('JavaScript')" class="dropdown-item">JavaScript</a>
-              <a href="#" @click="NavLinks('TypeScript')" class="dropdown-item">TypeScript</a>
-              <a href="#" @click="NavLinks('C++')" class="dropdown-item">C++</a>
-              <a href="#" @click="NavLinks('Java')" class="dropdown-item">Java</a>
-              <a href="#" @click="NavLinks('C#')" class="dropdown-item">C#</a>
-              <a href="#" @click="NavLinks('Ruby')" class="dropdown-item">Ruby</a>
-              <a href="#" @click="NavLinks('PHP')" class="dropdown-item">PHP</a>
-              <a href="#" @click="NavLinks('HTML')" class="dropdown-item">HTML</a>
-              <a href="#" @click="NavLinks('CSS')" class="dropdown-item">CSS</a>
-            </ul>
+        <div class="flex flex-col md:flex-row gap-3 md:justify-between md:mx-2 md:px-3 md:pb-5 md:gap-1">
+          <!-- For screens smaller than md, use dropdowns -->
+          <div class="flex flex-col space-y-4">
+            <div v-if="IsThisMobile()" class="dropdown">
+              <button @click="toggleDropdown('code')" class="menu-link flex justify-between items-center w-full">
+                Code
+                <span v-if="dropdown === 'code'">▲</span>
+                <span v-else>▼</span>
+              </button>
+              <ul v-if="dropdown === 'code'" class="dropdown-list flex flex-col pl-4 mt-2 space-y-2">
+                <a href="#" @click="NavLinks('Python')" class="dropdown-item">Python</a>
+                <a href="#" @click="NavLinks('JavaScript')" class="dropdown-item">JavaScript</a>
+                <a href="#" @click="NavLinks('TypeScript')" class="dropdown-item">TypeScript</a>
+                <a href="#" @click="NavLinks('C++')" class="dropdown-item">C++</a>
+                <a href="#" @click="NavLinks('Java')" class="dropdown-item">Java</a>
+                <a href="#" @click="NavLinks('C#')" class="dropdown-item">C#</a>
+                <a href="#" @click="NavLinks('Ruby')" class="dropdown-item">Ruby</a>
+                <a href="#" @click="NavLinks('PHP')" class="dropdown-item">PHP</a>
+                <a href="#" @click="NavLinks('HTML')" class="dropdown-item">HTML</a>
+                <a href="#" @click="NavLinks('CSS')" class="dropdown-item">CSS</a>
+              </ul>
+            </div>
+
+            <!-- For screens md and larger, render links directly -->
+            <div v-else class="flex flex-col gap-3">
+              <h1 class="font-bold text-yellow-100 text-lg border-l-8 border-yellow-600 pl-1 bg-stone-700 pr-2 mb-5">Language</h1>
+              <a href="#" @click="NavLinks('Python')" class="menu-link ml-2">Python</a>
+              <a href="#" @click="NavLinks('JavaScript')" class="menu-link ml-2">JavaScript</a>
+              <a href="#" @click="NavLinks('TypeScript')" class="menu-link ml-2">TypeScript</a>
+              <a href="#" @click="NavLinks('C++')" class="menu-link ml-2">C++</a>
+              <a href="#" @click="NavLinks('Java')" class="menu-link ml-2">Java</a>
+              <a href="#" @click="NavLinks('C#')" class="menu-link ml-2">C#</a>
+              <a href="#" @click="NavLinks('Ruby')" class="menu-link ml-2">Ruby</a>
+              <a href="#" @click="NavLinks('PHP')" class="menu-link ml-2">PHP</a>
+              <a href="#" @click="NavLinks('HTML')" class="menu-link ml-2">HTML</a>
+              <a href="#" @click="NavLinks('CSS')" class="menu-link ml-2">CSS</a>
+            </div>
           </div>
 
-          <!-- Frontend Frameworks Dropdown -->
-          <div class="dropdown">
-            <button @click="toggleDropdown('frontendFrameworks')" class="menu-link flex justify-between items-center w-full">
-              Frontend Frameworks
-              <span v-if="dropdown === 'frontendFrameworks'">▲</span>
-              <span v-else>▼</span>
-            </button>
-            <ul v-if="dropdown === 'frontendFrameworks'" class="dropdown-list flex flex-col pl-4 mt-2 space-y-2">
-              <a href="#" @click="NavLinks('React')" class="dropdown-item">React</a>
-              <a href="#" @click="NavLinks('Vue')" class="dropdown-item">Vue</a>
-              <a href="#" @click="NavLinks('Angular')" class="dropdown-item">Angular</a>
-              <a href="#" class="dropdown-item">Svelte</a>
-              <a href="#" class="dropdown-item">Ember</a>
-              <a href="#" class="dropdown-item">Backbone</a>
-              <a href="#" class="dropdown-item">Preact</a>
-              <a href="#" @click="NavLinks('NextJS')" class="dropdown-item">Next.js</a>
-              <a href="#" class="dropdown-item">Nuxt.js</a>
-              <a href="#" class="dropdown-item">Gatsby</a>
-            </ul>
-          </div>
-        </div>
+          <!-- Frontend Frameworks -->
+          <div class="flex flex-col space-y-4">
+            <div v-if="IsThisMobile()" class="dropdown">
+              <button @click="toggleDropdown('frontendFrameworks')" class="menu-link flex justify-between items-center w-full">
+                Frontend
+                <span v-if="dropdown === 'frontendFrameworks'">▲</span>
+                <span v-else>▼</span>
+              </button>
+              <ul v-if="dropdown === 'frontendFrameworks'" class="dropdown-list flex flex-col pl-4 mt-2 space-y-2">
+                <a href="#" @click="NavLinks('React')" class="dropdown-item">React</a>
+                <a href="#" @click="NavLinks('Vue')" class="dropdown-item">Vue</a>
+                <a href="#" @click="NavLinks('Angular')" class="dropdown-item">Angular</a>
+                <a href="#" class="dropdown-item">Svelte</a>
+                <a href="#" class="dropdown-item">Ember</a>
+                <a href="#" class="dropdown-item">Backbone</a>
+                <a href="#" class="dropdown-item">Preact</a>
+                <a href="#" @click="NavLinks('NextJS')" class="dropdown-item">Next.js</a>
+                <a href="#" class="dropdown-item">Nuxt.js</a>
+                <a href="#" class="dropdown-item">Gatsby</a>
+              </ul>
+            </div>
 
-        <!-- Section 3: Backend Frameworks -->
-        <div class="flex flex-col space-y-4">
-          <!-- Backend Dropdown -->
-          <div class="dropdown">
-            <button @click="toggleDropdown('backendFrameworks')" class="menu-link flex justify-between items-center w-full">
-              Backend Frameworks
-              <span v-if="dropdown === 'backendFrameworks'">▲</span>
-              <span v-else>▼</span>
-            </button>
-            <ul v-if="dropdown === 'backendFrameworks'" class="dropdown-list flex flex-col pl-4 mt-2 space-y-2">
-              <a href="#" class="dropdown-item">Django</a>
-              <a href="#" class="dropdown-item">Flask</a>
-              <a href="#" class="dropdown-item">Express</a>
-              <a href="#" class="dropdown-item">Laravel</a>
-              <a href="#" class="dropdown-item">Spring Boot</a>
-              <a href="#" class="dropdown-item">Ruby on Rails</a>
-              <a href="#" class="dropdown-item">ASP.NET</a>
-              <a href="#" class="dropdown-item">Koa</a>
-              <a href="#" class="dropdown-item">FastAPI</a>
-              <a href="#" class="dropdown-item">Symfony</a>
-              <a href="#" class="dropdown-item">Phoenix</a>
-              <a href="#" class="dropdown-item">Gin</a>
-            </ul>
+            <div v-else class="flex flex-col gap-3">
+              <h1 class="font-bold text-yellow-100 text-lg border-l-8 border-yellow-600 pl-1 bg-stone-700 pr-2 mb-5">Frontend</h1>
+              <a href="#" @click="NavLinks('React')" class="menu-link ml-2">React</a>
+              <a href="#" @click="NavLinks('Vue')" class="menu-link ml-2">Vue</a>
+              <a href="#" @click="NavLinks('Angular')" class="menu-link ml-2">Angular</a>
+              <a href="#" class="menu-link ml-2">Svelte</a>
+              <a href="#" class="menu-link ml-2">Ember</a>
+              <a href="#" class="menu-link ml-2">Backbone</a>
+              <a href="#" class="menu-link ml-2">Preact</a>
+              <a href="#" @click="NavLinks('NextJS')" class="menu-link ml-2">Next.js</a>
+              <a href="#" class="menu-link ml-2">Nuxt.js</a>
+              <a href="#" class="menu-link ml-2">Gatsby</a>
+            </div>
           </div>
-        </div>
 
-        <!-- Section 4: Professional Tools -->
-        <div class="flex flex-col space-y-4">
-          <!-- Professional Tools Dropdown -->
-          <div class="dropdown">
-            <button @click="toggleDropdown('tools')" class="menu-link flex justify-between items-center w-full">
-              Professional Tools
-              <span v-if="dropdown === 'tools'">▲</span>
-              <span v-else>▼</span>
-            </button>
-            <ul v-if="dropdown === 'tools'" class="dropdown-list flex flex-col pl-4 mt-2 space-y-2">
-              <a href="#" class="dropdown-item">Postman</a>
-              <a href="#" class="dropdown-item">PostgreSQL</a>
-              <a href="#" class="dropdown-item">MySQL</a>
-              <a href="#" class="dropdown-item">MongoDB</a>
-            </ul>
+          <!-- Backend Frameworks -->
+          <div class="flex flex-col space-y-4">
+            <div v-if="IsThisMobile()" class="dropdown">
+              <button @click="toggleDropdown('backendFrameworks')" class="menu-link flex justify-between items-center w-full">
+                Backend
+                <span v-if="dropdown === 'backendFrameworks'">▲</span>
+                <span v-else>▼</span>
+              </button>
+              <ul v-if="dropdown === 'backendFrameworks'" class="dropdown-list flex flex-col pl-4 mt-2 space-y-2">
+                <a href="#" class="dropdown-item">Django</a>
+                <a href="#" class="dropdown-item">Flask</a>
+                <a href="#" class="dropdown-item">Express</a>
+                <a href="#" class="dropdown-item">Laravel</a>
+                <a href="#" class="dropdown-item">Spring Boot</a>
+                <a href="#" class="dropdown-item">Ruby on Rails</a>
+                <a href="#" class="dropdown-item">ASP.NET</a>
+                <a href="#" class="dropdown-item">FastAPI</a>
+                <a href="#" class="dropdown-item">Gin</a>
+              </ul>
+            </div>
+
+            <div v-else class="flex flex-col gap-3">
+              <h1 class="font-bold text-yellow-100 text-lg border-l-8 border-yellow-600 pl-1 bg-stone-700 pr-2 mb-5">Backend</h1>
+              <a href="#" class="menu-link ml-2">Django</a>
+              <a href="#" class="menu-link ml-2">Flask</a>
+              <a href="#" class="menu-link ml-2">Express</a>
+              <a href="#" class="menu-link ml-2">Laravel</a>
+              <a href="#" class="menu-link ml-2">Spring Boot</a>
+              <a href="#" class="menu-link ml-2">Ruby on Rails</a>
+              <a href="#" class="menu-link ml-2">ASP.NET</a>
+              <a href="#" class="menu-link ml-2">FastAPI</a>
+              <a href="#" class="menu-link ml-2">Gin</a>
+            </div>
           </div>
-        </div>
 
-        <!-- Section 5: DevOps & Git Tools -->
-        <div class="flex flex-col space-y-4">
-          <!-- DevOps Dropdown -->
-          <div class="dropdown">
-            <button @click="toggleDropdown('devops')" class="menu-link flex justify-between items-center w-full">
-              DevOps & Git Tools
-              <span v-if="dropdown === 'devops'">▲</span>
-              <span v-else>▼</span>
-            </button>
-            <ul v-if="dropdown === 'devops'" class="dropdown-list flex flex-col pl-4 mt-2 space-y-2">
-              <a href="#" class="dropdown-item">Git</a>
-              <a href="#" class="dropdown-item">GitHub</a>
-              <a href="#" class="dropdown-item">GitLab</a>
-              <a href="#" class="dropdown-item">Docker</a>
-            </ul>
+          <!-- Tools -->
+          <div class="flex flex-col space-y-4">
+            <div v-if="IsThisMobile()" class="dropdown">
+              <button @click="toggleDropdown('tools')" class="menu-link flex justify-between items-center w-full">
+                Professional Tools
+                <span v-if="dropdown === 'tools'">▲</span>
+                <span v-else>▼</span>
+              </button>
+              <ul v-if="dropdown === 'tools'" class="dropdown-list flex flex-col pl-4 mt-2 space-y-2">
+                <a href="#" class="dropdown-item">Postman</a>
+                <a href="#" class="dropdown-item">PostgreSQL</a>
+                <a href="#" class="dropdown-item">MySQL</a>
+                <a href="#" class="dropdown-item">MongoDB</a>
+              </ul>
+            </div>
+
+            <div v-else class="flex flex-col gap-3">
+              <h1 class="font-bold text-yellow-100 text-lg  border-l-8 border-yellow-600 pl-1 bg-stone-700 pr-2 mb-5">Database</h1>
+              <a href="#" class="menu-link ml-2">Postman</a>
+              <a href="#" class="menu-link ml-2">PostgreSQL</a>
+              <a href="#" class="menu-link ml-2">MySQL</a>
+              <a href="#" class="menu-link ml-2">MongoDB</a>
+            </div>
+          </div>
+
+          <!-- DevOps & Git Tools -->
+          <div class="flex flex-col space-y-4">
+            <div v-if="IsThisMobile()" class="dropdown">
+              <button @click="toggleDropdown('devops')" class="menu-link flex justify-between items-center w-full">
+                DevOps & Git Tools
+                <span v-if="dropdown === 'devops'">▲</span>
+                <span v-else>▼</span>
+              </button>
+              <ul v-if="dropdown === 'devops'" class="dropdown-list flex flex-col pl-4 mt-2 space-y-2">
+                <a href="#" class="dropdown-item">Git</a>
+                <a href="#" class="dropdown-item">GitHub</a>
+                <a href="#" class="dropdown-item">GitLab</a>
+                <a href="#" class="dropdown-item">Docker</a>
+              </ul>
+            </div>
+
+            <div v-else class="flex flex-col gap-3">
+              <h1 class="font-bold text-yellow-100 text-lg  border-l-8 border-yellow-600 pl-1 bg-stone-700 pr-2 mb-5">DevOps</h1>
+              <a href="#" class="menu-link ml-2">Git</a>
+              <a href="#" class="menu-link ml-2">GitHub</a>
+              <a href="#" class="menu-link ml-2">GitLab</a>
+              <a href="#" class="menu-link ml-2">Docker</a>
+            </div>
           </div>
         </div>
       </div>
@@ -184,14 +240,23 @@
 
 <script setup>
 import { X } from 'lucide-vue-next';
-import { ref } from 'vue';
+import { ref, defineProps } from 'vue';
 import { Swiper, SwiperSlide } from 'swiper/vue';
 import { FreeMode } from 'swiper/modules';
 
 import 'swiper/css';
 import 'swiper/css/free-mode';
 
-// Courses object array with grayscale and colored icons
+const props = defineProps({
+  IsMobile: Boolean
+});
+
+console.log(props.IsMobile);
+
+function IsThisMobile(){
+  return props.IsMobile;
+}
+
 const courses = ref([
   { name: 'Python', iconGray: '/icons/python.svg', iconColored: '/python/logo.svg', isHovered: false },
   { name: 'JavaScript', iconGray: '/icons/javascript.svg', iconColored: '/js/logo.png', isHovered: false },

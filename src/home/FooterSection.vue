@@ -8,7 +8,7 @@
           Learning Topics
         </h2>
         <div class="space-y-2">
-          <a v-for="lang in languages" :key="lang" href="/learn" class="text-xs md:text-base block hover:text-blue-600">
+          <a v-for="lang in languages" :key="lang" href="#" @click="redirectTopics(lang)" class="text-xs md:text-base block hover:text-blue-600">
             {{ lang }}
           </a>
         </div>
@@ -21,7 +21,7 @@
           Advanced Topics
         </h2>
         <div class="space-y-2">
-          <a v-for="topic in advancedTopics" :key="topic" href="#" class="text-xs md:text-base block hover:text-blue-600">
+          <a v-for="topic in advancedTopics" :key="topic" href="#" @click="redirectTopics(topic)" class="text-xs md:text-base block hover:text-blue-600">
             {{ topic }}
           </a>
         </div>
@@ -34,7 +34,7 @@
           Developer Tools
         </h2>
         <div class="space-y-2">
-          <a v-for="tool in devTools" :key="tool" href="#" class="text-xs md:text-base block hover:text-blue-600">
+          <a v-for="tool in devTools" :key="tool" href="#" @click="redirectTopics(tool)" class="text-xs md:text-base block hover:text-blue-600">
             {{ tool }}
           </a>
         </div>
@@ -86,6 +86,8 @@
 
 <script setup>
 import { Book, Library,  Wrench , Mail, Phone, MessageSquare } from 'lucide-vue-next'
+import { useRouter } from 'vue-router';
+import LearnPage from '@/main/MainPage.vue';
 
 const languages = [
   'Python', 'JavaScript', 'TypeScript', 'Java',
@@ -101,4 +103,16 @@ const devTools = [
   'Git', 'GitHub', 'GitLab', 'Postman',
   'Docker', 'VS Code', 'IntelliJ IDEA', 'Jenkins', 'Jira', 'AWS'
 ]
+
+const router = useRouter();
+const redirectTopics = (course) => {
+  router.push({
+    name: 'Main',
+    params: {
+      selectedCourse: course,
+    },
+  });
+};
+
+
 </script>

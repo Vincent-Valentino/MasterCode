@@ -1,15 +1,15 @@
 <template>
   <div class="min-h-screen bg-white text-gray-800">
-    <MainNavbar @selectedCourse="selectCourse" />
+    <MainNavbar @selectedCourse="selectCourse" :IsMobile="isMobile" />
 
     <!-- Flex container for content and sidebar -->
     <div class="flex flex-col md:flex-row md:space-x-4 bg-slate-50">
       <!-- Main content area -->
       <div :class="!isMobile.valueOf ? 'w-[70%]' : 'w-full'">
-        <div v-if="selectedCourse && isMobile.valueOf" class="right-0 z-50">
+        <div v-if="selectedCourse !== 'Home' && isMobile.valueOf" class="right-0 z-30">
           <button 
             @click="toggleSidebar" 
-            class="fixed py-[0.5rem] bg-white md:hidden right-[0.5rem] h-20 border-black border-[1px] top-[70%] z-50 text-black text-xs rounded-full">
+            class="fixed py-[0.5rem] bg-white md:hidden right-[0.5rem] h-20 border-black border-[1px] top-[70%] z-30 text-black text-xs rounded-full">
             <ChevronsLeft class="w-3 h-3"/>
           </button>
         </div>
@@ -38,7 +38,7 @@
 </template>
 
 <script>
-import { ref, onMounted, onUnmounted } from 'vue';
+import { ref } from 'vue';
 import MainNavbar from './MainNavbar.vue';
 import MainContent from './MainContent.vue';
 import MainFooter from './MainFooter.vue';

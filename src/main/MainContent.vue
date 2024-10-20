@@ -72,10 +72,6 @@ const props = defineProps({
 // Emit events to notify the parent about subcourse changes
 const emit = defineEmits(['updateSubcourseIndex']);
 
-// State for the drawer toggle (without drawer functionality for now)
-const drawerOpen = ref(false);  // Control drawer visibility
-
-
 // Get subcourses from the selected course
 const subcourses = computed(() => (courses[props.selectedCourse]?.subcourses) || []);
 
