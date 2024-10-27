@@ -156,14 +156,14 @@ public class WildcardExample {
     }
 
     // Upper Bounded Wildcard
-    public static void printNumbers(List<? extends Number> list) {
+    public static void printNumbers(List&lt;? extends Number> list) {
         for(Number num : list) {
             System.out.println(num);
         }
     }
 
     // Lower Bounded Wildcard
-    public static void addNumbers(List<? super Integer> list) {
+    public static void addNumbers(List&lt;? super Integer> list) {
         list.add(10);
         list.add(20);
     }
