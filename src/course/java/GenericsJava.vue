@@ -149,7 +149,7 @@ public class MaximumFinder {
 // Using Wildcards in Methods
 public class WildcardExample {
     // Unbounded Wildcard
-    public static void printList(List<?> list) {
+    public static void printList(List&lt;?> list) {
         for(Object obj : list) {
             System.out.println(obj);
         }
@@ -278,7 +278,7 @@ a {
   color: #1e40af; /* Tailwind's blue-800 */
 }
 
-h2, p , h1, h3, h4{
+h2, p , h1, h3, h4, li{
   font-family: "Roboto Condensed", sans-serif;
 }
 
