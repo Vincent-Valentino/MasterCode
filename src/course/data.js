@@ -2,6 +2,7 @@ export const courses = {
   Python: {
     title: 'Python',
     subcourses: [
+      // { title: 'Python', component: () => import('@/course/python/Python.vue') },
       { title: 'Introduction to Python', component: () => import('@/course/python/IntroductionPython.vue') },
       { title: 'Get Started with Python', component: () => import('@/course/python/GetStartedPython.vue') },
       { title: 'Python Variables and Data Types', component: () => import('@/course/python/VariablesPython.vue') },
@@ -202,30 +203,166 @@ export const courses = {
     subcourses: [
       { title: 'Introduction to Java', component: () => import('@/course/java/IntroductionJava.vue') },
       { title: 'Get Started with Java', component: () => import('@/course/java/GetStartedJava.vue') },
+      { title: 'Java Basics: Variables and Data Types', component: () => import('@/course/java/BasicsJava.vue') },
+      { title: 'Java Control Structures', component: () => import('@/course/java/ControlStructuresJava.vue') },
+      { title: 'Java Methods', component: () => import('@/course/java/MethodsJava.vue') },
+      { title: 'Java Object-Oriented Programming', component: () => import('@/course/java/OOPJava.vue') },
+      { title: 'Java Collections Framework', component: () => import('@/course/java/CollectionsFrameworkJava.vue') },
+      { title: 'Java Streams API', component: () => import('@/course/java/StreamsAPIJava.vue') },
+      { title: 'Java Exception Handling', component: () => import('@/course/java/ExceptionHandlingJava.vue') },
+      { title: 'Java Multithreading', component: () => import('@/course/java/MultithreadingJava.vue') },
+      { title: 'Java Generics', component: () => import('@/course/java/GenericsJava.vue') },
+      { title: 'Java I/O Streams', component: () => import('@/course/java/IOStreamsJava.vue') },
+      { title: 'Java JDBC', component: () => import('@/course/java/JDBCJava.vue') },
+      { title: 'Java Design Patterns', component: () => import('@/course/java/DesignPatternsJava.vue') }
     ]
   },
   PHP: {
     title: 'PHP',
     subcourses: [
       { title: 'Introduction to PHP', component: () => import('@/course/php/IntroductionPHP.vue') },
+      { title: 'Getting Started with PHP', component: () => import('@/course/php/GetStartedPHP.vue') },
+      { title: 'PHP Basics: Variables and Data Types', component: () => import('@/course/php/BasicsPHP.vue') },
+      { title: 'PHP Control Structures', component: () => import('@/course/php/ControlStructuresPHP.vue') },
+      { title: 'PHP Functions', component: () => import('@/course/php/FunctionsPHP.vue') },
+      { title: 'PHP Object-Oriented Programming', component: () => import('@/course/php/OOPPHP.vue') },
+      { title: 'PHP Arrays', component: () => import('@/course/php/ArraysPHP.vue') },
+      { title: 'PHP Sessions and Cookies', component: () => import('@/course/php/SessionsCookiesPHP.vue') },
+      { title: 'PHP and MySQL', component: () => import('@/course/php/PHPMySQL.vue') },
+      { title: 'PHP Security Best Practices', component: () => import('@/course/php/SecurityPHP.vue') },
     ]
   },
   Ruby: {
     title: 'Ruby',
     subcourses: [
       { title: 'Introduction to Ruby', component: () => import('@/course/ruby/IntroductionRuby.vue') },
+      { title: 'Getting Started with Ruby', component: () => import('@/course/ruby/GetStartedRuby.vue') },
+      { title: 'Ruby Basics: Variables and Data Types', component: () => import('@/course/ruby/BasicsRuby.vue') },
+      { title: 'Ruby Control Structures', component: () => import('@/course/ruby/ControlStructuresRuby.vue') },
+      { title: 'Ruby Methods', component: () => import('@/course/ruby/MethodsRuby.vue') },
+      { title: 'Ruby Object-Oriented Programming', component: () => import('@/course/ruby/OOPRuby.vue') },
+      { title: 'Ruby Collections', component: () => import('@/course/ruby/CollectionsRuby.vue') },
+      { title: 'Ruby Blocks and Iterators', component: () => import('@/course/ruby/BlocksIteratorsRuby.vue') },
+      { title: 'Ruby Modules and Mixins', component: () => import('@/course/ruby/ModulesMixinsRuby.vue') },
+      { title: 'Ruby Exception Handling', component: () => import('@/course/ruby/ExceptionHandlingRuby.vue') },
+      { title: 'Ruby Gems and Libraries', component: () => import('@/course/ruby/GemsLibrariesRuby.vue') },
     ]
   },
   TailwindCSS: {
     title: 'TailwindCSS',
     subcourses: [
       { title: 'Introduction to TailwindCSS', component: () => import('@/course/tailwind/IntroductionTailwind.vue') },
+      { title: 'Get Started with TailwindCSS', component: () => import('@/course/tailwind/GetStartedTailwind.vue') },
+      { title: 'TailwindCSS Utility Classes', component: () => import('@/course/tailwind/UtilityClassesTailwind.vue') },
+      { title: 'Responsive Design with TailwindCSS', component: () => import('@/course/tailwind/ResponsiveDesignTailwind.vue') },
+      { title: 'TailwindCSS Components', component: () => import('@/course/tailwind/ComponentsTailwind.vue') },
+      { title: 'Customizing TailwindCSS', component: () => import('@/course/tailwind/CustomizationTailwind.vue') },
+      { title: 'TailwindCSS Plugins', component: () => import('@/course/tailwind/PluginsTailwind.vue') },
+      { title: 'TailwindCSS with JavaScript Frameworks', component: () => import('@/course/tailwind/WithFrameworksTailwind.vue') },
     ]
   },
   Bootstrap: {
     title: 'Bootstrap',
     subcourses: [
       { title: 'Introduction to Bootstrap', component: () => import('@/course/bootstrap/IntroductionBootstrap.vue') },
+      { title: 'Get Started with Bootstrap', component: () => import('@/course/bootstrap/GetStartedBootstrap.vue') },
+      { title: 'Bootstrap Grid System', component: () => import('@/course/bootstrap/GridSystemBootstrap.vue') },
+      { title: 'Bootstrap Components', component: () => import('@/course/bootstrap/ComponentsBootstrap.vue') },
+      { title: 'Responsive Design with Bootstrap', component: () => import('@/course/bootstrap/ResponsiveDesignBootstrap.vue') },
+      { title: 'Bootstrap Utilities', component: () => import('@/course/bootstrap/UtilitiesBootstrap.vue') },
+      { title: 'Bootstrap Customization', component: () => import('@/course/bootstrap/CustomizationBootstrap.vue') },
+      { title: 'Bootstrap Forms', component: () => import('@/course/bootstrap/FormsBootstrap.vue') },
+      { title: 'Bootstrap Navigation', component: () => import('@/course/bootstrap/NavigationBootstrap.vue') },
+      { title: 'Bootstrap Modals and Alerts', component: () => import('@/course/bootstrap/ModalsAlertsBootstrap.vue') },
+      { title: 'Bootstrap JavaScript Plugins', component: () => import('@/course/bootstrap/JavaScriptPluginsBootstrap.vue') },
+    ]
+  },
+  SQL: {
+    title: 'SQL',
+    subcourses: [
+      { title: 'Introduction to SQL', component: () => import('@/course/sql/IntroductionSQL.vue') },
+      { title: 'Getting Started with SQL', component: () => import('@/course/sql/GetStartedSQL.vue') },
+      { title: 'SQL Queries', component: () => import('@/course/sql/QueriesSQL.vue') },
+      { title: 'SQL Joins', component: () => import('@/course/sql/JoinsSQL.vue') },
+      { title: 'SQL Subqueries', component: () => import('@/course/sql/SubqueriesSQL.vue') },
+      { title: 'Advanced SQL Functions', component: () => import('@/course/sql/AdvancedFunctionsSQL.vue') },
+      { title: 'Database Normalization', component: () => import('@/course/sql/NormalizationSQL.vue') },
+      { title: 'Indexing in SQL', component: () => import('@/course/sql/IndexingSQL.vue') },
+      { title: 'SQL Transactions', component: () => import('@/course/sql/TransactionsSQL.vue') },
+    ]
+  },
+  MongoDB: {
+    title: 'MongoDB',
+    subcourses: [
+      { title: 'Introduction to MongoDB', component: () => import('@/course/mongodb/IntroductionMongoDB.vue') },
+      { title: 'Getting Started with MongoDB', component: () => import('@/course/mongodb/GetStartedMongoDB.vue') },
+      { title: 'MongoDB CRUD Operations', component: () => import('@/course/mongodb/CRUDOperationsMongoDB.vue') },
+      { title: 'MongoDB Aggregation Framework', component: () => import('@/course/mongodb/AggregationMongoDB.vue') },
+      { title: 'Indexing in MongoDB', component: () => import('@/course/mongodb/IndexingMongoDB.vue') },
+      { title: 'MongoDB Data Modeling', component: () => import('@/course/mongodb/DataModelingMongoDB.vue') },
+      { title: 'MongoDB Security', component: () => import('@/course/mongodb/SecurityMongoDB.vue') },
+      { title: 'MongoDB Performance Tuning', component: () => import('@/course/mongodb/PerformanceTuningMongoDB.vue') },
+      { title: 'MongoDB Backup and Restore', component: () => import('@/course/mongodb/BackupRestoreMongoDB.vue') },
+    ]
+  },
+  Django: {
+    title: 'Django',
+    subcourses: [
+      { title: 'Introduction to Django', component: () => import('@/course/django/IntroductionDjango.vue') },
+      { title: 'Getting Started with Django', component: () => import('@/course/django/GetStartedDjango.vue') },
+      { title: 'Django Models', component: () => import('@/course/django/ModelsDjango.vue') },
+      { title: 'Django Views and Templates', component: () => import('@/course/django/ViewsTemplatesDjango.vue') },
+      { title: 'Django Forms', component: () => import('@/course/django/FormsDjango.vue') },
+      { title: 'Django Admin Interface', component: () => import('@/course/django/AdminInterfaceDjango.vue') },
+      { title: 'Django Authentication', component: () => import('@/course/django/AuthenticationDjango.vue') },
+      { title: 'Django REST Framework', component: () => import('@/course/django/RESTFrameworkDjango.vue') },
+      { title: 'Django Deployment', component: () => import('@/course/django/DeploymentDjango.vue') },
+      { title: 'Django Testing', component: () => import('@/course/django/TestingDjango.vue') },
+    ]
+  },
+  Express: {
+    title: 'Express',
+    subcourses: [
+      { title: 'Introduction to Express.js', component: () => import('@/course/express/IntroductionExpress.vue') },
+      { title: 'Getting Started with Express', component: () => import('@/course/express/GetStartedExpress.vue') },
+      { title: 'Express Routing', component: () => import('@/course/express/RoutingExpress.vue') },
+      { title: 'Middleware in Express', component: () => import('@/course/express/MiddlewareExpress.vue') },
+      { title: 'Express and MongoDB', component: () => import('@/course/express/ExpressMongoDB.vue') },
+      { title: 'Express Security Best Practices', component: () => import('@/course/express/SecurityExpress.vue') },
+      { title: 'Error Handling in Express', component: () => import('@/course/express/ErrorHandlingExpress.vue') },
+      { title: 'Express Sessions and Authentication', component: () => import('@/course/express/SessionsAuthenticationExpress.vue') },
+      { title: 'Express API Development', component: () => import('@/course/express/APIDevelopmentExpress.vue') },
+      { title: 'Express Deployment', component: () => import('@/course/express/DeploymentExpress.vue') },
+    ]
+  },
+  Svelte: {
+    title: 'Svelte',
+    subcourses: [
+      { title: 'Introduction to Svelte', component: () => import('@/course/svelte/IntroductionSvelte.vue') },
+      { title: 'Getting Started with Svelte', component: () => import('@/course/svelte/GetStartedSvelte.vue') },
+      { title: 'Svelte Components', component: () => import('@/course/svelte/ComponentsSvelte.vue') },
+      { title: 'Svelte Stores', component: () => import('@/course/svelte/StoresSvelte.vue') },
+      { title: 'Svelte Routing', component: () => import('@/course/svelte/RoutingSvelte.vue') },
+      { title: 'Svelte Forms and Validation', component: () => import('@/course/svelte/FormsValidationSvelte.vue') },
+      { title: 'Svelte Animations', component: () => import('@/course/svelte/AnimationsSvelte.vue') },
+      { title: 'Svelte and APIs', component: () => import('@/course/svelte/APIsSvelte.vue') },
+      { title: 'Svelte SSR (Server-Side Rendering)', component: () => import('@/course/svelte/SSRSvelte.vue') },
+      { title: 'Deploying Svelte Applications', component: () => import('@/course/svelte/DeployingSvelte.vue') },
+    ]
+  },
+  NuxtJS: {
+    title: 'Nuxt.js',
+    subcourses: [
+      { title: 'Introduction to Nuxt.js', component: () => import('@/course/nuxt/IntroductionNuxtJS.vue') },
+      { title: 'Getting Started with Nuxt.js', component: () => import('@/course/nuxt/GetStartedNuxtJS.vue') },
+      { title: 'Nuxt.js Pages and Routing', component: () => import('@/course/nuxt/PagesRoutingNuxtJS.vue') },
+      { title: 'Nuxt.js Components and Props', component: () => import('@/course/nuxt/ComponentsPropsNuxtJS.vue') },
+      { title: 'Nuxt.js State Management', component: () => import('@/course/nuxt/StateManagementNuxtJS.vue') },
+      { title: 'Nuxt.js Modules', component: () => import('@/course/nuxt/ModulesNuxtJS.vue') },
+      { title: 'Nuxt.js Plugins', component: () => import('@/course/nuxt/PluginsNuxtJS.vue') },
+      { title: 'Nuxt.js Middleware', component: () => import('@/course/nuxt/MiddlewareNuxtJS.vue') },
+      { title: 'Nuxt.js Authentication', component: () => import('@/course/nuxt/AuthenticationNuxtJS.vue') },
+      { title: 'Nuxt.js Deployment', component: () => import('@/course/nuxt/DeploymentNuxtJS.vue') },
     ]
   },
 };

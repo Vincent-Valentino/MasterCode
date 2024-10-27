@@ -108,7 +108,7 @@ int main() {
 </script>
 
 <style>
-h2, p , h1{
+h2, p , h1, h3, h4, li{
   font-family: "Roboto Condensed", sans-serif;
 }
 

@@ -229,5 +229,11 @@ const runProgramSteps = ref([
 </script>
 
 <style scoped>
-/* Add any styles if needed */
+h2, p , h1, h3, h4{
+  font-family: "Roboto Condensed", sans-serif;
+}
+
+a {
+  font-family: "JetBrains Mono", sans-serif;
+}
 </style>

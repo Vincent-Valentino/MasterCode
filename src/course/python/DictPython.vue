@@ -1015,7 +1015,7 @@ print(ci_dict.keys())  # Output: dict_keys(['name', 'age', 'city'])
 };
 </script>
 
-<style>
+<style scoped>
   pre {
   font-size: 0.65rem;
   white-space: pre-wrap; /* Ensures text wrapping for very long lines */
@@ -1031,4 +1031,13 @@ print(ci_dict.keys())  # Output: dict_keys(['name', 'age', 'city'])
     font-size: 0.5rem; /* Smaller font size for mobile devices */
   }
 }
+
+  h2, p , h1, h3, h4, li{
+    font-family: "Roboto Condensed", sans-serif;
+  }
+
+  a {
+    font-family: "JetBrains Mono", sans-serif;
+  }
+
 </style>

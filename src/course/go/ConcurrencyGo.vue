@@ -124,19 +124,17 @@ func main() {
         <strong>Output:</strong>
       </p>
       <div class="bg-gray-800 text-white p-2 rounded-md overflow-x-auto mb-6">
-        <pre><code>
-    Worker 1 starting
-    Worker 2 starting
-    Worker 3 starting
-    Worker 4 starting
-    Worker 5 starting
-    Worker 1 done
-    Worker 2 done
-    Worker 3 done
-    Worker 4 done
-    Worker 5 done
-    All workers done
-        </code></pre>
+        <pre><code>Worker 1 starting
+Worker 2 starting
+Worker 3 starting
+Worker 4 starting
+Worker 5 starting
+Worker 1 done
+Worker 2 done
+Worker 3 done
+Worker 4 done
+Worker 5 done
+All workers done</code></pre>
       </div>
       <p class="text-base md:text-lg mb-6">
         <strong>Explanation:</strong>
@@ -171,32 +169,28 @@ func main() {
         <strong>Example: Creating and Using Channels</strong>
       </p>
       <div class="bg-gray-800 text-white p-4 rounded-md overflow-x-auto mb-6">
-        <pre><code>
-    package main
+        <pre><code>package main
 
-    import (
-        "fmt"
-    )
+import (
+    "fmt"
+)
 
-    func main() {
-        messages := make(chan string)
+func main() {
+    messages := make(chan string)
 
-        go func() {
-            messages <- "Hello from goroutine"
-        }()
+    go func() {
+        messages <- "Hello from goroutine"
+    }()
 
-        msg := <-messages
-        fmt.Println(msg)
-    }
-        </code></pre>
+    msg := <-messages
+    fmt.Println(msg)
+}</code></pre>
       </div>
       <p class="text-base md:text-lg mb-6">
         <strong>Output:</strong>
       </p>
       <div class="bg-gray-800 text-white p-2 rounded-md overflow-x-auto mb-6">
-        <pre><code>
-    Hello from goroutine
-        </code></pre>
+        <pre><code>Hello from goroutine</code></pre>
       </div>
       <p class="text-base md:text-lg mb-6">
         <strong>Explanation:</strong>
@@ -225,35 +219,31 @@ func main() {
         <strong>Example: Buffered Channels</strong>
       </p>
       <div class="bg-gray-800 text-white p-4 rounded-md overflow-x-auto mb-6">
-        <pre><code>
-    package main
+        <pre><code>package main
 
-    import (
-        "fmt"
-    )
+import (
+    "fmt"
+)
 
-    func main() {
-        buffered := make(chan int, 3)
+func main() {
+    buffered := make(chan int, 3)
 
-        buffered <- 1
-        buffered <- 2
-        buffered <- 3
+    buffered <- 1
+    buffered <- 2
+    buffered <- 3
 
-        fmt.Println(<-buffered)
-        fmt.Println(<-buffered)
-        fmt.Println(<-buffered)
-    }
-        </code></pre>
+    fmt.Println(<-buffered)
+    fmt.Println(<-buffered)
+    fmt.Println(<-buffered)
+}</code></pre>
       </div>
       <p class="text-base md:text-lg mb-6">
         <strong>Output:</strong>
       </p>
       <div class="bg-gray-800 text-white p-2 rounded-md overflow-x-auto mb-6">
-        <pre><code>
-    1
-    2
-    3
-        </code></pre>
+        <pre><code>1
+2
+3</code></pre>
       </div>
       <p class="text-base md:text-lg mb-6">
         <strong>Explanation:</strong>
@@ -279,42 +269,38 @@ func main() {
         <strong>Example: Channel Directions</strong>
       </p>
       <div class="bg-gray-800 text-white p-4 rounded-md overflow-x-auto mb-6">
-        <pre><code>
-    package main
+        <pre><code>package main
 
-    import (
-        "fmt"
-    )
+import (
+    "fmt"
+)
 
-    func sendData(ch chan<- int) {
-        for i := 1; i <= 5; i++ {
-            ch <- i
-        }
-        close(ch)
+func sendData(ch chan<- int) {
+    for i := 1; i <= 5; i++ {
+        ch <- i
     }
+    close(ch)
+}
 
-    func main() {
-        ch := make(chan int)
+func main() {
+     ch := make(chan int)
 
-        go sendData(ch)
+     go sendData(ch)
 
-        for num := range ch {
-            fmt.Println(num)
-        }
-    }
-        </code></pre>
+     for num := range ch {
+         fmt.Println(num)
+     }
+}</code></pre>
       </div>
       <p class="text-base md:text-lg mb-6">
         <strong>Output:</strong>
       </p>
       <div class="bg-gray-800 text-white p-2 rounded-md overflow-x-auto mb-6">
-        <pre><code>
-    1
-    2
-    3
-    4
-    5
-        </code></pre>
+        <pre><code>1
+2
+3
+4
+5</code></pre>
       </div>
       <p class="text-base md:text-lg mb-6">
         <strong>Explanation:</strong>
@@ -346,47 +332,43 @@ func main() {
         <strong>Example: Basic Select Usage</strong>
       </p>
       <div class="bg-gray-800 text-white p-4 rounded-md overflow-x-auto mb-6">
-        <pre><code>
-    package main
+        <pre><code>package main
 
-    import (
-        "fmt"
-        "time"
-    )
+import (
+    "fmt"
+    "time"
+)
 
-    func main() {
-        ch1 := make(chan string)
-        ch2 := make(chan string)
+func main() {
+     ch1 := make(chan string)
+     ch2 := make(chan string)
 
-        go func() {
-            time.Sleep(2 * time.Second)
-            ch1 <- "Message from ch1"
-        }()
+     go func() {
+         time.Sleep(2 * time.Second)
+         ch1 <- "Message from ch1"
+     }()
 
-        go func() {
-            time.Sleep(1 * time.Second)
-            ch2 <- "Message from ch2"
-        }()
+     go func() {
+         time.Sleep(1 * time.Second)
+         ch2 <- "Message from ch2"
+     }()
 
-        for i := 0; i < 2; i++ {
-            select {
-            case msg1 := <-ch1:
-                fmt.Println(msg1)
-            case msg2 := <-ch2:
-                fmt.Println(msg2)
-            }
-        }
-    }
-        </code></pre>
+     for i := 0; i < 2; i++ {
+         select {
+         case msg1 := <-ch1:
+            fmt.Println(msg1)
+         case msg2 := <-ch2:
+            fmt.Println(msg2)
+         }
+     }
+}</code></pre>
       </div>
       <p class="text-base md:text-lg mb-6">
         <strong>Possible Output:</strong>
       </p>
       <div class="bg-gray-800 text-white p-2 rounded-md overflow-x-auto mb-6">
-        <pre><code>
-    Message from ch2
-    Message from ch1
-        </code></pre>
+        <pre><code>Message from ch2
+Message from ch1</code></pre>
       </div>
       <p class="text-base md:text-lg mb-6">
         <strong>Explanation:</strong>
@@ -409,39 +391,37 @@ func main() {
         <strong>Example: Select with Default Case</strong>
       </p>
       <div class="bg-gray-800 text-white p-4 rounded-md overflow-x-auto mb-6">
-        <pre><code>
-    package main
+        <pre><code>package main
 
-    import (
-        "fmt"
-        "time"
-    )
+import (
+    "fmt"
+    "time"
+)
 
-    func main() {
-        ch := make(chan string)
+func main() {
+     ch := make(chan string)
 
-        select {
-        case msg := <-ch:
-            fmt.Println("Received:", msg)
-        default:
-            fmt.Println("No message received.")
-        }
+     select {
+     case msg := <-ch:
+        fmt.Println("Received:", msg)
+     default:
+        fmt.Println("No message received.")
+     }
 
-        go func() {
-            time.Sleep(1 * time.Second)
-            ch <- "Hello after delay"
-        }()
+     go func() {
+         time.Sleep(1 * time.Second)
+         ch <- "Hello after delay"
+     }()
 
-        time.Sleep(2 * time.Second)
+     time.Sleep(2 * time.Second)
 
-        select {
-        case msg := <-ch:
-            fmt.Println("Received:", msg)
-        default:
-            fmt.Println("No message received.")
-        }
-    }
-        </code></pre>
+     select {
+     case msg := <-ch:
+         fmt.Println("Received:", msg)
+     default:
+         fmt.Println("No message received.")
+     }
+}</code></pre>
       </div>
       <p class="text-base md:text-lg mb-6">
         <strong>Output:</strong>
@@ -450,17 +430,13 @@ func main() {
         First Select:
       </p>
       <div class="bg-gray-800 text-white p-2 rounded-md overflow-x-auto mb-6">
-        <pre><code>
-    No message received.
-        </code></pre>
+        <pre><code>No message received.</code></pre>
       </div>
       <p class="text-base md:text-lg mb-6">
         Second Select (after message is sent):
       </p>
       <div class="bg-gray-800 text-white p-2 rounded-md overflow-x-auto mb-6">
-        <pre><code>
-    Received: Hello after delay
-        </code></pre>
+        <pre><code>Received: Hello after delay</code></pre>
       </div>
       <p class="text-base md:text-lg mb-6">
         <strong>Explanation:</strong>
@@ -1509,4 +1485,13 @@ a {
 a:hover {
   text-decoration: underline;
 }
+
+h2, p , h1, h3, h4{
+  font-family: "Roboto Condensed", sans-serif;
+}
+
+a {
+  font-family: "JetBrains Mono", sans-serif;
+}
+
 </style>

@@ -238,7 +238,7 @@ if char in 'aeiou':
 };
 </script>
 
-<style>
+<style scoped>
   pre {
   white-space: pre-wrap; /* Ensures text wrapping for very long lines */
   overflow-x: auto;      /* Adds horizontal scroll for overflow content */ 
@@ -249,4 +249,13 @@ if char in 'aeiou':
     font-size: 0.5rem; /* Smaller font size for mobile devices */
   }
 }
+
+  h2, p , h1, h3, h4, li{
+    font-family: "Roboto Condensed", sans-serif;
+  }
+
+  a {
+    font-family: "JetBrains Mono", sans-serif;
+  }
+
 </style>

@@ -226,7 +226,7 @@ console.log(canVote);
 };
 </script>
 
-<style>
+<style scoped>
   pre {
   white-space: pre-wrap; /* Ensures text wrapping for very long lines */
   overflow-x: auto;      /* Adds horizontal scroll for overflow content */ 
@@ -237,4 +237,13 @@ console.log(canVote);
     font-size: 0.5rem; /* Smaller font size for mobile devices */
   }
 }
+
+  h2, p , h1, h3, h4{
+    font-family: "Roboto Condensed", sans-serif;
+  }
+
+  a {
+    font-family: "JetBrains Mono", sans-serif;
+  }
+
 </style>

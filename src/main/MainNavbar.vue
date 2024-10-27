@@ -1,6 +1,6 @@
 <template>
   <!-- Main Navbar and Menu Section -->
-  <transition name="slide-down">
+  <transition name="slide-down" mode="out-in">
     <div v-if="IsMenuVisible" class="absolute bg-stone-800 min-h-screen md:min-h-1/3 text-white left-0 top-0 w-full z-50">
       <!-- Close Button -->
       <div class="p-4 flex justify-center">
@@ -195,14 +195,14 @@
 
   <!-- Top Navbar -->
   <nav class="bg-white shadow">
-    <div class="w-full mx-auto px-4 py-1 md:py-2 sm:px-6 lg:px-8 bg-black">
+    <div class="w-full mx-auto px-4 py-1 md:py-2 sm:px-6 lg:px-8 shadow-sm shadow-amber-900 bg-red-700">
       <div class="flex justify-between h-16 items-center">
         <!-- Logo -->
-        <h2 class="font-black text-white text-xl md:text-3xl ml-4">MasterCode</h2>
+        <h2 class="font-black text-stone-900 text-xl md:text-3xl ml-4">Master<span class="text-stone-200">Code</span></h2>
 
         <!-- Menu and Login Buttons -->
         <div class="items-center flex">
-          <a href="#" class="text-stone-50 hidden md:inline mx-10 self-center text-center">Log In</a>
+          <a href="/auth" class="text-stone-50 hidden md:inline mx-10 self-center text-center">Log In</a>
           <button
             @click="toggleMenu"
             class="ml-auto p-1 bg-black text-white rounded-md focus:outline-none border-white border-2 mx-3 relative">
@@ -223,13 +223,13 @@
         class="mySwiper p-5"
       >
         <SwiperSlide v-for="course in courses" :key="course.name" class="!w-auto">
-          <button @click="selectCourse(course.name)" 
+          <button @click="selectCourse(course.name)"
                   class="text-white m-1 px-1 py-2 rounded-full text-sm md:text-lg md:px-3 md:mx-5  whitespace-nowrap flex flex-col justify-center items-center">
             <!-- Dynamic Image Icon with Hover Effect -->
-            <img :src="course.isHovered ? course.iconColored : course.iconGray" 
-                 :alt="course.name" 
-                 @mouseover="hoverCourse(course, true)" 
-                 @mouseleave="hoverCourse(course, false)" 
+            <img :src="course.isHovered ? course.iconColored : course.iconGray"
+                 :alt="course.name"
+                 @mouseover="hoverCourse(course, true)"
+                 @mouseleave="hoverCourse(course, false)"
                  class="size-12 md:size-16 mr-2 transition-all duration-300 ease-in-out transform hover:scale-110"/>
           </button>
         </SwiperSlide>
@@ -315,20 +315,18 @@ function toggleDropdown(menu) {
 </script>
 
 <style scoped>
-/* Slide-down transition */
 .slide-down-enter-active, .slide-down-leave-active {
-  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+  transition: transform 0.5s ease, opacity 0.5s ease;
 }
-.slide-down-enter, .slide-down-leave-to {
+.slide-down-enter-from, .slide-down-leave-to {
   transform: translateY(-100%);
   opacity: 0;
 }
-.slide-down-enter-to, .slide-down-leave {
+.slide-down-enter-to, .slide-down-leave-from {
   transform: translateY(0);
   opacity: 1;
 }
 
-/* Custom styles for hover effect */
 .menu-link:hover {
   color: #ffc107;
 }

@@ -1262,7 +1262,7 @@ print(f"Memory saving with set: {(list_memory - set_memory) / 1024 / 1024:.2f} M
 };
 </script>
 
-<style>
+<style scoped>
   pre {
   font-size: 0.9rem;
   white-space: pre-wrap; /* Ensures text wrapping for very long lines */
@@ -1274,4 +1274,13 @@ print(f"Memory saving with set: {(list_memory - set_memory) / 1024 / 1024:.2f} M
     font-size: 0.5rem; /* Smaller font size for mobile devices */
   }
 }
+
+  h2, p , h1, h3, h4, li{
+    font-family: "Roboto Condensed", sans-serif;
+  }
+
+  a {
+    font-family: "JetBrains Mono", sans-serif;
+  }
+
 </style>

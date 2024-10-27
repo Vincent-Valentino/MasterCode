@@ -100,9 +100,7 @@
       <p class="text-base md:text-lg mb-4">
         Structs allow you to define complex data types by grouping together related fields. They are similar to classes in other languages but are more lightweight and do not support inheritance. Structs are instrumental in modeling real-world entities and organizing related data cohesively.
       </p>
-      <pre class="bg-gray-800 text-white p-4 rounded-md overflow-x-auto mb-6">
-<code>
-// Define a struct
+      <pre class="bg-gray-800 text-white p-4 rounded-md overflow-x-auto mb-6"><code>// Define a struct
 type Person struct {
     FirstName string
     LastName  string
@@ -117,9 +115,7 @@ func main() {
     p.Age = 28
 
     fmt.Println(p)
-}
-</code>
-      </pre>
+}</code></pre>
 
       <!-- Main Function and Package Declaration -->
       <h2 class="text-xl md:text-2xl font-semibold mb-4">Main Function and Package Declaration</h2>
@@ -132,28 +128,22 @@ func main() {
       <p class="text-base md:text-lg mb-4">
         Every Go file starts with a <code>package</code> declaration. The <code>main</code> package is special; it defines a standalone executable program. Packages help organize code, promote reusability, and manage dependencies effectively.
       </p>
-      <pre class="bg-gray-800 text-white p-4 rounded-md overflow-x-auto mb-6">
-<code>package main</code>
-      </pre>
+      <pre class="bg-gray-800 text-white p-4 rounded-md overflow-x-auto mb-6"><code>package main</code></pre>
 
       <!-- Importing Packages -->
       <h3 class="text-lg md:text-xl font-semibold mb-2">Importing Packages</h3>
       <p class="text-base md:text-lg mb-4">
         Go uses the <code>import</code> statement to include packages that provide additional functionality. Packages can be part of the standard library or third-party modules. Importing packages allows you to leverage existing code, fostering efficiency and reducing redundancy.
       </p>
-      <pre class="bg-gray-800 text-white p-4 rounded-md overflow-x-auto mb-6">
-<code>import "fmt"</code>
-      </pre>
+      <pre class="bg-gray-800 text-white p-4 rounded-md overflow-x-auto mb-6"><code>import "fmt"</code></pre>
 
       <p class="text-base md:text-lg mb-6">
         You can import multiple packages using parentheses:
       </p>
-      <pre class="bg-gray-800 text-white p-4 rounded-md overflow-x-auto mb-6">
-<code>import (
+      <pre class="bg-gray-800 text-white p-4 rounded-md overflow-x-auto mb-6"><code>import (
     "fmt"
     "math"
-)</code>
-      </pre>
+)</code></pre>
 
       <!-- Main Function -->
       <h3 class="text-lg md:text-xl font-semibold mb-2">The <code>main</code> Function</h3>
@@ -173,9 +163,7 @@ func main() {
       <p class="text-base md:text-lg mb-4">
         Here's a complete Go program that demonstrates variable declarations, data types, and the main function. This example integrates the concepts discussed, providing a cohesive understanding of how they work together.
       </p>
-      <pre class="bg-gray-800 text-white p-4 rounded-md overflow-x-auto mb-6">
-<code>
-// Package declaration
+      <pre class="bg-gray-800 text-white p-4 rounded-md overflow-x-auto mb-6"><code>// Package declaration
 package main
 
 // Importing the fmt package
@@ -203,17 +191,11 @@ func main() {
 
     // Printing the Person struct
     fmt.Println(p)
-}
-</code>
-      </pre>
+}</code></pre>
       <p class="text-base md:text-lg mb-6">
         <strong>Output:</strong>
       </p>
-      <pre class="bg-gray-800 text-white p-2 rounded-md overflow-x-auto mb-6">
-<code>
-{John Doe 30}
-</code>
-      </pre>
+      <pre class="bg-gray-800 text-white p-2 rounded-md overflow-x-auto mb-6"><code>{John Doe 30}</code></pre>
 
       <!-- Differences with Other Languages -->
       <h2 class="text-xl md:text-2xl font-semibold mb-4">Differences with Other Languages</h2>
@@ -246,23 +228,16 @@ func main() {
       </p>
 
       <h4 class="text-lg md:text-xl font-semibold mb-2">Go:</h4>
-      <pre class="bg-gray-800 text-white p-4 rounded-md overflow-x-auto mb-6">
-<code>
-// Using var keyword
+      <pre class="bg-gray-800 text-white p-4 rounded-md overflow-x-auto mb-6"><code>// Using var keyword
 var age int = 25
 
 // Using shorthand
-name := "Alice"
-</code>
-      </pre>
+name := "Alice"</code></pre>
 
       <h4 class="text-lg md:text-xl font-semibold mb-2">Python:</h4>
-      <pre class="bg-gray-800 text-white p-4 rounded-md overflow-x-auto mb-6">
-<code># Dynamic typing
+      <pre class="bg-gray-800 text-white p-4 rounded-md overflow-x-auto mb-6"><code># Dynamic typing
 age = 25
-name = "Alice"
-</code>
-      </pre>
+name = "Alice"</code></pre>
 
       <p class="text-base md:text-lg mb-6">
         In Go, the type of the variable is explicitly declared or inferred, whereas Python determines the type at runtime. This explicit typing in Go enhances code reliability and performance.
@@ -302,4 +277,13 @@ pre {
     font-size: 0.5rem; /* Smaller font size for mobile devices */
   }
 }
+
+h2, p , h1, h3, h4{
+  font-family: "Roboto Condensed", sans-serif;
+}
+
+a {
+  font-family: "JetBrains Mono", sans-serif;
+}
+
 </style>

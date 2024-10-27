@@ -127,17 +127,17 @@ export default {
   data() {
     return {
       eventIntroductionCode: `<!-- Sample HTML Structure for Events -->
-<!DOCTYPE html>
-<html>
-<head>
-  <title>Event Introduction</title>
-</head>
-<body>
-  <button id="clickButton">Click Me</button>
-  <input type="text" id="textInput" placeholder="Type something...">
-  <div id="hoverDiv">Hover over me!</div>
-</body>
-</html>
+&lt;!DOCTYPE html>
+&lt;html>
+&lt;head>
+  &lt;title>Event Introduction&lt;/title>
+&lt;/head>
+&lt;body>
+  &lt;button id="clickButton">Click Me&lt;/button>
+  &lt;input type="text" id="textInput" placeholder="Type something...">
+  &lt;div id="hoverDiv">Hover over me!&lt;/div>
+&lt;/body>
+&lt;/html>
       `,
       eventTypesCode: `// Mouse Events
 document.getElementById('clickButton').addEventListener('click', function() {
@@ -360,7 +360,7 @@ document.addEventListener('pointerdown', function(event) {
 };
 </script>
 
-<style>
+<style scoped>
   pre {
   white-space: pre-wrap; /* Ensures text wrapping for very long lines */
   overflow-x: auto;      /* Adds horizontal scroll for overflow content */ 
@@ -371,4 +371,12 @@ document.addEventListener('pointerdown', function(event) {
     font-size: 0.5rem; /* Smaller font size for mobile devices */
   }
 }
+  h2, p , h1, h3, h4{
+    font-family: "Roboto Condensed", sans-serif;
+  }
+
+  a {
+    font-family: "JetBrains Mono", sans-serif;
+  }
+
 </style>

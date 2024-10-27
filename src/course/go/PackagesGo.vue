@@ -308,7 +308,7 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 pre {
   white-space: pre-wrap;
   overflow-x: auto;
@@ -319,4 +319,13 @@ pre {
     font-size: 0.5rem;
   }
 }
+
+h2, p , h1, h3, h4{
+  font-family: "Roboto Condensed", sans-serif;
+}
+
+a {
+  font-family: "JetBrains Mono", sans-serif;
+}
+
 </style>
