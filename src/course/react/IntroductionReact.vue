@@ -7,7 +7,7 @@
     </div>
 
     <!-- Content Section -->
-    <div class="bg-gray-50 rounded-b-lg p-6 md:p-8">
+    <div class="bg-white rounded-b-lg p-6 md:p-8">
       <!-- Introduction Paragraph -->
       <p class="text-base md:text-lg mb-8 leading-relaxed">
         React, created by Facebook (now Meta) in 2013, revolutionized how developers build user interfaces for modern web applications. With its component-based architecture and virtual DOM, React has become the go-to library for creating dynamic, high-performance applications. Its declarative approach allows developers to describe what the UI should look like at any given time, while React efficiently manages updates and renders only what’s necessary.

@@ -175,7 +175,7 @@ sorted_people = sorted(people, key=lambda x: x[1])
 };
 </script>
 
-<style>
+<style scoped>
   pre {
   white-space: pre-wrap; /* Ensures text wrapping for very long lines */
   overflow-x: auto;      /* Adds horizontal scroll for overflow content */ 

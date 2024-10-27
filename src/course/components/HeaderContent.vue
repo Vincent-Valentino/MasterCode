@@ -10,8 +10,8 @@ import { defineProps, computed } from 'vue';
 
 const colors = {
   python: {
-    "text": "text-yellow-400",
-    "background": "bg-blue-500"
+    "text": "text-blue-900",
+    "background": "bg-yellow-200"
   },
 
   javascript: {

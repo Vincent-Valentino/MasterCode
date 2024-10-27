@@ -2,7 +2,7 @@
   <div class="w-full">
     <!-- Header Section -->
     <div class="w-full flex items-center gap-5 bg-orange-600 rounded-t-xl p-4">
-      <img src="/icons/java.svg" alt="Java Logo" class="w-12 h-12">
+      <img src="/java/logo.svg" alt="Java Logo" class="w-12 h-12">
       <h1 class="text-2xl md:text-4xl font-bold text-white">Introduction to Java</h1>
     </div>
 

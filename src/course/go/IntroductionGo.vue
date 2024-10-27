@@ -1,9 +1,9 @@
 <template>
   <div class="w-full">
     <!-- Header Section -->
-    <div class="w-full flex items-center gap-5 bg-teal-500 rounded-t-xl p-4">
-      <img src="/icons/go.svg" alt="Go Logo" class="w-12 h-12">
-      <h1 class="text-2xl md:text-4xl font-bold text-white">Introduction to Go</h1>
+    <div class="w-full flex items-center gap-5 bg-teal-200 rounded-t-xl p-4">
+      <img src="/go/logo.svg" alt="Go Logo" class="w-12 h-12">
+      <h1 class="text-2xl md:text-4xl font-bold text-blue-600">Introduction to Go</h1>
     </div>
 
     <!-- Content Section -->

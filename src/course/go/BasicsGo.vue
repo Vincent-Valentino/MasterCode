@@ -1,9 +1,9 @@
 <template>
   <div class="w-full">
     <!-- Header Section -->
-    <div class="w-full flex items-center gap-5 bg-emerald-200 rounded-t-xl p-4">
+    <div class="w-full flex items-center gap-5 bg-teal-200 rounded-t-xl p-4">
       <img src="/go/logo.svg" alt="Go Logo" class="w-12 h-12">
-      <h1 class="text-2xl md:text-4xl font-bold text-teal-500">Go Basics</h1>
+      <h1 class="text-2xl md:text-4xl font-bold text-blue-600">Variables and Data Types</h1>
     </div>
 
     <!-- Content Section -->
@@ -16,74 +16,89 @@
       <!-- Variables in Go -->
       <h2 class="text-xl md:text-2xl font-semibold mb-4">Variables in Go</h2>
       <p class="text-base md:text-lg mb-4">
-        Variables are fundamental building blocks in any programming language, allowing you to store and manipulate data. Go offers flexible ways to declare variables, ensuring both simplicity and type safety.
+        Variables are fundamental building blocks in any programming language, allowing you to store and manipulate data. Go offers flexible ways to declare variables, ensuring both simplicity and type safety. Understanding how to effectively use variables is crucial for managing data within your applications.
       </p>
 
-      <!-- Declaring Variables -->
-      <h3 class="text-lg md:text-xl font-semibold mb-2">Declaring Variables</h3>
+      <!-- Variables Comparison Table -->
+      <h3 class="text-lg md:text-xl font-semibold mb-2">Declaring Variables: var vs. :=</h3>
       <p class="text-base md:text-lg mb-4">
-        In Go, you can declare variables using the <code>var</code> keyword or the shorthand := operator. Each method has its own use cases and benefits.
+        Go provides two primary methods for declaring variables: using the <code>var</code> keyword and the shorthand <code>:=</code> operator. Each method serves different purposes and offers unique advantages.
       </p>
 
-      <p class="text-base md:text-lg mb-4">
-        <strong>Using the <code>var</code> Keyword:</strong>
-      </p>
-      <pre class="bg-gray-800 text-white p-4 rounded-md overflow-x-auto mb-6">
-<code>
-// Declare a variable with a specified type
-var age int = 30
-
-// Declare multiple variables
-var (
-    firstName string = "John"
-    lastName  string = "Doe"
-)
-</code>
-      </pre>
-
-      <p class="text-base md:text-lg mb-4">
-        <strong>Using Shorthand (:=):</strong>
-      </p>
-      <pre class="bg-gray-800 text-white p-4 rounded-md overflow-x-auto mb-6">
-<code>
-// Shorthand declaration and initialization
-age := 30
-firstName, lastName := "John", "Doe"
-</code>
-      </pre>
+      <table class="min-w-full table-auto mb-6 overflow-x-auto">
+        <thead>
+        <tr class="bg-gray-200">
+          <th class="px-4 py-2">Declaration Method</th>
+          <th class="px-4 py-2">Syntax Example</th>
+          <th class="px-4 py-2">Use Case &amp; Benefits</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+          <td class="border px-4 py-2 font-semibold">Using <code>var</code> Keyword</td>
+          <td class="border px-4 py-2">
+            <code>var age int = 30</code><br/>
+            <code>var firstName, lastName string = "John", "Doe"</code>
+          </td>
+          <td class="border px-4 py-2">
+            - Explicitly declares the type of the variable.<br/>
+            - Enhances code readability by making types clear.<br/>
+            - Useful for package-level variables.
+          </td>
+        </tr>
+        <tr class="bg-gray-100">
+          <td class="border px-4 py-2 font-semibold">Using Shorthand <code>:=</code></td>
+          <td class="border px-4 py-2">
+            <code>age := 30</code><br/>
+            <code>firstName, lastName := "John", "Doe"</code>
+          </td>
+          <td class="border px-4 py-2">
+            - Concise syntax for declaring and initializing variables.<br/>
+            - Type is inferred based on the assigned value.<br/>
+            - Can only be used within functions.
+          </td>
+        </tr>
+        </tbody>
+      </table>
 
       <p class="text-base md:text-lg mb-6">
-        The shorthand := can only be used inside functions and infers the type based on the assigned value, making it concise for variable declarations.
+        The <code>var</code> keyword is ideal when you want to explicitly define the type of a variable, enhancing clarity, especially in larger codebases or when dealing with package-level variables. On the other hand, the shorthand <code>:=</code> operator offers a more concise way to declare and initialize variables within functions, leveraging Go's type inference capabilities to reduce boilerplate code.
       </p>
 
       <!-- Data Types in Go -->
       <h2 class="text-xl md:text-2xl font-semibold mb-4">Data Types in Go</h2>
       <p class="text-base md:text-lg mb-4">
-        Go is a statically typed language, meaning that variable types are explicitly declared and checked at compile-time. Understanding the various data types available in Go is crucial for effective programming.
+        Go is a statically typed language, meaning that variable types are explicitly declared and checked at compile-time. Understanding the various data types available in Go is crucial for effective programming, as it influences how data is stored, accessed, and manipulated within your applications.
       </p>
 
       <!-- Basic Types -->
       <h3 class="text-lg md:text-xl font-semibold mb-2">Basic Types</h3>
+      <p class="text-base md:text-lg mb-4">
+        Go provides a range of basic types that cater to different kinds of data. These types form the foundation upon which more complex data structures are built.
+      </p>
       <ul class="list-disc list-inside text-base md:text-lg mb-6">
-        <li><strong>Integers:</strong> <code>int</code>, <code>int8</code>, <code>int16</code>, <code>int32</code>, <code>int64</code>, <code>uint</code>, etc.</li>
-        <li><strong>Floating-Point Numbers:</strong> <code>float32</code>, <code>float64</code></li>
-        <li><strong>Booleans:</strong> <code>bool</code> (true or false)</li>
-        <li><strong>Strings:</strong> <code>string</code> (sequence of characters)</li>
+        <li><strong>Integers:</strong> Represent whole numbers. Go supports various integer sizes (e.g., <code>int</code>, <code>int8</code>, <code>uint</code>), allowing developers to choose the most appropriate type based on the required range and memory considerations.</li>
+        <li><strong>Floating-Point Numbers:</strong> Used for decimal numbers, offering precision in calculations. Go provides <code>float32</code> and <code>float64</code> types.</li>
+        <li><strong>Booleans:</strong> Represent true or false values, essential for controlling program flow and making decisions.</li>
+        <li><strong>Strings:</strong> Handle sequences of characters, enabling the storage and manipulation of text data.</li>
       </ul>
 
       <!-- Composite Types -->
       <h3 class="text-lg md:text-xl font-semibold mb-2">Composite Types</h3>
+      <p class="text-base md:text-lg mb-4">
+        Beyond basic types, Go offers composite types that allow for the creation of more complex and structured data. These types are essential for organizing and managing related data efficiently.
+      </p>
       <ul class="list-disc list-inside text-base md:text-lg mb-6">
-        <li><strong>Arrays:</strong> Fixed-size sequences of elements of the same type.</li>
-        <li><strong>Slices:</strong> Dynamic-sized, flexible views into arrays.</li>
-        <li><strong>Maps:</strong> Key-value pairs with unique keys.</li>
-        <li><strong>Structs:</strong> Collections of fields grouped together.</li>
+        <li><strong>Arrays:</strong> Fixed-size sequences of elements of the same type, useful for storing collections of data with a known size.</li>
+        <li><strong>Slices:</strong> Dynamic-sized, flexible views into arrays, allowing for more efficient and flexible data manipulation without the constraints of fixed sizes.</li>
+        <li><strong>Maps:</strong> Collections of key-value pairs, providing efficient lookups and associations between related pieces of data.</li>
+        <li><strong>Structs:</strong> Group related fields together, enabling the creation of complex data structures that model real-world entities.</li>
       </ul>
 
       <!-- Example: Structs -->
       <h3 class="text-lg md:text-xl font-semibold mb-2">Example: Structs</h3>
       <p class="text-base md:text-lg mb-4">
-        Structs allow you to define complex data types by grouping together fields. They are similar to classes in other languages but do not support inheritance.
+        Structs allow you to define complex data types by grouping together related fields. They are similar to classes in other languages but are more lightweight and do not support inheritance. Structs are instrumental in modeling real-world entities and organizing related data cohesively.
       </p>
       <pre class="bg-gray-800 text-white p-4 rounded-md overflow-x-auto mb-6">
 <code>
@@ -109,13 +124,13 @@ func main() {
       <!-- Main Function and Package Declaration -->
       <h2 class="text-xl md:text-2xl font-semibold mb-4">Main Function and Package Declaration</h2>
       <p class="text-base md:text-lg mb-4">
-        The <code>main</code> function and <code>package main</code> declaration are integral parts of a Go program, especially when creating executable applications.
+        The <code>main</code> function and <code>package main</code> declaration are integral parts of a Go program, especially when creating executable applications. They define the entry point and the scope of your application.
       </p>
 
       <!-- Package Declaration -->
       <h3 class="text-lg md:text-xl font-semibold mb-2">Package Declaration</h3>
       <p class="text-base md:text-lg mb-4">
-        Every Go file starts with a <code>package</code> declaration. The <code>main</code> package is special; it defines a standalone executable program.
+        Every Go file starts with a <code>package</code> declaration. The <code>main</code> package is special; it defines a standalone executable program. Packages help organize code, promote reusability, and manage dependencies effectively.
       </p>
       <pre class="bg-gray-800 text-white p-4 rounded-md overflow-x-auto mb-6">
 <code>package main</code>
@@ -124,7 +139,7 @@ func main() {
       <!-- Importing Packages -->
       <h3 class="text-lg md:text-xl font-semibold mb-2">Importing Packages</h3>
       <p class="text-base md:text-lg mb-4">
-        Go uses the <code>import</code> statement to include packages that provide additional functionality. Packages can be part of the standard library or third-party modules.
+        Go uses the <code>import</code> statement to include packages that provide additional functionality. Packages can be part of the standard library or third-party modules. Importing packages allows you to leverage existing code, fostering efficiency and reducing redundancy.
       </p>
       <pre class="bg-gray-800 text-white p-4 rounded-md overflow-x-auto mb-6">
 <code>import "fmt"</code>
@@ -143,7 +158,7 @@ func main() {
       <!-- Main Function -->
       <h3 class="text-lg md:text-xl font-semibold mb-2">The <code>main</code> Function</h3>
       <p class="text-base md:text-lg mb-4">
-        The <code>main</code> function is the entry point of a Go program. When you run your Go application, the execution starts from the <code>main</code> function.
+        The <code>main</code> function is the entry point of a Go program. When you run your Go application, the execution starts from the <code>main</code> function. It's responsible for orchestrating the flow of your application and initiating key processes.
       </p>
       <pre class="bg-gray-800 text-white p-4 rounded-md overflow-x-auto mb-6">
 <code>
@@ -156,7 +171,7 @@ func main() {
       <!-- Example: Complete Go Program -->
       <h3 class="text-lg md:text-xl font-semibold mb-2">Example: Complete Go Program</h3>
       <p class="text-base md:text-lg mb-4">
-        Here's a complete Go program that demonstrates variable declarations, data types, and the main function.
+        Here's a complete Go program that demonstrates variable declarations, data types, and the main function. This example integrates the concepts discussed, providing a cohesive understanding of how they work together.
       </p>
       <pre class="bg-gray-800 text-white p-4 rounded-md overflow-x-auto mb-6">
 <code>
@@ -227,7 +242,7 @@ func main() {
       <!-- Example Comparison: Variable Declaration -->
       <h3 class="text-lg md:text-xl font-semibold mb-2">Example Comparison: Variable Declaration</h3>
       <p class="text-base md:text-lg mb-4">
-        Here's how variable declarations differ between Go and Python.
+        Here's how variable declarations differ between Go and Python. This comparison highlights Go's static typing and explicit declarations versus Python's dynamic typing.
       </p>
 
       <h4 class="text-lg md:text-xl font-semibold mb-2">Go:</h4>
@@ -250,7 +265,7 @@ name = "Alice"
       </pre>
 
       <p class="text-base md:text-lg mb-6">
-        In Go, the type of the variable is explicitly declared or inferred, whereas Python determines the type at runtime.
+        In Go, the type of the variable is explicitly declared or inferred, whereas Python determines the type at runtime. This explicit typing in Go enhances code reliability and performance.
       </p>
 
       <!-- Conclusion -->
@@ -276,15 +291,15 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 pre {
-  white-space: pre-wrap;
-  overflow-x: auto;
+  white-space: pre-wrap; /* Ensures text wrapping for long lines */
+  overflow-x: auto;      /* Adds horizontal scroll for long code lines */
 }
 
 @media (max-width: 768px) {
   pre, code {
-    font-size: 0.5rem;
+    font-size: 0.5rem; /* Smaller font size for mobile devices */
   }
 }
 </style>

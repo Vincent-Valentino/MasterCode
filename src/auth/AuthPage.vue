@@ -1,5 +1,5 @@
 <template>
-  <div class="min-h-screen bg-gray-100 flex items-center justify-center px-4 sm:px-6 lg:px-8">
+  <div class="min-h-screen bg-gradient-to-r from-white via-stone-200 to-slate-300 flex items-center justify-center px-4 sm:px-6 lg:px-8">
     <div class="max-w-md w-full space-y-8">
       <div>
         <h2 class="mt-6 text-center text-3xl font-extrabold text-gray-900">
@@ -45,7 +45,7 @@
   </div>
 </template>
 
-<script>
+<script setup>
 import { ref } from 'vue';
 import LoginSection from './LoginSection.vue';
 import SignUpSection from './SignUpSection.vue';

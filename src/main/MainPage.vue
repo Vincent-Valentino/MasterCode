@@ -3,9 +3,9 @@
     <MainNavbar @selectedCourse="selectCourse" :IsMobile="isMobile" />
 
     <!-- Flex container for content and sidebar -->
-    <div class="flex flex-col md:flex-row md:space-x-4 bg-slate-50">
+    <div class="flex flex-col md:flex-row md:ml-4 bg-slate-50">
       <!-- Main content area -->
-      <div :class="!isMobile.valueOf ? 'w-[70%]' : 'w-full'">
+      <div :class="!isMobile.valueOf ? 'w-[66%]' : 'w-full'">
         <div v-if="selectedCourse !== 'Home' && isMobile.valueOf" class="right-0 z-30">
           <button 
             @click="toggleSidebar" 
@@ -21,7 +21,7 @@
           />
       </div>
       <!-- Sidebar / Drawer, hidden when no course is selected -->
-      <div :class="selectedCourse && selectedCourse !== 'Home' ? 'w-full md:w-[30%] h-auto' : 'hidden md:block w-0'">
+      <div :class="selectedCourse && selectedCourse !== 'Home' ? 'w-full md:w-[33%] h-auto md:mt-10 md:mr-5' : 'hidden md:block w-0'">
         <MainSidebar 
           v-if="selectedCourse" 
           :isMobile="isMobile.valueOf"

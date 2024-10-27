@@ -345,7 +345,7 @@ if __name__ == "__main__":
 };
 </script>
 
-<style>
+<style scoped>
   pre {
   white-space: pre-wrap; /* Ensures text wrapping for very long lines */
   overflow-x: auto;      /* Adds horizontal scroll for overflow content */ 

@@ -39,23 +39,8 @@
 </template>
 
 <script>
-import Header from "@/course/components/HeaderContent.vue";
-import Text from "@/course/components/Text.vue";
-import TextSection from "@/course/components/TextSection.vue";
-import PreCode from "@/course/components/PreCode.vue";
-import ListSection from "@/course/components/ListSection.vue";
-import TextCode from "@/course/components/TextCode.vue";
-
 export default {
   name: "IntroductionToPython",
-  components: {
-    Header,
-    Text,
-    TextSection,
-    PreCode,
-    ListSection,
-    TextCode
-  },
   data() {
     return {
       pythonCode: `print("Hello World")`,
@@ -121,3 +106,14 @@ int main() {
   },
 };
 </script>
+
+<style>
+h2, p , h1{
+  font-family: "Roboto Condensed", sans-serif;
+}
+
+a {
+  font-family: "JetBrains Mono", sans-serif;
+}
+
+</style>

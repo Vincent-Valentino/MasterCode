@@ -1,58 +1,58 @@
 <template>
   <div class="w-full">
     <!-- Header Section -->
-    <div class="w-full flex items-center gap-5 bg-blue-500 rounded-t-xl p-4">
-      <img src="/icons/go.svg" alt="Go Logo" class="w-12 h-12">
-      <h1 class="text-2xl md:text-4xl font-bold text-white">Go Concurrency</h1>
+    <div class="w-full flex items-center gap-5 bg-teal-200 rounded-t-xl p-4">
+      <img src="/go/logo.svg" alt="Go Logo" class="w-12 h-12">
+      <h1 class="text-2xl md:text-4xl font-bold text-blue-600">Go Concurrency</h1>
     </div>
 
     <!-- Content Section -->
     <div class="bg-white rounded-b-xl p-4 md:p-6">
       <!-- Introduction Paragraph -->
       <p class="text-base md:text-lg mb-6">
-        Concurrency is one of the standout features of Go, enabling developers to build highly efficient and scalable applications. Unlike parallelism, which focuses on executing multiple tasks simultaneously, concurrency is about managing multiple tasks at the same time, making Go an excellent choice for applications that require handling numerous tasks efficiently. This module explores Go's concurrency model, diving into goroutines, channels, synchronization mechanisms, and common concurrency patterns. Through detailed explanations and practical examples, you'll gain a deep understanding of how to leverage Go's concurrency features to build robust and performant applications.
+        Concurrency is one of the standout features of Go, enabling developers to build highly efficient and scalable applications. Unlike parallelism, which focuses on executing multiple tasks simultaneously, concurrency is about managing multiple tasks at the same time, making Go an excellent choice for applications that require handling numerous tasks efficiently. This module explores Go's concurrency model, diving into goroutines, channels, synchronization mechanisms, and common concurrency patterns. Through detailed explanations and practical insights, you'll gain a deep understanding of how to leverage Go's concurrency features to build robust and performant applications.
       </p>
 
       <!-- Goroutines -->
       <h2 class="text-xl md:text-2xl font-semibold mb-4">Goroutines</h2>
       <p class="text-base md:text-lg mb-4">
-        Goroutines are lightweight threads managed by the Go runtime. They allow functions or methods to run concurrently with other functions or methods. Goroutines are multiplexed onto multiple OS threads, enabling efficient use of system resources.
+        Goroutines are the cornerstone of Go's concurrency model. They are lightweight threads managed by the Go runtime, allowing functions or methods to execute concurrently with other functions or methods. Unlike traditional threads in other languages, goroutines are inexpensive in terms of memory and resources, enabling the creation of thousands or even millions of concurrent operations without significant overhead.
       </p>
 
-      <!-- Creating Goroutines -->
-      <h3 class="text-lg md:text-xl font-semibold mb-2">Creating Goroutines</h3>
+      <!-- Creating and Managing Goroutines -->
+      <h3 class="text-lg md:text-xl font-semibold mb-2">Creating and Managing Goroutines</h3>
       <p class="text-base md:text-lg mb-4">
-        To create a goroutine, use the `go` keyword followed by a function call. The function will execute concurrently with the calling function.
+        To create a goroutine, use the <code>go</code> keyword followed by a function call. This instructs the Go runtime to execute the function concurrently with the calling code.
       </p>
-      <pre class="bg-gray-800 text-white p-4 rounded-md overflow-x-auto mb-6">
-<code>
-// Example: Creating Goroutines
-package main
+
+      <p class="text-base md:text-lg mb-6">
+        <strong>Example: Creating Goroutines</strong>
+      </p>
+      <div class="bg-gray-800 text-white p-4 rounded-md overflow-x-auto mb-6">
+        <pre><code>package main
 
 import (
-    "fmt"
-    "time"
+"fmt"
+"time"
 )
 
 func say(s string) {
-    for i := 0; i < 5; i++ {
-        time.Sleep(100 * time.Millisecond)
-        fmt.Println(s)
-    }
+  for i := 0; i < 5; i++ {
+  time.Sleep(100 * time.Millisecond)
+  fmt.Println(s)
+  }
 }
 
 func main() {
-    go say("Hello")
-    say("World")
-}
-</code>
-      </pre>
+  go say("Hello")
+  say("World")
+}</code></pre>
+      </div>
       <p class="text-base md:text-lg mb-6">
-        **Output:**
+        <strong>Output:</strong>
       </p>
-      <pre class="bg-gray-800 text-white p-2 rounded-md overflow-x-auto mb-6">
-<code>
-World
+      <div class="bg-gray-800 text-white p-2 rounded-md overflow-x-auto mb-6">
+        <pre><code>World
 Hello
 World
 Hello
@@ -61,18 +61,17 @@ Hello
 World
 Hello
 World
-Hello
-</code>
-      </pre>
+Hello</code></pre>
+      </div>
       <p class="text-base md:text-lg mb-6">
-        **Explanation:**
+        <strong>Explanation:</strong>
       </p>
       <ul class="list-disc list-inside text-base md:text-lg mb-6">
         <li>
-          <strong>Goroutine Creation:</strong> The `go say("Hello")` statement starts a new goroutine that executes the `say` function concurrently.
+          <strong>Goroutine Creation:</strong> The <code>go say("Hello")</code> statement starts a new goroutine that executes the <code>say</code> function concurrently.
         </li>
         <li>
-          <strong>Main Goroutine:</strong> The main function continues executing and calls `say("World")` in the main goroutine.
+          <strong>Main Goroutine:</strong> The <code>main</code> function continues executing and calls <code>say("World")</code> in the main goroutine.
         </li>
         <li>
           <strong>Concurrency:</strong> Both goroutines run concurrently, interleaving their output.
@@ -82,23 +81,24 @@ Hello
       <!-- Synchronizing Goroutines -->
       <h3 class="text-lg md:text-xl font-semibold mb-2">Synchronizing Goroutines</h3>
       <p class="text-base md:text-lg mb-4">
-        Since goroutines execute concurrently, it's essential to synchronize them to ensure that the main program waits for goroutines to complete. Common synchronization mechanisms include `WaitGroup`, `Mutex`, and channels.
+        Since goroutines execute concurrently, it's essential to synchronize them to ensure that the main program waits for goroutines to complete. Common synchronization mechanisms include <code>WaitGroup</code>, <code>Mutex</code>, and channels.
       </p>
 
       <!-- Using WaitGroup -->
       <h4 class="text-lg md:text-xl font-semibold mb-2">Using WaitGroup</h4>
       <p class="text-base md:text-lg mb-4">
-        `WaitGroup` is used to wait for a collection of goroutines to finish executing.
+        <code>WaitGroup</code> is used to wait for a collection of goroutines to finish executing.
       </p>
-      <pre class="bg-gray-800 text-white p-4 rounded-md overflow-x-auto mb-6">
-<code>
-// Example: Using WaitGroup
-package main
+      <p class="text-base md:text-lg mb-6">
+        <strong>Example: Using WaitGroup</strong>
+      </p>
+      <div class="bg-gray-800 text-white p-4 rounded-md overflow-x-auto mb-6">
+        <pre><code>package main
 
 import (
-    "fmt"
-    "sync"
-    "time"
+   "fmt"
+   "sync"
+   "time"
 )
 
 func worker(id int, wg *sync.WaitGroup) {
@@ -118,42 +118,41 @@ func main() {
 
     wg.Wait()
     fmt.Println("All workers done")
-}
-</code>
-      </pre>
+}</code></pre>
+      </div>
       <p class="text-base md:text-lg mb-6">
-        **Output:**
+        <strong>Output:</strong>
       </p>
-      <pre class="bg-gray-800 text-white p-2 rounded-md overflow-x-auto mb-6">
-<code>
-Worker 1 starting
-Worker 2 starting
-Worker 3 starting
-Worker 4 starting
-Worker 5 starting
-Worker 1 done
-Worker 2 done
-Worker 3 done
-Worker 4 done
-Worker 5 done
-All workers done
-</code>
-      </pre>
+      <div class="bg-gray-800 text-white p-2 rounded-md overflow-x-auto mb-6">
+        <pre><code>
+    Worker 1 starting
+    Worker 2 starting
+    Worker 3 starting
+    Worker 4 starting
+    Worker 5 starting
+    Worker 1 done
+    Worker 2 done
+    Worker 3 done
+    Worker 4 done
+    Worker 5 done
+    All workers done
+        </code></pre>
+      </div>
       <p class="text-base md:text-lg mb-6">
-        **Explanation:**
+        <strong>Explanation:</strong>
       </p>
       <ul class="list-disc list-inside text-base md:text-lg mb-6">
         <li>
-          <strong>WaitGroup Initialization:</strong> A `WaitGroup` is declared to track the goroutines.
+          <strong>WaitGroup Initialization:</strong> A <code>WaitGroup</code> is declared to track the goroutines.
         </li>
         <li>
-          <strong>Adding Goroutines:</strong> `wg.Add(1)` increments the `WaitGroup` counter for each new goroutine.
+          <strong>Adding Goroutines:</strong> <code>wg.Add(1)</code> increments the <code>WaitGroup</code> counter for each new goroutine.
         </li>
         <li>
-          <strong>Decrementing Counter:</strong> `defer wg.Done()` decrements the counter when the goroutine completes.
+          <strong>Decrementing Counter:</strong> <code>defer wg.Done()</code> decrements the counter when the goroutine completes.
         </li>
         <li>
-          <strong>Waiting for Completion:</strong> `wg.Wait()` blocks the main goroutine until the counter reaches zero.
+          <strong>Waiting for Completion:</strong> <code>wg.Wait()</code> blocks the main goroutine until the counter reaches zero.
         </li>
       </ul>
 
@@ -166,43 +165,45 @@ All workers done
       <!-- Creating and Using Channels -->
       <h3 class="text-lg md:text-xl font-semibold mb-2">Creating and Using Channels</h3>
       <p class="text-base md:text-lg mb-4">
-        Channels are created using the `make` function and can be either buffered or unbuffered.
+        Channels are created using the <code>make</code> function and can be either buffered or unbuffered.
       </p>
-      <pre class="bg-gray-800 text-white p-4 rounded-md overflow-x-auto mb-6">
-<code>
-// Example: Creating and Using Channels
-package main
-
-import (
-    "fmt"
-)
-
-func main() {
-    messages := make(chan string)
-
-    go func() {
-        messages <- "Hello from goroutine"
-    }()
-
-    msg := <-messages
-    fmt.Println(msg)
-}
-</code>
-      </pre>
       <p class="text-base md:text-lg mb-6">
-        **Output:**
+        <strong>Example: Creating and Using Channels</strong>
       </p>
-      <pre class="bg-gray-800 text-white p-2 rounded-md overflow-x-auto mb-6">
-<code>
-Hello from goroutine
-</code>
-      </pre>
+      <div class="bg-gray-800 text-white p-4 rounded-md overflow-x-auto mb-6">
+        <pre><code>
+    package main
+
+    import (
+        "fmt"
+    )
+
+    func main() {
+        messages := make(chan string)
+
+        go func() {
+            messages <- "Hello from goroutine"
+        }()
+
+        msg := <-messages
+        fmt.Println(msg)
+    }
+        </code></pre>
+      </div>
       <p class="text-base md:text-lg mb-6">
-        **Explanation:**
+        <strong>Output:</strong>
+      </p>
+      <div class="bg-gray-800 text-white p-2 rounded-md overflow-x-auto mb-6">
+        <pre><code>
+    Hello from goroutine
+        </code></pre>
+      </div>
+      <p class="text-base md:text-lg mb-6">
+        <strong>Explanation:</strong>
       </p>
       <ul class="list-disc list-inside text-base md:text-lg mb-6">
         <li>
-          <strong>Channel Creation:</strong> `messages := make(chan string)` creates an unbuffered channel for strings.
+          <strong>Channel Creation:</strong> <code>messages := make(chan string)</code> creates an unbuffered channel for strings.
         </li>
         <li>
           <strong>Sending to Channel:</strong> The anonymous goroutine sends a message to the channel.
@@ -220,44 +221,46 @@ Hello from goroutine
       <p class="text-base md:text-lg mb-4">
         Buffered channels allow sending a limited number of values without a corresponding receiver. This can help improve performance by reducing synchronization overhead.
       </p>
-      <pre class="bg-gray-800 text-white p-4 rounded-md overflow-x-auto mb-6">
-<code>
-// Example: Buffered Channels
-package main
-
-import (
-    "fmt"
-)
-
-func main() {
-    buffered := make(chan int, 3)
-
-    buffered <- 1
-    buffered <- 2
-    buffered <- 3
-
-    fmt.Println(<-buffered)
-    fmt.Println(<-buffered)
-    fmt.Println(<-buffered)
-}
-</code>
-      </pre>
       <p class="text-base md:text-lg mb-6">
-        **Output:**
+        <strong>Example: Buffered Channels</strong>
       </p>
-      <pre class="bg-gray-800 text-white p-2 rounded-md overflow-x-auto mb-6">
-<code>
-1
-2
-3
-</code>
-      </pre>
+      <div class="bg-gray-800 text-white p-4 rounded-md overflow-x-auto mb-6">
+        <pre><code>
+    package main
+
+    import (
+        "fmt"
+    )
+
+    func main() {
+        buffered := make(chan int, 3)
+
+        buffered <- 1
+        buffered <- 2
+        buffered <- 3
+
+        fmt.Println(<-buffered)
+        fmt.Println(<-buffered)
+        fmt.Println(<-buffered)
+    }
+        </code></pre>
+      </div>
       <p class="text-base md:text-lg mb-6">
-        **Explanation:**
+        <strong>Output:</strong>
+      </p>
+      <div class="bg-gray-800 text-white p-2 rounded-md overflow-x-auto mb-6">
+        <pre><code>
+    1
+    2
+    3
+        </code></pre>
+      </div>
+      <p class="text-base md:text-lg mb-6">
+        <strong>Explanation:</strong>
       </p>
       <ul class="list-disc list-inside text-base md:text-lg mb-6">
         <li>
-          <strong>Buffered Channel Creation:</strong> `buffered := make(chan int, 3)` creates a channel with a capacity of 3.
+          <strong>Buffered Channel Creation:</strong> <code>buffered := make(chan int, 3)</code> creates a channel with a capacity of 3.
         </li>
         <li>
           <strong>Sending to Buffered Channel:</strong> You can send up to 3 values without a receiver blocking.
@@ -272,51 +275,53 @@ func main() {
       <p class="text-base md:text-lg mb-4">
         Channels can be restricted to send-only or receive-only, enhancing type safety and preventing unintended operations.
       </p>
-      <pre class="bg-gray-800 text-white p-4 rounded-md overflow-x-auto mb-6">
-<code>
-// Example: Channel Directions
-package main
-
-import (
-    "fmt"
-)
-
-func sendData(ch chan<- int) {
-    for i := 1; i <= 5; i++ {
-        ch <- i
-    }
-    close(ch)
-}
-
-func main() {
-    ch := make(chan int)
-
-    go sendData(ch)
-
-    for num := range ch {
-        fmt.Println(num)
-    }
-}
-</code>
-      </pre>
       <p class="text-base md:text-lg mb-6">
-        **Output:**
+        <strong>Example: Channel Directions</strong>
       </p>
-      <pre class="bg-gray-800 text-white p-2 rounded-md overflow-x-auto mb-6">
-<code>
-1
-2
-3
-4
-5
-</code>
-      </pre>
+      <div class="bg-gray-800 text-white p-4 rounded-md overflow-x-auto mb-6">
+        <pre><code>
+    package main
+
+    import (
+        "fmt"
+    )
+
+    func sendData(ch chan<- int) {
+        for i := 1; i <= 5; i++ {
+            ch <- i
+        }
+        close(ch)
+    }
+
+    func main() {
+        ch := make(chan int)
+
+        go sendData(ch)
+
+        for num := range ch {
+            fmt.Println(num)
+        }
+    }
+        </code></pre>
+      </div>
       <p class="text-base md:text-lg mb-6">
-        **Explanation:**
+        <strong>Output:</strong>
+      </p>
+      <div class="bg-gray-800 text-white p-2 rounded-md overflow-x-auto mb-6">
+        <pre><code>
+    1
+    2
+    3
+    4
+    5
+        </code></pre>
+      </div>
+      <p class="text-base md:text-lg mb-6">
+        <strong>Explanation:</strong>
       </p>
       <ul class="list-disc list-inside text-base md:text-lg mb-6">
         <li>
-          <strong>Send-Only Channel:</strong> `chan<- int` specifies that the channel is send-only within the `sendData` function.
+          <strong>Send-Only Channel:</strong> <code>chan<- int</code> specifies that the channel is send-only within the <code>sendData</code> function.
         </li>
         <li>
           <strong>Receiving Side:</strong> The main function receives data from the channel and prints it.
@@ -329,193 +334,199 @@ func main() {
       <!-- Select Statement -->
       <h2 class="text-xl md:text-2xl font-semibold mb-4">Select Statement</h2>
       <p class="text-base md:text-lg mb-4">
-        The `select` statement allows a goroutine to wait on multiple communication operations. It blocks until one of its cases can run, then executes that case.
+        The <code>select</code> statement allows a goroutine to wait on multiple communication operations. It blocks until one of its cases can run, then executes that case. This is essential for handling multiple channel operations concurrently.
       </p>
 
       <!-- Basic Select Usage -->
       <h3 class="text-lg md:text-xl font-semibold mb-2">Basic Select Usage</h3>
       <p class="text-base md:text-lg mb-4">
-        Using `select`, you can handle multiple channel operations gracefully.
+        Using <code>select</code>, you can handle multiple channel operations gracefully, executing whichever one becomes ready first.
       </p>
-      <pre class="bg-gray-800 text-white p-4 rounded-md overflow-x-auto mb-6">
-<code>
-// Example: Basic Select Usage
-package main
+      <p class="text-base md:text-lg mb-6">
+        <strong>Example: Basic Select Usage</strong>
+      </p>
+      <div class="bg-gray-800 text-white p-4 rounded-md overflow-x-auto mb-6">
+        <pre><code>
+    package main
 
-import (
-    "fmt"
-    "time"
-)
+    import (
+        "fmt"
+        "time"
+    )
 
-func main() {
-    ch1 := make(chan string)
-    ch2 := make(chan string)
+    func main() {
+        ch1 := make(chan string)
+        ch2 := make(chan string)
 
-    go func() {
-        time.Sleep(2 * time.Second)
-        ch1 <- "Message from ch1"
-    }()
+        go func() {
+            time.Sleep(2 * time.Second)
+            ch1 <- "Message from ch1"
+        }()
 
-    go func() {
-        time.Sleep(1 * time.Second)
-        ch2 <- "Message from ch2"
-    }()
+        go func() {
+            time.Sleep(1 * time.Second)
+            ch2 <- "Message from ch2"
+        }()
 
-    for i := 0; i < 2; i++ {
-        select {
-        case msg1 := <-ch1:
-            fmt.Println(msg1)
-        case msg2 := <-ch2:
-            fmt.Println(msg2)
+        for i := 0; i < 2; i++ {
+            select {
+            case msg1 := <-ch1:
+                fmt.Println(msg1)
+            case msg2 := <-ch2:
+                fmt.Println(msg2)
+            }
         }
     }
-}
-</code>
-      </pre>
+        </code></pre>
+      </div>
       <p class="text-base md:text-lg mb-6">
-        **Possible Output:**
+        <strong>Possible Output:</strong>
       </p>
-      <pre class="bg-gray-800 text-white p-2 rounded-md overflow-x-auto mb-6">
-<code>
-Message from ch2
-Message from ch1
-</code>
-      </pre>
+      <div class="bg-gray-800 text-white p-2 rounded-md overflow-x-auto mb-6">
+        <pre><code>
+    Message from ch2
+    Message from ch1
+        </code></pre>
+      </div>
       <p class="text-base md:text-lg mb-6">
-        **Explanation:**
+        <strong>Explanation:</strong>
       </p>
       <ul class="list-disc list-inside text-base md:text-lg mb-6">
         <li>
           <strong>Multiple Goroutines:</strong> Two goroutines send messages to different channels after different delays.
         </li>
         <li>
-          <strong>Select Statement:</strong> The `select` statement waits for messages from either channel and prints them as they arrive.
+          <strong>Select Statement:</strong> The <code>select</code> statement waits for messages from either channel and prints them as they arrive.
         </li>
       </ul>
 
       <!-- Default Case in Select -->
       <h3 class="text-lg md:text-xl font-semibold mb-2">Default Case in Select</h3>
       <p class="text-base md:text-lg mb-4">
-        The `default` case in a `select` statement executes immediately if no other case is ready, preventing the `select` from blocking.
+        The <code>default</code> case in a <code>select</code> statement executes immediately if no other case is ready, preventing the <code>select</code> from blocking.
       </p>
-      <pre class="bg-gray-800 text-white p-4 rounded-md overflow-x-auto mb-6">
-<code>
-// Example: Select with Default Case
-package main
-
-import (
-    "fmt"
-    "time"
-)
-
-func main() {
-    ch := make(chan string)
-
-    select {
-    case msg := <-ch:
-        fmt.Println("Received:", msg)
-    default:
-        fmt.Println("No message received.")
-    }
-
-    go func() {
-        time.Sleep(1 * time.Second)
-        ch <- "Hello after delay"
-    }()
-
-    time.Sleep(2 * time.Second)
-
-    select {
-    case msg := <-ch:
-        fmt.Println("Received:", msg)
-    default:
-        fmt.Println("No message received.")
-    }
-}
-</code>
-      </pre>
       <p class="text-base md:text-lg mb-6">
-        **Output:**
+        <strong>Example: Select with Default Case</strong>
+      </p>
+      <div class="bg-gray-800 text-white p-4 rounded-md overflow-x-auto mb-6">
+        <pre><code>
+    package main
+
+    import (
+        "fmt"
+        "time"
+    )
+
+    func main() {
+        ch := make(chan string)
+
+        select {
+        case msg := <-ch:
+            fmt.Println("Received:", msg)
+        default:
+            fmt.Println("No message received.")
+        }
+
+        go func() {
+            time.Sleep(1 * time.Second)
+            ch <- "Hello after delay"
+        }()
+
+        time.Sleep(2 * time.Second)
+
+        select {
+        case msg := <-ch:
+            fmt.Println("Received:", msg)
+        default:
+            fmt.Println("No message received.")
+        }
+    }
+        </code></pre>
+      </div>
+      <p class="text-base md:text-lg mb-6">
+        <strong>Output:</strong>
       </p>
       <p class="text-base md:text-lg mb-6">
         First Select:
       </p>
-      <pre class="bg-gray-800 text-white p-2 rounded-md overflow-x-auto mb-6">
-<code>
-No message received.
-</code>
-      </pre>
+      <div class="bg-gray-800 text-white p-2 rounded-md overflow-x-auto mb-6">
+        <pre><code>
+    No message received.
+        </code></pre>
+      </div>
       <p class="text-base md:text-lg mb-6">
         Second Select (after message is sent):
       </p>
-      <pre class="bg-gray-800 text-white p-2 rounded-md overflow-x-auto mb-6">
-<code>
-Received: Hello after delay
-</code>
-      </pre>
+      <div class="bg-gray-800 text-white p-2 rounded-md overflow-x-auto mb-6">
+        <pre><code>
+    Received: Hello after delay
+        </code></pre>
+      </div>
       <p class="text-base md:text-lg mb-6">
-        **Explanation:**
+        <strong>Explanation:</strong>
       </p>
       <ul class="list-disc list-inside text-base md:text-lg mb-6">
         <li>
-          <strong>First Select:</strong> No message is sent to `ch`, so the `default` case executes immediately.
+          <strong>First Select:</strong> No message is sent to <code>ch</code>, so the <code>default</code> case executes immediately.
         </li>
         <li>
-          <strong>Second Select:</strong> After a delay, a message is sent to `ch`, so the corresponding case executes.
+          <strong>Second Select:</strong> After a delay, a message is sent to <code>ch</code>, so the corresponding case executes.
         </li>
       </ul>
 
       <!-- Range Over Channels -->
       <h3 class="text-lg md:text-xl font-semibold mb-2">Range Over Channels</h3>
       <p class="text-base md:text-lg mb-4">
-        You can use `range` to receive values from a channel until it is closed.
+        You can use <code>range</code> to receive values from a channel until it is closed. This simplifies the process of receiving multiple values from a channel without explicitly handling each receive operation.
       </p>
-      <pre class="bg-gray-800 text-white p-4 rounded-md overflow-x-auto mb-6">
-<code>
-// Example: Range Over Channels
-package main
+      <p class="text-base md:text-lg mb-6">
+        <strong>Example: Range Over Channels</strong>
+      </p>
+      <div class="bg-gray-800 text-white p-4 rounded-md overflow-x-auto mb-6">
+        <pre><code>
+    package main
 
-import (
-    "fmt"
-)
+    import (
+        "fmt"
+    )
 
-func main() {
-    ch := make(chan int)
+    func main() {
+        ch := make(chan int)
 
-    go func() {
-        for i := 1; i <= 5; i++ {
-            ch <- i
+        go func() {
+            for i := 1; i <= 5; i++ {
+                ch <- i
+            }
+            close(ch)
+        }()
+
+        for num := range ch {
+            fmt.Println("Received:", num)
         }
-        close(ch)
-    }()
-
-    for num := range ch {
-        fmt.Println("Received:", num)
     }
-}
-</code>
-      </pre>
+        </code></pre>
+      </div>
       <p class="text-base md:text-lg mb-6">
-        **Output:**
+        <strong>Output:</strong>
       </p>
-      <pre class="bg-gray-800 text-white p-2 rounded-md overflow-x-auto mb-6">
-<code>
-Received: 1
-Received: 2
-Received: 3
-Received: 4
-Received: 5
-</code>
-      </pre>
+      <div class="bg-gray-800 text-white p-2 rounded-md overflow-x-auto mb-6">
+        <pre><code>
+    Received: 1
+    Received: 2
+    Received: 3
+    Received: 4
+    Received: 5
+        </code></pre>
+      </div>
       <p class="text-base md:text-lg mb-6">
-        **Explanation:**
+        <strong>Explanation:</strong>
       </p>
       <ul class="list-disc list-inside text-base md:text-lg mb-6">
         <li>
           <strong>Sending Goroutine:</strong> Sends integers 1 to 5 to the channel and then closes it.
         </li>
         <li>
-          <strong>Receiving with Range:</strong> The `for num := range ch` loop receives values until the channel is closed.
+          <strong>Receiving with Range:</strong> The <code>for num := range ch</code> loop receives values until the channel is closed.
         </li>
         <li>
           <strong>Automatic Termination:</strong> Once the channel is closed and all values are received, the loop terminates.
@@ -525,78 +536,80 @@ Received: 5
       <!-- Mutexes -->
       <h2 class="text-xl md:text-2xl font-semibold mb-4">Mutexes</h2>
       <p class="text-base md:text-lg mb-4">
-        Mutexes (mutual exclusions) are used to protect shared data from being accessed concurrently, preventing race conditions.
+        Mutexes (mutual exclusions) are used to protect shared data from being accessed concurrently, preventing race conditions. They ensure that only one goroutine can access a critical section of code or shared resource at a time.
       </p>
 
       <!-- Using Mutex -->
       <h3 class="text-lg md:text-xl font-semibold mb-2">Using Mutex</h3>
       <p class="text-base md:text-lg mb-4">
-        The `sync.Mutex` type provides two main methods: `Lock` and `Unlock`, which are used to control access to shared resources.
+        The <code>sync.Mutex</code> type provides two main methods: <code>Lock</code> and <code>Unlock</code>, which are used to control access to shared resources.
       </p>
-      <pre class="bg-gray-800 text-white p-4 rounded-md overflow-x-auto mb-6">
-<code>
-// Example: Using Mutex
-package main
+      <p class="text-base md:text-lg mb-6">
+        <strong>Example: Using Mutex</strong>
+      </p>
+      <div class="bg-gray-800 text-white p-4 rounded-md overflow-x-auto mb-6">
+        <pre><code>
+    package main
 
-import (
-    "fmt"
-    "sync"
-)
+    import (
+        "fmt"
+        "sync"
+    )
 
-type Counter struct {
-    mu    sync.Mutex
-    count int
-}
-
-func (c *Counter) Increment() {
-    c.mu.Lock()
-    defer c.mu.Unlock()
-    c.count++
-}
-
-func (c *Counter) Value() int {
-    c.mu.Lock()
-    defer c.mu.Unlock()
-    return c.count
-}
-
-func main() {
-    var wg sync.WaitGroup
-    counter := Counter{}
-
-    for i := 0; i < 1000; i++ {
-        wg.Add(1)
-        go func() {
-            defer wg.Done()
-            counter.Increment()
-        }()
+    type Counter struct {
+        mu    sync.Mutex
+        count int
     }
 
-    wg.Wait()
-    fmt.Println("Final Counter:", counter.Value())
-}
-</code>
-      </pre>
+    func (c *Counter) Increment() {
+        c.mu.Lock()
+        defer c.mu.Unlock()
+        c.count++
+    }
+
+    func (c *Counter) Value() int {
+        c.mu.Lock()
+        defer c.mu.Unlock()
+        return c.count
+    }
+
+    func main() {
+        var wg sync.WaitGroup
+        counter := Counter{}
+
+        for i := 0; i < 1000; i++ {
+            wg.Add(1)
+            go func() {
+                defer wg.Done()
+                counter.Increment()
+            }()
+        }
+
+        wg.Wait()
+        fmt.Println("Final Counter:", counter.Value())
+    }
+        </code></pre>
+      </div>
       <p class="text-base md:text-lg mb-6">
-        **Output:**
+        <strong>Output:</strong>
       </p>
-      <pre class="bg-gray-800 text-white p-2 rounded-md overflow-x-auto mb-6">
-<code>
-Final Counter: 1000
-</code>
-      </pre>
+      <div class="bg-gray-800 text-white p-2 rounded-md overflow-x-auto mb-6">
+        <pre><code>
+    Final Counter: 1000
+        </code></pre>
+      </div>
       <p class="text-base md:text-lg mb-6">
-        **Explanation:**
+        <strong>Explanation:</strong>
       </p>
       <ul class="list-disc list-inside text-base md:text-lg mb-6">
         <li>
-          <strong>Counter Struct:</strong> Contains a `sync.Mutex` and a `count` variable.
+          <strong>Counter Struct:</strong> Contains a <code>sync.Mutex</code> and a <code>count</code> variable.
         </li>
         <li>
           <strong>Increment Method:</strong> Locks the mutex before incrementing the counter and unlocks it afterward.
         </li>
         <li>
-          <strong>Concurrency Safety:</strong> Ensures that only one goroutine can access the `count` variable at a time, preventing race conditions.
+          <strong>Concurrency Safety:</strong> Ensures that only one goroutine can access the <code>count</code> variable at a time, preventing race conditions.
         </li>
         <li>
           <strong>WaitGroup Usage:</strong> Waits for all goroutines to finish before printing the final counter value.
@@ -606,50 +619,52 @@ Final Counter: 1000
       <!-- Atomic Operations -->
       <h3 class="text-lg md:text-xl font-semibold mb-2">Atomic Operations</h3>
       <p class="text-base md:text-lg mb-4">
-        The `sync/atomic` package provides low-level atomic memory primitives useful for implementing synchronization algorithms.
+        The <code>sync/atomic</code> package provides low-level atomic memory primitives useful for implementing synchronization algorithms. Atomic operations are lock-free and can offer better performance for simple synchronization tasks.
       </p>
-      <pre class="bg-gray-800 text-white p-4 rounded-md overflow-x-auto mb-6">
-<code>
-// Example: Atomic Operations
-package main
+      <p class="text-base md:text-lg mb-6">
+        <strong>Example: Atomic Operations</strong>
+      </p>
+      <div class="bg-gray-800 text-white p-4 rounded-md overflow-x-auto mb-6">
+        <pre><code>
+    package main
 
-import (
-    "fmt"
-    "sync"
-    "sync/atomic"
-)
+    import (
+        "fmt"
+        "sync"
+        "sync/atomic"
+    )
 
-func main() {
-    var counter int64 = 0
-    var wg sync.WaitGroup
+    func main() {
+        var counter int64 = 0
+        var wg sync.WaitGroup
 
-    for i := 0; i < 1000; i++ {
-        wg.Add(1)
-        go func() {
-            defer wg.Done()
-            atomic.AddInt64(&counter, 1)
-        }()
+        for i := 0; i < 1000; i++ {
+            wg.Add(1)
+            go func() {
+                defer wg.Done()
+                atomic.AddInt64(&counter, 1)
+            }()
+        }
+
+        wg.Wait()
+        fmt.Println("Final Counter:", counter)
     }
-
-    wg.Wait()
-    fmt.Println("Final Counter:", counter)
-}
-</code>
-      </pre>
+        </code></pre>
+      </div>
       <p class="text-base md:text-lg mb-6">
-        **Output:**
+        <strong>Output:</strong>
       </p>
-      <pre class="bg-gray-800 text-white p-2 rounded-md overflow-x-auto mb-6">
-<code>
-Final Counter: 1000
-</code>
-      </pre>
+      <div class="bg-gray-800 text-white p-2 rounded-md overflow-x-auto mb-6">
+        <pre><code>
+    Final Counter: 1000
+        </code></pre>
+      </div>
       <p class="text-base md:text-lg mb-6">
-        **Explanation:**
+        <strong>Explanation:</strong>
       </p>
       <ul class="list-disc list-inside text-base md:text-lg mb-6">
         <li>
-          <strong>Atomic Add:</strong> `atomic.AddInt64(&counter, 1)` atomically increments the `counter` variable, ensuring thread-safe operations without using mutexes.
+          <strong>Atomic Add:</strong> <code>atomic.AddInt64(&counter, 1)</code> atomically increments the <code>counter</code> variable, ensuring thread-safe operations without using mutexes.
         </li>
         <li>
           <strong>Performance:</strong> Atomic operations can offer better performance compared to mutexes for simple synchronization tasks.
@@ -662,168 +677,172 @@ Final Counter: 1000
       <!-- Buffered Channels and Worker Pools -->
       <h2 class="text-xl md:text-2xl font-semibold mb-4">Buffered Channels and Worker Pools</h2>
       <p class="text-base md:text-lg mb-4">
-        Buffered channels are often used in implementing worker pools, allowing a fixed number of goroutines to process tasks concurrently.
+        Buffered channels are often used in implementing worker pools, allowing a fixed number of goroutines to process tasks concurrently. This pattern helps manage workload effectively while preventing resource exhaustion.
       </p>
 
       <!-- Worker Pool Example -->
       <h3 class="text-lg md:text-xl font-semibold mb-2">Worker Pool Example</h3>
       <p class="text-base md:text-lg mb-4">
-        A worker pool limits the number of concurrent goroutines processing tasks, preventing resource exhaustion and managing workload effectively.
+        A worker pool limits the number of concurrent goroutines processing tasks, ensuring controlled concurrency and efficient resource utilization.
       </p>
-      <pre class="bg-gray-800 text-white p-4 rounded-md overflow-x-auto mb-6">
-<code>
-// Example: Worker Pool
-package main
-
-import (
-    "fmt"
-    "math/rand"
-    "sync"
-    "time"
-)
-
-func worker(id int, jobs <-chan int, results chan<- int, wg *sync.WaitGroup) {
-    defer wg.Done()
-    for j := range jobs {
-        fmt.Printf("Worker %d processing job %d\n", id, j)
-        time.Sleep(time.Duration(rand.Intn(1000)) * time.Millisecond)
-        results <- j * 2
-    }
-}
-
-func main() {
-    rand.Seed(time.Now().UnixNano())
-    jobs := make(chan int, 100)
-    results := make(chan int, 100)
-
-    var wg sync.WaitGroup
-    numWorkers := 5
-
-    for w := 1; w <= numWorkers; w++ {
-        wg.Add(1)
-        go worker(w, jobs, results, &wg)
-    }
-
-    for j := 1; j <= 10; j++ {
-        jobs <- j
-    }
-    close(jobs)
-
-    wg.Wait()
-    close(results)
-
-    for res := range results {
-        fmt.Println("Result:", res)
-    }
-}
-</code>
-      </pre>
       <p class="text-base md:text-lg mb-6">
-        **Possible Output:**
+        <strong>Example: Worker Pool</strong>
+      </p>
+      <div class="bg-gray-800 text-white p-4 rounded-md overflow-x-auto mb-6">
+        <pre><code>
+    package main
+
+    import (
+        "fmt"
+        "math/rand"
+        "sync"
+        "time"
+    )
+
+    func worker(id int, jobs <-chan int, results chan<- int, wg *sync.WaitGroup) {
+        defer wg.Done()
+        for j := range jobs {
+            fmt.Printf("Worker %d processing job %d\n", id, j)
+            time.Sleep(time.Duration(rand.Intn(1000)) * time.Millisecond)
+            results <- j * 2
+        }
+    }
+
+    func main() {
+        rand.Seed(time.Now().UnixNano())
+        jobs := make(chan int, 100)
+        results := make(chan int, 100)
+
+        var wg sync.WaitGroup
+        numWorkers := 5
+
+        for w := 1; w <= numWorkers; w++ {
+            wg.Add(1)
+            go worker(w, jobs, results, &wg)
+        }
+
+        for j := 1; j <= 10; j++ {
+            jobs <- j
+        }
+        close(jobs)
+
+        wg.Wait()
+        close(results)
+
+        for res := range results {
+            fmt.Println("Result:", res)
+        }
+    }
+        </code></pre>
+      </div>
+      <p class="text-base md:text-lg mb-6">
+        <strong>Possible Output:</strong>
       </p>
       <p class="text-base md:text-lg mb-6">
         Output will vary due to random sleep durations:
       </p>
-      <pre class="bg-gray-800 text-white p-2 rounded-md overflow-x-auto mb-6">
-<code>
-Worker 1 processing job 1
-Worker 2 processing job 2
-Worker 3 processing job 3
-Worker 4 processing job 4
-Worker 5 processing job 5
-Worker 1 processing job 6
-Worker 2 processing job 7
-Worker 3 processing job 8
-Worker 4 processing job 9
-Worker 5 processing job 10
-Result: 2
-Result: 4
-Result: 6
-Result: 8
-Result: 10
-Result: 12
-Result: 14
-Result: 16
-Result: 18
-Result: 20
-</code>
-      </pre>
+      <div class="bg-gray-800 text-white p-2 rounded-md overflow-x-auto mb-6">
+        <pre><code>
+    Worker 1 processing job 1
+    Worker 2 processing job 2
+    Worker 3 processing job 3
+    Worker 4 processing job 4
+    Worker 5 processing job 5
+    Worker 1 processing job 6
+    Worker 2 processing job 7
+    Worker 3 processing job 8
+    Worker 4 processing job 9
+    Worker 5 processing job 10
+    Result: 2
+    Result: 4
+    Result: 6
+    Result: 8
+    Result: 10
+    Result: 12
+    Result: 14
+    Result: 16
+    Result: 18
+    Result: 20
+        </code></pre>
+      </div>
       <p class="text-base md:text-lg mb-6">
-        **Explanation:**
+        <strong>Explanation:</strong>
       </p>
       <ul class="list-disc list-inside text-base md:text-lg mb-6">
         <li>
-          <strong>Job and Result Channels:</strong> `jobs` channel holds job identifiers, and `results` channel collects the processed results.
+          <strong>Job and Result Channels:</strong> <code>jobs</code> channel holds job identifiers, and <code>results</code> channel collects the processed results.
         </li>
         <li>
-          <strong>Workers:</strong> Five worker goroutines are spawned, each listening to the `jobs` channel, processing jobs, and sending results to the `results` channel.
+          <strong>Workers:</strong> Five worker goroutines are spawned, each listening to the <code>jobs</code> channel, processing jobs, and sending results to the <code>results</code> channel.
         </li>
         <li>
-          <strong>Job Submission:</strong> Ten jobs are submitted to the `jobs` channel and then the channel is closed to signal no more jobs.
+          <strong>Job Submission:</strong> Ten jobs are submitted to the <code>jobs</code> channel and then the channel is closed to signal no more jobs.
         </li>
         <li>
-          <strong>Waiting for Completion:</strong> `wg.Wait()` ensures all workers have finished processing before closing the `results` channel.
+          <strong>Waiting for Completion:</strong> <code>wg.Wait()</code> ensures all workers have finished processing before closing the <code>results</code> channel.
         </li>
         <li>
-          <strong>Result Collection:</strong> Results are collected and printed from the `results` channel.
+          <strong>Result Collection:</strong> Results are collected and printed from the <code>results</code> channel.
         </li>
       </ul>
 
       <!-- Buffered Channels for Task Queuing -->
       <h3 class="text-lg md:text-xl font-semibold mb-2">Buffered Channels for Task Queuing</h3>
       <p class="text-base md:text-lg mb-4">
-        Buffered channels can act as queues, allowing tasks to be buffered before being processed by workers.
+        Buffered channels can act as queues, allowing tasks to be buffered before being processed by workers. This setup helps in decoupling task submission from task processing, enhancing system throughput.
       </p>
-      <pre class="bg-gray-800 text-white p-4 rounded-md overflow-x-auto mb-6">
-<code>
-// Example: Buffered Channels as Queues
-package main
-
-import (
-    "fmt"
-    "time"
-)
-
-func main() {
-    queue := make(chan string, 3)
-
-    // Enqueue tasks
-    queue <- "Task 1"
-    queue <- "Task 2"
-    queue <- "Task 3"
-
-    // Start a worker
-    go func() {
-        for task := range queue {
-            fmt.Println("Processing", task)
-            time.Sleep(time.Second)
-        }
-    }()
-
-    time.Sleep(4 * time.Second)
-    close(queue)
-}
-</code>
-      </pre>
       <p class="text-base md:text-lg mb-6">
-        **Output:**
+        <strong>Example: Buffered Channels as Queues</strong>
       </p>
-      <pre class="bg-gray-800 text-white p-2 rounded-md overflow-x-auto mb-6">
-<code>
-Processing Task 1
-Processing Task 2
-Processing Task 3
-</code>
-      </pre>
+      <div class="bg-gray-800 text-white p-4 rounded-md overflow-x-auto mb-6">
+        <pre><code>
+    package main
+
+    import (
+        "fmt"
+        "time"
+    )
+
+    func main() {
+        queue := make(chan string, 3)
+
+        // Enqueue tasks
+        queue <- "Task 1"
+        queue <- "Task 2"
+        queue <- "Task 3"
+
+        // Start a worker
+        go func() {
+            for task := range queue {
+                fmt.Println("Processing", task)
+                time.Sleep(time.Second)
+            }
+        }()
+
+        time.Sleep(4 * time.Second)
+        close(queue)
+    }
+        </code></pre>
+      </div>
       <p class="text-base md:text-lg mb-6">
-        **Explanation:**
+        <strong>Output:</strong>
+      </p>
+      <div class="bg-gray-800 text-white p-2 rounded-md overflow-x-auto mb-6">
+        <pre><code>
+    Processing Task 1
+    Processing Task 2
+    Processing Task 3
+        </code></pre>
+      </div>
+      <p class="text-base md:text-lg mb-6">
+        <strong>Explanation:</strong>
       </p>
       <ul class="list-disc list-inside text-base md:text-lg mb-6">
         <li>
-          <strong>Buffered Queue:</strong> `queue := make(chan string, 3)` creates a buffered channel with a capacity of 3.
+          <strong>Buffered Queue:</strong> <code>queue := make(chan string, 3)</code> creates a buffered channel with a capacity of 3.
         </li>
         <li>
-          <strong>Enqueuing Tasks:</strong> Three tasks are enqueued without blocking.
+          <strong>Enqueuing Tasks:</strong> Three tasks are enqueued without blocking, thanks to the buffered channel.
         </li>
         <li>
           <strong>Worker Goroutine:</strong> A worker goroutine processes tasks from the queue.
@@ -836,72 +855,74 @@ Processing Task 3
       <!-- Synchronization with Mutexes -->
       <h2 class="text-xl md:text-2xl font-semibold mb-4">Synchronization with Mutexes</h2>
       <p class="text-base md:text-lg mb-4">
-        Mutexes ensure that only one goroutine accesses a shared resource at a time, preventing race conditions.
+        Mutexes ensure that only one goroutine accesses a shared resource at a time, preventing race conditions. They are essential when multiple goroutines need to read and write shared data.
       </p>
 
       <!-- Mutex Example -->
       <h3 class="text-lg md:text-xl font-semibold mb-2">Mutex Example</h3>
       <p class="text-base md:text-lg mb-4">
-        Demonstrates the use of `sync.Mutex` to protect shared data.
+        Demonstrates the use of <code>sync.Mutex</code> to protect shared data.
       </p>
-      <pre class="bg-gray-800 text-white p-4 rounded-md overflow-x-auto mb-6">
-<code>
-// Example: Mutex for Safe Access
-package main
+      <p class="text-base md:text-lg mb-6">
+        <strong>Example: Mutex for Safe Access</strong>
+      </p>
+      <div class="bg-gray-800 text-white p-4 rounded-md overflow-x-auto mb-6">
+        <pre><code>
+    package main
 
-import (
-    "fmt"
-    "sync"
-)
+    import (
+        "fmt"
+        "sync"
+    )
 
-type SafeCounter struct {
-    mu    sync.Mutex
-    count map[string]int
-}
-
-func (c *SafeCounter) Inc(key string) {
-    c.mu.Lock()
-    defer c.mu.Unlock()
-    c.count[key]++
-}
-
-func (c *SafeCounter) Value(key string) int {
-    c.mu.Lock()
-    defer c.mu.Unlock()
-    return c.count[key]
-}
-
-func main() {
-    c := SafeCounter{count: make(map[string]int)}
-    var wg sync.WaitGroup
-
-    for i := 0; i < 1000; i++ {
-        wg.Add(1)
-        go func() {
-            defer wg.Done()
-            c.Inc("somekey")
-        }()
+    type SafeCounter struct {
+        mu    sync.Mutex
+        count map[string]int
     }
 
-    wg.Wait()
-    fmt.Println("Final count:", c.Value("somekey"))
-}
-</code>
-      </pre>
+    func (c *SafeCounter) Inc(key string) {
+        c.mu.Lock()
+        defer c.mu.Unlock()
+        c.count[key]++
+    }
+
+    func (c *SafeCounter) Value(key string) int {
+        c.mu.Lock()
+        defer c.mu.Unlock()
+        return c.count[key]
+    }
+
+    func main() {
+        c := SafeCounter{count: make(map[string]int)}
+        var wg sync.WaitGroup
+
+        for i := 0; i < 1000; i++ {
+            wg.Add(1)
+            go func() {
+                defer wg.Done()
+                c.Inc("somekey")
+            }()
+        }
+
+        wg.Wait()
+        fmt.Println("Final count:", c.Value("somekey"))
+    }
+        </code></pre>
+      </div>
       <p class="text-base md:text-lg mb-6">
-        **Output:**
+        <strong>Output:</strong>
       </p>
-      <pre class="bg-gray-800 text-white p-2 rounded-md overflow-x-auto mb-6">
-<code>
-Final count: 1000
-</code>
-      </pre>
+      <div class="bg-gray-800 text-white p-2 rounded-md overflow-x-auto mb-6">
+        <pre><code>
+    Final count: 1000
+        </code></pre>
+      </div>
       <p class="text-base md:text-lg mb-6">
-        **Explanation:**
+        <strong>Explanation:</strong>
       </p>
       <ul class="list-disc list-inside text-base md:text-lg mb-6">
         <li>
-          <strong>SafeCounter Struct:</strong> Contains a mutex and a map to safely count occurrences.
+          <strong>SafeCounter Struct:</strong> Contains a <code>sync.Mutex</code> and a <code>count</code> map to safely count occurrences.
         </li>
         <li>
           <strong>Increment Method:</strong> Locks the mutex before modifying the map to prevent concurrent writes.
@@ -917,264 +938,278 @@ Final count: 1000
       <!-- Once and Once.Do -->
       <h3 class="text-lg md:text-xl font-semibold mb-2">Once and Once.Do</h3>
       <p class="text-base md:text-lg mb-4">
-        The `sync.Once` type ensures that a piece of code is executed only once, even if called from multiple goroutines.
+        The <code>sync.Once</code> type ensures that a piece of code is executed only once, even if called from multiple goroutines. This is useful for initialization tasks that should occur only once during the program's execution.
       </p>
-      <pre class="bg-gray-800 text-white p-4 rounded-md overflow-x-auto mb-6">
-<code>
-// Example: Using sync.Once
-package main
+      <p class="text-base md:text-lg mb-6">
+        <strong>Example: Using sync.Once</strong>
+      </p>
+      <div class="bg-gray-800 text-white p-4 rounded-md overflow-x-auto mb-6">
+        <pre><code>
+    package main
 
-import (
-    "fmt"
-    "sync"
-)
+    import (
+        "fmt"
+        "sync"
+    )
 
-func main() {
-    var once sync.Once
-    var wg sync.WaitGroup
+    func main() {
+        var once sync.Once
+        var wg sync.WaitGroup
 
-    for i := 0; i < 5; i++ {
-        wg.Add(1)
-        go func(id int) {
-            defer wg.Done()
-            once.Do(func() {
-                fmt.Println("This should run only once.")
-            })
-            fmt.Printf("Goroutine %d finished.\n", id)
-        }(i)
+        for i := 0; i < 5; i++ {
+            wg.Add(1)
+            go func(id int) {
+                defer wg.Done()
+                once.Do(func() {
+                    fmt.Println("This should run only once.")
+                })
+                fmt.Printf("Goroutine %d finished.\n", id)
+            }(i)
+        }
+
+        wg.Wait()
     }
-
-    wg.Wait()
-}
-</code>
-      </pre>
+        </code></pre>
+      </div>
       <p class="text-base md:text-lg mb-6">
-        **Possible Output:**
+        <strong>Possible Output:</strong>
       </p>
-      <pre class="bg-gray-800 text-white p-2 rounded-md overflow-x-auto mb-6">
-<code>
-This should run only once.
-Goroutine 0 finished.
-Goroutine 1 finished.
-Goroutine 2 finished.
-Goroutine 3 finished.
-Goroutine 4 finished.
-</code>
-      </pre>
+      <div class="bg-gray-800 text-white p-2 rounded-md overflow-x-auto mb-6">
+        <pre><code>
+    This should run only once.
+    Goroutine 0 finished.
+    Goroutine 1 finished.
+    Goroutine 2 finished.
+    Goroutine 3 finished.
+    Goroutine 4 finished.
+        </code></pre>
+      </div>
       <p class="text-base md:text-lg mb-6">
-        **Explanation:**
+        <strong>Explanation:</strong>
       </p>
       <ul class="list-disc list-inside text-base md:text-lg mb-6">
         <li>
-          <strong>sync.Once Initialization:</strong> Declares a `sync.Once` variable to ensure a function runs only once.
+          <strong>sync.Once Initialization:</strong> Declares a <code>sync.Once</code> variable to ensure a function runs only once.
         </li>
         <li>
-          <strong>Do Method:</strong> The anonymous function passed to `once.Do` executes only once, regardless of how many times it's called.
+          <strong>Do Method:</strong> The anonymous function passed to <code>once.Do</code> executes only once, regardless of how many times it's called.
         </li>
         <li>
-          <strong>Goroutine Execution:</strong> Each goroutine attempts to execute the `Do` method, but only the first call executes the function.
+          <strong>Goroutine Execution:</strong> Each goroutine attempts to execute the <code>Do</code> method, but only the first call executes the function.
         </li>
       </ul>
 
       <!-- Select with Timeout -->
       <h2 class="text-xl md:text-2xl font-semibold mb-4">Select with Timeout</h2>
       <p class="text-base md:text-lg mb-4">
-        Implementing timeouts with `select` helps prevent goroutines from blocking indefinitely by providing alternative execution paths if certain operations take too long.
+        Implementing timeouts with <code>select</code> helps prevent goroutines from blocking indefinitely by providing alternative execution paths if certain operations take too long. This is crucial for building responsive and resilient applications.
       </p>
 
       <!-- Select with Timeout Example -->
       <h3 class="text-lg md:text-xl font-semibold mb-2">Select with Timeout Example</h3>
       <p class="text-base md:text-lg mb-4">
-        Demonstrates how to use `select` with a timeout using `time.After`.
+        Demonstrates how to use <code>select</code> with a timeout using <code>time.After</code>.
       </p>
-      <pre class="bg-gray-800 text-white p-4 rounded-md overflow-x-auto mb-6">
-<code>
-// Example: Select with Timeout
-package main
+      <p class="text-base md:text-lg mb-6">
+        <strong>Example: Select with Timeout</strong>
+      </p>
+      <div class="bg-gray-800 text-white p-4 rounded-md overflow-x-auto mb-6">
+        <pre><code>
+    package main
 
-import (
-    "fmt"
-    "time"
-)
+    import (
+        "fmt"
+        "time"
+    )
 
-func main() {
-    ch := make(chan string)
+    func main() {
+        ch := make(chan string)
 
-    go func() {
-        time.Sleep(3 * time.Second)
-        ch <- "Delayed Message"
-    }()
+        go func() {
+            time.Sleep(3 * time.Second)
+            ch <- "Delayed Message"
+        }()
 
-    select {
-    case msg := <-ch:
-        fmt.Println("Received:", msg)
-    case <-time.After(2 * time.Second):
-        fmt.Println("Timeout: No message received within 2 seconds.")
+        select {
+        case msg := <-ch:
+            fmt.Println("Received:", msg)
+        case <-time.After(2 * time.Second):
+            fmt.Println("Timeout: No message received within 2 seconds.")
+        }
     }
-}
-</code>
-      </pre>
+        </code></pre>
+      </div>
       <p class="text-base md:text-lg mb-6">
-        **Possible Output:**
+        <strong>Possible Output:</strong>
       </p>
-      <pre class="bg-gray-800 text-white p-2 rounded-md overflow-x-auto mb-6">
-<code>
-Timeout: No message received within 2 seconds.
-</code>
-      </pre>
+      <div class="bg-gray-800 text-white p-2 rounded-md overflow-x-auto mb-6">
+        <pre><code>
+    Timeout: No message received within 2 seconds.
+        </code></pre>
+      </div>
       <p class="text-base md:text-lg mb-6">
-        **Explanation:**
+        <strong>Explanation:</strong>
       </p>
       <ul class="list-disc list-inside text-base md:text-lg mb-6">
         <li>
-          <strong>Channel Setup:</strong> A goroutine sends a message to `ch` after a 3-second delay.
+          <strong>Channel Setup:</strong> A goroutine sends a message to <code>ch</code> after a 3-second delay.
         </li>
         <li>
-          <strong>Select with Timeout:</strong> The `select` statement waits for either a message on `ch` or a timeout after 2 seconds.
+          <strong>Select with Timeout:</strong> The <code>select</code> statement waits for either a message on <code>ch</code> or a timeout after 2 seconds.
         </li>
         <li>
-          <strong>Outcome:</strong> Since the message arrives after the timeout, the `default` case executes.
+          <strong>Outcome:</strong> Since the message arrives after the timeout, the <code>default</code> case executes.
         </li>
       </ul>
 
-      <!-- Pattern: Fan-Out, Fan-In -->
+      <!-- Concurrency Patterns: Fan-Out, Fan-In -->
       <h2 class="text-xl md:text-2xl font-semibold mb-4">Concurrency Patterns: Fan-Out, Fan-In</h2>
       <p class="text-base md:text-lg mb-4">
-        The Fan-Out, Fan-In pattern involves distributing work across multiple goroutines (Fan-Out) and then collecting the results (Fan-In). This pattern is useful for parallelizing tasks and aggregating results efficiently.
+        The Fan-Out, Fan-In pattern involves distributing work across multiple goroutines (Fan-Out) and then collecting the results (Fan-In). This pattern is useful for parallelizing tasks and aggregating results efficiently, enhancing both performance and scalability.
       </p>
 
-      <!-- Fan-Out, Fan-In Example -->
-      <h3 class="text-lg md:text-xl font-semibold mb-2">Fan-Out, Fan-In Example</h3>
+      <!-- Fan-Out, Fan-In Overview -->
+      <h3 class="text-lg md:text-xl font-semibold mb-2">Fan-Out, Fan-In Overview</h3>
       <p class="text-base md:text-lg mb-4">
-        Demonstrates distributing tasks to multiple worker goroutines and collecting their results.
+        <strong>Fan-Out:</strong> Distributes tasks to multiple worker goroutines, allowing them to process tasks concurrently.
       </p>
-      <pre class="bg-gray-800 text-white p-4 rounded-md overflow-x-auto mb-6">
-<code>
-// Example: Fan-Out, Fan-In
-package main
-
-import (
-    "fmt"
-    "math/rand"
-    "sync"
-    "time"
-)
-
-func worker(id int, jobs <-chan int, results chan<- int, wg *sync.WaitGroup) {
-    defer wg.Done()
-    for j := range jobs {
-        fmt.Printf("Worker %d processing job %d\n", id, j)
-        time.Sleep(time.Duration(rand.Intn(1000)) * time.Millisecond)
-        results <- j * 2
-    }
-}
-
-func main() {
-    rand.Seed(time.Now().UnixNano())
-    jobs := make(chan int, 100)
-    results := make(chan int, 100)
-
-    var wg sync.WaitGroup
-    numWorkers := 3
-
-    // Fan-Out: Start workers
-    for w := 1; w <= numWorkers; w++ {
-        wg.Add(1)
-        go worker(w, jobs, results, &wg)
-    }
-
-    // Send jobs
-    for j := 1; j <= 5; j++ {
-        jobs <- j
-    }
-    close(jobs)
-
-    // Fan-In: Wait for all workers to finish
-    go func() {
-        wg.Wait()
-        close(results)
-    }()
-
-    // Collect results
-    for res := range results {
-        fmt.Println("Result:", res)
-    }
-}
-</code>
-      </pre>
-      <p class="text-base md:text-lg mb-6">
-        **Possible Output:**
+      <p class="text-base md:text-lg mb-4">
+        <strong>Fan-In:</strong> Collects the results from all worker goroutines, aggregating them into a single channel or collection.
       </p>
-      <pre class="bg-gray-800 text-white p-2 rounded-md overflow-x-auto mb-6">
-<code>
-Worker 1 processing job 1
-Worker 2 processing job 2
-Worker 3 processing job 3
-Result: 2
-Worker 1 processing job 4
-Worker 2 processing job 5
-Result: 4
-Result: 6
-Result: 8
-Result: 10
-</code>
-      </pre>
       <p class="text-base md:text-lg mb-6">
-        **Explanation:**
+        <strong>Example: Fan-Out, Fan-In</strong>
+      </p>
+      <div class="bg-gray-800 text-white p-4 rounded-md overflow-x-auto mb-6">
+        <pre><code>
+    package main
+
+    import (
+        "fmt"
+        "math/rand"
+        "sync"
+        "time"
+    )
+
+    func worker(id int, jobs <-chan int, results chan<- int, wg *sync.WaitGroup) {
+        defer wg.Done()
+        for j := range jobs {
+            fmt.Printf("Worker %d processing job %d\n", id, j)
+            time.Sleep(time.Duration(rand.Intn(1000)) * time.Millisecond)
+            results <- j * 2
+        }
+    }
+
+    func main() {
+        rand.Seed(time.Now().UnixNano())
+        jobs := make(chan int, 100)
+        results := make(chan int, 100)
+
+        var wg sync.WaitGroup
+        numWorkers := 3
+
+        // Fan-Out: Start workers
+        for w := 1; w <= numWorkers; w++ {
+            wg.Add(1)
+            go worker(w, jobs, results, &wg)
+        }
+
+        // Send jobs
+        for j := 1; j <= 5; j++ {
+            jobs <- j
+        }
+        close(jobs)
+
+        // Fan-In: Wait for all workers to finish
+        go func() {
+            wg.Wait()
+            close(results)
+        }()
+
+        // Collect results
+        for res := range results {
+            fmt.Println("Result:", res)
+        }
+    }
+        </code></pre>
+      </div>
+      <p class="text-base md:text-lg mb-6">
+        <strong>Possible Output:</strong>
+      </p>
+      <div class="bg-gray-800 text-white p-2 rounded-md overflow-x-auto mb-6">
+        <pre><code>
+    Worker 1 processing job 1
+    Worker 2 processing job 2
+    Worker 3 processing job 3
+    Result: 2
+    Worker 1 processing job 4
+    Worker 2 processing job 5
+    Result: 4
+    Result: 6
+    Result: 8
+    Result: 10
+        </code></pre>
+      </div>
+      <p class="text-base md:text-lg mb-6">
+        <strong>Explanation:</strong>
       </p>
       <ul class="list-disc list-inside text-base md:text-lg mb-6">
         <li>
-          <strong>Fan-Out:</strong> Three worker goroutines are spawned to process jobs concurrently.
+          <strong>Fan-Out:</strong> Three worker goroutines are spawned to process jobs concurrently, allowing multiple tasks to be handled in parallel.
         </li>
         <li>
-          <strong>Job Distribution:</strong> Jobs are sent to the `jobs` channel and distributed to available workers.
+          <strong>Job Distribution:</strong> Jobs are sent to the <code>jobs</code> channel and distributed to available workers.
         </li>
         <li>
-          <strong>Fan-In:</strong> Results from workers are collected from the `results` channel and printed.
+          <strong>Fan-In:</strong> Results from workers are collected from the <code>results</code> channel and printed.
         </li>
         <li>
-          <strong>Synchronization:</strong> A separate goroutine waits for all workers to finish before closing the `results` channel.
+          <strong>Synchronization:</strong> A separate goroutine waits for all workers to finish before closing the <code>results</code> channel, ensuring that all results are captured.
         </li>
       </ul>
 
       <!-- Race Conditions and the Race Detector -->
       <h2 class="text-xl md:text-2xl font-semibold mb-4">Race Conditions and the Race Detector</h2>
       <p class="text-base md:text-lg mb-4">
-        Race conditions occur when multiple goroutines access shared data concurrently, and at least one goroutine modifies the data. Go provides tools to detect and prevent race conditions.
+        Race conditions occur when multiple goroutines access shared data concurrently, and at least one goroutine modifies the data. These conditions can lead to unpredictable behavior and subtle bugs that are challenging to diagnose. Go provides robust tools to detect and prevent race conditions, ensuring the reliability of concurrent programs.
       </p>
 
-      <!-- Race Condition Example -->
-      <h3 class="text-lg md:text-xl font-semibold mb-2">Race Condition Example</h3>
+      <!-- Understanding Race Conditions -->
+      <h3 class="text-lg md:text-xl font-semibold mb-2">Understanding Race Conditions</h3>
       <p class="text-base md:text-lg mb-4">
-        Demonstrates a race condition and how to detect it using Go's race detector.
+        Race conditions happen when goroutines perform conflicting operations on shared resources without proper synchronization. This can result in data corruption, inconsistent states, and erratic program behavior.
       </p>
-      <pre class="bg-gray-800 text-white p-4 rounded-md overflow-x-auto mb-6">
-<code>
-// Example: Race Condition
-package main
+      <p class="text-base md:text-lg mb-6">
+        <strong>Scenario:</strong> Multiple goroutines incrementing a shared counter without synchronization.
+      </p>
+      <p class="text-base md:text-lg mb-6">
+        **Race Condition Code:**
+      </p>
+      <div class="bg-gray-800 text-white p-4 rounded-md overflow-x-auto mb-6">
+        <pre><code>
+    package main
 
-import (
-    "fmt"
-    "sync"
-)
+    import (
+        "fmt"
+        "sync"
+    )
 
-func main() {
-    var counter int
-    var wg sync.WaitGroup
+    func main() {
+        var counter int
+        var wg sync.WaitGroup
 
-    for i := 0; i < 1000; i++ {
-        wg.Add(1)
-        go func() {
-            defer wg.Done()
-            counter++
-        }()
+        for i := 0; i < 1000; i++ {
+            wg.Add(1)
+            go func() {
+                defer wg.Done()
+                counter++
+            }()
+        }
+
+        wg.Wait()
+        fmt.Println("Final Counter:", counter)
     }
-
-    wg.Wait()
-    fmt.Println("Final Counter:", counter)
-}
-</code>
-      </pre>
+        </code></pre>
+      </div>
       <p class="text-base md:text-lg mb-6">
         **Running with Race Detector:**
       </p>
@@ -1184,281 +1219,220 @@ func main() {
         ```
       </p>
       <p class="text-base md:text-lg mb-6">
-        **Possible Output:**
+        **Possible Race Detector Output:**
       </p>
+      <div class="bg-gray-800 text-white p-2 rounded-md overflow-x-auto mb-6">
+        <pre><code>
+    WARNING: DATA RACE
+    Read at 0x000000... by goroutine 7:
+      main.main.func1()
+          /path/to/main.go:12 +0x...
+
+    Previous write at 0x000000... by goroutine 6:
+      main.main.func1()
+          /path/to/main.go:12 +0x...
+
+    Goroutine 7 (running) created at:
+      main.main()
+          /path/to/main.go:11 +0x...
+
+    Goroutine 6 (finished) created at:
+      main.main()
+          /path/to/main.go:11 +0x...
+        </code></pre>
+      </div>
       <p class="text-base md:text-lg mb-6">
-        ```
-        WARNING: DATA RACE
-        Read at 0x000000... by goroutine 7:
-          main.main.func1()
-              /path/to/main.go:14 +0x...
-        
-        Previous write at 0x000000... by goroutine 6:
-          main.main.func1()
-              /path/to/main.go:14 +0x...
-        
-        Goroutine 7 (running) created at:
-          main.main()
-              /path/to/main.go:12 +0x...
-        
-        Goroutine 6 (finished) created at:
-          main.main()
-              /path/to/main.go:12 +0x...
-        ```
-      </p>
-      <p class="text-base md:text-lg mb-6">
-        **Explanation:**
+        <strong>Explanation:</strong>
       </p>
       <ul class="list-disc list-inside text-base md:text-lg mb-6">
         <li>
-          <strong>Race Detection:</strong> Running the program with `-race` flag detects concurrent access to the `counter` variable.
+          <strong>Race Detection:</strong> Running the program with the <code>-race</code> flag enables the race detector, which monitors concurrent access to shared variables.
         </li>
         <li>
-          <strong>Race Report:</strong> The race detector provides detailed information about the conflicting accesses, including the goroutines involved and the stack traces.
+          <strong>Race Report:</strong> The race detector identifies that multiple goroutines are accessing and modifying the <code>counter</code> variable concurrently without synchronization.
         </li>
         <li>
-          <strong>Mitigation:</strong> To prevent race conditions, use synchronization mechanisms like mutexes or atomic operations.
+          <strong>Resolution:</strong> To prevent race conditions, use synchronization mechanisms like <code>Mutex</code> or atomic operations.
         </li>
       </ul>
 
       <!-- Fixing Race Conditions -->
       <h3 class="text-lg md:text-xl font-semibold mb-2">Fixing Race Conditions</h3>
       <p class="text-base md:text-lg mb-4">
-        Utilize synchronization primitives to ensure safe access to shared resources.
+        To prevent race conditions, synchronization primitives such as <code>Mutex</code> or atomic operations should be employed. Here's how to resolve the above race condition using a <code>Mutex</code>:
       </p>
-      <pre class="bg-gray-800 text-white p-4 rounded-md overflow-x-auto mb-6">
-<code>
-// Example: Fixing Race Condition with Mutex
-package main
+      <p class="text-base md:text-lg mb-6">
+        **Corrected Code with Mutex:**
+      </p>
+      <div class="bg-gray-800 text-white p-4 rounded-md overflow-x-auto mb-6">
+        <pre><code>
+    package main
 
-import (
-    "fmt"
-    "sync"
-)
+    import (
+        "fmt"
+        "sync"
+    )
 
-func main() {
-    var counter int
-    var wg sync.WaitGroup
-    var mu sync.Mutex
+    func main() {
+        var counter int
+        var wg sync.WaitGroup
+        var mu sync.Mutex
 
-    for i := 0; i < 1000; i++ {
-        wg.Add(1)
-        go func() {
-            defer wg.Done()
-            mu.Lock()
-            counter++
-            mu.Unlock()
-        }()
+        for i := 0; i < 1000; i++ {
+            wg.Add(1)
+            go func() {
+                defer wg.Done()
+                mu.Lock()
+                counter++
+                mu.Unlock()
+            }()
+        }
+
+        wg.Wait()
+        fmt.Println("Final Counter:", counter)
     }
-
-    wg.Wait()
-    fmt.Println("Final Counter:", counter)
-}
-</code>
-      </pre>
+        </code></pre>
+      </div>
       <p class="text-base md:text-lg mb-6">
-        **Output:**
+        <strong>Output:</strong>
       </p>
-      <pre class="bg-gray-800 text-white p-2 rounded-md overflow-x-auto mb-6">
-<code>
-Final Counter: 1000
-</code>
-      </pre>
+      <div class="bg-gray-800 text-white p-2 rounded-md overflow-x-auto mb-6">
+        <pre><code>
+    Final Counter: 1000
+        </code></pre>
+      </div>
       <p class="text-base md:text-lg mb-6">
-        **Explanation:**
+        <strong>Explanation:</strong>
       </p>
       <ul class="list-disc list-inside text-base md:text-lg mb-6">
         <li>
-          <strong>Mutex Usage:</strong> A `sync.Mutex` is used to lock access to the `counter` variable during increment operations.
+          <strong>Mutex Protection:</strong> The <code>mu.Lock()</code> and <code>mu.Unlock()</code> calls ensure that only one goroutine can modify the <code>counter</code> at a time, preventing concurrent writes.
         </li>
         <li>
-          <strong>Safe Increment:</strong> `mu.Lock()` ensures that only one goroutine can modify `counter` at a time, preventing race conditions.
-        </li>
-        <li>
-          <strong>Correct Final Count:</strong> The final counter value reliably reaches 1000 without discrepancies.
-        </li>
-      </ul>
-
-      <!-- Channels for Synchronization -->
-      <h2 class="text-xl md:text-2xl font-semibold mb-4">Channels for Synchronization</h2>
-      <p class="text-base md:text-lg mb-4">
-        Channels can also be used as synchronization primitives to signal between goroutines.
-      </p>
-
-      <!-- Using Channels for Signaling -->
-      <h3 class="text-lg md:text-xl font-semibold mb-2">Using Channels for Signaling</h3>
-      <p class="text-base md:text-lg mb-4">
-        Utilize channels to signal the completion of tasks or to coordinate execution order.
-      </p>
-      <pre class="bg-gray-800 text-white p-4 rounded-md overflow-x-auto mb-6">
-<code>
-// Example: Using Channels for Signaling
-package main
-
-import (
-    "fmt"
-    "time"
-)
-
-func worker(id int, done chan<- bool) {
-    fmt.Printf("Worker %d starting\n", id)
-    time.Sleep(time.Second)
-    fmt.Printf("Worker %d done\n", id)
-    done <- true
-}
-
-func main() {
-    done := make(chan bool, 2)
-
-    go worker(1, done)
-    go worker(2, done)
-
-    // Wait for both workers to finish
-    <-done
-    <-done
-
-    fmt.Println("All workers completed.")
-}
-</code>
-      </pre>
-      <p class="text-base md:text-lg mb-6">
-        **Output:**
-      </p>
-      <pre class="bg-gray-800 text-white p-2 rounded-md overflow-x-auto mb-6">
-<code>
-Worker 1 starting
-Worker 2 starting
-Worker 1 done
-Worker 2 done
-All workers completed.
-</code>
-      </pre>
-      <p class="text-base md:text-lg mb-6">
-        **Explanation:**
-      </p>
-      <ul class="list-disc list-inside text-base md:text-lg mb-6">
-        <li>
-          <strong>Signaling Channel:</strong> `done` channel is used to signal when each worker completes its task.
-        </li>
-        <li>
-          <strong>Buffered Channel:</strong> The channel is buffered to accommodate multiple signals without blocking.
-        </li>
-        <li>
-          <strong>Waiting for Completion:</strong> The main goroutine waits for signals from all workers before proceeding.
+          <strong>Data Integrity:</strong> With proper synchronization, the final counter value accurately reflects all increments, eliminating race conditions.
         </li>
       </ul>
 
       <!-- Context Package -->
       <h2 class="text-xl md:text-2xl font-semibold mb-4">Context Package</h2>
       <p class="text-base md:text-lg mb-4">
-        The `context` package provides context propagation, cancellation signals, and deadlines across API boundaries and goroutines. It's essential for managing the lifecycle of goroutines, especially in large applications.
+        The <code>context</code> package in Go provides mechanisms for carrying deadlines, cancellation signals, and other request-scoped values across API boundaries and between goroutines. It's essential for managing the lifecycle of goroutines, especially in large applications where tasks may need to be canceled or timed out gracefully.
       </p>
 
-      <!-- Context Example -->
-      <h3 class="text-lg md:text-xl font-semibold mb-2">Context Example</h3>
+      <!-- Context Syntax and Usage -->
+      <h3 class="text-lg md:text-xl font-semibold mb-2">Context Syntax and Usage</h3>
       <p class="text-base md:text-lg mb-4">
-        Demonstrates how to use contexts to control goroutine execution.
+        Contexts are created using functions like <code>context.Background()</code>, <code>context.TODO()</code>, <code>context.WithCancel()</code>, <code>context.WithDeadline()</code>, and <code>context.WithTimeout()</code>. These contexts can then be passed to goroutines and functions to control their execution.
       </p>
-      <pre class="bg-gray-800 text-white p-4 rounded-md overflow-x-auto mb-6">
-<code>
-// Example: Using Context for Cancellation
-package main
 
-import (
-    "context"
-    "fmt"
-    "time"
-)
+      <p class="text-base md:text-lg mb-6">
+        <strong>Example: Using Context for Cancellation</strong>
+      </p>
+      <div class="bg-gray-800 text-white p-4 rounded-md overflow-x-auto mb-6">
+        <pre><code>
+    package main
 
-func worker(ctx context.Context, id int) {
-    for {
-        select {
-        case <-ctx.Done():
-            fmt.Printf("Worker %d exiting\n", id)
-            return
-        default:
-            fmt.Printf("Worker %d working\n", id)
-            time.Sleep(500 * time.Millisecond)
+    import (
+        "context"
+        "fmt"
+        "time"
+    )
+
+    func worker(ctx context.Context, id int) {
+        for {
+            select {
+            case <-ctx.Done():
+                fmt.Printf("Worker %d exiting\n", id)
+                return
+            default:
+                fmt.Printf("Worker %d working\n", id)
+                time.Sleep(500 * time.Millisecond)
+            }
         }
     }
-}
 
-func main() {
-    ctx, cancel := context.WithCancel(context.Background())
+    func main() {
+        ctx, cancel := context.WithCancel(context.Background())
 
-    go worker(ctx, 1)
-    go worker(ctx, 2)
+        go worker(ctx, 1)
+        go worker(ctx, 2)
 
-    time.Sleep(2 * time.Second)
-    cancel()
+        time.Sleep(2 * time.Second)
+        cancel()
 
-    // Allow workers to exit
-    time.Sleep(time.Second)
-    fmt.Println("All workers exited.")
-}
-</code>
-      </pre>
+        // Allow workers to exit
+        time.Sleep(time.Second)
+        fmt.Println("All workers exited.")
+    }
+        </code></pre>
+      </div>
       <p class="text-base md:text-lg mb-6">
-        **Output:**
+        <strong>Output:</strong>
       </p>
+      <div class="bg-gray-800 text-white p-2 rounded-md overflow-x-auto mb-6">
+        <pre><code>
+    Worker 1 working
+    Worker 2 working
+    Worker 1 working
+    Worker 2 working
+    Worker 1 working
+    Worker 2 working
+    Worker 1 working
+    Worker 2 working
+    Worker 1 exiting
+    Worker 2 exiting
+    All workers exited.
+        </code></pre>
+      </div>
       <p class="text-base md:text-lg mb-6">
-        ```
-        Worker 1 working
-        Worker 2 working
-        Worker 1 working
-        Worker 2 working
-        Worker 1 working
-        Worker 2 working
-        Worker 1 working
-        Worker 2 working
-        Worker 1 exiting
-        Worker 2 exiting
-        All workers exited.
-        ```
-      </p>
-      <p class="text-base md:text-lg mb-6">
-        **Explanation:**
+        <strong>Explanation:</strong>
       </p>
       <ul class="list-disc list-inside text-base md:text-lg mb-6">
         <li>
-          <strong>Context Creation:</strong> `context.WithCancel` creates a context that can be canceled.
+          <strong>Context Creation:</strong> <code>context.WithCancel</code> creates a cancellable context.
         </li>
         <li>
-          <strong>Goroutine Listening:</strong> Each worker goroutine listens for the cancellation signal via `<-ctx.Done()`.
+          <strong>Passing Context:</strong> The context is passed to worker goroutines, allowing them to listen for cancellation signals.
         </li>
         <li>
-          <strong>Cancellation:</strong> After 2 seconds, `cancel()` is called, signaling all workers to exit.
+          <strong>Cancellation:</strong> After 2 seconds, <code>cancel()</code> is called, signaling all workers to exit.
         </li>
         <li>
-          <strong>Graceful Shutdown:</strong> Workers perform necessary cleanup before exiting.
+          <strong>Graceful Shutdown:</strong> Workers receive the cancellation signal and exit gracefully, ensuring no goroutines are left hanging.
         </li>
       </ul>
 
       <!-- Conclusion of Concurrency -->
       <h2 class="text-xl md:text-2xl font-semibold mb-4">Conclusion</h2>
       <p class="text-base md:text-lg mb-4">
-        Go's concurrency model, centered around goroutines and channels, provides a powerful and intuitive way to build concurrent applications. By leveraging synchronization primitives like mutexes, atomic operations, and the context package, developers can create efficient, safe, and scalable software. Understanding and effectively utilizing these concurrency features is essential for harnessing the full potential of Go in modern software development.
+        Go's concurrency model, centered around goroutines and channels, provides a powerful and intuitive way to build concurrent applications. By leveraging synchronization primitives like <code>WaitGroup</code>, mutexes, and atomic operations, developers can create efficient, safe, and scalable software. Understanding and effectively utilizing these concurrency features is essential for harnessing the full potential of Go in modern software development.
       </p>
       <p class="text-base md:text-lg mb-6">
-        **Key Takeaways:**
+        <strong>Key Takeaways:</strong>
       </p>
       <ul class="list-disc list-inside text-base md:text-lg mb-6">
         <li>
-          <strong>Goroutines:</strong> Lightweight threads that enable concurrent execution.
+          <strong>Goroutines:</strong> Lightweight threads that enable concurrent execution of functions.
         </li>
         <li>
           <strong>Channels:</strong> Facilitate safe communication and synchronization between goroutines.
         </li>
         <li>
-          <strong>Synchronization:</strong> Use `WaitGroup`, mutexes, and atomic operations to manage concurrent access to shared resources.
+          <strong>Synchronization Primitives:</strong> Utilize <code>WaitGroup</code>, mutexes, and atomic operations to manage concurrent access to shared resources.
         </li>
         <li>
-          <strong>Select Statement:</strong> Allows waiting on multiple channel operations, enabling more flexible concurrency patterns.
+          <strong>Concurrency Patterns:</strong> Implement patterns like Fan-Out, Fan-In, and Worker Pools to organize and optimize concurrent operations.
         </li>
         <li>
-          <strong>Context Package:</strong> Provides mechanisms for cancellation and timeout propagation across goroutines.
+          <strong>Race Detection:</strong> Employ Go's race detector to identify and eliminate race conditions, ensuring the reliability of concurrent programs.
+        </li>
+        <li>
+          <strong>Context Management:</strong> Use the <code>context</code> package to control the lifecycle of goroutines, enabling cancellation and timeout capabilities.
         </li>
       </ul>
+      <p class="text-base md:text-lg mb-6">
+        By adhering to these principles and best practices, developers can create robust and efficient Go applications that effectively leverage concurrency to meet performance and scalability demands. Continue exploring advanced topics and real-world applications to further enhance your Go concurrency expertise.
+      </p>
 
       <!-- Further Reading -->
       <h2 class="text-xl md:text-2xl font-semibold mb-4">Further Reading</h2>
@@ -1497,15 +1471,42 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
 pre {
-  white-space: pre-wrap;
-  overflow-x: auto;
+  white-space: pre-wrap; /* Ensures text wrapping for long lines */
+  overflow-x: auto;      /* Adds horizontal scroll for long code lines */
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 0.75rem;
+  text-align: left;
+  border: 1px solid #e2e8f0;
+}
+
+th {
+  background-color: #f7fafc;
 }
 
 @media (max-width: 768px) {
   pre, code {
-    font-size: 0.5rem;
+    font-size: 0.5rem; /* Smaller font size for mobile devices */
   }
+
+  th, td {
+    padding: 0.5rem;
+  }
+}
+
+a {
+  color: #3182ce;
+}
+
+a:hover {
+  text-decoration: underline;
 }
 </style>

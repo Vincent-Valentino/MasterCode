@@ -251,8 +251,6 @@ const props = defineProps({
   IsMobile: Boolean
 });
 
-console.log(props.IsMobile);
-
 function IsThisMobile(){
   return props.IsMobile;
 }

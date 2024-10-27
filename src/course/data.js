@@ -201,6 +201,7 @@ export const courses = {
     title: 'Java',
     subcourses: [
       { title: 'Introduction to Java', component: () => import('@/course/java/IntroductionJava.vue') },
+      { title: 'Get Started with Java', component: () => import('@/course/java/GetStartedJava.vue') },
     ]
   },
   PHP: {

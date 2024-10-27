@@ -4,7 +4,7 @@
     v-if="isDrawerVisible || !isMobile"
     :class="{
       'fixed inset-0 z-50 bg-white p-4 w-full h-full': isDrawerVisible && isMobile,  // Mobile drawer
-      'md:sticky md:h-auto md:m-5 md:ml-0 md:w-11/12 md:p-0 md:pt-8 md:mb-28 md:rounded-lg top-0 z-40': !isMobile // Desktop sidebar
+      'md:sticky md:h-auto md:ml-5 md:mr-0 md:w-full md:p-4 md:pt-8 md:mb-28 md:rounded-lg top-0 z-40': !isMobile // Desktop sidebar
     }"
     >
     
@@ -19,12 +19,12 @@
     <div class="md:w-full md:bg-blue-900 rounded-t-lg">
       <h2 class="text-lg font-semibold pb-4 text-black md:text-white md:p-2">{{ selectedCourse }} Subcourses</h2>
     </div>
-    <ul class="flex flex-col md:block md:space-x-0 pt-3 pb-4 bg-white">
+    <ul class="flex flex-col md:block md:space-y-3 pt-3 pb-4 bg-white md:pr-4">
       <li v-for="(subcourse, index) in subcourses" :key="subcourse.title" class="mb-2">
         <!-- Link to select subcourse and trigger content change -->
         <a 
           href="#" 
-          class="text-blue-600 hover:text-blue-800 pl-2 p-1 mb-1"
+          class="md:text-sm text-blue-600 hover:text-blue-800 pl-2 p-1 mb-1"
           @click="clickCourse(index)"
         >
           {{ subcourse.title }}
@@ -72,7 +72,9 @@ function selectSubcourse(index) {
 function clickCourse(index){
   selectSubcourse(index)
   scrollToTop();
-  toggleSidebar();
+  if(!isMobile){
+    toggleSidebar();
+  }
 }
 
 </script>
