@@ -274,7 +274,7 @@ console.log(message); // Output: "You are an adult."</code></pre>
   }
 }
 
-  h2, p , h1, h3, h4{
+  h2, p , h1, h3, h4, li{
     font-family: "Roboto Condensed", sans-serif;
   }
 

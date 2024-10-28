@@ -212,7 +212,7 @@ for (let num of numbers) {
   }
 }
 
-  h2, p , h1, h3, h4{
+  h2, p , h1, h3, h4, li{
     font-family: "Roboto Condensed", sans-serif;
   }
 

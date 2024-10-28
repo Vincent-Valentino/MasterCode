@@ -312,7 +312,7 @@ export default {
 <style scoped>
 pre {
   white-space: pre-wrap; /* Ensures text wrapping for very long lines */
-  overflow-x: auto;      /* Adds horizontal scroll for overflow content */ 
+  overflow-x: auto;      /* Adds horizontal scroll for overflow content */
 }
 
 @media (max-width: 768px) {
@@ -321,24 +321,12 @@ pre {
   }
 }
 
-.active {
-  font-weight: bold;
-  color: #1D4ED8; /* Example active link color */
+
+h2, p , h1, h3, h4, li{
+  font-family: "Roboto Condensed", sans-serif;
 }
 
-/* Optional: Styles for route transitions if needed */
-.fade-enter {
-  opacity: 0;
-}
-.fade-enter-active {
-  opacity: 1;
-  transition: opacity 300ms;
-}
-.fade-exit {
-  opacity: 1;
-}
-.fade-exit-active {
-  opacity: 0;
-  transition: opacity 300ms;
+a {
+  font-family: "JetBrains Mono", sans-serif;
 }
 </style>

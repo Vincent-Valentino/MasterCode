@@ -1417,17 +1417,22 @@ export default {
 
 <style scoped>
 pre {
-  white-space: pre-wrap;
-  word-wrap: break-word;
-}
-a {
-  color: #818cf8; /* Tailwind's indigo-400 */
+  white-space: pre-wrap; /* Ensures text wrapping for very long lines */
+  overflow-x: auto;      /* Adds horizontal scroll for overflow content */
 }
 
-.text-red-500 {
-  color: #ef4444;
+@media (max-width: 768px) {
+  pre, code {
+    font-size: 0.5rem; /* Smaller font size for mobile devices */
+  }
 }
-.text-green-500 {
-  color: #10b981;
+
+
+h2, p , h1, h3, h4, li{
+  font-family: "Roboto Condensed", sans-serif;
+}
+
+a {
+  font-family: "JetBrains Mono", sans-serif;
 }
 </style>

@@ -371,7 +371,7 @@ document.addEventListener('pointerdown', function(event) {
     font-size: 0.5rem; /* Smaller font size for mobile devices */
   }
 }
-  h2, p , h1, h3, h4{
+  h2, p , h1, h3, h4, li{
     font-family: "Roboto Condensed", sans-serif;
   }
 

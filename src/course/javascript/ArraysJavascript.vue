@@ -429,7 +429,7 @@ console.log(doubledAndFlattened);  // Output: [1, 2, 2, 4, 3, 6]
 <style scoped>
   pre {
   white-space: pre-wrap; /* Ensures text wrapping for very long lines */
-  overflow-x: auto;      /* Adds horizontal scroll for overflow content */ 
+  overflow-x: auto;      /* Adds horizontal scroll for overflow content */
   }
 
   @media (max-width: 768px) {
@@ -438,7 +438,7 @@ console.log(doubledAndFlattened);  // Output: [1, 2, 2, 4, 3, 6]
   }
 }
 
-  h2, p , h1, h3, h4{
+  h2, p , h1, h3, h4, li{
     font-family: "Roboto Condensed", sans-serif;
   }
 

@@ -229,7 +229,18 @@ const runProgramSteps = ref([
 </script>
 
 <style scoped>
-h2, p , h1, h3, h4{
+pre {
+  white-space: pre-wrap; /* Ensures text wrapping for very long lines */
+  overflow-x: auto;      /* Adds horizontal scroll for overflow content */
+}
+
+@media (max-width: 768px) {
+  pre, code {
+    font-size: 0.5rem; /* Smaller font size for mobile devices */
+  }
+}
+
+h2, p , h1, h3, h4, li{
   font-family: "Roboto Condensed", sans-serif;
 }
 
