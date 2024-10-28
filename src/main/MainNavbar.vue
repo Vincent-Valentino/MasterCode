@@ -16,14 +16,14 @@
           <div class="w-1/2 md:w-full flex-col md:flex-row md:justify-start md:gap-10 md:px-10 md:py-2 md:font-bold md:text-yellow-300 flex gap-4 text-justify">
             <a href="#" @click="mainPage" class="menu-link ml-2">Home</a>
             <a href="/about" class="menu-link ml-2">About</a>
-            <a href="#" class="menu-link ml-2">FAQ</a>
-            <a href="#" class="menu-link hidden md:block">Account</a>
+            <a href="/faq" class="menu-link ml-2">FAQ</a>
+            <a href="/auth" class="menu-link hidden md:block">Account</a>
             <a href="#" class="menu-link hidden md:block">Achievements</a>
           </div>
           <div class="w-1/2 flex flex-col gap-4 text-justify md:hidden items-justify">
             <a href="#" class="menu-link ml-2">Account</a>
             <a href="#" class="menu-link ml-2">Achievements</a>
-            <a href="#" class="menu-link special-link w-1/2 md:hidden">Login</a>
+            <a href="/auth" class="menu-link special-link w-1/2 md:hidden">Login</a>
           </div>
         </div>
 
@@ -79,12 +79,12 @@
                 <a href="#" @click="NavLinks('React')" class="dropdown-item">React</a>
                 <a href="#" @click="NavLinks('Vue')" class="dropdown-item">Vue</a>
                 <a href="#" @click="NavLinks('Angular')" class="dropdown-item">Angular</a>
-                <a href="#" class="dropdown-item">Svelte</a>
+                <a href="#" @click="NavLinks('Svelte')" class="dropdown-item">Svelte</a>
                 <a href="#" class="dropdown-item">Ember</a>
                 <a href="#" class="dropdown-item">Backbone</a>
                 <a href="#" class="dropdown-item">Preact</a>
                 <a href="#" @click="NavLinks('NextJS')" class="dropdown-item">Next.js</a>
-                <a href="#" class="dropdown-item">Nuxt.js</a>
+                <a href="#" @click="NavLinks('NuxtJS')" class="dropdown-item">Nuxt.js</a>
                 <a href="#" class="dropdown-item">Gatsby</a>
               </ul>
             </div>
@@ -94,12 +94,12 @@
               <a href="#" @click="NavLinks('React')" class="menu-link ml-2">React</a>
               <a href="#" @click="NavLinks('Vue')" class="menu-link ml-2">Vue</a>
               <a href="#" @click="NavLinks('Angular')" class="menu-link ml-2">Angular</a>
-              <a href="#" class="menu-link ml-2">Svelte</a>
+              <a href="#" @click="NavLinks('Svelte')" class="menu-link ml-2">Svelte</a>
               <a href="#" class="menu-link ml-2">Ember</a>
               <a href="#" class="menu-link ml-2">Backbone</a>
               <a href="#" class="menu-link ml-2">Preact</a>
               <a href="#" @click="NavLinks('NextJS')" class="menu-link ml-2">Next.js</a>
-              <a href="#" class="menu-link ml-2">Nuxt.js</a>
+              <a href="#" @click="NavLinks('NuxtJS')" class="menu-link ml-2">Nuxt.js</a>
               <a href="#" class="menu-link ml-2">Gatsby</a>
             </div>
           </div>
@@ -113,9 +113,9 @@
                 <span v-else>▼</span>
               </button>
               <ul v-if="dropdown === 'backendFrameworks'" class="dropdown-list flex flex-col pl-4 mt-2 space-y-2">
-                <a href="#" class="dropdown-item">Django</a>
-                <a href="#" class="dropdown-item">Flask</a>
-                <a href="#" class="dropdown-item">Express</a>
+                <a href="#" @click="NavLinks('Django')" class="dropdown-item">Django</a>
+                <a href="#" @click="NavLinks('Flask')" class="dropdown-item">Flask</a>
+                <a href="#" @click="NavLinks('Express')" class="dropdown-item">Express</a>
                 <a href="#" class="dropdown-item">Laravel</a>
                 <a href="#" class="dropdown-item">Spring Boot</a>
                 <a href="#" class="dropdown-item">Ruby on Rails</a>
@@ -127,9 +127,9 @@
 
             <div v-else class="flex flex-col gap-3">
               <h1 class="font-bold text-yellow-100 text-lg border-l-8 border-yellow-600 pl-1 bg-stone-700 pr-2 mb-5">Backend</h1>
-              <a href="#" class="menu-link ml-2">Django</a>
-              <a href="#" class="menu-link ml-2">Flask</a>
-              <a href="#" class="menu-link ml-2">Express</a>
+              <a href="#" @click="NavLinks('Django')" class="menu-link ml-2">Django</a>
+              <a href="#" @click="NavLinks('Flask')" class="menu-link ml-2">Flask</a>
+              <a href="#" @click="NavLinks('Express')" class="menu-link ml-2">Express</a>
               <a href="#" class="menu-link ml-2">Laravel</a>
               <a href="#" class="menu-link ml-2">Spring Boot</a>
               <a href="#" class="menu-link ml-2">Ruby on Rails</a>

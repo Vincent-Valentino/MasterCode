@@ -4,7 +4,7 @@
     v-if="isDrawerVisible || !isMobile"
     :class="{
       'fixed inset-0 z-50 bg-white p-4 w-full h-full': isDrawerVisible && isMobile,  // Mobile drawer
-      'md:sticky md:h-auto md:ml-5 md:mr-0 md:w-full md:p-4 md:pt-8 md:mb-28 md:rounded-lg top-0 z-40': !isMobile // Desktop sidebar
+      'md:sticky md:h-auto md:mx-4 md:shadow-sm md:pt-6 md:w-full md:mt-4 md:mb-28  md:rounded-lg top-0 z-40': !isMobile // Desktop sidebar
     }"
     >
     
@@ -16,10 +16,10 @@
     </button>
 
     <!-- Sidebar Content -->
-    <div class="md:w-full md:bg-blue-900 rounded-t-lg">
+    <div class="md:w-full md:bg-blue-900 rounded-t-lg shadow-black shadow-sm ">
       <h2 class="text-lg font-semibold pb-4 text-black md:text-white md:p-2">{{ selectedCourse }} Subcourses</h2>
     </div>
-    <ul class="flex flex-col md:block md:space-y-3 pt-3 pb-4 bg-white md:pr-4">
+    <ul class="flex flex-col md:block md:space-y-3 pt-3 pb-4 bg-white md:pr-4 shadow-sm shadow-black">
       <li v-for="(subcourse, index) in subcourses" :key="subcourse.title" class="mb-2">
         <!-- Link to select subcourse and trigger content change -->
         <a 

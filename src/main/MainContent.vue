@@ -1,5 +1,5 @@
 <template>
-  <div class="w-full min-h-screen py-6 px-1 md:p-6 relative">
+  <div class="w-full min-h-screen py-6 px-1 md:p-0 rounded-2xl relative shadow-sm shadow-black my-6">
     <!-- Default text when no course is selected -->
     <div
       v-if="selectedCourse === 'Home'"
@@ -37,7 +37,7 @@
       <component :is="currentSubcourseComponent" />
 
       <!-- Previous/Next buttons -->
-      <div class="mt-6 flex justify-center gap-4">
+      <div class="my-6 py-6 flex justify-center gap-4">
         <button
           v-if="currentSubcourseIndex > 0"
           class="text-sm md:text-base px-3 py-2 rounded-2xl text-cyan-800 border-blue-400 border-2 flex items-center justify-center transition duration-200 ease-in-out hover:bg-blue-100 hover:border-blue-500 hover:text-blue-800"
